@@ -1,0 +1,3850 @@
+{
+ "name": "16 Weeks to Six Pack Abs",
+ "source": "iwantsixpackabs.com \"My 16 Week Journey to Six Pack Abs\" (Feb 19 - June 4, 2007), Wayback Machine snapshot 20071230185456 of /workout/week1-16.html",
+ "schedule": "Monday: Resistance Training (from the fitness video journal); Tuesday: Interval Training: Cardio; Wednesday: Resistance Training; Thursday: Interval Training: Cardio; Friday: Resistance Training; Saturday: Interval Training: Cardio; Sunday: Rest",
+ "intervalRules": "Always warm up for 4-6 minutes. High intensity: Perform one minute as fast as you can. (Level 9 or 10 intensity on a scale of 1-10). Moderate intensity: Slow down to a moderate pace for two minutes (Level 6-7 intensity). Therefore, one round will last about 3 minutes. Always cool down for 5 minutes. Warning: Do not perform interval training before resistance training. It can actually cause a negative effect on your routine.",
+ "intervalActivities": "What ever you enjoy and willing to stick to. You can jog/run/sprint, stationary bike, spinning bike, eliptical machine, rowing, stair climbing, mountain biking, swimming, etc.",
+ "demoMatchLegend": {
+  "page": "GIF shown on this week's own page",
+  "same": "same exercise, GIF from another week's page",
+  "similar": "similar exercise (base movement) from another week's page",
+  "none": "no demo available"
+ },
+ "weeks": [
+  {
+   "week": 1,
+   "title": "Feb 19, Week One - M, W, F",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week1.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.veoh.com/videodetails.swf?permalinkId=v256554DNQr5p48&id=1013855&player=videodetails&videoAutoPlay=0"
+   ],
+   "format": "superset",
+   "status": "full",
+   "repsGuidance": null,
+   "roundsGuidance": "3",
+   "restBetweenRoundsSeconds": 60,
+   "instructions": "For the first couple weeks, I will be focusing on bodyweight training. You will notice that I superset between upper body and lower body. You may have to re-adjust the reps according to your fitness level. Try to do this exercise 3 times this week in nonconsecutive days. All exercises are done in supersets. For example, Standard Pushup are supersetted with BodyWeight Squats. Do NOT rest within the superset (between pushups and squats), but rest 1 minute after squats before repeating the superset. For example: Perform Standard Pushup followed by Bodyweight Squat and then rest for 1 minute or less. Repeat for a total of 3 \"rounds\" before moving the next \"superset.\"",
+   "substitutions": [
+    "You may have to re-adjust the reps according to your fitness level.",
+    "B2 Pullup: NOTE: If you can do a few pulups, I suggest that you watch this video: Pullup Tips",
+    "Pullup Tips page: Can't Do A Single Pull Up? No Problem.... Here Are My Top Favorite Alternative To Pull Ups. Pull ups are one of the best body weight exercise for your back. However, a lot of people cannot do a single pull up because they are either too heavy or too weak. I got a quick and easy alternatives to pullps exercise. A must watch pull up video.",
+    "C1 Burpees / 8 Count Body Builders (trainer's comment): WITHOUT THE PUSHUP",
+    "A2 Bodyweight Squats: If you want to make the exercise more challenging hold your arms at your sides or behind your head."
+   ],
+   "appNotes": [
+    "The pull-up alternatives themselves were only shown in a Veoh video that the Wayback Machine did not archive, so the specific alternative exercises are not available."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "superset",
+     "roundsText": "3",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 60,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "Standard pushups",
+       "exerciseName": "Standard Pushup",
+       "instructions": "1. Lie face down on the floor with hands palm down, fingers pointing straight ahead, and aligned at the nipple line.\n2. Place hands slightly wider than shoulder width, and feet should be at hip width with toes on floor.\n3. Start position: Extend the elbows and raise the body off the floor.\n4. Lower your entire body (legs, hips, trunk, and head) 4-8 inches from the floor.\n5. Return to the start position by extending at the elbows and pushing the body up.\n6. Remember to keep the head and trunk stabilized in a neutral position by isometrically contracting the abdominal and back muscles. Never fully lock out the elbows at the start position and avoid hyperextension of the low back.",
+       "demoGif": "demos/08standardpushup.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "20",
+         "resistance": "BW"
+        },
+        {
+         "set": 2,
+         "reps": "20",
+         "resistance": "BW"
+        },
+        {
+         "set": 3,
+         "reps": "20",
+         "resistance": "BW"
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 0,
+       "reps": "20"
+      },
+      {
+       "code": "A2",
+       "label": "Body Squat",
+       "exerciseName": "Bodyweight Squats",
+       "instructions": "1. Start by placing feet shoulder width apart and holding your arms out in front of you.\n2. Proceed to squat down like you are going to sit in a chair. Your upper body will lean forward slightly and your hips will shift backwards while going down.\n3. Remember to keep your knees from going out in front of your toes while squatting.\n4. Repeat according to your required repetitions. If you want to make the exercise more challenging hold your arms at your sides or behind your head.",
+       "trainerComments": "Complete in a superset with A1.",
+       "demoGif": "demos/bodyweight_squat.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "20",
+         "resistance": "BW"
+        },
+        {
+         "set": 2,
+         "reps": "20",
+         "resistance": "BW"
+        },
+        {
+         "set": 3,
+         "reps": "20",
+         "resistance": "BW"
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 60,
+       "reps": "20"
+      }
+     ]
+    },
+    {
+     "code": "B",
+     "kind": "superset",
+     "roundsText": "3",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 60,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "B1",
+       "label": "Stationary Lunges",
+       "exerciseName": "Stationary Bodyweight Lunge",
+       "instructions": "1) Stand with feet hip width apart. Take left leg and step back approximately 2 feet standing on the ball of the foot.\n2) Start position: Feet should be positioned at a staggered stance with head and back erect and straight in a neutral position. Place hands on hips.\n3) Lower body by bending at right hip and knee until thigh is parallel to floor. Body should follow a straight line down towards the floor.\n4) Return to start position. Alternate or switch to other leg after prescribed reps.\n5) Remember to keep head back, and hips squared and in a neutral position throughout movement.",
+       "demoGif": "demos/stationary_bodyweight_lunge.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "15-20",
+         "resistance": "BW"
+        },
+        {
+         "set": 2,
+         "reps": "15-20",
+         "resistance": "BW"
+        },
+        {
+         "set": 3,
+         "reps": "15-20",
+         "resistance": "BW"
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 0,
+       "reps": "15-20"
+      },
+      {
+       "code": "B2",
+       "label": "Pull ups",
+       "exerciseName": "Pullup",
+       "instructions": "1) Position hands wider than shoulder width apart with overhand grip (palms facing forward).\n2) Start position: Hang with arms fully extended and elbows facing away from body. Feet may be crossed with knees bent.\n3) Pull body up until bar is below chin level.\n4) Return to start position.\n5) Remember to keep the movement controlled with the body stable to minimize momentum and body sway. If the bar is too high, it is advisable to use a step to ensure proper hand placement as well as safety.",
+       "trainerComments": "Complete in a superset with B1. NOTE: If you can do a few pulups, I suggest that you watch this video: Pullup Tips",
+       "demoGif": "demos/wtchinup.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "15-20",
+         "resistance": "BW"
+        },
+        {
+         "set": 2,
+         "reps": "15-20",
+         "resistance": "BW"
+        },
+        {
+         "set": 3,
+         "reps": "15-20",
+         "resistance": "BW"
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 60,
+       "reps": "15-20"
+      }
+     ]
+    },
+    {
+     "code": "C",
+     "kind": "superset",
+     "roundsText": "3",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 60,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "C1",
+       "label": "Burpees",
+       "exerciseName": "8 Count Body Builders",
+       "instructions": "Start in a standing position and bend your knees and place your hands on the ground. Extend your legs back into a push up position. Bring your knees back in towards chest and stand back up. This should be a continuous motion and be fluid.",
+       "trainerComments": "WITHOUT THE PUSHUP",
+       "demoGif": "demos/13eightcounterbodybuilders.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "15",
+         "resistance": "BW"
+        },
+        {
+         "set": 2,
+         "reps": "15",
+         "resistance": "BW"
+        },
+        {
+         "set": 3,
+         "reps": "15",
+         "resistance": "BW"
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 0,
+       "reps": "15"
+      },
+      {
+       "code": "C2",
+       "label": "Plank",
+       "exerciseName": "Plank",
+       "instructions": "1. Start by placing your forearms on the ground and forming a plank with your forearms and feet.\n2. Hold this position keeping your body parallel to the ground for the required time.",
+       "trainerComments": "Complete in a superset with C1.",
+       "demoGif": "demos/plank.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "45 SECOND",
+         "resistance": "BW"
+        },
+        {
+         "set": 2,
+         "reps": "45 SECOND",
+         "resistance": "BW"
+        },
+        {
+         "set": 3,
+         "reps": "45 SECOND",
+         "resistance": "BW"
+        }
+       ],
+       "workSeconds": 45,
+       "sets": 3,
+       "restAfterSeconds": 60,
+       "reps": "45 SECOND"
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 3,
+    "timesPerWeek": 3,
+    "totalMinutes": 19,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Week One to Four\")",
+    "text": "Complete 3 rounds, 3 xs per week. Total time: 19 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "title": "Feb 26, Week 2 - M, W, F",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week2.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.youtube.com/v/XzEgJzB2GEw"
+   ],
+   "format": "superset",
+   "status": "full",
+   "repsGuidance": null,
+   "roundsGuidance": "3 (per-set tables)",
+   "restBetweenRoundsSeconds": 60,
+   "instructions": "For the first couple weeks, I will be focusing on bodyweight training. You will notice that I superset between upper body and lower body. You may have to re-adjust the reps according to your fitness level. Try to do this exercise 3 times this week in nonconsecutive days. All exercises are done in supersets. For example, Dive Bomber Pushup are supersetted with Squat Jump. Do NOT rest within the superset (between pushups and squat jump), but rest 1 minute after squats before repeating the superset.",
+   "substitutions": [
+    "You may have to re-adjust the reps according to your fitness level.",
+    "B1 is listed as \"Chin up or pull up\".",
+    "B1 Chinup: NOTE: If you can do a few pulups, I suggest that you watch this video: Pullup Tips",
+    "Pullup Tips page: Can't Do A Single Pull Up? No Problem.... Here Are My Top Favorite Alternative To Pull Ups. Pull ups are one of the best body weight exercise for your back. However, a lot of people cannot do a single pull up because they are either too heavy or too weak. I got a quick and easy alternatives to pullps exercise. A must watch pull up video."
+   ],
+   "appNotes": [
+    "The page gives no explicit round count this week; the 3 rounds come from its per-set tables (3 sets each).",
+    "The pull-up alternatives themselves were only shown in a Veoh video that the Wayback Machine did not archive, so the specific alternative exercises are not available."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "superset",
+     "roundsText": "3",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 60,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "Dive Bomber Pushup",
+       "exerciseName": "Dive Bomber Pushup",
+       "instructions": "1) Lie face down on the floor with hands palm down, fingers pointing straight ahead, and aligned at the nipple line.\n2) Place hands slightly wider than shoulder width, and feet should be at hip width with toes on floor.\n3) Start position: Extend the elbows and raise the body off the floor.\n4) Lower your entire body (legs, hips, trunk, and head) 4-8 inches from the floor starting with the head first and follow with the shoulders and waist. It should look like you are diving down towards the ground.\n5) Return to the start position by extending at the elbows and pushing the body up.\n6) Remember to keep the head and trunk stabilized in a neutral position by isometrically contracting the abdominal and back muscles. Never fully lock out the elbows at the start position and avoid hyperextension of the low back.",
+       "demoGif": "demos/06mattfureypushup.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "20",
+         "resistance": "BW"
+        },
+        {
+         "set": 2,
+         "reps": "20",
+         "resistance": "BW"
+        },
+        {
+         "set": 3,
+         "reps": "20",
+         "resistance": "BW"
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 0,
+       "reps": "20"
+      },
+      {
+       "code": "A2",
+       "label": "Jump Squat",
+       "exerciseName": "Squat Jump",
+       "instructions": "1) Stand with feet shoulder-width apart, trunk flexed forward slightly with back straight in a neutral position.\n2) Arms should be in the ?eady position with elbows flexed at approximately 90°.\n3) Lower body where thighs are parallel to ground.\n4) Explode vertically and drive arms up.\n5) Land on both feet and repeat. Prior to takeoff extend the ankles to their maximum range (full plantar flexion) to ensure proper mechanics.",
+       "demoGif": "demos/single_squat_jump.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "15-20",
+         "resistance": "BW"
+        },
+        {
+         "set": 2,
+         "reps": "15-20",
+         "resistance": "BW"
+        },
+        {
+         "set": 3,
+         "reps": "15-20",
+         "resistance": "BW"
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 60,
+       "reps": "15-20"
+      }
+     ]
+    },
+    {
+     "code": "B",
+     "kind": "superset",
+     "roundsText": "3",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 60,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "B1",
+       "label": "Chin up or pull up",
+       "exerciseName": "Chinup",
+       "instructions": "1) Position hands shoulder width to slightly narrower than shoulder width apart with underhand grip (palms facing towards body).\n2) Start position: Hang with arms fully extended and elbows forward. Feet may be crossed with knees bent.\n3) Pull body up until bar is below chin level.\n4) Return to start position.\n5) Remember to keep the movement controlled with the body stable to minimize momentum and body sway. If the bar is too high, it is advisable to use a step to ensure proper hand placement as well as safety.",
+       "trainerComments": "NOTE: If you can do a few pulups, I suggest that you watch this video: Pullup Tips",
+       "demoGif": "demos/wtunderhandchinup.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "15-20",
+         "resistance": "BW"
+        },
+        {
+         "set": 2,
+         "reps": "15-20",
+         "resistance": "BW"
+        },
+        {
+         "set": 3,
+         "reps": "15-20",
+         "resistance": "BW"
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 0,
+       "reps": "15-20"
+      },
+      {
+       "code": "B2",
+       "label": "Alternating Split Squat Jump",
+       "exerciseName": "Alternating Split Squat Jump",
+       "instructions": "1) Stand with feet hip width apart. Take left leg and step back approximately 2 feet standing on the ball of back foot.\n2) Feet should be positioned at a staggered stance with head and back erect and straight in a neutral position. Place hands on waist.\n3) Lower body by bending at right hip and knee until thigh is parallel to floor then immediately explode vertically.\n4) Switch feet in the air so that the back foot lands forward and vice versa.\n5) Prior to takeoff extend the ankles to their maximum range (full plantar flexion) ensure proper mechanics.",
+       "demoGif": "demos/alt_split_squat_jump.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "15 each side",
+         "resistance": "BW"
+        },
+        {
+         "set": 2,
+         "reps": "15 each side",
+         "resistance": "BW"
+        },
+        {
+         "set": 3,
+         "reps": "15 each side",
+         "resistance": "BW"
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 60,
+       "reps": "15 each side"
+      }
+     ]
+    },
+    {
+     "code": "C",
+     "kind": "superset",
+     "roundsText": "3",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 60,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "C1",
+       "label": "Double Crunch",
+       "exerciseName": "Double Crunch",
+       "instructions": "1. Lie back onto floor or bench with knees bent and hands behind head. Keep elbows back and out of sight. Head should be in a neutral position with a space between chin and chest.\n2. Start position: Hands behind head and knees bent at 90 degrees.\n3. Leading with the chin and chest towards the ceiling, contract the abdominals and raise shoulders off floor or bench. During the crunch, also bring knees towards chest.\n4. Return to start position.\n5. Remember to keep head and back in a neutral position. Hyperextension or flexion of either may cause injury.",
+       "demoGif": "demos/suitcase_crunch.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "30",
+         "resistance": "BW"
+        },
+        {
+         "set": 2,
+         "reps": "30",
+         "resistance": "BW"
+        },
+        {
+         "set": 3,
+         "reps": "30",
+         "resistance": "BW"
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 0,
+       "reps": "30"
+      },
+      {
+       "code": "C2",
+       "label": "Single Leg Plank Pose",
+       "exerciseName": "Single Leg Plank Pose",
+       "instructions": "1. Start by forming a straight plank with your forearms and feet as the contact points on the ground.\n2. Once the plank is formed raise one foot off the ground and hold this position for the desired time.\n3. Once the time has been met return your foot to the ground and repeat with the other leg.",
+       "demoGif": "demos/single_leg_pike_1.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "45 sec",
+         "resistance": "BW"
+        },
+        {
+         "set": 2,
+         "reps": "45 sec",
+         "resistance": "BW"
+        },
+        {
+         "set": 3,
+         "reps": "45 sec",
+         "resistance": "BW"
+        }
+       ],
+       "workSeconds": 45,
+       "sets": 3,
+       "restAfterSeconds": 60,
+       "reps": "45 sec"
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 3,
+    "timesPerWeek": 3,
+    "totalMinutes": 19,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Week One to Four\")",
+    "text": "Complete 3 rounds, 3 xs per week. Total time: 19 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "title": "March 5, Week 3 - M, W, F",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week3.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.metacafe.com/fplayer/460684/the_3rd_week_of_my_16_week_journey_to_six_pack_abs_march_5.swf"
+   ],
+   "format": "superset",
+   "status": "full",
+   "repsGuidance": "12-15",
+   "roundsGuidance": "3 (A, B) / 2 (C, D) per-set tables",
+   "restBetweenRoundsSeconds": 60,
+   "instructions": "For the third week, I am adding a resistance band. ... I am still doing the full body workout but challenging my body even further by adding more resistance with the band. You may have to re-adjust the reps according to your fitness level. Try to do this exercise 3 times this week in nonconsecutive days. All exercises are done in supersets. For example, Squat are supersetted with Chest Press with the band. Do NOT rest within the superset (between Squat and chest press), but rest 1 minute after squats before repeating the superset. Aim for 12-15 reps for each one.",
+   "substitutions": [
+    "You may have to re-adjust the reps according to your fitness level.",
+    "Bands: It does not have to be Bodylastics. You can purchase any resistance bands from your local sporting good store such as Sport Authority, Modell's Sporting Goods, or what ever local sporting good stores that you have in your town.",
+    "A1 Band Squat (trainer's comment): Place the handle behind you.",
+    "A2 Band Press / B2 Band Row: Put one foot forward and one foot back.",
+    "Before week #4, get yourself a stability ball because I will start implementing it for my week 4 workout routine."
+   ],
+   "appNotes": [
+    "The per-set table for D2 Hip Thrusts lists only 1 set (D1 lists 2); the app pre-loads exactly what the tables show."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "superset",
+     "roundsText": "3",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 60,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "Band Squat",
+       "exerciseName": "Squat with Fit Band",
+       "instructions": "1. Start by stepping on the FitBand with both feet shoulder width apart.\n2. Hold the FitBand at shoulder level with both hands. Start into a full squat while holding the band at shoulder height.\n3. Return to the starting position and repeat for the prescribed repetitions.",
+       "trainerComments": "Place the handle behind you.",
+       "demoGif": "demos/squats_with_sissel_fitband.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "12-15",
+         "resistance": null
+        },
+        {
+         "set": 2,
+         "reps": "12-15",
+         "resistance": null
+        },
+        {
+         "set": 3,
+         "reps": "12-15",
+         "resistance": null
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 0,
+       "reps": "12-15"
+      },
+      {
+       "code": "A2",
+       "label": "Band Press (one foot forward, one foot back)",
+       "exerciseName": "Standing Chest Press with Band",
+       "instructions": "1. Start by securing the band at chest level behind you and standing with your feet together. To have a more stable stance you can bring one foot in front of the other in a staggered stance(lunge stance).\n2. Hold the band with your hands at chest level and your elbows back.\n3. Press the bands out away from your body until your arms are extended.\n4. Return to the starting position and repeat for the recommended repetitions.",
+       "trainerComments": "Put one foot forward and one foot back.",
+       "demoGif": "demos/standingbandchestpress1.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "12-15",
+         "resistance": null
+        },
+        {
+         "set": 2,
+         "reps": "12-15",
+         "resistance": null
+        },
+        {
+         "set": 3,
+         "reps": "12-15",
+         "resistance": null
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 60,
+       "reps": "12-15"
+      }
+     ]
+    },
+    {
+     "code": "B",
+     "kind": "superset",
+     "roundsText": "3",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 60,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "B1",
+       "label": "Stationary Lunges (with bands)",
+       "exerciseName": "Stationary Lunge with Fit Band",
+       "instructions": "1) Stand with feet hip width apart. Take left leg and step back approximately 2 feet standing on the ball of the foot. Place fit band under front foot and hold the other end with your hands.\n2) Start position: Feet should be positioned at a staggered stance with head and back erect and straight in a neutral position. Place hands on hips.\n3) Lower body by bending at right hip and knee until thigh is parallel to floor. Body should follow a straight line down towards the floor.\n4) Return to start position.",
+       "demoGif": "demos/split_squat_with_sissel_fitband.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "12-15",
+         "resistance": null
+        },
+        {
+         "set": 2,
+         "reps": "12-15",
+         "resistance": null
+        },
+        {
+         "set": 3,
+         "reps": "12-15",
+         "resistance": null
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 0,
+       "reps": "12-15"
+      },
+      {
+       "code": "B2",
+       "label": "Standing Band Row (one foot forward, one foot back)",
+       "exerciseName": "Standing Row with bands",
+       "instructions": "1. Anchor tubing at around belly button or chest level.\n2. Grab the ends of the band in each hand with arms at full extension.\n3. Pull your hands back towards your navel and pinch your shoulder blades together as you pull.\n4. Keep your elbows close to the body and return to the starting position and repeat.",
+       "trainerComments": "Put one foot forward and one foot back",
+       "demoGif": "demos/standing_lat_pull_with_fitband.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "12-15",
+         "resistance": null
+        },
+        {
+         "set": 2,
+         "reps": "12-15",
+         "resistance": null
+        },
+        {
+         "set": 3,
+         "reps": "12-15",
+         "resistance": null
+        }
+       ],
+       "sets": 3,
+       "restAfterSeconds": 60,
+       "reps": "12-15"
+      }
+     ]
+    },
+    {
+     "code": "C",
+     "kind": "superset",
+     "roundsText": "2",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 60,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "C1",
+       "label": "Standing Shoulder Press with bands",
+       "exerciseName": "Standing Shoulder Press with Tubing",
+       "instructions": "1. Start by placing both feet on the band and hold each end in both hands at shoulder level.\n2. Starting with your elbows at 90 degrees press both arms straight up until your elbows are extended.\n3. Return to the starting position and repeat for the prescribed repetitions. Keep your abdominals tight throughout the movement and avoid arching your low back.",
+       "demoGif": "demos/standing_shoulder_press_with_sissel_step_tube.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "12-15",
+         "resistance": null
+        },
+        {
+         "set": 2,
+         "reps": "12-15",
+         "resistance": null
+        }
+       ],
+       "sets": 2,
+       "restAfterSeconds": 0,
+       "reps": "12-15"
+      },
+      {
+       "code": "C2",
+       "label": "Bicep Curl with bands",
+       "exerciseName": "Bicep Curl",
+       "instructions": "1) Stand with feet shoulder width apart, knees slightly bent, and at a staggered stance.\n2) Step onto middle of tubing with back foot or both feet.\n3) Start position: Grasp handles with underhand grip (palms facing forward) with arms hanging down at sides. Elbows should be close to sides.\n4) Flex at the elbows and curl handles up to approximately shoulder level. Keep elbows close to sides throughout movement.\n5) Return to start position.\n6) Remember to keep back and head straight in a neutral position throughout movement. Shoulders should be stabilized by squeezing shoulder blades together slightly - only the elbow joint should be moving.",
+       "demoGif": "demos/bicepbandcurl.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "12-15",
+         "resistance": null
+        },
+        {
+         "set": 2,
+         "reps": "12-15",
+         "resistance": null
+        }
+       ],
+       "sets": 2,
+       "restAfterSeconds": 60,
+       "reps": "12-15"
+      }
+     ]
+    },
+    {
+     "code": "D",
+     "kind": "superset",
+     "roundsText": "2 (D1) / 1 (D2)",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 60,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "D1",
+       "label": "Standing Rotations",
+       "exerciseName": "Standing Rotations",
+       "instructions": "1. Position pulley at approximately chest height.\n2. Stand with your right side towards pulley. Position feet shoulder width apart with knees slightly bent.\n3. Start position: Grasp handle with right hand first followed by left hand on top of right hand. Extend arms forward at shoulder level. Hips and shoulders should be squared.\n4. Rotate hips approximately 65° (or slightly past midway between the hip and naval).\n5. Return to start position. Switch sides after prescribed number of reps.\n6. Remember to rotate shoulders and hips and not just the arms. To ensure this movement, let head follow arms during rotation.",
+       "demoGif": "demos/facing_bungee_twist.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "12-15",
+         "resistance": null
+        },
+        {
+         "set": 2,
+         "reps": "12-15",
+         "resistance": null
+        }
+       ],
+       "sets": 2,
+       "restAfterSeconds": 0,
+       "reps": "12-15"
+      },
+      {
+       "code": "D2",
+       "label": "Hip Thrusts",
+       "exerciseName": "Hip Thrusts",
+       "instructions": "1. Lie on your back with your legs bent 90 degrees at the hip.\n2. Slowly lift your hips off the floor and towards the ceiling.\n3. Lower your hips to the floor and repeat for the prescribed number of repetitions.",
+       "demoGif": "demos/hip_thrust.gif",
+       "demoMatch": "page",
+       "setTable": [
+        {
+         "set": 1,
+         "reps": "12-15",
+         "resistance": null
+        }
+       ],
+       "sets": 1,
+       "restAfterSeconds": 60,
+       "reps": "12-15"
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 3,
+    "timesPerWeek": 3,
+    "totalMinutes": 19,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Week One to Four\")",
+    "text": "Complete 3 rounds, 3 xs per week. Total time: 19 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "title": "March 12, Week 4 - M, W, F",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week4.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.youtube.com/v/oy9h-mQy7gQ"
+   ],
+   "format": "circuit",
+   "status": "full",
+   "repsGuidance": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+   "roundsGuidance": "Beginner 2-3, Intermediate 3-4, Advanced 4-5 circuits",
+   "restBetweenRoundsSeconds": null,
+   "circuitLevels": [
+    {
+     "level": "Beginner",
+     "workSeconds": 30,
+     "restSeconds": 30,
+     "circuits": "2-3"
+    },
+    {
+     "level": "Intermediate",
+     "workSeconds": 45,
+     "restSeconds": 15,
+     "circuits": "3-4"
+    },
+    {
+     "level": "Advanced",
+     "workSeconds": 60,
+     "restSeconds": 10,
+     "circuits": "4-5"
+    }
+   ],
+   "instructions": "Circuit training is an excellent way to improve mobility, strength and stamina. This circuit training format utilizes a group of 8 strength exercises that are completed one exercise after another with little or no break. Each exercise is performed for a prescribed amount of time before moving on to the next exercise. The exercises within each circuit are separated by brief, timed rest intervals, and each circuit is separated by a longer rest period. Example for a beginner : Do ball pushups for 30 seconds (whatever amount you can complete), followed by 30 second break. Next, perform Ball Squats for 30 seconds (whatever amount you can complete) followed by a 30 second break. Repeat until the last exercise (superman) and go back to ball pushups again; for a complete a total of 2-3 rounds.",
+   "substitutions": [
+    "Pick your level: Beginner: 30 seconds per exercise, 30 second break in between, 2-3 circuits. Intermediate: 45 seconds per exercise, 15 second break in between, 3-4 circuits. Advance: 60 seconds per exercise, 10 second break in between, 4-5 circuits.",
+    "A2 Ball Squat: (hold dumbbells on your side if available)",
+    "A3 Seated Band Row (trainer's comment): Or sit on the ball",
+    "Superman (trainer's comment): Perform on the floor without the BOSU",
+    "Example for a beginner: Do ball pushups for 30 seconds (whatever amount you can complete), followed by 30 second break."
+   ],
+   "appNotes": [
+    "The page does not give a number for the \"longer rest period\" between circuits; set your own rest timer.",
+    "Pre-loaded with the Beginner settings (30 s work, 30 s break, 2 circuits). Change the work/rest timers per exercise for Intermediate or Advanced.",
+    "The page labels both Ball Crunch and Superman \"A7\"; the app shows Superman as A8."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "circuit",
+     "roundsText": "Beginner 2-3 / Intermediate 3-4 / Advanced 4-5",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": null,
+     "restAfterEachSeconds": 30,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "Ball Pushups",
+       "exerciseName": "Pushup (both hands on ball)",
+       "instructions": "1) Get on your knees and place hands 6-8 inches apart onto the flexaball.\n2) Start position: Align hands at nipple line, place feet hip width apart on toes, and extend the arms to raise body up. Trunk and hips should be in a straight line.\n3) Lower your entire body (legs, hips, trunk, and head) 4-8 inches from the flexaball.\n4) Return to the start position by extending at the elbows and pushing the body up.\n5) Remember to keep the head and trunk stabilized in a neutral position by isometrically contracting the abdominal and back muscles. Never fully lock out the elbows at the start position and avoid hyperextension of the low back.",
+       "demoGif": "demos/sb_push-up_hands_on_ball.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A2",
+       "label": "Ball Squat",
+       "exerciseName": "Wall Squat with resistance",
+       "instructions": "1. Start by placing the ball behind the small of your back. Place the band your your feet and hold onto it with your hands.\n2. Slowly squat down until your thighs are near parallel to the ground.\n3. Return to the starting position and repeat.",
+       "trainerComments": "(hold dumbbells on your side if available)",
+       "demoGif": "demos/bandwallsquat.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A3",
+       "label": "Seated Band Row",
+       "exerciseName": "Seated Row with Bands",
+       "instructions": "1. Start by attaching a band to the top of a door or fixed object.\n2. Sit on the ground with your knees bent and your arms extended up and out.\n3. Pull the handles towards your chest keeping your elbows close to your body.\n4. Pinch your shoulder blades together while performing this movement.\n5. Repeat for the prescribed number of repetitions.",
+       "trainerComments": "Or sit on the ball",
+       "demoGif": "demos/vsit-rw_fittube_sec_door_attachment.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A4",
+       "label": "Hip Bridge",
+       "exerciseName": "Hip Bridge on Ball",
+       "instructions": "1) Assume back lying position on floor. Place hands at sides with palms down on floor.\n2) Start position: Place heels on top of Flexaball with knees slightly bent.\n3) Raise hips off floor by pressing heels into ball.\n4) Return to start position.\n5) To increase difficulty, raise and extend arms above chest.",
+       "demoGif": "demos/swiss_ball_hip_extension.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A5",
+       "label": "Side Lateral Raise w/ band",
+       "exerciseName": "Lateral raise with tubing",
+       "instructions": "1) Step onto tubing with feet hip width apart and knees slightly bent.\n2) Start position: Grasp handles with a neutral grip (palms facing each other). Arms should hang down to sides with elbows slightly bent.\n3) Raise handles to side of body at shoulder height keeping elbows only slightly bent.\n4) Return to start position.",
+       "demoGif": "demos/lateral_raises_with_step_tube.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A6",
+       "label": "Tricep Extensions",
+       "exerciseName": "Cable Overhead Tricep Extensions",
+       "instructions": "1. Start by placing cable or band at or near head level. Step forward with one foot for balance.\n2. Grab handle with your hands and with your elbows pointing forward extend your hands out until your arms are straight.\n3. Return to the starting position and repeat for the recommended repetitions.",
+       "demoGif": "demos/cableoverheadextension.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A7",
+       "label": "Ball Crunch",
+       "exerciseName": "Stability Ball Crunch",
+       "instructions": "1. Sit in upright position on flexaball with feet flat on floor.\n2. Walk feet forward allowing flexaball to roll underneath body until it is positioned on lower to mid-back region. Raise hips slightly to create a ?able top position parallel to floor.\n3. Place hands across your chest. Head should be in a neutral position with a space between chin and chest.\n4. Leading with the chin and chest towards the ceiling, contract the abdominal and raise shoulders up.\n5. Return to start position.\n6. Remember to keep head and back in a neutral position. Hyperextension or flexion of either may cause injury.",
+       "demoGif": "demos/abdominalcrunchonsisselexerciseball.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A8",
+       "label": "Superman",
+       "exerciseName": "Superman",
+       "instructions": "1) Start position: Lie face down on floor with hands down at sides. You may place a rolled towel under forehead to clear face from floor.\n2) Raise chest and head off floor keeping feet in contact with floor.\n3) Return to start position.\n4) To increase resistance, extend arms and place hands overhead.\n5) Do not raise head past 8-12 inches - excessive hyperextension may cause injury. To vary exercise raise feet while raising trunk.",
+       "trainerComments": "Perform on the floor without the BOSU",
+       "demoGif": "demos/superman.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 3,
+    "timesPerWeek": 3,
+    "totalMinutes": 19,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Week One to Four\")",
+    "text": "Complete 3 rounds, 3 xs per week. Total time: 19 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "title": "March 19th, Week Five - M, W, F (3x per week)",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week5.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.veoh.com/videodetails.swf?permalinkId=v3130503scqgJjp&id=1013855&player=videodetails&videoAutoPlay=0"
+   ],
+   "format": "circuit",
+   "status": "full",
+   "repsGuidance": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+   "roundsGuidance": "Beginner 2-3, Intermediate 3-4, Advanced 4-5 circuits",
+   "restBetweenRoundsSeconds": null,
+   "circuitLevels": [
+    {
+     "level": "Beginner",
+     "workSeconds": 30,
+     "restSeconds": 30,
+     "circuits": "2-3"
+    },
+    {
+     "level": "Intermediate",
+     "workSeconds": 45,
+     "restSeconds": 15,
+     "circuits": "3-4"
+    },
+    {
+     "level": "Advanced",
+     "workSeconds": 60,
+     "restSeconds": 10,
+     "circuits": "4-5"
+    }
+   ],
+   "instructions": "Circuit training is an excellent way to improve mobility, strength and stamina. This circuit training format utilizes a group of 8 strength exercises that are completed one exercise after another with little or no break. Each exercise is performed for a prescribed amount of time before moving on to the next exercise. The exercises within each circuit are separated by brief, timed rest intervals, and each circuit is separated by a longer rest period. Example for a beginner: Do ball pushups for 30 seconds (whatever amount you can complete), followed by 30 second break. Next, perform Squats for 30 seconds (whatever amount you can complete) followed by a 30 second break. Repeat until the last exercise (superman) and go back to ball pushups again; for a complete a total of 2-3 rounds.",
+   "substitutions": [
+    "Pick your level: Beginner: 30 seconds per exercise, 30 second break in between, 2-3 circuits. Intermediate: 45 seconds per exercise, 15 second break in between, 3-4 circuits. Advance: 60 seconds per exercise, 10 second break in between, 4-5 circuits.",
+    "A2 Band Squat and Press / A8 Superman: (Watch the video)",
+    "Example for a beginner: Do ball pushups for 30 seconds (whatever amount you can complete), followed by 30 second break."
+   ],
+   "appNotes": [
+    "The page does not give a number for the \"longer rest period\" between circuits; set your own rest timer.",
+    "Pre-loaded with the Beginner settings (30 s work, 30 s break, 2 circuits). Change the work/rest timers per exercise for Intermediate or Advanced.",
+    "\"Watch the video\": the week's video was a Veoh embed that was not archived."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "circuit",
+     "roundsText": "Beginner 2-3 / Intermediate 3-4 / Advanced 4-5",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": null,
+     "restAfterEachSeconds": 30,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "Ball Pushups (feet on the ball)",
+       "exerciseName": "Pushup (both feet on ball)",
+       "instructions": "1) Lie face down with chest on flexaball.\n2) Take your hands and walk forward allowing the flexaball to roll under your body until the top of your feet are supported by the flexaball.\n3) Start position: With arms fully extended, place your hands slightly wider than shoulder width, fingers pointing straight ahead, and aligned at the nipple line.\n4) Lower your body (legs, hips, trunk, and head) 4-8 inches from the floor.\n5) Return to the start position by extending at the elbows and pushing the body up.",
+       "demoGif": "demos/sb_push-up_feet_on_ball.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A2",
+       "label": "Band Squat and Press",
+       "exerciseName": "Squat with Fit Band",
+       "instructions": "1. Start by stepping on the FitBand with both feet shoulder width apart.\n2. Hold the FitBand at shoulder level with both hands. Start into a full squat while holding the band at shoulder height.\n3. Return to the starting position and repeat for the prescribed repetitions.",
+       "trainerComments": "(Watch the video)",
+       "demoGif": "demos/squats_with_sissel_fitband.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A3",
+       "label": "Standing Bent Over Pull Down",
+       "exerciseName": "45 degree Lat Pulldown with bands",
+       "instructions": "1) Secure door strap overhead at top of door.\n2) Start position: Position hands overhead and shoulder width apart. Grasp handles with a neutral grip (palms facing each other) and lean trunk forward in alignment with the angle of the tubing from the point of attachment.\n3) Pull handles down to approximately ear level, making sure you lead with the elbows and squeeze the shoulder blades together at the end of the pulldown.\n4) Return to start position.",
+       "demoGif": "demos/lat_pull_at_45_degrees_with_fitband.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A4",
+       "label": "Hamstring curl w/ stability ball",
+       "exerciseName": "Hamstring Curl",
+       "instructions": "1) Assume back lying position on floor. Place hands at sides with palms down on floor.\n2) Start position: Place heels of both feet on top of stability ball. Raise hips off floor.\n3) Curl heels toward glutes by flexing at the knee. Hips should remain off floor.\n4) Return to start position.\n5) Remember to maintain stability of ball by utilizing muscles in the trunk and core. To increase difficulty, cross arms hands over chest to take away base of suppport.",
+       "demoGif": "demos/swiss_ball_leg_curl.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A5",
+       "label": "Kneeling Tricep Pressdown",
+       "exerciseName": "Tricep Pressdown",
+       "instructions": "1) Secure door strap overhead at top of door.\n2) Stand approximately 2-3 feet away from attachment point with feet shoulder width apart and knees slightly bent . You may use a staggered stance for increased stability.\n3) Start position: Grasp handles with shoulder width or medium overhand grip (palms down). Lower handles to chest level so that elbows are bent at 90°.\n4) Keeping shoulders stabilized and elbows close to sides, extend arm and lower bar to hip level.\n5) Return to start position.\n6) Remember to keep back and head erect and in a neutral position. Stabilize shoulders by squeezing shoulder blades together slightly.",
+       "trainerComments": "Biceps (Bands)",
+       "demoGif": "demos/triceppressdownband.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A6",
+       "label": "Bicep curl (w/ band attached to the door)",
+       "exerciseName": "Bicep Curl",
+       "instructions": "1) Stand with feet shoulder width apart, knees slightly bent, and at a staggered stance.\n2) Step onto middle of tubing with back foot or both feet.\n3) Start position: Grasp handles with underhand grip (palms facing forward) with arms hanging down at sides. Elbows should be close to sides.\n4) Flex at the elbows and curl handles up to approximately shoulder level. Keep elbows close to sides throughout movement.\n5) Return to start position.\n6) Remember to keep back and head straight in a neutral position throughout movement. Shoulders should be stabilized by squeezing shoulder blades together slightly - only the elbow joint should be moving.",
+       "demoGif": "demos/bicepbandcurl.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A7",
+       "label": "Ball Transfer (arm to leg exchange)",
+       "exerciseName": "Arm to Leg Exchange",
+       "instructions": "1) Lie back onto floor or bench with knees bent and hands straight behind head. Keep elbows back and out of sight. Head should be in a neutral position with a space between chin and chest.\n2) Start position: Straighten legs and hold a stability ball between your legs.\n3) Leading with the chin and chest towards the ceiling, contract the abdominals and raise shoulders off floor or bench. During the crunch, also bring legs and ball towards chest. At the top position transfer the ball from your legs to your hands.\n4) Return to start position and repeat in the other direction.\n5) Remember to keep head and back in a neutral position. Hyperextension or flexion of either may cause injury.",
+       "demoGif": "demos/sb_exchange.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A8",
+       "label": "Superman (with alternating arms and legs)",
+       "exerciseName": "Pushup Superman w/ Alternating Arms",
+       "instructions": "Start the movement in a plank position. Holding that position raise your right arm and left leg off of the ground. Return to the starting position and repeat with the other arm and leg. Hold each lift for 1-2 seconds.",
+       "trainerComments": "(Watch the video)",
+       "demoGif": "demos/push-up_position_alt_superman.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 4,
+    "timesPerWeek": 4,
+    "totalMinutes": 22,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Week Five to Eight\")",
+    "text": "Complete 4 rounds, 4 xs per week. Total time: 22 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "title": "March 26th, Week 6- M, W, F (3x per week)",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week6.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.youtube.com/v/rwpXQbvrvuQ"
+   ],
+   "format": "circuit",
+   "status": "full",
+   "repsGuidance": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+   "roundsGuidance": "Beginner 2-3, Intermediate 3-4, Advanced 3-4 circuits",
+   "restBetweenRoundsSeconds": null,
+   "circuitLevels": [
+    {
+     "level": "Beginner",
+     "workSeconds": 30,
+     "restSeconds": 30,
+     "circuits": "2-3"
+    },
+    {
+     "level": "Intermediate",
+     "workSeconds": 45,
+     "restSeconds": 15,
+     "circuits": "3-4"
+    },
+    {
+     "level": "Advanced",
+     "workSeconds": 60,
+     "restSeconds": 10,
+     "circuits": "3-4"
+    }
+   ],
+   "instructions": "Circuit training is an excellent way to improve mobility, strength and stamina. This circuit training format utilizes a group of 8 strength exercises that are completed one exercise after another with little or no break. Each exercise is performed for a prescribed amount of time before moving on to the next exercise. The exercises within each circuit are separated by brief, timed rest intervals, and each circuit is separated by a longer rest period. Example for a beginner: Do chest press for 30 seconds (whatever amount you can complete), followed by 30 second break. Next, perform box jump for 30 seconds (whatever amount you can complete) followed by a 30 second break. Repeat until the last exercise ( One arm standing concentration curl ) and go back to band pres again; for a complete a total of 2-3 rounds.",
+   "substitutions": [
+    "Pick your level: Beginner: 30 seconds per exercise, 30 second break in between, 2-3 circuits. Intermediate: 45 seconds per exercise, 15 second break in between, 3-4 circuits. Advance: 60 seconds per exercise, 10 second break in between, 3-4 circuits.",
+    "Step up (trainer's comment): with or with resistance band.",
+    "Band Row (trainer's comment): Fold from the hip (similar to the video)",
+    "Every exercise: Follow the proper form from the video"
+   ],
+   "appNotes": [
+    "The page does not give a number for the \"longer rest period\" between circuits; set your own rest timer.",
+    "Pre-loaded with the Beginner settings (30 s work, 30 s break, 2 circuits). Change the work/rest timers per exercise for Intermediate or Advanced.",
+    "The page says \"a group of 8 strength exercises\" but lists 9; all 9 are included in page order (codes A1-A9 are the app's, the page lists them unnumbered).",
+    "The week's form video (YouTube embed) was not archived."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "circuit",
+     "roundsText": "Beginner 2-3 / Intermediate 3-4 / Advanced 3-4",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": null,
+     "restAfterEachSeconds": 30,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "Band Press",
+       "exerciseName": "Standing Chest Press with Band",
+       "instructions": "1. Start by securing the band at chest level behind you and standing with your feet together. To have a more stable stance you can bring one foot in front of the other in a staggered stance(lunge stance).\n2. Hold the band with your hands at chest level and your elbows back.\n3. Press the bands out away from your body until your arms are extended.\n4. Return to the starting position and repeat for the recommended repetitions.",
+       "trainerComments": "Follow the proper form from the video",
+       "demoGif": "demos/standingbandchestpress1.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A2",
+       "label": "Box Jump",
+       "exerciseName": "Linear Stability Jumps",
+       "instructions": "1.Stand facing box with feet slightly wider than hip-width apart. 2.Lower body into a semi-squat position and jump up onto box. Feet should land softly on box. 3.Step back down (not jump back down) and repeat according to prescribed reps.",
+       "trainerComments": "Follow the proper form from the video",
+       "demoGif": "demos/linstabjumps.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A3",
+       "label": "Band Row",
+       "exerciseName": "Standing Row with bands",
+       "instructions": "1. Anchor tubing at around belly button or chest level.\n2. Grab the ends of the band in each hand with arms at full extension.\n3. Pull your hands back towards your navel and pinch your shoulder blades together as you pull.\n4. Keep your elbows close to the body and return to the starting position and repeat.",
+       "trainerComments": "Fold from the hip (similar to the video)Follow the proper form from the video",
+       "demoGif": "demos/standing_lat_pull_with_fitband.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A4",
+       "label": "Step up: w/o band",
+       "exerciseName": "One Leg Box Step Up",
+       "instructions": "1. Stand to the right of the box. Place left foot on top of box.\n2. Raise body using the left foot only until leg is extended\n3. Lower to start position keeping the foot on top of box. Repeat with other leg according to exercise prescription.",
+       "trainerComments": "with or with resistance band. Follow the proper form from the video",
+       "demoGif": "demos/heeltouchstep-up.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A5",
+       "label": "Bench dip",
+       "exerciseName": "Tricep Bench Dip",
+       "instructions": "1. Start by placing your hands on the bench and your feet are on the ground with your legs semi straight.\n2. Proceed to bend your arms until they are bent to about 90 degrees.\n3. Return to the starting position and repeat for the desired repetitions.",
+       "trainerComments": "Follow the proper form from the video",
+       "demoGif": "demos/tricepbenchdip.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A6",
+       "label": "Walking Lunges (w/ weights)",
+       "exerciseName": "Walking Lunge with Dumbbell",
+       "instructions": "1. Start position: Stand with feet hip width apart. Hold a Dumbell in each hand.\n2. Step forward 2-3 feet forming a 90° bend at the front hip and knee. DO NOT allow front knee to extend past the big toe - may cause injury.\n3. Push body up and move the back foot beside the front foot. Alternate feet and repeat.\n4. Remember to keep head and back upright in a neutral position. Shoulders and hips should remain squared at all times.\n5. Watch for proper knee alignment - do not let front knee extend past big toe or deviate laterally or medially. Back knee should not come in contact with floor.",
+       "trainerComments": "Follow the proper form from the video",
+       "demoGif": "demos/db_walking_lunge.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A7",
+       "label": "Tricep Extension (behind head)",
+       "exerciseName": "Standing Overhead Tricep Extension with band",
+       "instructions": "1. Start by holding the tubing in one hand and placing that hand behind your back.\n2. Now grab the other end of the band with the arm that is over your head.\n3. Extend the top elbow until your arm is fully extended.\n4. Return to the starting position and repeat for the prescribed repetitions.",
+       "trainerComments": "Follow the proper form from the video",
+       "demoGif": "demos/standing_overhead_extension_with_fitband.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A8",
+       "label": "Toe Touch (Ab crunch)",
+       "exerciseName": "Alternating Toe Touch",
+       "instructions": "1. Start position: Lie back onto floor or bench with feet up into the air. Head should be in a neutral position with a space between chin and chest.\n2. Leading with the chin and chest towards the ceiling, contract the abdominal and raise shoulders off floor or bench. Extend one arm and reach for the opposite foot. Return to start position and repeat with other hand. Remember to keep head and back in a neutral position. Hyperextension or flexion may cause injury. To increase resistance, hold medicine ball in hands. To decrease resistance, position hand closer towards body",
+       "trainerComments": "Follow the proper form from the video",
+       "demoGif": "demos/alt_toe_touch_crunch.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      },
+      {
+       "code": "A9",
+       "label": "One arm standing concentration curl",
+       "exerciseName": "Cable Curl",
+       "instructions": "1) Stand approximately 2 feet away from cable pulley with feet shoulder width apart and knees slightly bent.\n2) Start position: Grasp bar with underhand grip (palms facing forward) approximately hip width apart and allow arms to hang down at sides. Elbows should be close to sides.\n3) Flex at the elbows and curl bar up to approximately shoulder level. Keep elbows close to sides throughout movement.\n4) Return to start position.\n5) Remember to keep back and head straight in a neutral position throughout movement. Shoulders should be stabilized by squeezing shoulder blades together slightly - only the elbow joint should be moving.",
+       "trainerComments": "Follow the proper form from the video",
+       "demoGif": "demos/cbcurl.gif",
+       "demoMatch": "page",
+       "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
+       "workSeconds": 30,
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 4,
+    "timesPerWeek": 4,
+    "totalMinutes": 22,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Week Five to Eight\")",
+    "text": "Complete 4 rounds, 4 xs per week. Total time: 22 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "title": "Arpil 2, Week 7 - M, W, F (3x per week)",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week7.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.metacafe.com/fplayer/514640/300_spartan_workout_training_home_version.swf"
+   ],
+   "format": "spartan300",
+   "status": "full",
+   "repsGuidance": "30 reps per exercise (300 total)",
+   "roundsGuidance": "1 (300 reps combined)",
+   "restBetweenRoundsSeconds": null,
+   "instructions": "300 Spartan Training Workout. Home Version. This is my home version Spartan training that anyone can perform from home. The rules are simple. Perform the exercise shown in any order. Perform 30 reps for each one. Complete a total of 300 reps combined. 300 Spartan Training Workout - Endurance and Conditiong Training Week. NO PRISONES... NO MERCY",
+   "substitutions": [
+    "Perform the exercise shown in any order."
+   ],
+   "appNotes": [
+    "The page gives no rest times and has no exercise demo table this week; GIFs shown are the same or similar exercises from other weeks' pages.",
+    "The week's form video (Metacafe embed) was not archived."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "list",
+     "roundsText": "1",
+     "defaultRounds": 1,
+     "restAfterGroupSeconds": null,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "S1",
+       "label": "Jump Squat",
+       "exerciseName": "Jump Squat",
+       "instructions": "",
+       "demoGif": "demos/single_squat_jump.gif",
+       "demoMatch": "same",
+       "reps": "30",
+       "sets": 1,
+       "restAfterSeconds": null
+      },
+      {
+       "code": "S2",
+       "label": "Staggered pushups",
+       "exerciseName": "Staggered pushups",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "30",
+       "sets": 1,
+       "restAfterSeconds": null
+      },
+      {
+       "code": "S3",
+       "label": "Alternating Spil Jump",
+       "exerciseName": "Alternating Spil Jump",
+       "instructions": "",
+       "demoGif": "demos/alt_split_squat_jump.gif",
+       "demoMatch": "same",
+       "reps": "30",
+       "sets": 1,
+       "restAfterSeconds": null
+      },
+      {
+       "code": "S4",
+       "label": "Explosive pushups",
+       "exerciseName": "Explosive pushups",
+       "instructions": "",
+       "demoGif": "demos/explosivepushup1.gif",
+       "demoMatch": "same",
+       "reps": "30",
+       "sets": 1,
+       "restAfterSeconds": null
+      },
+      {
+       "code": "S5",
+       "label": "Prison squat",
+       "exerciseName": "Prison squat",
+       "instructions": "",
+       "demoGif": "demos/bodyweight_squat.gif",
+       "demoMatch": "similar",
+       "reps": "30",
+       "sets": 1,
+       "restAfterSeconds": null
+      },
+      {
+       "code": "S6",
+       "label": "Hindu pushups",
+       "exerciseName": "Hindu pushups",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "30",
+       "sets": 1,
+       "restAfterSeconds": null
+      },
+      {
+       "code": "S7",
+       "label": "Kneeling Band Row",
+       "exerciseName": "Kneeling Band Row",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "30",
+       "sets": 1,
+       "restAfterSeconds": null
+      },
+      {
+       "code": "S8",
+       "label": "Burpees",
+       "exerciseName": "Burpees",
+       "instructions": "",
+       "demoGif": "demos/13eightcounterbodybuilders.gif",
+       "demoMatch": "similar",
+       "reps": "30",
+       "sets": 1,
+       "restAfterSeconds": null
+      },
+      {
+       "code": "S9",
+       "label": "Pull ups",
+       "exerciseName": "Pull ups",
+       "instructions": "",
+       "demoGif": "demos/wtchinup.gif",
+       "demoMatch": "same",
+       "reps": "30",
+       "sets": 1,
+       "restAfterSeconds": null
+      },
+      {
+       "code": "S10",
+       "label": "Double Crunch",
+       "exerciseName": "Double Crunch",
+       "instructions": "",
+       "demoGif": "demos/suitcase_crunch.gif",
+       "demoMatch": "same",
+       "reps": "30",
+       "sets": 1,
+       "restAfterSeconds": null
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 4,
+    "timesPerWeek": 4,
+    "totalMinutes": 22,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Week Five to Eight\")",
+    "text": "Complete 4 rounds, 4 xs per week. Total time: 22 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "title": "Arpil 9, Week 8 - M, W, F (3x per week)",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week8.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.youtube.com/v/WYnYM-VcZa0"
+   ],
+   "format": "superset",
+   "status": "full",
+   "repsGuidance": "15-20",
+   "roundsGuidance": "3-4 (\"Aim for 3-4 rounds\"; the same page also says \"Repeat for a total of 2-3 rounds total\")",
+   "restBetweenRoundsSeconds": 30,
+   "instructions": "All exercises are done in a superset between upper body and lower body. For example, elevated feet pushups (upper body) are supersetted with 1 legged ball squats (lower body). Do NOT rest within the superset (between the upper body and lower body), but rest 30 seconds after the lower body before repeating the superset again. Repeat for a total of 2-3 rounds total. Proceed to the next superset. Aim for higher reps: 15-20 reps. Aim for 3-4 rounds for each superset (upper body to lower body). Again, take no more than 30 seconds rest in between.",
+   "substitutions": [
+    "Aim for higher reps: 15-20 reps",
+    "Again, take no more than 30 seconds rest in between."
+   ],
+   "appNotes": [
+    "The page contradicts itself on rounds (2-3 vs 3-4); the app pre-loads 3, which satisfies both. The page has no routine list, so names come from its exercise table."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "superset",
+     "roundsText": "3-4",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "Elevated Feet Pushup",
+       "exerciseName": "Elevated Feet Pushup",
+       "instructions": "1) Lie face down on a ball with hands palm down, fingers pointing straight ahead, and aligned at the nipple line.\n2) Place hands slightly wider than shoulder width\n3) Start position: Extend your arms and place feet at hip width with toes positioned onto a secure bench or chair.\n4) Lower your body (legs, hips, trunk, and head).\n5) Return to the start position by extending at the elbows and pushing the body up. Remember to keep the head and trunk stabilized in a neutral position by isometrically contracting the abdominal and back muscles. Never fully lock out the elbows at the start position and avoid hyperextension of the low back.",
+       "demoGif": "demos/sb_feet_elevated_push-up.gif",
+       "demoMatch": "page",
+       "reps": "15-20",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "A2",
+       "label": "1 legged ball squat",
+       "exerciseName": "1 legged ball squat",
+       "instructions": "1) Place flexaball against wall approximately lower back height.\n2) Start position: Lean lower back against ball and take approximately one step forward with each foot. Feet should be slightly wider than hip width apart.\n3) Raise one foot off the ground. Bending at the hips and knees, lower body until thigh is parallel to the ground. DO NOT allow knee to extend past the big toe.\n4) Return to start position.\n5) Remember to keep back and head straight in a neutral position.\n6) Watch for proper knee alignment - do not let front knee extend past big toe or deviate laterally or medially.",
+       "demoGif": "demos/1legballsquat.gif",
+       "demoMatch": "page",
+       "reps": "15-20",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "B",
+     "kind": "superset",
+     "roundsText": "3-4",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "B1",
+       "label": "Pushup (both feet on ball)",
+       "exerciseName": "Pushup (both feet on ball)",
+       "instructions": "1) Lie face down with chest on flexaball.\n2) Take your hands and walk forward allowing the flexaball to roll under your body until the top of your feet are supported by the flexaball.\n3) Start position: With arms fully extended, place your hands slightly wider than shoulder width, fingers pointing straight ahead, and aligned at the nipple line.\n4) Lower your body (legs, hips, trunk, and head) 4-8 inches from the floor.\n5) Return to the start position by extending at the elbows and pushing the body up.",
+       "demoGif": "demos/sb_push-up_feet_on_ball.gif",
+       "demoMatch": "page",
+       "reps": "15-20",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "B2",
+       "label": "Single Leg Hip Extension on Ball",
+       "exerciseName": "Single Leg Hip Extension on Ball",
+       "instructions": "1. Assume back lying position on floor. Place hands at sides with palms down on floor.\n2. Start position: Place one heel on top of Flexaball with knee slightly bent.\n3. Raise hips off floor by pressing one heel into ball.\n4. Return to start position.\n5. To increase difficulty, raise and extend arms above chest.",
+       "demoGif": "demos/swiss_ball_single_hip_extension.gif",
+       "demoMatch": "page",
+       "reps": "15-20",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "C",
+     "kind": "superset",
+     "roundsText": "3-4",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "C1",
+       "label": "Pullup",
+       "exerciseName": "Pullup",
+       "instructions": "1) Position hands wider than shoulder width apart with overhand grip (palms facing forward).\n2) Start position: Hang with arms fully extended and elbows facing away from body. Feet may be crossed with knees bent.\n3) Pull body up until bar is below chin level.\n4) Return to start position.\n5) Remember to keep the movement controlled with the body stable to minimize momentum and body sway. If the bar is too high, it is advisable to use a step to ensure proper hand placement as well as safety.",
+       "demoGif": "demos/wtchinup.gif",
+       "demoMatch": "page",
+       "reps": "15-20",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "C2",
+       "label": "Wall Sit",
+       "exerciseName": "Wall Sit",
+       "instructions": "1. Place ball against the wall and your lower back.\n2. Proceed into a squated position so that your thighs are parallel to the ground.\n3. Hold this position for the required number of seconds.\n4. Remember to keep your feet flat on the floor and your knees behind your toes.\n5. Hold for as long as you can.",
+       "demoGif": "demos/wall_sit.gif",
+       "demoMatch": "page",
+       "reps": "15-20",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "D",
+     "kind": "superset",
+     "roundsText": "3-4",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "D1",
+       "label": "Upright Row with band",
+       "exerciseName": "Upright Row with band",
+       "instructions": "1. Stand on a band with your feet and hold the other end of the band with your hands.\n2. Bring your elbows up towards the ceiling and keep your hands close to your chest.\n3. Return to the starting position and repeat for the prescribed repetitions.",
+       "demoGif": "demos/upright_row_with_fitband.gif",
+       "demoMatch": "page",
+       "reps": "15-20",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "D2",
+       "label": "Calf Raise",
+       "exerciseName": "Calf Raise",
+       "instructions": "1) Start position: Stand with feet hip width apart leaning against a ball or stand on the edge of a step on the balls of your feet with heels hanging over edge. Toes should be pointing forward.\n2) Contract calves by pushing off balls of feet to raise heels up in air (standing on toes)\n3) Lower heels and repeat.\n4) Remember to keep knees slightly bent throughout movement to prevent any knee strain.",
+       "demoGif": "demos/calfraiseonball.gif",
+       "demoMatch": "page",
+       "reps": "15-20",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "E",
+     "kind": "superset",
+     "roundsText": "3-4",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "E1",
+       "label": "Bicep Curl",
+       "exerciseName": "Bicep Curl",
+       "instructions": "1) Stand with feet shoulder width apart, knees slightly bent, and at a staggered stance.\n2) Step onto middle of tubing with back foot or both feet.\n3) Start position: Grasp handles with underhand grip (palms facing forward) with arms hanging down at sides. Elbows should be close to sides.\n4) Flex at the elbows and curl handles up to approximately shoulder level. Keep elbows close to sides throughout movement.\n5) Return to start position.\n6) Remember to keep back and head straight in a neutral position throughout movement. Shoulders should be stabilized by squeezing shoulder blades together slightly - only the elbow joint should be moving.",
+       "demoGif": "demos/bicepbandcurl.gif",
+       "demoMatch": "page",
+       "reps": "15-20",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E2",
+       "label": "Knee Lift",
+       "exerciseName": "Knee Lift",
+       "instructions": "Lie on your back and place a stability ball behind your knees. Secure it with the backs of your legs and your feet. Lift your knees towards your chest and then return to the starting position",
+       "demoGif": "demos/sb_knee_lift.gif",
+       "demoMatch": "page",
+       "reps": "15-20",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 4,
+    "timesPerWeek": 4,
+    "totalMinutes": 22,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Week Five to Eight\")",
+    "text": "Complete 4 rounds, 4 xs per week. Total time: 22 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "title": "Arpil 16, Week 9 - M, W, F (3x per week)",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week9.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.veoh.com/videodetails2.swf?permalinkId=v420877QpFK6xCN&id=1013855&player=videodetailsembedded&videoAutoPlay=0"
+   ],
+   "format": "superset",
+   "status": "full",
+   "repsGuidance": "15-30",
+   "roundsGuidance": "2-3",
+   "restBetweenRoundsSeconds": 30,
+   "instructions": "All exercises are done in a superset between upper body and lower body. For example, explosive pushups(upper body) are supersetted with Squat with the bodylatics (lower body). Do NOT rest within the superset (between the upper body and lower body), but rest 30 seconds after the lower body before repeating the superset again. Repeat for a total of 2-3 rounds total. Proceed to the next superset. -Aim for higher reps: 15-30 reps -Aim for 2-3 rounds for each superset (Alternating between upper body to lower body) -Again, take no more than 30 seconds rest in between.",
+   "substitutions": [
+    "C1 is listed as \"Pullup or Chin up\". Trainer's comment: Perform Staggered Pullups if possible",
+    "A1 Explosive Pushups (trainer's comment): Perform as much as you can",
+    "A2 Squat (trainer's comment): Place handle over your shoulder",
+    "E2 Ball Crunch (trainer's comment): To make it more intense, incorporate the band"
+   ],
+   "appNotes": [
+    "D2 Wall Squat Hold with Calf Raises is in the routine list but has no demo/table entry on the page (GIF shown is the similar Wall Sit)."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "superset",
+     "roundsText": "2-3",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "Explosive Pushups",
+       "exerciseName": "Explosive Pushup",
+       "instructions": "1. Start by getting into a push-up position.\n2. Lower yourself to the ground and then explosively push up so that your hands leave the ground.\n3. Catch your fall with your hands and immediately lower yourself into a pushup again and repeat.\n4. Repeat for the recommended repetitions.",
+       "trainerComments": "Perform as much as you can",
+       "demoGif": "demos/explosivepushup1.gif",
+       "demoMatch": "page",
+       "reps": "15-30",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "A2",
+       "label": "Ball Squat with bands",
+       "exerciseName": "Wall Squat with resistance",
+       "instructions": "1. Start by placing the ball behind the small of your back. Place the band your your feet and hold onto it with your hands.\n2. Slowly squat down until your thighs are near parallel to the ground.\n3. Return to the starting position and repeat.",
+       "trainerComments": "Place handle over your shoulder",
+       "demoGif": "demos/bandwallsquat.gif",
+       "demoMatch": "page",
+       "reps": "15-30",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "B",
+     "kind": "superset",
+     "roundsText": "2-3",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "B1",
+       "label": "Band Fly",
+       "exerciseName": "Chest Fly with Tubing",
+       "instructions": "1) Secure door strap waist height.\n2) Stand with feet shoulder width apart, knees slightly bent, facing away from the attachment point. You may put one foot in front of the other (staggered stance) for increased stability.\n3) Start position: Grasp each handle and position hands wider than shoulder width with palms facing each other (neutral grip). Elbows should be slightly bent and behind the body.\n4) Begin by moving arms in an arcing motion to join hands at chest level.\n5) Return to start position.",
+       "demoGif": "demos/standing_chest_flye_with_band.gif",
+       "demoMatch": "page",
+       "reps": "15-30",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "B2",
+       "label": "One Leg Hamstring Curl",
+       "exerciseName": "Single Leg Curl (on ball)",
+       "instructions": "1) Assume back lying position on floor. Place hands at sides with palms down on floor.\n2) Start position: Place heel of one foot on top of Flexaball. Other leg should be held in the air above ball. Raise hips off floor by pushing heel down into ball.\n3) Curl ball towards glutes by flexing at the knee. Hips should remain off floor.\n4) Return to start position.\n5) Remember to maintain stability of ball by utilizing muscles in the trunk and core. To increase difficulty, raise hands up over chest.",
+       "demoGif": "demos/swiss_ball_single_leg_curl.gif",
+       "demoMatch": "page",
+       "reps": "15-30",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "C",
+     "kind": "superset",
+     "roundsText": "2-3",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "C1",
+       "label": "Pullup or Chin up",
+       "exerciseName": "Chinup",
+       "instructions": "1) Position hands shoulder width to slightly narrower than shoulder width apart with underhand grip (palms facing towards body).\n2) Start position: Hang with arms fully extended and elbows forward. Feet may be crossed with knees bent.\n3) Pull body up until bar is below chin level.\n4) Return to start position.\n5) Remember to keep the movement controlled with the body stable to minimize momentum and body sway. If the bar is too high, it is advisable to use a step to ensure proper hand placement as well as safety.",
+       "trainerComments": "Perform Staggered Pullups if possible",
+       "demoGif": "demos/wtunderhandchinup.gif",
+       "demoMatch": "page",
+       "reps": "15-30",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "C2",
+       "label": "Reverse Lunges with free weights (e.i. plates)",
+       "exerciseName": "Bodyweight Reverse Lunge",
+       "instructions": "1. Start by standing with your feet shoulder width apart.\n2. Step back with one foot and bend your knees into a lunged position. Your back knee should come close to touching the ground and your front leg should be bent to about 90 degrees at the knee.\n3. Maintain your upright posture throughout the movement.\n4. Return to the starting position and repeat. Once repetitions are completed then repeat with the other leg.",
+       "demoGif": "demos/bodweight_forward_lunge.gif",
+       "demoMatch": "page",
+       "reps": "15-30",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "D",
+     "kind": "superset",
+     "roundsText": "2-3",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "D1",
+       "label": "Band Row (Seated on the Floor)",
+       "exerciseName": "Seated Row with Bands",
+       "instructions": "1. Start by attaching a band to the top of a door or fixed object.\n2. Sit on the ground with your knees bent and your arms extended up and out.\n3. Pull the handles towards your chest keeping your elbows close to your body.\n4. Pinch your shoulder blades together while performing this movement.\n5. Repeat for the prescribed number of repetitions.",
+       "demoGif": "demos/vsit-rw_fittube_sec_door_attachment.gif",
+       "demoMatch": "page",
+       "reps": "15-30",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "D2",
+       "label": "Wall Squat Hold with Calf Raises",
+       "exerciseName": "Wall Squat Hold with Calf Raises",
+       "instructions": "",
+       "demoGif": "demos/wall_sit.gif",
+       "demoMatch": "similar",
+       "reps": "15-30",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "E",
+     "kind": "superset",
+     "roundsText": "2-3",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "E1",
+       "label": "Front Lateral Raise",
+       "exerciseName": "Front Raise with Band",
+       "instructions": "1) Step onto tubing with feet hip width apart and knees slightly bent.\n2) Start position: Grasp handles with an overhand grip (palms down) and shoulder width apart. Arms should hang down at sides with elbows slightly bent.\n3) Raise handles to front of body at shoulder height keeping elbows only slightly bent.\n4) Return to start position.\n5) Remember to keep back and head straight in a neutral position - hyperextension or flexion may cause injury. Keep shoulders stabilized by squeezing shoulder blades together throughout movement.",
+       "demoGif": "demos/alternating_front_raises_with_sissel_step_tube.gif",
+       "demoMatch": "page",
+       "reps": "15-30",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E2",
+       "label": "Ball Crunch with bands for resistance",
+       "exerciseName": "Stability Ball Crunch",
+       "instructions": "1. Sit in upright position on flexaball with feet flat on floor.\n2. Walk feet forward allowing flexaball to roll underneath body until it is positioned on lower to mid-back region. Raise hips slightly to create a ?able top position parallel to floor.\n3. Place hands across your chest. Head should be in a neutral position with a space between chin and chest.\n4. Leading with the chin and chest towards the ceiling, contract the abdominal and raise shoulders up.\n5. Return to start position.\n6. Remember to keep head and back in a neutral position. Hyperextension or flexion of either may cause injury.",
+       "trainerComments": "To make it more intense, incorporate the band:",
+       "demoGif": "demos/abdominalcrunchonsisselexerciseball.gif",
+       "demoMatch": "page",
+       "reps": "15-30",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 5,
+    "timesPerWeek": 4,
+    "totalMinutes": 25,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Week Nine to Twelve\")",
+    "text": "Complete 5 rounds, 4 xs per week. Total time: 25 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "title": "April 23, Week 10 - M, W, F (3x per week)",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week10.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.youtube.com/v/-w7wDTO-oaM"
+   ],
+   "format": "superset",
+   "status": "full",
+   "repsGuidance": "6-10",
+   "roundsGuidance": "3-4 (A-C), 2 (D-E)",
+   "restBetweenRoundsSeconds": 30,
+   "instructions": "All exercises are done in a superset between upper body and lower body. For example, pushups with bands (pushing) are supersetted with Pull ups (pulling). Do NOT rest within the superset, but rest 30 seconds after the lower body before repeating the superset again. Repeat for a total of 2-3 rounds total. Proceed to the next superset. Aim for lower reps: 6-10 reps. Aim for 2-4 rounds for each superset. Again, take no more than 30 seconds rest in between.",
+   "substitutions": [
+    "C1 Squat and Press / C2 Alternating Split Squat Jump: (use any weights that you can find) For example: rocks,",
+    "A1 Pushups (trainer's comment): USE ELASTIC BAND",
+    "B1 (trainer's comment): TO A STAGERRED PUSHUPS",
+    "C2 (trainer's comment): WITH WEIGHTS",
+    "B2 / C1 (trainer's comment): FOLLOW THE VIDEO"
+   ],
+   "appNotes": [
+    "The routine list names differ from the demo table names (e.g. \"Staggered alternating pushups\" is demonstrated as Explosive Pushup \"TO A STAGERRED PUSHUPS\"); both are shown."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "superset",
+     "roundsText": "3-4",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "Pushups with Bodylastics band",
+       "exerciseName": "Standard Pushup",
+       "instructions": "1. Lie face down on the floor with hands palm down, fingers pointing straight ahead, and aligned at the nipple line.\n2. Place hands slightly wider than shoulder width, and feet should be at hip width with toes on floor.\n3. Start position: Extend the elbows and raise the body off the floor.\n4. Lower your entire body (legs, hips, trunk, and head) 4-8 inches from the floor.\n5. Return to the start position by extending at the elbows and pushing the body up.\n6. Remember to keep the head and trunk stabilized in a neutral position by isometrically contracting the abdominal and back muscles. Never fully lock out the elbows at the start position and avoid hyperextension of the low back.",
+       "trainerComments": "USE ELASTIC BAND",
+       "demoGif": "demos/08standardpushup.gif",
+       "demoMatch": "page",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "A2",
+       "label": "Pull-ups with medium size towel",
+       "exerciseName": "Towel Pull Up",
+       "instructions": "1. Place two towels over a bar or fixed object.\n2. Grip each towel with your hands and proceed to perform a pullup.\n3. Repeat according to the prescribed repetitions.",
+       "demoGif": "demos/towel_chin-up.gif",
+       "demoMatch": "page",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "B",
+     "kind": "superset",
+     "roundsText": "3-4",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "B1",
+       "label": "Staggered alternating pushups",
+       "exerciseName": "Explosive Pushup",
+       "instructions": "1. Start by getting into a push-up position.\n2. Lower yourself to the ground and then explosively push up so that your hands leave the ground.\n3. Catch your fall with your hands and immediately lower yourself into a pushup again and repeat.\n4. Repeat for the recommended repetitions.",
+       "trainerComments": "TO A STAGERRED PUSHUPS",
+       "demoGif": "demos/explosivepushup1.gif",
+       "demoMatch": "page",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "B2",
+       "label": "Lat Pulldown swimmer with Bodylastics band",
+       "exerciseName": "Bent Over Row (w/ bands)",
+       "instructions": "1. Starting Position: Place bands around a fixed object or in a door jamb at head height.\n2. Bend forward at the waist keeping your back flat to about a 45 degree angle.\n3. Pull band towards your waist in a rowing motion.\n4. Squeeze your shoulder blades together as you pull the band towards you.",
+       "trainerComments": "FOLLOW THE VIDEO",
+       "demoGif": "demos/bentover_narrow_row_with_sissel_fitband.gif",
+       "demoMatch": "page",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "C",
+     "kind": "superset",
+     "roundsText": "3-4",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "C1",
+       "label": "Squat and Press (use any weights that you can find)",
+       "exerciseName": "Squat and Press with medicine ball",
+       "instructions": "1. Stand with feet shoulder width apart and knees slightly bent.\n2. Start position: Position medicine ball to ear level.\n3. Go into a full squat. Immediately extend legs and stand up and at the same time press hands up above head keeping wrists over the elbows and arms moving parallel to body at all times.\n4. Return to start position and repeat.",
+       "trainerComments": "FOLLOW THE VIDEO",
+       "demoGif": "demos/push_squats_and_medicine_ball_press.gif",
+       "demoMatch": "page",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "C2",
+       "label": "Alternating Split Squat Jump (use any weights that you can find)",
+       "exerciseName": "Alternating Split Squat Jump",
+       "instructions": "1) Stand with feet hip width apart. Take left leg and step back approximately 2 feet standing on the ball of back foot.\n2) Feet should be positioned at a staggered stance with head and back erect and straight in a neutral position. Place hands on waist.\n3) Lower body by bending at right hip and knee until thigh is parallel to floor then immediately explode vertically.\n4) Switch feet in the air so that the back foot lands forward and vice versa.\n5) Prior to takeoff extend the ankles to their maximum range (full plantar flexion) ensure proper mechanics.",
+       "trainerComments": "WITH WEIGHTS",
+       "demoGif": "demos/alt_split_squat_jump.gif",
+       "demoMatch": "page",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "D",
+     "kind": "superset",
+     "roundsText": "2",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "D1",
+       "label": "One Leg Calf Raise with weights",
+       "exerciseName": "Single Leg DB Calf Raise",
+       "instructions": "1) Start position: Stand with feet hip width apart or stand on the edge of a step on the ball of one foot with your heel hanging over edge. Toes should be pointing forward. Hold a dumbell in the hand on the same side.\n2) Contract calf by pushing off ball of foot to raise heel up in air (standing on toes)\n3) Lower heel and repeat.\n4) Remember to keep knee slightly bent throughout movement to prevent any knee strain. You may have to hold on to a fixed stationary object for stability.\n5. Repeat with the other leg after completing the prescribed repetitions.",
+       "demoGif": "demos/single_leg_db_calf_raise.gif",
+       "demoMatch": "page",
+       "reps": "6-10",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "D2",
+       "label": "Bicep Curl",
+       "exerciseName": "Dumbbell Curl (two arms)",
+       "instructions": "1) Stand with feet shoulder width apart and knees slightly bent or sit in upright position.\n2) Start position: Grasp DB's with underhand grip (palms facing forward) and allow arms to hang down at sides. Elbows should be close to sides.\n3) Flex at the elbows and curl DB's up to approximately shoulder level. Keep elbows close to sides throughout movement. This exercise may be done one arm at a time.\n4) Return to start position.\n5) Remember to keep back and head straight in a neutral position throughout movement. Shoulders should be stabilized by squeezing shoulder blades together slightly - only the elbow joint should be moving.",
+       "demoGif": "demos/db_biceps_curl.gif",
+       "demoMatch": "page",
+       "reps": "6-10",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "E",
+     "kind": "superset",
+     "roundsText": "2",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "E1",
+       "label": "Weighted Abdominal Crunch",
+       "exerciseName": "Medicine Ball Crunch",
+       "instructions": "1. Start position: Lie back onto floor or bench with knees bent and hands above your head holding a medicine ball. Head should be in a neutral position with a space between chin and chest.\n2. Leading with the chin and chest towards the ceiling, contract the abdominal and raise shoulders off floor or bench.\n3. Return to start position.\n4. Remember to keep head and back in a neutral position. Hyperextension or flexion of either may cause injury.",
+       "demoGif": "demos/mb_crunch.gif",
+       "demoMatch": "page",
+       "reps": "6-10",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E2",
+       "label": "Plank with leg lift",
+       "exerciseName": "Single Leg Plank Raise",
+       "instructions": "1. Start by forming a straight plank with your forearms and feet as the contact points on the ground.\n2. Once the plank is formed raise one foot off the ground and then return to the starting position.\n3. Repeat this movement for the desired repetitions alternating back and forth between legs +",
+       "demoGif": "demos/single_leg_pike.gif",
+       "demoMatch": "page",
+       "reps": "6-10",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 5,
+    "timesPerWeek": 4,
+    "totalMinutes": 25,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Week Nine to Twelve\")",
+    "text": "Complete 5 rounds, 4 xs per week. Total time: 25 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "title": "Week #11 April 29 th",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week11.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.metacafe.com/fplayer/570867/week_11_discover_how_to_get_six_pack_abs_in_16_weeks_or_less.swf"
+   ],
+   "format": "superset",
+   "status": "full",
+   "repsGuidance": "6-10",
+   "roundsGuidance": "2-4 (per superset: A 3-4, B 3, C 3-4, D 3, E 2, F 2)",
+   "restBetweenRoundsSeconds": 30,
+   "instructions": "All exercises are done in a superset between upper body and lower body. For example, pushups with feet on the ball (with bands to add resistance) are supersetted with a one leg squat with the rope. Do NOT rest within the superset, but rest 30 seconds after the lower body before repeating the superset again. Repeat for a total of 2-4 rounds total. Proceed to the next superset. Aim for lower reps: 6-10 reps. Aim for 2-4 rounds for each superset. Again, take no more than a 30 second rest in between. Make sure to watch the video several times and observe my form",
+   "substitutions": [
+    "C1: Pull-ups with weights (you can use a backpack with books in it for weights)",
+    "Rope: With this workout routine, you will need a rope which can easily be picked up from your local hardware store. It should be about 10-12 feet long and at least ? an inch thick. Create a knot at the end to make a handle."
+   ],
+   "appNotes": [
+    "This week's page has no exercise demo table; GIFs shown are similar exercises from earlier weeks' pages (marked \"similar\").",
+    "The week's form video was not archived."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "superset",
+     "roundsText": "3-4",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "Pushups with feet on the ball (with band to add resistance)",
+       "exerciseName": "Pushups with feet on the ball (with band to add resistance)",
+       "instructions": "",
+       "demoGif": "demos/sb_push-up_feet_on_ball.gif",
+       "demoMatch": "similar",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "A2",
+       "label": "One leg squat with rope (both sides)",
+       "exerciseName": "One leg squat with rope (both sides)",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "B",
+     "kind": "superset",
+     "roundsText": "3",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "B1",
+       "label": "Spiderman pushups",
+       "exerciseName": "Spiderman pushups",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "B2",
+       "label": "Deep Squat with plates",
+       "exerciseName": "Deep Squat with plates",
+       "instructions": "",
+       "demoGif": "demos/bodyweight_squat.gif",
+       "demoMatch": "similar",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "C",
+     "kind": "superset",
+     "roundsText": "3-4",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "C1",
+       "label": "Pull-ups with weights (you can use a backpack with books in it for weights)",
+       "exerciseName": "Pull-ups with weights (you can use a backpack with books in it for weights)",
+       "instructions": "",
+       "demoGif": "demos/wtchinup.gif",
+       "demoMatch": "similar",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "C2",
+       "label": "Squat hold with rope (hold for as long as you can)",
+       "exerciseName": "Squat hold with rope (hold for as long as you can)",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "D",
+     "kind": "superset",
+     "roundsText": "3",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "D1",
+       "label": "Recline Pull with the rope",
+       "exerciseName": "Recline Pull with the rope",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "D2",
+       "label": "Forward Lunges with weight",
+       "exerciseName": "Forward Lunges with weight",
+       "instructions": "",
+       "demoGif": "demos/bodweight_forward_lunge.gif",
+       "demoMatch": "similar",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "E",
+     "kind": "superset",
+     "roundsText": "2",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "E1",
+       "label": "Tricep extension with the rope",
+       "exerciseName": "Tricep extension with the rope",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "6-10",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E2",
+       "label": "Weighted Ab Crunch",
+       "exerciseName": "Weighted Ab Crunch",
+       "instructions": "",
+       "demoGif": "demos/mb_crunch.gif",
+       "demoMatch": "similar",
+       "reps": "6-10",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "F",
+     "kind": "superset",
+     "roundsText": "2",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "F1",
+       "label": "Right Side Plank",
+       "exerciseName": "Right Side Plank",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "6-10",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "F2",
+       "label": "Left Side Plank",
+       "exerciseName": "Left Side Plank",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "6-10",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 5,
+    "timesPerWeek": 4,
+    "totalMinutes": 25,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Week Nine to Twelve\")",
+    "text": "Complete 5 rounds, 4 xs per week. Total time: 25 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "title": "Week #12 May 7 th",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week12.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.metacafe.com/fplayer/584406/week_12_discover_how_to_get_six_pack_abs_in_16_weeks_or_less.swf"
+   ],
+   "format": "superset",
+   "status": "full",
+   "repsGuidance": "6-10",
+   "roundsGuidance": "2-4 (per superset: A 3-4, B 3, C 3-4, D 3, E 2)",
+   "restBetweenRoundsSeconds": 30,
+   "instructions": "All exercises are done in a superset between upper body and lower body. For example, pushups with hands on the ball (with bands to add resistance) are supersetted with a jump squat with weights. Do NOT rest within the superset, but rest 30 seconds after the lower body before repeating the superset again. Repeat for a total of 2-4 rounds total. Proceed to the next superset. Aim for lower reps: 6-10 reps. Aim for 2-4 rounds for each superset. Again, take no more than a 30 second rest in between. Make sure to watch the video several times and observe my form",
+   "substitutions": [
+    "C1: Pull-ups with weights (you can use a backpack with books in it for weights)",
+    "E1: Bicep curl with the rope (using your bodyweight for weight)"
+   ],
+   "appNotes": [
+    "This week's page has no exercise demo table; GIFs shown are similar exercises from earlier weeks' pages (marked \"similar\").",
+    "The week's form video was not archived."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "superset",
+     "roundsText": "3-4",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "Pushups with hands on the ball (with band to add resistance)",
+       "exerciseName": "Pushups with hands on the ball (with band to add resistance)",
+       "instructions": "",
+       "demoGif": "demos/sb_push-up_hands_on_ball.gif",
+       "demoMatch": "similar",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "A2",
+       "label": "Jump Squat with weights",
+       "exerciseName": "Jump Squat with weights",
+       "instructions": "",
+       "demoGif": "demos/single_squat_jump.gif",
+       "demoMatch": "similar",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "B",
+     "kind": "superset",
+     "roundsText": "3",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "B1",
+       "label": "Spiderman pushups with bands",
+       "exerciseName": "Spiderman pushups with bands",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "B2",
+       "label": "Alternating Split squat jump with weights",
+       "exerciseName": "Alternating Split squat jump with weights",
+       "instructions": "",
+       "demoGif": "demos/alt_split_squat_jump.gif",
+       "demoMatch": "similar",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "C",
+     "kind": "superset",
+     "roundsText": "3-4",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "C1",
+       "label": "Pull-ups with weights (you can use a backpack with books in it for weights)",
+       "exerciseName": "Pull-ups with weights (you can use a backpack with books in it for weights)",
+       "instructions": "",
+       "demoGif": "demos/wtchinup.gif",
+       "demoMatch": "similar",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "C2",
+       "label": "Squat hold with weights (hold for as long as you can)",
+       "exerciseName": "Squat hold with weights (hold for as long as you can)",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "D",
+     "kind": "superset",
+     "roundsText": "3",
+     "defaultRounds": 3,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "D1",
+       "label": "Recline Pull with the rope (one leg up)",
+       "exerciseName": "Recline Pull with the rope (one leg up)",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "D2",
+       "label": "Calf Raise with weight",
+       "exerciseName": "Calf Raise with weight",
+       "instructions": "",
+       "demoGif": "demos/single_leg_db_calf_raise.gif",
+       "demoMatch": "similar",
+       "reps": "6-10",
+       "sets": 3,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "E",
+     "kind": "superset",
+     "roundsText": "2",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "E1",
+       "label": "Bicep curl with the rope (using your bodyweight for weight)",
+       "exerciseName": "Bicep curl with the rope (using your bodyweight for weight)",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "6-10",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E2",
+       "label": "Stability crunch with bodylastic bands",
+       "exerciseName": "Stability crunch with bodylastic bands",
+       "instructions": "",
+       "demoGif": "demos/abdominalcrunchonsisselexerciseball.gif",
+       "demoMatch": "similar",
+       "reps": "6-10",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E3",
+       "label": "Ball Plank",
+       "exerciseName": "Ball Plank",
+       "instructions": "",
+       "demoGif": "demos/plank.gif",
+       "demoMatch": "similar",
+       "reps": "6-10",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 5,
+    "timesPerWeek": 4,
+    "totalMinutes": 25,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Week Nine to Twelve\")",
+    "text": "Complete 5 rounds, 4 xs per week. Total time: 25 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "title": "May 14. 2007, Week 13 - M, W, F (3x per week)",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week13.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.veoh.com/videodetails2.swf?permalinkId=v536093ZhsnzygS&id=1013855&player=videodetailsembedded&videoAutoPlay=0"
+   ],
+   "format": "superset",
+   "status": "full",
+   "repsGuidance": "8-15",
+   "roundsGuidance": "4-5 (E: 2)",
+   "restBetweenRoundsSeconds": 30,
+   "instructions": "All exercises are done in a superset between upper body and lower body. For example, pushups with hands on the ball (with bands to add resistance) are supersetted with a jump squat with weights. Do NOT rest within the superset, but rest 30 seconds after the lower body before repeating the superset again. Repeat for a total of 2-4 rounds total. Proceed to the next superset. Aim for lower reps: 8-15 reps. Aim for 4-5 rounds for each superset. Again, take no more than a 30 second rest in between. Make sure to watch the video several times and observe my form",
+   "substitutions": [
+    "C1: Pull-ups with weights (you can use a backpack with books in it for weights)",
+    "E1: Tricep extension with rope or using the jungle gym (using your bodyweight for weight)"
+   ],
+   "appNotes": [
+    "This week's page has no exercise demo table; GIFs shown are similar exercises from earlier weeks' pages (marked \"similar\").",
+    "The week's form video was not archived.",
+    "The instructions say \"Repeat for a total of 2-4 rounds total\" but also \"Aim for 4-5 rounds for each superset\"; the app follows the per-superset \"*Aim for\" lines."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "Ball Pushups with hands on the ball (with band to add resistance)",
+       "exerciseName": "Ball Pushups with hands on the ball (with band to add resistance)",
+       "instructions": "",
+       "demoGif": "demos/sb_push-up_hands_on_ball.gif",
+       "demoMatch": "similar",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "A2",
+       "label": "One Leg Squat (Pistol Squat style)",
+       "exerciseName": "One Leg Squat (Pistol Squat style)",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "B",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "B1",
+       "label": "Elevated pushups with resistance band",
+       "exerciseName": "Elevated pushups with resistance band",
+       "instructions": "",
+       "demoGif": "demos/sb_feet_elevated_push-up.gif",
+       "demoMatch": "similar",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "B2",
+       "label": "Plate Swing (watch the video)",
+       "exerciseName": "Plate Swing (watch the video)",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "C",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "C1",
+       "label": "Pull-ups with weights (you can use a backpack with books in it for weights)",
+       "exerciseName": "Pull-ups with weights (you can use a backpack with books in it for weights)",
+       "instructions": "",
+       "demoGif": "demos/wtchinup.gif",
+       "demoMatch": "similar",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "C2",
+       "label": "Squat with weights (Small range of motion)",
+       "exerciseName": "Squat with weights (Small range of motion)",
+       "instructions": "",
+       "demoGif": "demos/bodyweight_squat.gif",
+       "demoMatch": "similar",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "D",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "D1",
+       "label": "Recline Pull with feet elevated",
+       "exerciseName": "Recline Pull with feet elevated",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "D2",
+       "label": "Hip Bridge (on the chair)",
+       "exerciseName": "Hip Bridge (on the chair)",
+       "instructions": "",
+       "demoGif": "demos/swiss_ball_hip_extension.gif",
+       "demoMatch": "similar",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "E",
+     "kind": "superset",
+     "roundsText": "2",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "E1",
+       "label": "Tricep extension with rope or using the jungle gym (using your bodyweight for weight)",
+       "exerciseName": "Tricep extension with rope or using the jungle gym (using your bodyweight for weight)",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-15",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E2",
+       "label": "Stability crunch with resistance bands",
+       "exerciseName": "Stability crunch with resistance bands",
+       "instructions": "",
+       "demoGif": "demos/abdominalcrunchonsisselexerciseball.gif",
+       "demoMatch": "similar",
+       "reps": "8-15",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E3",
+       "label": "Ball Plank with feet elevated",
+       "exerciseName": "Ball Plank with feet elevated",
+       "instructions": "",
+       "demoGif": "demos/plank.gif",
+       "demoMatch": "similar",
+       "reps": "8-15",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 6,
+    "timesPerWeek": 5,
+    "totalMinutes": 28,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Weeks Thirteen to Sixteen\")",
+    "text": "Complete 6 rounds, 5 xs per week. Total time: 28 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "title": "May 21. 2007, Week 14 - M, W, F (3x per week)",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week14.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.metacafe.com/fplayer/613449/how_to_get_six_pack_abs_in_16_weeks_week_14.swf"
+   ],
+   "format": "superset",
+   "status": "full",
+   "repsGuidance": "8-15",
+   "roundsGuidance": "4-5 (E: 2)",
+   "restBetweenRoundsSeconds": 30,
+   "instructions": "All exercises are done in a superset between upper body and lower body. For example, pushups with hands on the ball (with bands to add resistance) are supersetted with a jump squat with weights. Do NOT rest within the superset, but rest 30 seconds after the lower body before repeating the superset again. Repeat for a total of 2-4 rounds total. Proceed to the next superset. Aim for lower reps: 8-15 reps. Aim for 4-5 rounds for each superset. Again, take no more than a 30 second rest in between. Make sure to watch the video several times and observe my form",
+   "substitutions": [
+    "I have a lot of members asking me how they can make the exercises even harder without any fitness equipment. Well, it is very simple. All you need is a strong sturdy backpack.",
+    "Backpack: It weighs about 25 - 45 lbs depending on what exercise that I am performing. For example, I was using about 45 pounds when I doing my pushups and 25 pounds when performing my pullups with the weighted backpack. You can adjust the weight of your backpack depending on your own fitness level. If you do not have any plates, you can use heavy books, a sandbag, or anything heavy that you can stuff in it.",
+    "You will also need a rope for this routine. You can use an ordinary rope that you can pick up from your local hardware store or you can use the jungle gym 1 and/or junge gym 2 for your own comfort.",
+    "E1: Bicep Curl with rope or using the jungle gym (to add resistance use a weighted backpack)"
+   ],
+   "appNotes": [
+    "This week's page has no exercise demo table; GIFs shown are similar exercises from earlier weeks' pages (marked \"similar\").",
+    "The week's form video was not archived.",
+    "The instructions say \"Repeat for a total of 2-4 rounds total\" but also \"Aim for 4-5 rounds for each superset\"; the app follows the per-superset \"*Aim for\" lines."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "Spiderman Pusups with weighted backpack",
+       "exerciseName": "Spiderman Pusups with weighted backpack",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "A2",
+       "label": "Squat with weighted backpack and plate",
+       "exerciseName": "Squat with weighted backpack and plate",
+       "instructions": "",
+       "demoGif": "demos/bodyweight_squat.gif",
+       "demoMatch": "similar",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "B",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "B1",
+       "label": "Pushups with weighted backpack",
+       "exerciseName": "Pushups with weighted backpack",
+       "instructions": "",
+       "demoGif": "demos/08standardpushup.gif",
+       "demoMatch": "similar",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "B2",
+       "label": "One Leg Squat with rope and weighted backpack",
+       "exerciseName": "One Leg Squat with rope and weighted backpack",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "C",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "C1",
+       "label": "Pull-ups with weighted backpack",
+       "exerciseName": "Pull-ups with weighted backpack",
+       "instructions": "",
+       "demoGif": "demos/wtchinup.gif",
+       "demoMatch": "similar",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "C2",
+       "label": "Forward Lunges with weighted backpack and plate",
+       "exerciseName": "Forward Lunges with weighted backpack and plate",
+       "instructions": "",
+       "demoGif": "demos/bodweight_forward_lunge.gif",
+       "demoMatch": "similar",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "D",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "D1",
+       "label": "Recline Pull with weighted backpack",
+       "exerciseName": "Recline Pull with weighted backpack",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "D2",
+       "label": "Squat Hold with weighted backpack",
+       "exerciseName": "Squat Hold with weighted backpack",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-15",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "E",
+     "kind": "superset",
+     "roundsText": "2",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "E1",
+       "label": "Bicep Curl with rope or using the jungle gym (to add resistance use a weighted backpack)",
+       "exerciseName": "Bicep Curl with rope or using the jungle gym (to add resistance use a weighted backpack)",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-15",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E2",
+       "label": "Pushup Plank with weighed backpack",
+       "exerciseName": "Pushup Plank with weighed backpack",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-15",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E3",
+       "label": "Reverse crunches",
+       "exerciseName": "Reverse crunches",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-15",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 6,
+    "timesPerWeek": 5,
+    "totalMinutes": 28,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Weeks Thirteen to Sixteen\")",
+    "text": "Complete 6 rounds, 5 xs per week. Total time: 28 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "title": "May 28. 2007, Week 15- M, W, F (3x per week)",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week15.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.metacafe.com/fplayer/629659/how_to_get_six_pack_abs_in_16_weeks_week15.swf"
+   ],
+   "format": "superset",
+   "status": "full",
+   "repsGuidance": "8-12",
+   "roundsGuidance": "4-5 (E: 2)",
+   "restBetweenRoundsSeconds": 30,
+   "instructions": "All exercises are done in a superset between upper body and lower body. For example, One Arm Pushups are supersetted with a Reverse Lunges with weighted backpack and plate. Do NOT rest within the superset, but rest 30 seconds after the lower body before repeating the superset again. Repeat for a total of 4-5 rounds total. Proceed to the next superset. Aim for lower reps: 8-12 reps. Aim for 4-5 rounds for each superset. Again, take no more than a 30 second rest in between. Make sure to watch the video several times and observe my form",
+   "substitutions": [
+    "Backpack: It weighs about 25 - 45 lbs depending on what exercise that I am performing. For example, I was using about 45 pounds when I doing my pushups and 25 pounds when performing my pullups with the weighted backpack. You can adjust the weight of your backpack depending on your own fitness level. If you do not have any plates, you can use heavy books, a sandbag, or anything heavy that you can stuff in it.",
+    "You will also need a rope for this routine. You can use an ordinary rope that you can pick up from your local hardware store or you can use the jungle gym 1 and/or junge gym 2 for your own comfort.",
+    "E1: Tricep Extension with rope or using the jungle gym (to add resistance use a weighted backpack)"
+   ],
+   "appNotes": [
+    "This week's page has no exercise demo table; GIFs shown are similar exercises from earlier weeks' pages (marked \"similar\").",
+    "The week's form video was not archived."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "One Arm Pushups",
+       "exerciseName": "One Arm Pushups",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "A2",
+       "label": "Reverse Lunges with weighted backpack and plate",
+       "exerciseName": "Reverse Lunges with weighted backpack and plate",
+       "instructions": "",
+       "demoGif": "demos/bodweight_forward_lunge.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "B",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "B1",
+       "label": "Elevated Pushups with weighted backpack",
+       "exerciseName": "Elevated Pushups with weighted backpack",
+       "instructions": "",
+       "demoGif": "demos/sb_feet_elevated_push-up.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "B2",
+       "label": "Band Squat and press w/ weighted backpack",
+       "exerciseName": "Band Squat and press w/ weighted backpack",
+       "instructions": "",
+       "demoGif": "demos/squats_with_sissel_fitband.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "C",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "C1",
+       "label": "Pull-ups with weighted backpack",
+       "exerciseName": "Pull-ups with weighted backpack",
+       "instructions": "",
+       "demoGif": "demos/wtchinup.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "C2",
+       "label": "Squat (small range of motion) with weighted backpack and plate",
+       "exerciseName": "Squat (small range of motion) with weighted backpack and plate",
+       "instructions": "",
+       "demoGif": "demos/bodyweight_squat.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "D",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "D1",
+       "label": "Recline Pull with weighted backpack (feet elevated)",
+       "exerciseName": "Recline Pull with weighted backpack (feet elevated)",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "D2",
+       "label": "One leg calf raise with weighted backpack and plates or dumbbell",
+       "exerciseName": "One leg calf raise with weighted backpack and plates or dumbbell",
+       "instructions": "",
+       "demoGif": "demos/single_leg_db_calf_raise.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "E",
+     "kind": "superset",
+     "roundsText": "2",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "E1",
+       "label": "Tricep Extension with rope or using the jungle gym (to add resistance use a weighted backpack)",
+       "exerciseName": "Tricep Extension with rope or using the jungle gym (to add resistance use a weighted backpack)",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-12",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E2",
+       "label": "Ball Plank (feet elevated) with weighed backpack",
+       "exerciseName": "Ball Plank (feet elevated) with weighed backpack",
+       "instructions": "",
+       "demoGif": "demos/plank.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E3",
+       "label": "Ball crunch with bands",
+       "exerciseName": "Ball crunch with bands",
+       "instructions": "",
+       "demoGif": "demos/abdominalcrunchonsisselexerciseball.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 6,
+    "timesPerWeek": 5,
+    "totalMinutes": 28,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Weeks Thirteen to Sixteen\")",
+    "text": "Complete 6 rounds, 5 xs per week. Total time: 28 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "title": "June 4. 2007, Week 16 - M, W, F (3x per week)",
+   "sourceUrl": "https://web.archive.org/web/20071230185456/http://www.iwantsixpackabs.com/workout/week16.html",
+   "videoArchived": false,
+   "videoUrls": [
+    "http://www.metacafe.com/fplayer/650142/how_to_get_six_pack_abs_week_16_six_pack_abs_workout_program.swf"
+   ],
+   "format": "superset",
+   "status": "full",
+   "repsGuidance": "8-12",
+   "roundsGuidance": "4-5 (E, F: 2)",
+   "restBetweenRoundsSeconds": 30,
+   "instructions": "All exercises are done in a superset between upper body and lower body. For example, One Arm Pushups are supersetted with a Reverse Lunges with weighted backpack and plate. Do NOT rest within the superset, but rest 30 seconds after the lower body before repeating the superset again. Repeat for a total of 4-5 rounds total. Proceed to the next superset. Aim for lower reps: 8-12 reps. Aim for 4-5 rounds for each superset. Again, take no more than a 30 second rest in between. Make sure to watch the video several times and observe my form",
+   "substitutions": [
+    "B1: Alligator Pushups with or without weighted backpack",
+    "Pull-ups: I also receive tons of e-mails from those people that can not do a single pull up. Well, if you are someone who cannot do a single pull up, there is still hope. Do not give up yet. I made video just for you to show you exercise alternatives to pull ups.",
+    "Backpack: You can adjust the weight of your backpack depending on your own fitness level. If you do not have any plates, you can use heavy books, a sandbag, or anything heavy that you can stuff in it.",
+    "You will also need a rope for this routine. You can use an ordinary rope that you can pick up from your local hardware store or you can use the jungle gym 1 and/or junge gym 2 for your own comfort.",
+    "E: Tricep Extension with rope or using the jungle gym (to add resistance use a weighted backpack)",
+    "E3: Hammer curl with plate (lean against the wall for support"
+   ],
+   "appNotes": [
+    "This week's page has no exercise demo table; GIFs shown are similar exercises from earlier weeks' pages (marked \"similar\").",
+    "The week's form video was not archived.",
+    "The page labels the tricep extension \"E3\" as well as the hammer curl; the app shows it as E2.",
+    "The pull-up alternatives themselves were only shown in a Veoh video that the Wayback Machine did not archive, so the specific alternative exercises are not available."
+   ],
+   "groups": [
+    {
+     "code": "A",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "A1",
+       "label": "One Arm Pushups",
+       "exerciseName": "One Arm Pushups",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "A2",
+       "label": "One Leg Pistol Squat with weighted backpack and rope or using the jungle gym",
+       "exerciseName": "One Leg Pistol Squat with weighted backpack and rope or using the jungle gym",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "B",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "B1",
+       "label": "Alligator Pushups with or without weighted backpack",
+       "exerciseName": "Alligator Pushups with or without weighted backpack",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "B2",
+       "label": "Jump Squat w/ weighted backpack",
+       "exerciseName": "Jump Squat w/ weighted backpack",
+       "instructions": "",
+       "demoGif": "demos/single_squat_jump.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "C",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "C1",
+       "label": "Pull-ups (using a towel) with weighted backpack",
+       "exerciseName": "Pull-ups (using a towel) with weighted backpack",
+       "instructions": "",
+       "demoGif": "demos/towel_chin-up.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "C2",
+       "label": "One Leg Squat hold with plate",
+       "exerciseName": "One Leg Squat hold with plate",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "D",
+     "kind": "superset",
+     "roundsText": "4-5",
+     "defaultRounds": 4,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "D1",
+       "label": "Recline Pull with weighted feet elevated on a stability ball",
+       "exerciseName": "Recline Pull with weighted feet elevated on a stability ball",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "D2",
+       "label": "One leg calf raise with weighted backpack and stability ball",
+       "exerciseName": "One leg calf raise with weighted backpack and stability ball",
+       "instructions": "",
+       "demoGif": "demos/calfraiseonball.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 4,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "E",
+     "kind": "superset",
+     "roundsText": "2",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "E1",
+       "label": "Upside Down Shoulder press",
+       "exerciseName": "Upside Down Shoulder press",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-12",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E2",
+       "label": "Tricep Extension with rope or using the jungle gym (to add resistance use a weighted backpack)",
+       "exerciseName": "Tricep Extension with rope or using the jungle gym (to add resistance use a weighted backpack)",
+       "instructions": "",
+       "demoMatch": "none",
+       "reps": "8-12",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "E3",
+       "label": "Hammer curl with plate (lean against the wall for support",
+       "exerciseName": "Hammer curl with plate (lean against the wall for support",
+       "instructions": "",
+       "demoGif": "demos/db_biceps_curl.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    },
+    {
+     "code": "F",
+     "kind": "superset",
+     "roundsText": "2",
+     "defaultRounds": 2,
+     "restAfterGroupSeconds": 30,
+     "restAfterEachSeconds": null,
+     "exercises": [
+      {
+       "code": "F1",
+       "label": "Ball crunch with fitness bands",
+       "exerciseName": "Ball crunch with fitness bands",
+       "instructions": "",
+       "demoGif": "demos/abdominalcrunchonsisselexerciseball.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 2,
+       "restAfterSeconds": 0
+      },
+      {
+       "code": "F2",
+       "label": "Rotational twist with fitness bands",
+       "exerciseName": "Rotational twist with fitness bands",
+       "instructions": "",
+       "demoGif": "demos/facing_bungee_twist.gif",
+       "demoMatch": "similar",
+       "reps": "8-12",
+       "sets": 2,
+       "restAfterSeconds": 30
+      }
+     ]
+    }
+   ],
+   "interval": {
+    "rounds": 6,
+    "timesPerWeek": 5,
+    "totalMinutes": 28,
+    "highSeconds": 60,
+    "moderateSeconds": 120,
+    "warmupMinutes": "4-6",
+    "cooldownMinutes": 5,
+    "source": "my_video_tips/interval_training.html (\"Weeks Thirteen to Sixteen\")",
+    "text": "Complete 6 rounds, 5 xs per week. Total time: 28 minutes per session (including the warm up and cool down). You can perform this during your non-training days or right after your weight lifting."
+   },
+   "days": [
+    {
+     "day": "MON",
+     "type": "resistance"
+    },
+    {
+     "day": "TUE",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "WED",
+     "type": "resistance"
+    },
+    {
+     "day": "THU",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "FRI",
+     "type": "resistance"
+    },
+    {
+     "day": "SAT",
+     "type": "interval",
+     "optional": true
+    },
+    {
+     "day": "SUN",
+     "type": "rest"
+    }
+   ]
+  }
+ ]
+}

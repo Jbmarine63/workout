@@ -1,0 +1,16 @@
+import { chromium, devices } from 'playwright';
+import { execSync } from 'child_process';
+const BASE = 'http://127.0.0.1:8765/workout-pwa/';
+const b = await chromium.launch(); const ctx = await b.newContext(devices['iPhone 13']); const p = await ctx.newPage();
+await p.goto(BASE); await p.waitForFunction(() => window.__app?.ready); await p.evaluate(() => navigator.serviceWorker.ready); await p.reload(); await p.waitForFunction(() => window.__app?.ready);
+const v1 = await p.evaluate(async () => (await caches.keys()).join());
+execSync("cd /workspace/workout-pwa && echo '/* update-test */' >> css/app.css && python3 tools/build_sw.py");
+await p.reload(); await p.waitForFunction(() => window.__app?.ready);
+await p.waitForSelector('#upd', { timeout: 15000 });
+await Promise.all([p.waitForEvent('load'), p.click('[data-act=sw-reload]')]);
+await p.waitForFunction(() => window.__app?.ready);
+await p.waitForTimeout(500);
+const v2 = await p.evaluate(async () => (await caches.keys()).join());
+console.log('update flow', v1, '->', v2, v1 !== v2 ? 'PASS' : 'FAIL');
+await b.close();
+execSync("cd /workspace/workout-pwa && sed -i '/update-test/d' css/app.css && python3 tools/build_sw.py");
