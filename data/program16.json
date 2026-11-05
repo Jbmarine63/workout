@@ -8,7 +8,8 @@
   "page": "GIF shown on this week's own page",
   "same": "same exercise, GIF from another week's page",
   "similar": "similar exercise (base movement) from another week's page",
-  "none": "no demo available"
+  "none": "no demo available",
+  "library": "same exercise, demo from another exercise library (see Credits)"
  },
  "weeks": [
   {
@@ -70,7 +71,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 0,
-       "reps": "20"
+       "reps": "20",
+       "demoSource": "site"
       },
       {
        "code": "A2",
@@ -99,7 +101,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 60,
-       "reps": "20"
+       "reps": "20",
+       "demoSource": "site"
       }
      ]
     },
@@ -137,7 +140,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 0,
-       "reps": "15-20"
+       "reps": "15-20",
+       "demoSource": "site"
       },
       {
        "code": "B2",
@@ -166,7 +170,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 60,
-       "reps": "15-20"
+       "reps": "15-20",
+       "demoSource": "site"
       }
      ]
     },
@@ -205,7 +210,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 0,
-       "reps": "15"
+       "reps": "15",
+       "demoSource": "site"
       },
       {
        "code": "C2",
@@ -235,7 +241,8 @@
        "workSeconds": 45,
        "sets": 3,
        "restAfterSeconds": 60,
-       "reps": "45 SECOND"
+       "reps": "45 SECOND",
+       "demoSource": "site"
       }
      ]
     }
@@ -344,7 +351,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 0,
-       "reps": "20"
+       "reps": "20",
+       "demoSource": "site"
       },
       {
        "code": "A2",
@@ -372,7 +380,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 60,
-       "reps": "15-20"
+       "reps": "15-20",
+       "demoSource": "site"
       }
      ]
     },
@@ -411,7 +420,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 0,
-       "reps": "15-20"
+       "reps": "15-20",
+       "demoSource": "site"
       },
       {
        "code": "B2",
@@ -439,7 +449,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 60,
-       "reps": "15 each side"
+       "reps": "15 each side",
+       "demoSource": "site"
       }
      ]
     },
@@ -477,7 +488,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 0,
-       "reps": "30"
+       "reps": "30",
+       "demoSource": "site"
       },
       {
        "code": "C2",
@@ -506,7 +518,8 @@
        "workSeconds": 45,
        "sets": 3,
        "restAfterSeconds": 60,
-       "reps": "45 sec"
+       "reps": "45 sec",
+       "demoSource": "site"
       }
      ]
     }
@@ -616,7 +629,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 0,
-       "reps": "12-15"
+       "reps": "12-15",
+       "demoSource": "site"
       },
       {
        "code": "A2",
@@ -645,7 +659,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 60,
-       "reps": "12-15"
+       "reps": "12-15",
+       "demoSource": "site"
       }
      ]
     },
@@ -683,7 +698,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 0,
-       "reps": "12-15"
+       "reps": "12-15",
+       "demoSource": "site"
       },
       {
        "code": "B2",
@@ -712,7 +728,8 @@
        ],
        "sets": 3,
        "restAfterSeconds": 60,
-       "reps": "12-15"
+       "reps": "12-15",
+       "demoSource": "site"
       }
      ]
     },
@@ -745,7 +762,8 @@
        ],
        "sets": 2,
        "restAfterSeconds": 0,
-       "reps": "12-15"
+       "reps": "12-15",
+       "demoSource": "site"
       },
       {
        "code": "C2",
@@ -768,7 +786,8 @@
        ],
        "sets": 2,
        "restAfterSeconds": 60,
-       "reps": "12-15"
+       "reps": "12-15",
+       "demoSource": "site"
       }
      ]
     },
@@ -801,7 +820,8 @@
        ],
        "sets": 2,
        "restAfterSeconds": 0,
-       "reps": "12-15"
+       "reps": "12-15",
+       "demoSource": "site"
       },
       {
        "code": "D2",
@@ -819,7 +839,8 @@
        ],
        "sets": 1,
        "restAfterSeconds": 60,
-       "reps": "12-15"
+       "reps": "12-15",
+       "demoSource": "site"
       }
      ]
     }
@@ -934,7 +955,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A2",
@@ -947,7 +969,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A3",
@@ -960,7 +983,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A4",
@@ -972,7 +996,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A5",
@@ -984,7 +1009,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A6",
@@ -996,7 +1022,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A7",
@@ -1008,7 +1035,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A8",
@@ -1021,7 +1049,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     }
@@ -1134,7 +1163,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A2",
@@ -1147,7 +1177,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A3",
@@ -1159,7 +1190,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A4",
@@ -1171,7 +1203,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A5",
@@ -1184,7 +1217,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A6",
@@ -1196,7 +1230,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A7",
@@ -1208,7 +1243,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A8",
@@ -1221,7 +1257,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     }
@@ -1337,7 +1374,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A2",
@@ -1350,7 +1388,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A3",
@@ -1363,7 +1402,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A4",
@@ -1376,7 +1416,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A5",
@@ -1389,7 +1430,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A6",
@@ -1402,7 +1444,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A7",
@@ -1415,7 +1458,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A8",
@@ -1428,7 +1472,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       },
       {
        "code": "A9",
@@ -1441,7 +1486,8 @@
        "reps": "30 sec (beginner) / 45 sec (intermediate) / 60 sec (advanced)",
        "workSeconds": 30,
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     }
@@ -1530,17 +1576,21 @@
        "demoMatch": "same",
        "reps": "30",
        "sets": 1,
-       "restAfterSeconds": null
+       "restAfterSeconds": null,
+       "demoSource": "site"
       },
       {
        "code": "S2",
        "label": "Staggered pushups",
        "exerciseName": "Staggered pushups",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "30",
        "sets": 1,
-       "restAfterSeconds": null
+       "restAfterSeconds": null,
+       "demoGif": "demos/staggered_pushup_lottie.gif",
+       "demoSource": "lottiefiles",
+       "demoNote": "Demo from LottieFiles"
       },
       {
        "code": "S3",
@@ -1551,7 +1601,8 @@
        "demoMatch": "same",
        "reps": "30",
        "sets": 1,
-       "restAfterSeconds": null
+       "restAfterSeconds": null,
+       "demoSource": "site"
       },
       {
        "code": "S4",
@@ -1562,7 +1613,8 @@
        "demoMatch": "same",
        "reps": "30",
        "sets": 1,
-       "restAfterSeconds": null
+       "restAfterSeconds": null,
+       "demoSource": "site"
       },
       {
        "code": "S5",
@@ -1573,38 +1625,47 @@
        "demoMatch": "similar",
        "reps": "30",
        "sets": 1,
-       "restAfterSeconds": null
+       "restAfterSeconds": null,
+       "demoSource": "site"
       },
       {
        "code": "S6",
        "label": "Hindu pushups",
        "exerciseName": "Hindu pushups",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "30",
        "sets": 1,
-       "restAfterSeconds": null
+       "restAfterSeconds": null,
+       "demoGif": "demos/hindu_pushup_dand_commons.gif",
+       "demoSource": "wikimedia",
+       "demoNote": "Demo from Wikimedia Commons"
       },
       {
        "code": "S7",
        "label": "Kneeling Band Row",
        "exerciseName": "Kneeling Band Row",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "30",
        "sets": 1,
-       "restAfterSeconds": null
+       "restAfterSeconds": null,
+       "demoGif": "demos/kneeling_row_edb.gif",
+       "demoSource": "exercisedb",
+       "demoNote": "Similar exercise (demo from ExerciseDB)"
       },
       {
        "code": "S8",
        "label": "Burpees",
        "exerciseName": "Burpees",
        "instructions": "",
-       "demoGif": "demos/13eightcounterbodybuilders.gif",
-       "demoMatch": "similar",
+       "demoGif": "demos/burpees.gif",
+       "demoMatch": "library",
        "reps": "30",
        "sets": 1,
-       "restAfterSeconds": null
+       "restAfterSeconds": null,
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Demo from FitnessGenerator library"
       },
       {
        "code": "S9",
@@ -1615,7 +1676,8 @@
        "demoMatch": "same",
        "reps": "30",
        "sets": 1,
-       "restAfterSeconds": null
+       "restAfterSeconds": null,
+       "demoSource": "site"
       },
       {
        "code": "S10",
@@ -1626,7 +1688,8 @@
        "demoMatch": "same",
        "reps": "30",
        "sets": 1,
-       "restAfterSeconds": null
+       "restAfterSeconds": null,
+       "demoSource": "site"
       }
      ]
     }
@@ -1715,7 +1778,8 @@
        "demoMatch": "page",
        "reps": "15-20",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "A2",
@@ -1726,7 +1790,8 @@
        "demoMatch": "page",
        "reps": "15-20",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -1747,7 +1812,8 @@
        "demoMatch": "page",
        "reps": "15-20",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "B2",
@@ -1758,7 +1824,8 @@
        "demoMatch": "page",
        "reps": "15-20",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -1779,7 +1846,8 @@
        "demoMatch": "page",
        "reps": "15-20",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "C2",
@@ -1790,7 +1858,8 @@
        "demoMatch": "page",
        "reps": "15-20",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -1811,7 +1880,8 @@
        "demoMatch": "page",
        "reps": "15-20",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "D2",
@@ -1822,7 +1892,8 @@
        "demoMatch": "page",
        "reps": "15-20",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -1843,7 +1914,8 @@
        "demoMatch": "page",
        "reps": "15-20",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "E2",
@@ -1854,7 +1926,8 @@
        "demoMatch": "page",
        "reps": "15-20",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     }
@@ -1946,7 +2019,8 @@
        "demoMatch": "page",
        "reps": "15-30",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "A2",
@@ -1958,7 +2032,8 @@
        "demoMatch": "page",
        "reps": "15-30",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -1979,7 +2054,8 @@
        "demoMatch": "page",
        "reps": "15-30",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "B2",
@@ -1990,7 +2066,8 @@
        "demoMatch": "page",
        "reps": "15-30",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -2012,7 +2089,8 @@
        "demoMatch": "page",
        "reps": "15-30",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "C2",
@@ -2023,7 +2101,8 @@
        "demoMatch": "page",
        "reps": "15-30",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -2044,7 +2123,8 @@
        "demoMatch": "page",
        "reps": "15-30",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "D2",
@@ -2055,7 +2135,8 @@
        "demoMatch": "similar",
        "reps": "15-30",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -2076,7 +2157,8 @@
        "demoMatch": "page",
        "reps": "15-30",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "E2",
@@ -2088,7 +2170,8 @@
        "demoMatch": "page",
        "reps": "15-30",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     }
@@ -2181,7 +2264,8 @@
        "demoMatch": "page",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "A2",
@@ -2192,7 +2276,8 @@
        "demoMatch": "page",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -2214,7 +2299,8 @@
        "demoMatch": "page",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "B2",
@@ -2226,7 +2312,8 @@
        "demoMatch": "page",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -2248,7 +2335,8 @@
        "demoMatch": "page",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "C2",
@@ -2260,7 +2348,8 @@
        "demoMatch": "page",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -2281,7 +2370,8 @@
        "demoMatch": "page",
        "reps": "6-10",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "D2",
@@ -2292,7 +2382,8 @@
        "demoMatch": "page",
        "reps": "6-10",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -2313,7 +2404,8 @@
        "demoMatch": "page",
        "reps": "6-10",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "E2",
@@ -2324,7 +2416,8 @@
        "demoMatch": "page",
        "reps": "6-10",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     }
@@ -2414,17 +2507,21 @@
        "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "A2",
        "label": "One leg squat with rope (both sides)",
        "exerciseName": "One leg squat with rope (both sides)",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoGif": "demos/one_leg_squat_with_bar.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       }
      ]
     },
@@ -2441,21 +2538,26 @@
        "label": "Spiderman pushups",
        "exerciseName": "Spiderman pushups",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/spiderman_pushup_lottie.gif",
+       "demoSource": "lottiefiles",
+       "demoNote": "Demo from LottieFiles"
       },
       {
        "code": "B2",
        "label": "Deep Squat with plates",
        "exerciseName": "Deep Squat with plates",
        "instructions": "",
-       "demoGif": "demos/bodyweight_squat.gif",
+       "demoGif": "demos/dbsquat.gif",
        "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       }
      ]
     },
@@ -2476,17 +2578,21 @@
        "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "C2",
        "label": "Squat hold with rope (hold for as long as you can)",
        "exerciseName": "Squat hold with rope (hold for as long as you can)",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoGif": "demos/squat_hold_rope_edb.gif",
+       "demoSource": "exercisedb",
+       "demoNote": "Similar exercise (demo from ExerciseDB)"
       }
      ]
     },
@@ -2503,21 +2609,26 @@
        "label": "Recline Pull with the rope",
        "exerciseName": "Recline Pull with the rope",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/inverted_row.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       },
       {
        "code": "D2",
        "label": "Forward Lunges with weight",
        "exerciseName": "Forward Lunges with weight",
        "instructions": "",
-       "demoGif": "demos/bodweight_forward_lunge.gif",
+       "demoGif": "demos/dblunge.gif",
        "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       }
      ]
     },
@@ -2534,21 +2645,26 @@
        "label": "Tricep extension with the rope",
        "exerciseName": "Tricep extension with the rope",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "6-10",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/tricep_extension_under_single_bar.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       },
       {
        "code": "E2",
        "label": "Weighted Ab Crunch",
        "exerciseName": "Weighted Ab Crunch",
        "instructions": "",
-       "demoGif": "demos/mb_crunch.gif",
-       "demoMatch": "similar",
+       "demoGif": "demos/wtcrunch.gif",
+       "demoMatch": "library",
        "reps": "6-10",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Demo from FitnessGenerator library"
       }
      ]
     },
@@ -2565,20 +2681,26 @@
        "label": "Right Side Plank",
        "exerciseName": "Right Side Plank",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "6-10",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/side_plank.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Demo from FitnessGenerator library"
       },
       {
        "code": "F2",
        "label": "Left Side Plank",
        "exerciseName": "Left Side Plank",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "6-10",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoGif": "demos/side_plank.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Demo from FitnessGenerator library"
       }
      ]
     }
@@ -2668,7 +2790,8 @@
        "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "A2",
@@ -2679,7 +2802,8 @@
        "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -2696,10 +2820,13 @@
        "label": "Spiderman pushups with bands",
        "exerciseName": "Spiderman pushups with bands",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/spiderman_pushup_lottie.gif",
+       "demoSource": "lottiefiles",
+       "demoNote": "Demo from LottieFiles"
       },
       {
        "code": "B2",
@@ -2710,7 +2837,8 @@
        "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -2731,17 +2859,21 @@
        "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "C2",
        "label": "Squat hold with weights (hold for as long as you can)",
        "exerciseName": "Squat hold with weights (hold for as long as you can)",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoGif": "demos/squat_hold_edb.gif",
+       "demoSource": "exercisedb",
+       "demoNote": "Similar exercise (demo from ExerciseDB)"
       }
      ]
     },
@@ -2758,10 +2890,13 @@
        "label": "Recline Pull with the rope (one leg up)",
        "exerciseName": "Recline Pull with the rope (one leg up)",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/inverted_row.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       },
       {
        "code": "D2",
@@ -2772,7 +2907,8 @@
        "demoMatch": "similar",
        "reps": "6-10",
        "sets": 3,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -2803,7 +2939,8 @@
        "demoMatch": "similar",
        "reps": "6-10",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "E3",
@@ -2814,7 +2951,8 @@
        "demoMatch": "similar",
        "reps": "6-10",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     }
@@ -2905,17 +3043,21 @@
        "demoMatch": "similar",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "A2",
        "label": "One Leg Squat (Pistol Squat style)",
        "exerciseName": "One Leg Squat (Pistol Squat style)",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoGif": "demos/07onelegsquat.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Demo from FitnessGenerator library"
       }
      ]
     },
@@ -2936,17 +3078,21 @@
        "demoMatch": "similar",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "B2",
        "label": "Plate Swing (watch the video)",
        "exerciseName": "Plate Swing (watch the video)",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoGif": "demos/onearmkettlebellswing.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       }
      ]
     },
@@ -2967,18 +3113,21 @@
        "demoMatch": "similar",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "C2",
        "label": "Squat with weights (Small range of motion)",
        "exerciseName": "Squat with weights (Small range of motion)",
        "instructions": "",
-       "demoGif": "demos/bodyweight_squat.gif",
+       "demoGif": "demos/dbsquat.gif",
        "demoMatch": "similar",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       }
      ]
     },
@@ -2995,10 +3144,13 @@
        "label": "Recline Pull with feet elevated",
        "exerciseName": "Recline Pull with feet elevated",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/elevatedsupinepullup.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Demo from FitnessGenerator library"
       },
       {
        "code": "D2",
@@ -3009,7 +3161,8 @@
        "demoMatch": "similar",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -3026,10 +3179,13 @@
        "label": "Tricep extension with rope or using the jungle gym (using your bodyweight for weight)",
        "exerciseName": "Tricep extension with rope or using the jungle gym (using your bodyweight for weight)",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "8-15",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/tricep_extension_under_single_bar.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       },
       {
        "code": "E2",
@@ -3040,7 +3196,8 @@
        "demoMatch": "similar",
        "reps": "8-15",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "E3",
@@ -3051,7 +3208,8 @@
        "demoMatch": "similar",
        "reps": "8-15",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     }
@@ -3140,21 +3298,26 @@
        "label": "Spiderman Pusups with weighted backpack",
        "exerciseName": "Spiderman Pusups with weighted backpack",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/spiderman_pushup_lottie.gif",
+       "demoSource": "lottiefiles",
+       "demoNote": "Demo from LottieFiles"
       },
       {
        "code": "A2",
        "label": "Squat with weighted backpack and plate",
        "exerciseName": "Squat with weighted backpack and plate",
        "instructions": "",
-       "demoGif": "demos/bodyweight_squat.gif",
+       "demoGif": "demos/dbsquat.gif",
        "demoMatch": "similar",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       }
      ]
     },
@@ -3175,17 +3338,21 @@
        "demoMatch": "similar",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "B2",
        "label": "One Leg Squat with rope and weighted backpack",
        "exerciseName": "One Leg Squat with rope and weighted backpack",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoGif": "demos/one_leg_squat_with_bar.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       }
      ]
     },
@@ -3206,18 +3373,21 @@
        "demoMatch": "similar",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "C2",
        "label": "Forward Lunges with weighted backpack and plate",
        "exerciseName": "Forward Lunges with weighted backpack and plate",
        "instructions": "",
-       "demoGif": "demos/bodweight_forward_lunge.gif",
+       "demoGif": "demos/dblunge.gif",
        "demoMatch": "similar",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       }
      ]
     },
@@ -3234,20 +3404,26 @@
        "label": "Recline Pull with weighted backpack",
        "exerciseName": "Recline Pull with weighted backpack",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/inverted_row.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       },
       {
        "code": "D2",
        "label": "Squat Hold with weighted backpack",
        "exerciseName": "Squat Hold with weighted backpack",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "8-15",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoGif": "demos/squat_hold_edb.gif",
+       "demoSource": "exercisedb",
+       "demoNote": "Similar exercise (demo from ExerciseDB)"
       }
      ]
     },
@@ -3274,20 +3450,26 @@
        "label": "Pushup Plank with weighed backpack",
        "exerciseName": "Pushup Plank with weighed backpack",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "8-15",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/straight_arm_push_up_hold.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       },
       {
        "code": "E3",
        "label": "Reverse crunches",
        "exerciseName": "Reverse crunches",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "8-15",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoGif": "demos/reversecrunch.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Demo from FitnessGenerator library"
       }
      ]
     }
@@ -3374,21 +3556,26 @@
        "label": "One Arm Pushups",
        "exerciseName": "One Arm Pushups",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/1armpushups.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Demo from FitnessGenerator library"
       },
       {
        "code": "A2",
        "label": "Reverse Lunges with weighted backpack and plate",
        "exerciseName": "Reverse Lunges with weighted backpack and plate",
        "instructions": "",
-       "demoGif": "demos/bodweight_forward_lunge.gif",
+       "demoGif": "demos/dbrearlunge.gif",
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       }
      ]
     },
@@ -3409,7 +3596,8 @@
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "B2",
@@ -3420,7 +3608,8 @@
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -3441,18 +3630,21 @@
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "C2",
        "label": "Squat (small range of motion) with weighted backpack and plate",
        "exerciseName": "Squat (small range of motion) with weighted backpack and plate",
        "instructions": "",
-       "demoGif": "demos/bodyweight_squat.gif",
+       "demoGif": "demos/dbsquat.gif",
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       }
      ]
     },
@@ -3469,10 +3661,13 @@
        "label": "Recline Pull with weighted backpack (feet elevated)",
        "exerciseName": "Recline Pull with weighted backpack (feet elevated)",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/elevatedsupinepullup.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Demo from FitnessGenerator library"
       },
       {
        "code": "D2",
@@ -3483,7 +3678,8 @@
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -3500,10 +3696,13 @@
        "label": "Tricep Extension with rope or using the jungle gym (to add resistance use a weighted backpack)",
        "exerciseName": "Tricep Extension with rope or using the jungle gym (to add resistance use a weighted backpack)",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "8-12",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/tricep_extension_under_single_bar.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       },
       {
        "code": "E2",
@@ -3514,7 +3713,8 @@
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "E3",
@@ -3525,7 +3725,8 @@
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     }
@@ -3617,20 +3818,26 @@
        "label": "One Arm Pushups",
        "exerciseName": "One Arm Pushups",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/1armpushups.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Demo from FitnessGenerator library"
       },
       {
        "code": "A2",
        "label": "One Leg Pistol Squat with weighted backpack and rope or using the jungle gym",
        "exerciseName": "One Leg Pistol Squat with weighted backpack and rope or using the jungle gym",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoGif": "demos/07onelegsquat.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Demo from FitnessGenerator library"
       }
      ]
     },
@@ -3661,7 +3868,8 @@
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -3682,17 +3890,21 @@
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "C2",
        "label": "One Leg Squat hold with plate",
        "exerciseName": "One Leg Squat hold with plate",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoGif": "demos/weighted_1legsquat.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       }
      ]
     },
@@ -3709,10 +3921,13 @@
        "label": "Recline Pull with weighted feet elevated on a stability ball",
        "exerciseName": "Recline Pull with weighted feet elevated on a stability ball",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/elevatedsupinepullup.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       },
       {
        "code": "D2",
@@ -3723,7 +3938,8 @@
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 4,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     },
@@ -3740,31 +3956,39 @@
        "label": "Upside Down Shoulder press",
        "exerciseName": "Upside Down Shoulder press",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "library",
        "reps": "8-12",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/handstand_pushup_edb.gif",
+       "demoSource": "exercisedb",
+       "demoNote": "Demo from ExerciseDB"
       },
       {
        "code": "E2",
        "label": "Tricep Extension with rope or using the jungle gym (to add resistance use a weighted backpack)",
        "exerciseName": "Tricep Extension with rope or using the jungle gym (to add resistance use a weighted backpack)",
        "instructions": "",
-       "demoMatch": "none",
+       "demoMatch": "similar",
        "reps": "8-12",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoGif": "demos/tricep_extension_under_single_bar.gif",
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       },
       {
        "code": "E3",
        "label": "Hammer curl with plate (lean against the wall for support",
        "exerciseName": "Hammer curl with plate (lean against the wall for support",
        "instructions": "",
-       "demoGif": "demos/db_biceps_curl.gif",
+       "demoGif": "demos/dbhammercurl.gif",
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "fitnessgenerator",
+       "demoNote": "Similar exercise (demo from FitnessGenerator library)"
       }
      ]
     },
@@ -3785,7 +4009,8 @@
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 2,
-       "restAfterSeconds": 0
+       "restAfterSeconds": 0,
+       "demoSource": "site"
       },
       {
        "code": "F2",
@@ -3796,7 +4021,8 @@
        "demoMatch": "similar",
        "reps": "8-12",
        "sets": 2,
-       "restAfterSeconds": 30
+       "restAfterSeconds": 30,
+       "demoSource": "site"
       }
      ]
     }
@@ -3846,5 +4072,82 @@
     }
    ]
   }
- ]
+ ],
+ "demoSourceLabels": {
+  "site": "iwantsixpackabs.com (archived)",
+  "fitnessgenerator": "FitnessGenerator library",
+  "lottiefiles": "LottieFiles",
+  "wikimedia": "Wikimedia Commons",
+  "exercisedb": "ExerciseDB"
+ },
+ "libraryDemos": {
+  "Barbell Bench Press": "demos/barbellbenchpress.gif",
+  "Incline Dumbbell Press": "demos/inclinebenchpress.gif",
+  "Dip": "demos/wttridip.gif",
+  "Overhead Press": "demos/bbmilitarypress.gif",
+  "Lateral Raise": "demos/dblateralraise.gif",
+  "Pull-Up": "demos/wtchinup.gif",
+  "Barbell Row": "demos/bbborow.gif",
+  "Lat Pulldown": "demos/cbfrontpulldown.gif",
+  "Conventional Deadlift": "demos/bbdeadlift.gif",
+  "Barbell Back Squat": "demos/bbsquat.gif",
+  "Romanian Deadlift": "demos/bbstrbackstifflegdeadlift.gif",
+  "Walking Lunge": "demos/db_walking_lunge.gif",
+  "Leg Press": "demos/sl45legpress.gif",
+  "Barbell Curl": "demos/bbcurl.gif",
+  "Triceps Pushdown": "demos/cbpushdown.gif",
+  "Plank": "demos/plank.gif",
+  "V-ups": "demos/v_up.gif",
+  "Mountain climbers": "demos/mountain_climbers.gif"
+ },
+ "demoSources": {
+  "demos/07onelegsquat.gif": "fitnessgenerator",
+  "demos/1armpushups.gif": "fitnessgenerator",
+  "demos/barbellbenchpress.gif": "fitnessgenerator",
+  "demos/bbborow.gif": "fitnessgenerator",
+  "demos/bbcurl.gif": "fitnessgenerator",
+  "demos/bbdeadlift.gif": "fitnessgenerator",
+  "demos/bbmilitarypress.gif": "fitnessgenerator",
+  "demos/bbsquat.gif": "fitnessgenerator",
+  "demos/bbstrbackstifflegdeadlift.gif": "fitnessgenerator",
+  "demos/burpees.gif": "fitnessgenerator",
+  "demos/cbfrontpulldown.gif": "fitnessgenerator",
+  "demos/cbpushdown.gif": "fitnessgenerator",
+  "demos/dbhammercurl.gif": "fitnessgenerator",
+  "demos/dblateralraise.gif": "fitnessgenerator",
+  "demos/dblunge.gif": "fitnessgenerator",
+  "demos/dbrearlunge.gif": "fitnessgenerator",
+  "demos/dbsquat.gif": "fitnessgenerator",
+  "demos/elevatedsupinepullup.gif": "fitnessgenerator",
+  "demos/handstand_pushup_edb.gif": "exercisedb",
+  "demos/hindu_pushup_dand_commons.gif": "wikimedia",
+  "demos/inclinebenchpress.gif": "fitnessgenerator",
+  "demos/inverted_row.gif": "fitnessgenerator",
+  "demos/kneeling_row_edb.gif": "exercisedb",
+  "demos/mountain_climbers.gif": "fitnessgenerator",
+  "demos/one_leg_squat_with_bar.gif": "fitnessgenerator",
+  "demos/onearmkettlebellswing.gif": "fitnessgenerator",
+  "demos/reversecrunch.gif": "fitnessgenerator",
+  "demos/side_plank.gif": "fitnessgenerator",
+  "demos/sl45legpress.gif": "fitnessgenerator",
+  "demos/spiderman_pushup_lottie.gif": "lottiefiles",
+  "demos/squat_hold_edb.gif": "exercisedb",
+  "demos/squat_hold_rope_edb.gif": "exercisedb",
+  "demos/staggered_pushup_lottie.gif": "lottiefiles",
+  "demos/straight_arm_push_up_hold.gif": "fitnessgenerator",
+  "demos/tricep_extension_under_single_bar.gif": "fitnessgenerator",
+  "demos/v_up.gif": "fitnessgenerator",
+  "demos/weighted_1legsquat.gif": "fitnessgenerator",
+  "demos/wtcrunch.gif": "fitnessgenerator",
+  "demos/wttridip.gif": "fitnessgenerator"
+ },
+ "nameAliases": {
+  "Alternating Spil Jump": "Alternating Split Squat Jump",
+  "Explosive pushups": "Explosive Pushup",
+  "Pull ups": "Pullup",
+  "Jump Squat": "Squat Jump",
+  "Spiderman Pusups with weighted backpack": "Spiderman pushups",
+  "Pushup Plank with weighed backpack": "Pushup Plank with weighted backpack",
+  "Hammer curl with plate (lean against the wall for support": "Hammer curl with plate (lean against the wall for support)"
+ }
 }

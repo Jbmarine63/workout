@@ -5,7 +5,7 @@ Run after changing any file:  python3 tools/build_sw.py
 import hashlib, json, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIRS = {'tools', '.git', '.github', 'node_modules'}
-SKIP_FILES = {'sw.js', 'README.md', '.nojekyll', '.gitignore', 'LICENSE'}
+SKIP_FILES = {'sw.js', 'README.md', 'CHANGES.md', '.nojekyll', '.gitignore', 'LICENSE'}
 files = []
 for dp, dns, fns in os.walk(ROOT):
     dns[:] = sorted(d for d in dns if d not in SKIP_DIRS)

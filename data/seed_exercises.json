@@ -1,1 +1,114 @@
-[{"equipment":"Barbell, Flat Bench","instructions":"Lie on a flat bench and grip the bar slightly wider than shoulder width. Lower the bar to mid-chest with control, then press up until your arms are fully extended.","muscleGroup":"Chest","name":"Barbell Bench Press"},{"equipment":"Dumbbells, Incline Bench","instructions":"Set the bench to about 30 degrees. Press the dumbbells from chest level to full extension, keeping your back flat against the bench.","muscleGroup":"Chest","name":"Incline Dumbbell Press"},{"equipment":"Parallel Bars","instructions":"Support yourself on parallel bars with arms straight. Lower your body by bending the elbows until your shoulders are below your elbows, then press back up.","muscleGroup":"Chest","name":"Dip"},{"equipment":"Barbell","instructions":"Stand with the bar at shoulder height. Brace your core and press the bar overhead until your arms lock out, keeping your ribs down.","muscleGroup":"Shoulders","name":"Overhead Press"},{"equipment":"Dumbbells","instructions":"With a slight bend in the elbows, raise the dumbbells out to your sides until they reach shoulder height, then lower slowly.","muscleGroup":"Shoulders","name":"Lateral Raise"},{"equipment":"Pull-Up Bar","instructions":"Hang from the bar with an overhand grip. Pull your chest toward the bar by driving your elbows down, then lower under control.","muscleGroup":"Back","name":"Pull-Up"},{"equipment":"Barbell","instructions":"Hinge forward about 45 degrees with a flat back. Row the bar to your lower ribs, squeezing your shoulder blades together at the top.","muscleGroup":"Back","name":"Barbell Row"},{"equipment":"Cable Machine","instructions":"Sit tall and pull the bar down to your upper chest, driving your elbows toward your ribs. Control the weight back up.","muscleGroup":"Back","name":"Lat Pulldown"},{"equipment":"Barbell","instructions":"Stand with feet hip-width apart and the bar over mid-foot. Hinge at the hips, grip the bar, and stand up by driving your hips forward while keeping your back flat.","muscleGroup":"Back","name":"Conventional Deadlift"},{"equipment":"Barbell, Squat Rack","instructions":"Rest the bar across your upper back. Sit down between your heels until your hips are below your knees, keeping your chest up, then drive back up.","muscleGroup":"Legs","name":"Barbell Back Squat"},{"equipment":"Barbell or Dumbbells","instructions":"With a slight knee bend, push your hips back and lower the weight along your thighs until you feel a stretch in your hamstrings, then drive your hips forward.","muscleGroup":"Legs","name":"Romanian Deadlift"},{"equipment":"Dumbbells","instructions":"Step forward into a lunge, lowering until both knees are near 90 degrees. Push through your front heel to step into the next lunge.","muscleGroup":"Legs","name":"Walking Lunge"},{"equipment":"Leg Press Machine","instructions":"Place your feet shoulder-width apart on the platform. Lower the weight until your knees reach about 90 degrees, then press without locking your knees.","muscleGroup":"Legs","name":"Leg Press"},{"equipment":"Barbell","instructions":"Stand tall with the bar at thigh level. Curl the bar toward your shoulders without swinging, squeezing at the top, then lower slowly.","muscleGroup":"Biceps","name":"Barbell Curl"},{"equipment":"Cable Machine","instructions":"Pin your elbows at your sides and push the bar down until your arms are straight. Let it rise slowly back to the starting position.","muscleGroup":"Triceps","name":"Triceps Pushdown"},{"equipment":"Bodyweight","instructions":"Hold your body in a straight line from head to heels, supported on your forearms and toes. Brace your abs and breathe steadily.","muscleGroup":"Core","name":"Plank"}]
+[
+ {
+  "equipment": "Barbell, Flat Bench",
+  "instructions": "Lie on a flat bench and grip the bar slightly wider than shoulder width. Lower the bar to mid-chest with control, then press up until your arms are fully extended.",
+  "muscleGroup": "Chest",
+  "name": "Barbell Bench Press",
+  "demoGif": "demos/barbellbenchpress.gif"
+ },
+ {
+  "equipment": "Dumbbells, Incline Bench",
+  "instructions": "Set the bench to about 30 degrees. Press the dumbbells from chest level to full extension, keeping your back flat against the bench.",
+  "muscleGroup": "Chest",
+  "name": "Incline Dumbbell Press",
+  "demoGif": "demos/inclinebenchpress.gif"
+ },
+ {
+  "equipment": "Parallel Bars",
+  "instructions": "Support yourself on parallel bars with arms straight. Lower your body by bending the elbows until your shoulders are below your elbows, then press back up.",
+  "muscleGroup": "Chest",
+  "name": "Dip",
+  "demoGif": "demos/wttridip.gif"
+ },
+ {
+  "equipment": "Barbell",
+  "instructions": "Stand with the bar at shoulder height. Brace your core and press the bar overhead until your arms lock out, keeping your ribs down.",
+  "muscleGroup": "Shoulders",
+  "name": "Overhead Press",
+  "demoGif": "demos/bbmilitarypress.gif"
+ },
+ {
+  "equipment": "Dumbbells",
+  "instructions": "With a slight bend in the elbows, raise the dumbbells out to your sides until they reach shoulder height, then lower slowly.",
+  "muscleGroup": "Shoulders",
+  "name": "Lateral Raise",
+  "demoGif": "demos/dblateralraise.gif"
+ },
+ {
+  "equipment": "Pull-Up Bar",
+  "instructions": "Hang from the bar with an overhand grip. Pull your chest toward the bar by driving your elbows down, then lower under control.",
+  "muscleGroup": "Back",
+  "name": "Pull-Up",
+  "demoGif": "demos/wtchinup.gif"
+ },
+ {
+  "equipment": "Barbell",
+  "instructions": "Hinge forward about 45 degrees with a flat back. Row the bar to your lower ribs, squeezing your shoulder blades together at the top.",
+  "muscleGroup": "Back",
+  "name": "Barbell Row",
+  "demoGif": "demos/bbborow.gif"
+ },
+ {
+  "equipment": "Cable Machine",
+  "instructions": "Sit tall and pull the bar down to your upper chest, driving your elbows toward your ribs. Control the weight back up.",
+  "muscleGroup": "Back",
+  "name": "Lat Pulldown",
+  "demoGif": "demos/cbfrontpulldown.gif"
+ },
+ {
+  "equipment": "Barbell",
+  "instructions": "Stand with feet hip-width apart and the bar over mid-foot. Hinge at the hips, grip the bar, and stand up by driving your hips forward while keeping your back flat.",
+  "muscleGroup": "Back",
+  "name": "Conventional Deadlift",
+  "demoGif": "demos/bbdeadlift.gif"
+ },
+ {
+  "equipment": "Barbell, Squat Rack",
+  "instructions": "Rest the bar across your upper back. Sit down between your heels until your hips are below your knees, keeping your chest up, then drive back up.",
+  "muscleGroup": "Legs",
+  "name": "Barbell Back Squat",
+  "demoGif": "demos/bbsquat.gif"
+ },
+ {
+  "equipment": "Barbell or Dumbbells",
+  "instructions": "With a slight knee bend, push your hips back and lower the weight along your thighs until you feel a stretch in your hamstrings, then drive your hips forward.",
+  "muscleGroup": "Legs",
+  "name": "Romanian Deadlift",
+  "demoGif": "demos/bbstrbackstifflegdeadlift.gif"
+ },
+ {
+  "equipment": "Dumbbells",
+  "instructions": "Step forward into a lunge, lowering until both knees are near 90 degrees. Push through your front heel to step into the next lunge.",
+  "muscleGroup": "Legs",
+  "name": "Walking Lunge",
+  "demoGif": "demos/db_walking_lunge.gif"
+ },
+ {
+  "equipment": "Leg Press Machine",
+  "instructions": "Place your feet shoulder-width apart on the platform. Lower the weight until your knees reach about 90 degrees, then press without locking your knees.",
+  "muscleGroup": "Legs",
+  "name": "Leg Press",
+  "demoGif": "demos/sl45legpress.gif"
+ },
+ {
+  "equipment": "Barbell",
+  "instructions": "Stand tall with the bar at thigh level. Curl the bar toward your shoulders without swinging, squeezing at the top, then lower slowly.",
+  "muscleGroup": "Biceps",
+  "name": "Barbell Curl",
+  "demoGif": "demos/bbcurl.gif"
+ },
+ {
+  "equipment": "Cable Machine",
+  "instructions": "Pin your elbows at your sides and push the bar down until your arms are straight. Let it rise slowly back to the starting position.",
+  "muscleGroup": "Triceps",
+  "name": "Triceps Pushdown",
+  "demoGif": "demos/cbpushdown.gif"
+ },
+ {
+  "equipment": "Bodyweight",
+  "instructions": "Hold your body in a straight line from head to heels, supported on your forearms and toes. Brace your abs and breathe steadily.",
+  "muscleGroup": "Core",
+  "name": "Plank",
+  "demoGif": "demos/plank.gif"
+ }
+]

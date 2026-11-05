@@ -2,7 +2,7 @@
  * Plain JS, no build step. Data lives in IndexedDB; assets are precached by sw.js. */
 'use strict';
 (function () {
-const APP_VERSION = '2.0.0';
+const APP_VERSION = '1.4'; // matches the Android app 1.4 (versionCode 6)
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
 const h = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -130,20 +130,49 @@ function buildLibrary() {
       if (e.inProgram) cur.inProgram = true;
     }
   };
-  S.seed.forEach(e => add({ name: e.name, muscleGroup: e.muscleGroup || classify(e.name), equipment: e.equipment || '', instructions: e.instructions || '', demoAsset: null }));
-  // Only GIFs of the same exercise go on the library entry.
+  S.seed.forEach(e => add({ name: e.name, muscleGroup: e.muscleGroup || classify(e.name), equipment: e.equipment || '', instructions: e.instructions || '', demoAsset: e.demoGif || null }));
+  // Only GIFs of the same exercise go on the library entry ("similar" GIFs never do).
   S.program.weeks.forEach(w => w.groups.forEach(g => g.exercises.forEach(pe => add({
     name: pe.exerciseName, muscleGroup: classify(pe.exerciseName), equipment: '', instructions: pe.instructions || '', inProgram: true,
-    demoAsset: (pe.demoMatch === 'page' || pe.demoMatch === 'same') ? pe.demoGif || null : null
+    demoAsset: EXACT_MATCH.has(pe.demoMatch) ? pe.demoGif || null : null
   }))));
   (S.workouts.days || []).forEach(d => (d.exercises || []).forEach(ex => add({
     name: ex.name, muscleGroup: classify(ex.name), equipment: '', instructions: ex.instructions || '', inProgram: true, demoAsset: ex.demoGif || null
   })));
   S.custom.forEach(c => add({ name: c.name, muscleGroup: c.muscleGroup || 'Custom', equipment: c.equipment || '', instructions: c.instructions || '', demoAsset: null, customId: c.id }));
+  // 1.4: rows still without a GIF get one when a bundled demo shows that exact exercise
+  // (libraryDemos, a same-name program entry, or the site's misspelling via nameAliases).
+  map.forEach(e => { if (!e.demoAsset) e.demoAsset = libraryDemoFor(e.name); });
   S.library = Array.from(map.values()).sort((a, b) => a.name.localeCompare(b.name));
   S.libByKey = map;
 }
 const libEx = name => S.libByKey.get(String(name || '').trim().toLowerCase());
+
+/* ---------------- Demo GIFs (1.4, same rules as Android Program16.kt) ---------------- */
+const EXACT_MATCH = new Set(['page', 'same', 'library']);
+const SAME_NOTE = 'Demo from another week (same exercise)';
+const SIMILAR_NOTE = 'Similar demo (related exercise)';
+const ieq = (a, b) => String(a || '').trim().toLowerCase() === String(b || '').trim().toLowerCase();
+const allProgramExercises = () => S.program.weeks.flatMap(w => w.groups.flatMap(g => g.exercises));
+/** Demo for a library name: libraryDemos, else a same-name program entry whose GIF shows it, else one alias hop. */
+function libraryDemoFor(name, depth = 0) {
+  const ld = S.program.libraryDemos || {};
+  const k = Object.keys(ld).find(x => ieq(x, name)); if (k) return ld[k];
+  const pe = allProgramExercises().find(e => ieq(e.exerciseName, name) && e.demoGif && EXACT_MATCH.has(e.demoMatch));
+  if (pe) return pe.demoGif;
+  if (depth > 0) return null;
+  const al = S.program.nameAliases || {}; const a = Object.keys(al).find(x => ieq(x, name));
+  return a ? libraryDemoFor(al[a], 1) : null;
+}
+/** Label shown with a program entry's demo ('' = none needed). */
+const noteFor = pe => (pe.demoNote && pe.demoNote.trim()) || (pe.demoMatch === 'same' ? SAME_NOTE : pe.demoMatch === 'similar' ? SIMILAR_NOTE : '');
+/** "Demo from LottieFiles" etc. for GIFs that are not from the original site ('' for site GIFs). */
+function sourceCredit(asset) {
+  const src = asset && (S.program.demoSources || {})[asset]; if (!src || src === 'site') return '';
+  return 'Demo from ' + ((S.program.demoSourceLabels || {})[src] || src);
+}
+const demoSummary = note => !note ? 'Demo' : /^Demo from /.test(note) ? note : 'Demo · ' + note;
+const roadNote = sw => 'Similar demo (Road swap' + (sw.demo && !ieq(sw.demo, sw.name) ? `: shows ${sw.demo})` : ')');
 const weekOf = n => S.program.weeks.find(w => w.week === n);
 
 /* ---------------- Road mode: cab-friendly swaps ----------------
@@ -159,7 +188,7 @@ const ROAD_RULES = [
   [/bench dip|tricep bench/, { name: 'Step dips (cab step or bunk edge)', demo: 'Tricep Bench Dip', how: 'Hands on the edge behind you, feet out front. Lower until your elbows hit 90°, then press up.' }],
   [/box step|step up/, { name: 'Step-ups on the cab step', demo: 'One Leg Box Step Up', how: 'Hold the grab handle for balance. Drive through the heel on the step, stand tall, step down slowly.' }],
   [/box jump|linear stability/, { name: 'Squat jumps', demo: 'Squat Jump', how: 'Squat down, jump as high as you can, land soft and go straight into the next rep.' }],
-  [/^knee lift$/, { name: 'Mountain climbers', demo: '', how: 'Pushup position, drive your knees to your chest one at a time, fast.' }]
+  [/^knee lift$/, { name: 'Mountain climbers', demo: '', demoAsset: 'demos/mountain_climbers.gif', how: 'Pushup position, drive your knees to your chest one at a time, fast.' }]
 ];
 const BALL_RULES = [
   [/calf/, { name: 'Single-leg calf raise on the cab step', demo: 'Single Leg DB Calf Raise', how: 'Ball of your foot on the step edge, heel hanging off. Rise all the way up, lower slowly.' }],
@@ -171,7 +200,7 @@ const BALL_RULES = [
   [/push.?ups?.*feet|feet.*push/, { name: 'Feet-elevated pushups (feet on the cab step)', demo: 'Elevated Feet Pushup', how: 'Feet up on the step, hands on the ground. Chest to the ground, press back up.' }],
   [/push.?ups?/, { name: 'Pushups', demo: 'Standard Pushup', how: 'Hands just wider than shoulders, body in a straight line. Chest to the ground, press up.' }],
   [/plank/, { name: 'Plank (feet on the cab step to make it harder)', demo: 'Plank', how: 'Forearms down, body in a straight line, squeeze your abs and glutes.' }],
-  [/exchange|transfer/, { name: 'V-ups', demo: '', how: 'Lie flat, then lift your arms and legs together to meet over your hips. Lower with control.' }]
+  [/exchange|transfer/, { name: 'V-ups', demo: '', demoAsset: 'demos/v_up.gif', how: 'Lie flat, then lift your arms and legs together to meet over your hips. Lower with control.' }]
 ];
 function roadSwap(pe) {
   const n = `${pe.label || ''} | ${pe.exerciseName || pe.exName || ''}`.toLowerCase();
@@ -181,7 +210,8 @@ function roadSwap(pe) {
   }
   return null;
 }
-const roadDemo = sw => (sw && sw.demo && libEx(sw.demo)?.demoAsset) || null;
+// 1.4: a swap's own GIF (V-ups, Mountain climbers), else the library demo of the move it shows.
+const roadDemo = sw => (sw && (sw.demoAsset || (sw.demo && (libEx(sw.demo)?.demoAsset || libraryDemoFor(sw.demo))))) || null;
 const roadCount = w => w.groups.reduce((a, g) => a + g.exercises.filter(pe => roadSwap(pe)).length, 0);
 
 /* ---------------- Audio / speech / wake lock ---------------- */
@@ -389,9 +419,9 @@ const go = hash => { if (location.hash === hash) render(); else location.hash = 
 
 function render() {
   const r = route();
-  const tab = r.name === 'interval' ? 'history' : (r.name === 'article' || r.name === 'photos') ? 'more' : r.name === 'session' ? 'today' : r.name;
+  const tab = r.name === 'interval' ? 'history' : (r.name === 'article' || r.name === 'photos' || r.name === 'credits') ? 'more' : r.name === 'session' ? 'today' : r.name;
   $$('#tabs a').forEach(a => { const on = a.dataset.tab === tab; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
-  const views = { today: viewToday, program: viewProgram, exercises: viewExercises, session: viewSession, go: viewGo, history: viewHistory, interval: viewInterval, more: viewMore, article: viewArticle, photos: viewPhotos };
+  const views = { today: viewToday, program: viewProgram, exercises: viewExercises, session: viewSession, go: viewGo, history: viewHistory, interval: viewInterval, more: viewMore, article: viewArticle, photos: viewPhotos, credits: viewCredits };
   const fn = views[r.name] || viewToday;
   const { title, html, after, bare } = fn(r);
   document.body.classList.toggle('focus', r.name === 'go');
@@ -597,7 +627,7 @@ function resistanceDay(w, day) {
           <div class="target">${e.sets} × ${h(e.reps)}${e.restAfterSeconds === 0 ? ' · no rest → next' : e.restAfterSeconds ? ` · rest ${e.restAfterSeconds}s` : ''}</div>
           ${sw ? `<div class="small road-note">${icon('truck', 14)} Road mode swap for: ${h(e.label)}</div>` : ''}
           ${!sw && e.trainerComments ? `<div class="small muted">Trainer: ${h(e.trainerComments)}</div>` : ''}</div></div>
-        ${demo ? `<details><summary>Demo${!sw && e.demoMatch === 'similar' ? ' (similar move)' : ''}</summary>${gifTag(demo, e.exerciseName)}</details>` : ''}
+        ${demo ? `<details><summary>${h(demoSummary(sw ? roadNote(sw) : noteFor(e)))}</summary>${gifTag(demo, sw ? sw.name : e.exerciseName)}</details>` : ''}
         ${sw ? `<details><summary>How to</summary><p class="small">${h(sw.how)}</p></details>` : e.instructions ? `<details><summary>How to</summary><pre class="text small">${h(e.instructions)}</pre></details>` : ''}
       </div>`;
     }).join('');
@@ -631,12 +661,52 @@ function programItems(w, road) {
       targetSets: pe.sets, targetReps: pe.reps || '', restAfterSeconds: pe.restAfterSeconds ?? null, workSeconds: pe.workSeconds ?? null,
       notes: sw ? sw.how : [pe.trainerComments ? `Trainer: ${pe.trainerComments}` : '', pe.note || ''].filter(Boolean).join('\n'),
       demoAsset: sw ? roadDemo(sw) : pe.demoGif || null,
-      demoNote: sw ? '' : pe.demoMatch === 'same' ? 'Demo from another week (same exercise)' : pe.demoMatch === 'similar' ? 'Similar demo (related exercise)' : '',
+      demoNote: sw ? (roadDemo(sw) ? roadNote(sw) : '') : noteFor(pe),
       roadFrom: sw ? pe.label : undefined,
       sets: []
     });
   }));
   return items;
+}
+/**
+ * 1.4 upgrade for logs saved by older versions: fills in missing demo GIFs and labels on saved workouts.
+ * Only it.demoAsset / it.demoNote ever change; sets, notes, names, order and dates are never touched.
+ *  - Program rows (matched to their program entry by group code + name, or roadFrom for Road swaps)
+ *    get the entry's 1.4 GIF and label (as Android's refreshDemos); a GIF is never removed. Road rows
+ *    without a GIF get the swap's GIF, and get the "Similar demo (Road swap …)" label.
+ *  - Other rows (added from the library) get the library GIF when they had none.
+ * Idempotent: a second run changes nothing. Returns the number of rows changed.
+ */
+async function upgradeDemos() {
+  let changed = 0;
+  for (const s of S.sessions) {
+    let dirty = false;
+    const w = s.programWeek ? weekOf(s.programWeek) : null;
+    for (const it of (s.items || [])) {
+      let asset = it.demoAsset || null, note = it.demoNote || '';
+      const pe = w && w.groups.flatMap(g => g.exercises).find(e => e.code === it.groupCode && (it.roadFrom ? e.label === it.roadFrom : e.label === it.label && ieq(e.exerciseName, it.exName)));
+      if (pe && it.roadFrom) {
+        const sw = roadSwap(pe);
+        if (sw && sw.name === it.label) {
+          if (!asset) asset = roadDemo(sw);
+          if (asset && !note) note = roadNote(sw);
+        }
+      } else if (pe) {
+        // Older versions only ever wrote these automatic labels, so the row still shows the program's
+        // demo: bring it to the 1.4 one (never removes a GIF).
+        const auto = note === '' || note === SIMILAR_NOTE || note === SAME_NOTE;
+        if (pe.demoGif && (!asset || auto)) { asset = pe.demoGif; note = noteFor(pe); }
+      } else if (!it.roadFrom && !asset && it.exName) {
+        asset = libEx(it.exName)?.demoAsset || null;
+      }
+      if (asset !== (it.demoAsset || null) || note !== (it.demoNote || '')) {
+        it.demoAsset = asset; it.demoNote = note; dirty = true; changed++;
+      }
+    }
+    if (dirty) await DB.put('sessions', s);
+  }
+  if (changed) await refresh();
+  return changed;
 }
 async function startProgram(weekN, day) {
   const act = activeSession();
@@ -814,7 +884,8 @@ function goSet(s, step, sub) {
   }
   const demo = it.demoAsset
     ? `<div class="demo-card">${gifTag(it.demoAsset, it.label, 'demo-img')}${it.groupCode ? `<span class="code">${h(it.groupCode)}</span>` : ''}
-        ${it.roadFrom ? `<div class="demo-note">${icon('truck', 16)}<span>Road mode swap for: ${h(it.roadFrom)}</span></div>` : ''}</div>`
+        ${it.roadFrom ? `<div class="demo-note">${icon('truck', 16)}<span>Road mode swap for: ${h(it.roadFrom)}</span></div>` : ''}</div>
+      ${it.demoNote || sourceCredit(it.demoAsset) ? `<div class="small muted demo-label">${h(it.demoNote || sourceCredit(it.demoAsset))}</div>` : ''}`
     : `<div class="demo-card none">${it.groupCode ? `<span class="code">${h(it.groupCode)}</span>` : ''}${icon('lift', 40)}<span class="small muted">No demo for this one${it.roadFrom ? ` · Road mode swap for: ${h(it.roadFrom)}` : ''}</span></div>`;
   const howLib = libEx(it.exName);
   const notes = it.notes ? it.notes.split('\n')[0] : '';
@@ -1024,7 +1095,7 @@ function viewExercises() {
       <div class="row">${thumb(e.demoAsset, e.name)}
         <div class="grow"><div class="ex-title">${h(e.name)}</div><div class="small muted">${h(e.muscleGroup)}${e.equipment ? ' · ' + h(e.equipment) : ''}${e.inProgram ? ' · in the program' : ''}</div></div>
         <button class="icon primary" data-act="ex-add" data-i="${i}" aria-label="Add ${h(e.name)} to workout">${icon('plus', 20)}</button></div>
-      ${e.demoAsset || e.instructions ? `<details><summary>${e.demoAsset ? 'Demo &amp; how-to' : 'How to'}</summary>${gifTag(e.demoAsset, e.name)}<pre class="text small">${h(e.instructions)}</pre></details>` : ''}
+      ${e.demoAsset || e.instructions ? `<details><summary>${e.demoAsset ? 'Demo &amp; how-to' : 'How to'}</summary>${gifTag(e.demoAsset, e.name)}${sourceCredit(e.demoAsset) ? `<div class="small muted demo-label">${h(sourceCredit(e.demoAsset))}</div>` : ''}<pre class="text small">${h(e.instructions)}</pre></details>` : ''}
     </div>`).join('')}</div>`,
     after() {
       const inp = $('#exSearch');
@@ -1190,7 +1261,8 @@ function viewMore() {
       <label class="f">Theme<select data-setting="theme"><option value="auto" ${S.settings.theme === 'auto' ? 'selected' : ''}>Match phone</option><option value="dark" ${S.settings.theme === 'dark' ? 'selected' : ''}>Dark</option><option value="light" ${S.settings.theme === 'light' ? 'selected' : ''}>Light</option></select></label>
       <label class="check"><input type="checkbox" data-setting="keepAwake" ${S.settings.keepAwake ? 'checked' : ''}> Keep the screen on while a timer runs ${'wakeLock' in navigator ? '' : '<span class="small muted">(not supported here)</span>'}</label>
       <div class="row gap" style="margin-top:8px"><button class="grow sm" data-act="sound-test">Test sound</button><button class="grow sm" data-act="voice-test">Test voice</button></div>
-      <div class="small muted" style="margin-top:8px">Storage: ${S.persisted === true ? 'persistent ✓' : S.persisted === false ? 'best-effort (add to Home Screen to keep data safe)' : 'unknown'} · ${isStandalone() ? 'running from Home Screen ✓' : 'running in the browser'}</div>
+      <a class="listitem" href="#/credits" id="creditsLink">${icon('book', 20)}<span class="grow t">Credits &amp; licenses</span><span class="muted">›</span></a>
+      <div class="small muted" style="margin-top:8px">Workout ${APP_VERSION} · Storage: ${S.persisted === true ? 'persistent ✓' : S.persisted === false ? 'best-effort (add to Home Screen to keep data safe)' : 'unknown'} · ${isStandalone() ? 'running from Home Screen ✓' : 'running in the browser'}</div>
     </div>
     <div class="card"><h3>Backup &amp; restore</h3>
       <p class="small muted" id="stats">${S.sessions.length} workouts · ${S.intervals.length} cardio entries · ${nSets} sets. Your log is stored only on this phone, so save a backup now and then.</p>
@@ -1207,9 +1279,41 @@ function viewMore() {
       <ol class="small tight"><li>Open this page in <b>Safari</b>.</li><li>Tap the <b>Share</b> button.</li><li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li><li>Open <b>Workout</b> from the Home Screen. It works offline after that.</li></ol>
       <p class="small muted">On Android, open it in Chrome and choose <b>Install app</b> from the ⋮ menu.</p>
     </div>
-    <p class="small muted pad">Six Pack Workout ${APP_VERSION} · ${h(S.program.name)} (iwantsixpackabs.com, 2007).</p>`,
+    <p class="small muted pad">Workout ${APP_VERSION} · ${h(S.program.name)} (iwantsixpackabs.com, 2007).</p>`,
     after() { buildBackup(); } };
 }
+/* ---------------- Credits (1.4, same content as the Android Credits screen) ---------------- */
+const CREDITS = [
+  { title: '16 Weeks to Six Pack Abs, by Arnel (iwantsixpackabs.com)',
+    lines: ["The program, schedule, substitution notes, journal and original demo GIFs come from Arnel's site iwantsixpackabs.com (2007), read from the copy archived by the Internet Archive Wayback Machine."],
+    urls: ['https://web.archive.org/web/2007/http://www.iwantsixpackabs.com/workout/week1.html'] },
+  { title: 'FitnessGenerator exercise library (archived)',
+    lines: ["The site's own demo GIFs were hosted by FitnessGenerator. The extra demos added in 1.4 for weeks 7 and 11-16 and the library lifts come from the same FitnessGenerator library, archived by the Wayback Machine.",
+      'Labelled "Demo from FitnessGenerator library" (or "Similar exercise" when it is a related move).'],
+    urls: ['https://web.archive.org/web/2007/http://www.fitnessgenerator.com/'] },
+  { title: 'LottieFiles',
+    lines: ['"Staggered_push_ups" by Dinh Bui Xuan and "spiderman push-up" (creator not listed), free animations under the Lottie Simple License. Converted to small GIFs.'],
+    urls: ['https://lottiefiles.com/free-animation/staggered-push-ups-zgWfOIvx3C', 'https://lottiefiles.com/free-animation/spiderman-push-up-f9IsK5KAnA', 'https://lottiefiles.com/page/license'] },
+  { title: 'Wikimedia Commons',
+    lines: ['"Dand (Basic) (cropped)" by RickyBennison, CC BY-SA 4.0 (Hindu pushups). Resized and converted to a smaller GIF (200 px, 6 fps); the modified file is shared under the same license.'],
+    urls: ['https://commons.wikimedia.org/wiki/File:Dand_(Basic)_(cropped).gif', 'https://creativecommons.org/licenses/by-sa/4.0/'] },
+  { title: 'ExerciseDB / AscendAPI',
+    lines: ['Demos for Upside Down Shoulder press, the squat holds and Kneeling Band Row come from the ExerciseDB free dataset by AscendAPI, for personal, non-commercial use with credit to AscendAPI.'],
+    urls: ['https://oss.exercisedb.dev/docs'] },
+  { title: 'Barlow Condensed font', lines: ['By Jeremy Tribby. SIL Open Font License 1.1. (Bundled in the Android app; the web app uses it when your device has it.)'],
+    urls: ['https://fonts.google.com/specimen/Barlow+Condensed', 'https://openfontlicense.org'] },
+  { title: 'Open-source libraries (Android app)',
+    lines: ['AndroidX (Core, Activity, Lifecycle, Navigation), Jetpack Compose and Material 3, Room, Coil and kotlinx.serialization. Apache License 2.0. This web app itself uses no third-party code.'],
+    urls: ['https://www.apache.org/licenses/LICENSE-2.0'] }
+];
+function viewCredits() {
+  return { title: 'Credits', html: `<div id="credits">
+    <p class="small muted pad">Where the program, the demo GIFs, the font and the libraries come from.</p>
+    ${CREDITS.map(c => `<div class="card credit"><h3>${h(c.title)}</h3>${c.lines.map(l => `<p class="small">${h(l)}</p>`).join('')}
+      ${c.urls.map(u => `<div class="small"><a href="${h(u)}" target="_blank" rel="noopener noreferrer">${h(u)}</a></div>`).join('')}</div>`).join('')}
+    <a class="btn block" href="#/more">${icon('back', 16)} Back</a></div>` };
+}
+
 function viewArticle(r) {
   const a = (S.workouts.articles || []).find(x => x.id === r.parts[1]);
   if (!a) return { title: 'Article', html: '<div class="empty">Not found.</div>' };
@@ -1453,6 +1557,7 @@ async function boot() {
     S.intervalDraft = await DB.kvGet('intervalDraft', null);
     Timer.st = await DB.kvGet('timer', null);
     await refresh();
+    try { await upgradeDemos(); } catch (e) { console.warn('demo upgrade skipped', e); }
     applyTheme(); updateOnline();
     if (navigator.storage && navigator.storage.persist) {
       try { S.persisted = await navigator.storage.persisted(); if (!S.persisted) S.persisted = await navigator.storage.persist(); } catch (e) { /* ignore */ }
@@ -1461,7 +1566,7 @@ async function boot() {
     if (!location.hash) history.replaceState(null, '', '#/today');
     render();
     if (Timer.st && !Timer.st.done) Timer.run();
-    window.__app = { S, DB, Timer, refresh, render, buildBackup, importBackup, nextStep, roadSwap, classify, ready: true };
+    window.__app = { S, DB, Timer, refresh, render, buildBackup, importBackup, nextStep, roadSwap, roadDemo, classify, upgradeDemos, libraryDemoFor, ready: true };
   } catch (e) {
     $('#view').innerHTML = `<div class="card"><h3>Could not start</h3><p class="small">${h(e && e.message)}</p><p class="small">If you're offline, open the app once while online so it can save everything for offline use.</p></div>`;
     console.error(e);

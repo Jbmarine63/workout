@@ -249,3 +249,7 @@ body.has-timer main{padding-bottom:calc(var(--tap) + 270px + var(--sab))}
 /* light theme: give white demo pictures an edge */
 :root[data-theme="light"] .demo-card,:root[data-theme="light"] .thumb,:root[data-theme="light"] .ht-img,:root[data-theme="light"] .mini,:root[data-theme="light"] .next-thumb,:root[data-theme="light"] .gif{border:1px solid var(--line)}
 .weight-row button.grow{white-space:nowrap}
+/* 1.4: demo source / "similar" labels and the Credits page */
+.demo-label{margin:4px 2px 0}
+.credit a{color:var(--link);word-break:break-all}
+.credit p{margin:4px 0}
