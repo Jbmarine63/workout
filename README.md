@@ -42,6 +42,7 @@ Always open it from the Home Screen icon, not from a Safari tab (see "Limitation
 - **History:** workouts and interval cardio in one list, with All/Workouts/Cardio filters. Tap an entry to
   view or edit it; deleting asks for confirmation.
 - **More:**
+  - **Share this app:** Share sends `https://jbmarine63.github.io/workout/` through the system share sheet when the browser allows it, in a Safari tab and from the Home Screen icon. **Copy link** copies that address. Closing the sheet does nothing else. If the clipboard is missing or blocked, the address is shown so it can be copied by hand.
   - **Backup:** Share/save JSON through the iOS share sheet ("Save to Files"), Download JSON, or Export CSV.
   - **Restore:** from JSON, with a choice of **Merge** (skips entries you already have) or **Replace**
     (asks a second time).
@@ -113,6 +114,7 @@ demos/*.gif (99)       journal_images/*.jpg (6)   articles/*.txt (3)
 icons/ (180, 192, 512, maskable 512, apple-touch-icon)
 tools/build_sw.py  tools/sw.template.js  tools/test/e2e.mjs, update-flow.mjs (older Playwright tests)
 tools/test/v14-upgrade.mjs (1.4 upgrade, GIF, Road mode and Credits test)
+tools/test/share-link.mjs (WebKit iPhone: share, cancel, copy, clipboard fallback)
 ```
 
 ## Testing

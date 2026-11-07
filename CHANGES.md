@@ -1,3 +1,12 @@
+Share link: More → Share this app sends https://jbmarine63.github.io/workout/
+
+- Share uses the system share sheet when navigator.share is available, in a
+  Safari tab and in the Home Screen app. The call starts inside the tap.
+- Copy link copies that address. Closing the share sheet does nothing else.
+  If the clipboard is missing or denied, the address is shown so it can be
+  copied by hand. Workout logs, GIFs and credits are unchanged.
+- Service worker cache rebuilt so installed copies show "Update ready".
+
 PWA 1.4: match Android 1.4 demo GIFs, labels, Road mode fixes and Credits
 
 - Add the 39 demo GIFs from Android 1.4 (demos/, 99 total). Program entries

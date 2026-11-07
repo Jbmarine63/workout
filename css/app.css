@@ -253,3 +253,5 @@ body.has-timer main{padding-bottom:calc(var(--tap) + 270px + var(--sab))}
 .demo-label{margin:4px 2px 0}
 .credit a{color:var(--link);word-break:break-all}
 .credit p{margin:4px 0}
+.share-url,#shareUrlField{user-select:all;-webkit-user-select:all;word-break:break-all}
+.share-url{color:var(--fg)}

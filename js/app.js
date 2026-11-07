@@ -3,6 +3,8 @@
 'use strict';
 (function () {
 const APP_VERSION = '1.4'; // matches the Android app 1.4 (versionCode 6)
+// Always this address. The open page may be #/more, a local preview, or the Home Screen start URL.
+const SHARE_URL = 'https://jbmarine63.github.io/workout/';
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
 const h = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -1228,6 +1230,77 @@ function shareFile(text, name, type) {
   } catch (e) { /* fall through */ }
   return Promise.resolve(false);
 }
+function sharePayload() { return { title: 'Workout', url: SHARE_URL }; }
+/** Closing the sheet is AbortError on iOS Safari and other browsers. That is not a failure. */
+function isShareCancel(err) { return !!(err && err.name === 'AbortError'); }
+/**
+ * Start the system share sheet in this turn, before any await.
+ * iOS Safari (browser tab and Home Screen) throws NotAllowedError if share()
+ * runs after the tap's user activation has expired.
+ * Returns null when share is missing so the caller can copy instead.
+ */
+function startShare() {
+  if (typeof navigator.share !== 'function') return null;
+  try { return navigator.share(sharePayload()); }
+  catch (err) { return Promise.reject(err); }
+}
+/** Last-ditch copy for browsers with no clipboard API. Must run in the tap. */
+function tryExecCopy(text) {
+  const prev = document.activeElement;
+  const y = window.scrollY;
+  const el = document.createElement('textarea');
+  el.value = text;
+  el.setAttribute('readonly', '');
+  el.setAttribute('aria-hidden', 'true');
+  el.tabIndex = -1;
+  // opacity:0 and on-screen: iOS will not copy from display:none or an off-screen box.
+  el.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;padding:0;border:none;outline:none;box-shadow:none;background:transparent;font-size:16px;opacity:0;';
+  document.body.appendChild(el);
+  let ok = false;
+  try {
+    el.focus();
+    el.select();
+    el.setSelectionRange(0, text.length);
+    ok = document.execCommand('copy');
+  } catch (e) { ok = false; }
+  el.remove();
+  if (prev && prev.focus) { try { prev.focus({ preventScroll: true }); } catch (e) { /* ignore */ } }
+  if (window.scrollY !== y) window.scrollTo(0, y);
+  return !!ok;
+}
+/**
+ * Copy SHARE_URL. writeText is invoked immediately when it exists so the tap
+ * still counts. A rejection (denied, unavailable, or a non-secure context)
+ * tries execCommand once, then the caller shows the address to copy by hand.
+ */
+function copyShareUrl() {
+  try {
+    if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+      const pending = navigator.clipboard.writeText(SHARE_URL);
+      if (pending && typeof pending.then === 'function') return pending.then(() => true, () => tryExecCopy(SHARE_URL));
+    }
+  } catch (e) { /* fall through */ }
+  return Promise.resolve(tryExecCopy(SHARE_URL));
+}
+function selectShareField(root) {
+  const scope = root && root.querySelector ? root : document;
+  const field = scope.querySelector('#shareUrlField');
+  if (!field) return;
+  try { field.focus({ preventScroll: true }); } catch (e) { try { field.focus(); } catch (e2) { /* ignore */ } }
+  try { field.select(); } catch (e) { /* ignore */ }
+  try { field.setSelectionRange(0, field.value.length); } catch (e) { /* ignore */ }
+}
+/** Clipboard missing or denied: the address stays selected so a long-press can copy it. */
+function showManualCopy() {
+  if ($('#shareUrlField')) { selectShareField(); return; }
+  modal(`<h3>Copy link</h3>
+    <p class="small muted">Clipboard is not available. Touch and hold the address, then tap Copy.</p>
+    <input id="shareUrlField" type="url" readonly value="${h(SHARE_URL)}" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" inputmode="url">
+    <div class="btns">
+      <button class="primary" data-act="copy-link">Copy link</button>
+      <button data-act="modal-val" data-v="">Close</button>
+    </div>`, selectShareField);
+}
 async function importBackup(text) {
   let data; try { data = JSON.parse(text); } catch (e) { toast('That file is not valid JSON.'); return; }
   if (!data || data.app !== 'workout-pwa' || !Array.isArray(data.sessions) || !Array.isArray(data.intervals)) { toast('Not a Workout backup file.'); return; }
@@ -1254,6 +1327,14 @@ function viewMore() {
   const nSets = S.sessions.reduce((a, s) => a + s.items.reduce((b, it) => b + it.sets.length, 0), 0);
   const weekOpts = S.program.weeks.map(x => `<option value="${x.week}" ${currentWeek() === x.week ? 'selected' : ''}>Week ${x.week}</option>`).join('');
   return { title: 'More', html: `
+    <div class="card" id="shareCard">
+      <h3>Share this app</h3>
+      <p class="small muted">Send <span class="share-url">${h(SHARE_URL)}</span> to another phone.</p>
+      <div class="stack">
+        <button class="primary block" id="shareApp" data-act="share-app">${icon('share', 18)} Share</button>
+        <button class="block" id="copyLink" data-act="copy-link">Copy link</button>
+      </div>
+    </div>
     <div class="card"><h3>Settings</h3>
       <label class="f">Current program week<select data-setting="currentWeek">${weekOpts}</select></label>
       <div class="set-row">${icon('truck', 20, 'blue')}<div class="grow"><b>Road mode</b><div class="small muted">Swap moves that need a ball, pull-up bar, rope or bench for band and bodyweight versions.</div></div>${switchBtn('toggle-road', !!S.settings.roadMode, 'Road mode')}</div>
@@ -1276,7 +1357,7 @@ function viewMore() {
       <a class="listitem" href="#/photos">${icon('book', 20)}<span class="grow t">Journal photos</span><span class="muted">›</span></a>
     </div>
     <div class="card"><h3>Install on iPhone</h3>
-      <ol class="small tight"><li>Open this page in <b>Safari</b>.</li><li>Tap the <b>Share</b> button.</li><li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li><li>Open <b>Workout</b> from the Home Screen. It works offline after that.</li></ol>
+      <ol class="small tight"><li>Open this page in <b>Safari</b>.</li><li>Tap <b>Safari's Share</b> button (the square with an arrow).</li><li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li><li>Open <b>Workout</b> from the Home Screen. It works offline after that.</li></ol>
       <p class="small muted">On Android, open it in Chrome and choose <b>Install app</b> from the ⋮ menu.</p>
     </div>
     <p class="small muted pad">Workout ${APP_VERSION} · ${h(S.program.name)} (iwantsixpackabs.com, 2007).</p>`,
@@ -1498,6 +1579,41 @@ document.addEventListener('click', async ev => {
       if (!ok) { download(bk.csv, bk.csvName, 'text/csv'); toast('CSV downloaded'); }
       break;
     }
+    case 'share-app': {
+      // startShare() runs before any await so iOS still counts this tap.
+      if (b.dataset.busy === '1') break;
+      b.dataset.busy = '1';
+      const shareP = startShare();
+      try {
+        if (shareP) {
+          try {
+            await shareP;
+            break;
+          } catch (err) {
+            if (isShareCancel(err)) break;
+          }
+        }
+        const copied = await copyShareUrl();
+        if (copied) toast('Link copied');
+        else showManualCopy();
+      } finally {
+        if (b.isConnected) delete b.dataset.busy;
+      }
+      break;
+    }
+    case 'copy-link': {
+      // writeText/execCommand start inside copyShareUrl(), before this await.
+      const pending = copyShareUrl();
+      const copied = await pending;
+      if (copied) {
+        toast('Link copied');
+        if (!$('#modal').hidden) closeModal('copied');
+      } else if ($('#shareUrlField')) {
+        selectShareField();
+        toast('Touch and hold the link, then tap Copy', 3500);
+      } else showManualCopy();
+      break;
+    }
     case 'sound-test': unlockAudio(); beep(3); break;
     case 'voice-test': unlockAudio(); speak('10 seconds. 3. 2. 1. Go! Explosive pushups.', true); break;
     case 'a2hs-x': S.settings.a2hsDismissed = true; saveSettings(); $('#a2hs')?.remove(); break;
@@ -1566,7 +1682,7 @@ async function boot() {
     if (!location.hash) history.replaceState(null, '', '#/today');
     render();
     if (Timer.st && !Timer.st.done) Timer.run();
-    window.__app = { S, DB, Timer, refresh, render, buildBackup, importBackup, nextStep, roadSwap, roadDemo, classify, upgradeDemos, libraryDemoFor, ready: true };
+    window.__app = { S, DB, Timer, refresh, render, buildBackup, importBackup, nextStep, roadSwap, roadDemo, classify, upgradeDemos, libraryDemoFor, SHARE_URL, ready: true };
   } catch (e) {
     $('#view').innerHTML = `<div class="card"><h3>Could not start</h3><p class="small">${h(e && e.message)}</p><p class="small">If you're offline, open the app once while online so it can save everything for offline use.</p></div>`;
     console.error(e);
