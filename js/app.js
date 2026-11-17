@@ -2,7 +2,7 @@
  * Plain JS, no build step. Data lives in IndexedDB; assets are precached by sw.js. */
 'use strict';
 (function () {
-const APP_VERSION = '1.5'; // matches the Android app 1.5 (versionCode 7)
+const APP_VERSION = '1.5.1'; // matches the Android app 1.5.1 (versionCode 8)
 // Always this address. The open page may be #/more, a local preview, or the Home Screen start URL.
 const SHARE_URL = 'https://jbmarine63.github.io/workout/';
 const $ = (s, el = document) => el.querySelector(s);
@@ -94,7 +94,7 @@ const DB = {
 const S = {
   program: null, workouts: null, seed: [], library: [], libByKey: new Map(),
   sessions: [], intervals: [], custom: [],
-  settings: { week: 1, day: 'MON', currentWeek: null, theme: 'auto', keepAwake: true, a2hsDismissed: false, roadMode: false, voiceCues: true, injuries: [], shoulderMobility: null, ankleFreshSprain: false },
+  settings: { week: 1, day: 'MON', currentWeek: null, theme: 'auto', colorScheme: 'default', keepAwake: true, a2hsDismissed: false, roadMode: false, voiceCues: true, injuries: [], shoulderMobility: null, ankleFreshSprain: false },
   recovery: null, metrics: [], habits: [], recLogs: [], photos: [], recOpen: [],
   hint: null, intervalDraft: null, persisted: null, backup: null,
   todayPick: null, goDraft: {}, lastDone: null
@@ -1390,6 +1390,7 @@ function viewMore() {
       <div class="set-row">${icon('truck', 20, 'blue')}<div class="grow"><b>Road mode</b><div class="small muted">Swap moves that need a ball, pull-up bar, rope or bench for band and bodyweight versions.</div></div>${switchBtn('toggle-road', !!S.settings.roadMode, 'Road mode')}</div>
       <div class="set-row">${icon('speaker', 20, 'blue')}<div class="grow"><b>Spoken cues</b><div class="small muted">Counts down rest out loud and calls the next move.</div></div>${switchBtn('toggle-voice', !!S.settings.voiceCues, 'Spoken cues')}</div>
       <label class="f">Theme<select data-setting="theme"><option value="auto" ${S.settings.theme === 'auto' ? 'selected' : ''}>Match phone</option><option value="dark" ${S.settings.theme === 'dark' ? 'selected' : ''}>Dark</option><option value="light" ${S.settings.theme === 'light' ? 'selected' : ''}>Light</option></select></label>
+      <label class="f">Color scheme <span class="scheme-dots" aria-hidden="true"><i></i><i></i></span><select data-setting="colorScheme" id="colorScheme">${COLOR_SCHEMES.map(([k, n]) => `<option value="${k}" ${colorSchemeKey(S.settings.colorScheme) === k ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
       <label class="check"><input type="checkbox" data-setting="keepAwake" ${S.settings.keepAwake ? 'checked' : ''}> Keep the screen on while a timer runs ${'wakeLock' in navigator ? '' : '<span class="small muted">(not supported here)</span>'}</label>
       <div class="row gap" style="margin-top:8px"><button class="grow sm" data-act="sound-test">Test sound</button><button class="grow sm" data-act="voice-test">Test voice</button></div>
       <a class="listitem" href="#/credits" id="creditsLink">${icon('book', 20)}<span class="grow t">Credits &amp; licenses</span><span class="muted">›</span></a>
@@ -1459,9 +1460,13 @@ function viewPhotos() {
 }
 
 /* ---------------- Theme / banners ---------------- */
+// 1.5.1 colour schemes (accent + secondary only). Same keys, names and order as Android (ColorSchemes.all).
+const COLOR_SCHEMES = [['default', 'Default'], ['marine', 'Marine'], ['army', 'Army'], ['navy', 'Navy'], ['airforce', 'Air Force']];
+const colorSchemeKey = v => (COLOR_SCHEMES.find(([k]) => k === String(v || '').trim().toLowerCase()) || COLOR_SCHEMES[0])[0];
 function applyTheme() {
   const t = S.settings.theme === 'auto' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : S.settings.theme;
   document.documentElement.dataset.theme = t;
+  document.documentElement.dataset.scheme = colorSchemeKey(S.settings.colorScheme);
   $('#themeColor').setAttribute('content', t === 'light' ? '#f4f5f7' : '#0e1012');
 }
 function showUpdate(reg) {

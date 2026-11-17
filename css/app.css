@@ -11,10 +11,22 @@
 }
 :root[data-theme="light"]{
   --bg:#f4f5f7;--card:#ffffff;--card2:#eceef1;--line:#d9dde3;--fg:#15181c;--muted:#59636e;--dim:#9aa3ad;
-  --accent:#e8650f;--accent-fg:#ffffff;--blue:#0b74b8;--blue-fg:#ffffff;--blue-bg:#e3f2fb;--blue-line:#a9d3ee;--blue-text:#0a4f7d;
+  --accent:#c2410c;--accent-fg:#ffffff;--blue:#0b74b8;--blue-fg:#ffffff;--blue-bg:#e3f2fb;--blue-line:#a9d3ee;--blue-text:#0a4f7d;
   --danger:#c62828;--warn:#9a6a00;--link:#0b63b6;--tabbar:#ffffff;
   color-scheme:light;
 }
+/* 1.5.1 colour schemes: accent (main action) + secondary ("done") only; Dark/Light/Match phone stays separate.
+   Same names, order and hex values as the Android app (ui/theme/Color.kt). WCAG AA checked for every scheme x mode.
+   "--blue" keeps its name but holds the scheme's secondary colour; links use it too. Default = the :root / light blocks above. */
+:root:not([data-theme="light"])[data-scheme="marine"]{--accent:#ff5252;--accent-fg:#1a0404;--blue:#ffc72c;--blue-fg:#1f1600;--blue-bg:#2a2410;--blue-line:#5a4a1a;--blue-text:#ffe9a8;--link:#ffc72c}
+:root[data-theme="light"][data-scheme="marine"]{--accent:#b3121b;--accent-fg:#ffffff;--blue:#7d5c00;--blue-fg:#ffffff;--blue-bg:#fbf3dc;--blue-line:#e6cf8a;--blue-text:#5c4300;--link:#7d5c00}
+:root:not([data-theme="light"])[data-scheme="army"]{--accent:#a3b86c;--accent-fg:#141a06;--blue:#d9bf8c;--blue-fg:#231a08;--blue-bg:#24211a;--blue-line:#4d4430;--blue-text:#f0e3c8;--link:#d9bf8c}
+:root[data-theme="light"][data-scheme="army"]{--accent:#4b5320;--accent-fg:#ffffff;--blue:#7a5c22;--blue-fg:#ffffff;--blue-bg:#f3ecdd;--blue-line:#d8c7a0;--blue-text:#5a4318;--link:#7a5c22}
+:root:not([data-theme="light"])[data-scheme="navy"]{--accent:#7aa2ff;--accent-fg:#0a1430;--blue:#f2c14e;--blue-fg:#1f1600;--blue-bg:#262212;--blue-line:#5a4a1a;--blue-text:#ffe9a8;--link:#f2c14e}
+:root[data-theme="light"][data-scheme="navy"]{--accent:#1f3a7a;--accent-fg:#ffffff;--blue:#7d5c00;--blue-fg:#ffffff;--blue-bg:#fbf3dc;--blue-line:#e6cf8a;--blue-text:#5c4300;--link:#7d5c00}
+:root:not([data-theme="light"])[data-scheme="airforce"]{--accent:#8fa8ff;--accent-fg:#0a1236;--blue:#c0c6cf;--blue-fg:#15181c;--blue-bg:#1e2226;--blue-line:#3e454d;--blue-text:#e6e9ed;--link:#c0c6cf}
+:root[data-theme="light"][data-scheme="airforce"]{--accent:#00308f;--accent-fg:#ffffff;--blue:#5a6370;--blue-fg:#ffffff;--blue-bg:#eceff2;--blue-line:#c5cbd2;--blue-text:#3c434c;--link:#5a6370}
+.scheme-dots{display:inline-flex;gap:4px;vertical-align:middle;margin-left:6px}.scheme-dots i{width:14px;height:14px;border-radius:7px;border:1px solid var(--line)}.scheme-dots i:first-child{background:var(--accent)}.scheme-dots i:last-child{background:var(--blue)}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
 body{overscroll-behavior-y:none}

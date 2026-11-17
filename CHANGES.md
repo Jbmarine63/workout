@@ -1,3 +1,15 @@
+PWA 1.5.1: color schemes (matches Android 1.5.1, versionCode 8)
+
+- More → Settings → Color scheme: Default (orange/blue), Marine (scarlet/gold), Army (olive drab/tan),
+  Navy (navy/gold), Air Force (ultramarine/silver). Only the accent and secondary ("done") colors
+  change; the Dark / Light / Match phone picker works as before and applies to every scheme.
+- Same names, order and hex values as the Android app. Every scheme × mode passes WCAG AA (4.5:1)
+  for text on accent buttons and accent/secondary-colored text. Default light's orange is a little
+  darker (#e8650f → #c2410c) so white button text passes too.
+- Saved in the existing settings record (no new store, IndexedDB stays version 2); unknown values
+  fall back to Default. Included in backups with the other settings.
+- tools/test/themes.mjs: headless test for the picker, CSS variables, persistence and fallback.
+
 PWA 1.5: matches Android 1.5 — Recovery, stretching, cardio log, trackers, stats, backup v2
 
 - New Recovery tab (5 tabs): tick knees, ankles/feet, hips, lower back or shoulders
