@@ -1,6 +1,6 @@
 # Six Pack Workout — iPhone web app (PWA)
 
-An offline web app version of the Android "Workout" app, matching **Android 1.4** (demo GIFs, labels,
+An offline web app version of the Android "Workout" app, matching **Android 1.5** (Recovery, stretching and routines, cardio log, trackers, stats, demo GIFs,
 Road mode and Credits), with the **16 Weeks to Six Pack Abs**
 program from the archived iwantsixpackabs.com (2007). Static files only. There's no build step and no CDN,
 and every path is relative, so it runs from any folder, including a GitHub Pages subpath like
@@ -47,7 +47,7 @@ Always open it from the Home Screen icon, not from a Safari tab (see "Limitation
   - **Restore:** from JSON, with a choice of **Merge** (skips entries you already have) or **Replace**
     (asks a second time).
   - **Settings:** current week, Road mode, spoken cues, theme (match phone, dark or light), keep the screen
-    awake, storage status, the version (**Workout 1.4**) and **Credits & licenses**.
+    awake, storage status, the version (**Workout 1.5**) and **Credits & licenses**.
   - **Reading:** the site's articles (interval training, eating, pull-up alternatives) and the journal photos.
 - **Offline:** the service worker precaches every file: all 99 GIFs, `data/program16.json`, the photos and the
   articles. Cache names are versioned by a content hash. Data is stored in IndexedDB, and the app asks for
@@ -72,6 +72,16 @@ Always open it from the Home Screen icon, not from a Safari tab (see "Limitation
   still have no demo (rope curl in weeks 12 and 14, Alligator in week 16).
 - **Exports on iPhone:** a standalone web app can't download files the normal way, so the share sheet is used.
   If it doesn't appear, use **Download** from Safari.
+
+## 1.5 (matches the Android app 1.5)
+
+- **Recovery** tab: injury areas (knees, shoulders, lower back, ankles, wrists) with leveled exercises, pain
+  guidance, red flags and sources; ticked areas swap program moves. Stretch and 4 Routines with a guided timer.
+- **Cardio** log with suggestions (jump rope, jogging, walking, sprints, Tabata, HIIT) or any type; distance.
+- **Trackers**: weight, measurements, habits, water and private progress photos. Health data is manual on
+  iPhone (web apps can't read Apple Health; the Android app can import from Health Connect).
+- **Stats** with streaks, calendar, weekly volume, badges and e1RM PRs. Backup format 2.
+- See CHANGES.md. Privacy policy: `privacy.html`.
 
 ## 1.4 (matches the Android app 1.4)
 
@@ -110,10 +120,12 @@ online.
 index.html  manifest.webmanifest  sw.js  .nojekyll
 css/app.css            js/app.js (all app logic, plain JS)
 data/program16.json    data/workouts.json  data/seed_exercises.json   (same files as the Android assets)
-demos/*.gif (99)       journal_images/*.jpg (6)   articles/*.txt (3)
+demos/*.gif (99)       recovery/*.gif (19)   data/recovery.json   privacy.html
+journal_images/*.jpg (6)   articles/*.txt (3)
 icons/ (180, 192, 512, maskable 512, apple-touch-icon)
 tools/build_sw.py  tools/sw.template.js  tools/test/e2e.mjs, update-flow.mjs (older Playwright tests)
 tools/test/v14-upgrade.mjs (1.4 upgrade, GIF, Road mode and Credits test)
+tools/test/v15.mjs (1.5: DB v1→v2 upgrade, Recovery, guides, swaps, cardio, trackers, stats, backup v2)
 tools/test/share-link.mjs (WebKit iPhone: share, cancel, copy, clipboard fallback)
 ```
 

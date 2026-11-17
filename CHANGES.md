@@ -1,3 +1,26 @@
+PWA 1.5: matches Android 1.5 — Recovery, stretching, cardio log, trackers, stats, backup v2
+
+- New Recovery tab (5 tabs): tick knees, shoulders, lower back, ankles or wrists. Each area has
+  leveled exercises (19 credited public-domain/CC GIFs in recovery/), a pain slider (0–10) with
+  stop/continue guidance, red flags, sources and a "not medical advice" note. Checked areas swap
+  matching program moves (after Road mode) and the workout shows "Recovery swap (area) for: …".
+- Stretch: dynamic warm-up and static stretches with a guided timer. Routines: 4 short routines
+  (spoken cues, screen awake) that log to Stats when finished.
+- Cardio log (Today → Cardio): suggestions for jump rope, jogging, walking, sprints, Tabata and
+  HIIT, or any type you type; minutes, optional distance (mi/km), notes.
+- Trackers (More): weight and body measurements, daily habits and water, private progress photos
+  (kept in this browser's storage, downscaled, never uploaded). Health apps: manual entry on iPhone;
+  the Android app can read Samsung Health data through Health Connect.
+- Stats: totals, streaks, 12-week calendar, weekly volume, badges, PRs with estimated 1RM. The
+  workout screen shows a progress hint and e1RM; Swap now covers the rest of the workout.
+- Today: resume banner for an unfinished workout, "Train anyway" on rest days, recovery status.
+- Backup format 2 (adds trackers, habits and recovery logs; photos listed without images), checked
+  before import, with a safety copy kept before anything changes. CSV gains distance and pain.
+- IndexedDB version 2 adds stores only; 1.4 data is untouched (tested with a real v1 database and
+  the 1.4 → 1.5 service-worker update).
+- privacy.html: the v1.5 privacy policy (also used by the Android Health Connect rationale screen).
+- sw.js: privacy.html opens as itself offline; 142 precached URLs (118 GIFs).
+
 Share link: More → Share this app sends https://jbmarine63.github.io/workout/
 
 - Share uses the system share sheet when navigator.share is available, in a

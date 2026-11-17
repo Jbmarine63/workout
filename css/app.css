@@ -255,3 +255,41 @@ body.has-timer main{padding-bottom:calc(var(--tap) + 270px + var(--sab))}
 .credit p{margin:4px 0}
 .share-url,#shareUrlField{user-select:all;-webkit-user-select:all;word-break:break-all}
 .share-url{color:var(--fg)}
+
+/* ---------- 1.5: recovery, cardio, trackers, stats ---------- */
+.acc-t{color:var(--accent)} .blue-t{color:var(--blue)} .danger-t{color:var(--danger)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;flex:none;background:var(--dim)}
+.dot.blue{background:var(--blue)} .dot.acc{background:var(--accent)} .dot.danger{background:var(--danger)}
+.pain-row{display:flex;align-items:flex-start;gap:2px;margin:6px 0}
+.pain-row .dot{margin-top:5px}
+.rec-tabs{margin-bottom:12px}
+.warn-card{border-color:var(--warn)}
+.warn-card b{color:var(--warn);display:flex;align-items:center;gap:6px}
+.sub-q{margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.area-card{padding:8px 12px}
+.area-head{justify-content:space-between;min-height:56px;padding:4px}
+.area-name{font-size:17px;color:var(--fg)}
+.left{text-align:left;justify-content:flex-start}
+.lvl{margin:12px 0 4px}
+.rec-ex{width:100%}
+.redflags{margin-top:12px;padding:10px 12px;border-radius:12px;background:var(--card2);border-left:3px solid var(--danger)}
+.srcs{margin-top:8px;word-break:break-all}
+.srcs summary{cursor:pointer;color:var(--link)}
+.stretch-row{width:100%;gap:12px}
+.routine ol{padding-left:20px}
+.cardio-idea{width:100%;gap:12px}
+.rec-line{gap:10px;text-decoration:none;color:var(--fg);padding:12px 16px}
+.resume{display:flex;align-items:center;gap:12px;border-color:var(--accent)}
+.stat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;text-align:center}
+.stat-grid>div{display:flex;flex-direction:column;align-items:center}
+.heat{display:flex;gap:3px;margin:6px 0}
+.heat>div{display:flex;flex-direction:column;gap:3px;flex:1}
+.heat i{display:block;aspect-ratio:1;border-radius:3px;background:var(--card2)}
+.heat i.h1{background:var(--blue)} .heat i.h2{background:var(--accent)}
+.bars{display:flex;align-items:flex-end;gap:6px;height:140px;overflow-x:auto}
+.bars>div{flex:1;min-width:26px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px}
+.bars i{display:block;width:70%;background:var(--accent);border-radius:4px 4px 0 0}
+.bars .small{font-size:10px}
+.badge.earned{color:var(--accent-fg);background:var(--accent);border-color:var(--accent)}
+.badge.locked{opacity:.5}
+input[type=range]{width:100%;accent-color:var(--accent)}

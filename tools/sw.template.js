@@ -37,6 +37,12 @@ self.addEventListener('fetch', event => {
   event.respondWith((async () => {
     const cache = await caches.open(CACHE);
     if (req.mode === 'navigate') {
+      // Standalone pages (privacy.html) open as themselves; everything else is the app shell.
+      if (/\.html$/.test(url.pathname) && !url.pathname.endsWith('/index.html')) {
+        const page = await cache.match(req, { ignoreSearch: true });
+        if (page) return page;
+        try { return await fetch(req); } catch (e) { /* fall through to the app */ }
+      }
       return (await cache.match('./index.html')) || (await cache.match('./')) || fetch(req);
     }
     const hit = await cache.match(req, { ignoreSearch: true });

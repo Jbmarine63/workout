@@ -1,0 +1,2302 @@
+{
+ "version": 1,
+ "source": "Workout App v1.5 — Recovery & Stretching (Future Updates), Part 2 research, 2026-11-17",
+ "safety": {
+  "disclaimer": "These exercises are general information, not medical advice. They are not a diagnosis or a treatment plan. If you have had surgery, a recent injury, numbness, weakness, or pain that is getting worse, see a doctor or physiotherapist before starting. Stop any exercise that causes sharp pain.",
+  "painRule": [
+   {
+    "from": 0,
+    "to": 3,
+    "level": "ok",
+    "text": "0–3 out of 10 during an exercise is OK."
+   },
+   {
+    "from": 4,
+    "to": 5,
+    "level": "caution",
+    "text": "4–5 out of 10 is acceptable only if it settles by the next morning."
+   },
+   {
+    "from": 6,
+    "to": 10,
+    "level": "stop",
+    "text": "6+ out of 10, or pain that is worse the next day: stop that exercise and drop back a step."
+   }
+  ],
+  "painSource": "NHS Inform pain scale, via https://medibilbaosalud.com/en/knee-exercises/",
+  "phasing": "Each list runs early → late. Level 3 moves are only for when Level 1–2 feel comfortable.",
+  "shoulderPrompt": "Can you raise your arm above shoulder height without sharp pain?",
+  "shoulderRule": "MOON shoulder protocol: don't start strengthening until the arm lifts above about 120° and pain at rest is below 2/10. Until then, the mobility moves only.",
+  "ankleRule": "After a fresh sprain, do NOT tilt the foot in or out for the first ~2 weeks — only bend and straighten (pumps). No running or jumping until your balance is back.",
+  "equipment": "Everything here is bodyweight plus one loop resistance band. The band is the only purchase; it fits in a glove box.",
+  "stretchRule": "Move to warm up, hold to cool down: keep pre-workout stretches moving, and save long holds for after the workout (Cleveland Clinic / Harvard Health)."
+ },
+ "areas": [
+  {
+   "key": "knee",
+   "name": "Knees",
+   "intro": "achy knees from sitting, stairs, and squatting loads; patellofemoral pain (\"runner's knee\") and early osteoarthritis are the usual culprits. The evidence base is consistent: strengthen quads + glutes/hips, don't just stretch the knee (Lack et al., *BJSM* 2015: hip + quad strengthening cut patellofemoral pain 50–75%).",
+   "exercises": [
+    {
+     "id": "knee_01",
+     "name": "Quad sets (isometric)",
+     "types": [
+      "early",
+      "strength"
+     ],
+     "phase": 1,
+     "how": "Leg straight, tighten thigh, press back of knee into floor/bed, hold 5–10 s. First exercise prescribed after knee replacement — safe for almost everyone.",
+     "steps": [
+      "Leg straight, tighten thigh, press back of knee into floor/bed, hold 5–10 s.",
+      "First exercise prescribed after knee replacement — safe for almost everyone."
+     ],
+     "source": "AAOS knee program, summarised at https://medibilbaosalud.com/en/knee-exercises/",
+     "sourceUrls": [
+      "https://medibilbaosalud.com/en/knee-exercises/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "knee_02",
+     "name": "Straight-leg raises",
+     "types": [
+      "strength"
+     ],
+     "phase": 1,
+     "how": "Lying on back, one knee bent, lift straight leg 6–10 in, hold 5 s, lower slowly.",
+     "steps": [
+      "Lying on back, one knee bent, lift straight leg 6–10 in, hold 5 s, lower slowly."
+     ],
+     "source": "AAOS, via https://medibilbaosalud.com/en/knee-exercises/",
+     "sourceUrls": [
+      "https://medibilbaosalud.com/en/knee-exercises/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "knee_03",
+     "name": "Heel slides",
+     "types": [
+      "mobility"
+     ],
+     "phase": 1,
+     "how": "Lying down, slide heel toward buttocks to bend the knee as far as comfortable, hold 2 s. Restores range of motion.",
+     "steps": [
+      "Lying down, slide heel toward buttocks to bend the knee as far as comfortable, hold 2 s.",
+      "Restores range of motion."
+     ],
+     "source": "NHS Inform, via https://medibilbaosalud.com/en/knee-exercises/ ; https://bridgwaterphysiotherapy.ca/top-7-exercises-physiotherapy-for-knee-pain-relief/",
+     "sourceUrls": [
+      "https://medibilbaosalud.com/en/knee-exercises/",
+      "https://bridgwaterphysiotherapy.ca/top-7-exercises-physiotherapy-for-knee-pain-relief/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "knee_04",
+     "name": "Seated knee extensions (short-arc quads)",
+     "types": [
+      "strength"
+     ],
+     "phase": 1,
+     "how": "Sitting, tighten thigh and slowly straighten the leg, hold 5 s. Isolates the VMO (inner quad, key for kneecap tracking).",
+     "steps": [
+      "Sitting, tighten thigh and slowly straighten the leg, hold 5 s.",
+      "Isolates the VMO (inner quad, key for kneecap tracking)."
+     ],
+     "source": "AAOS, via https://medibilbaosalud.com/en/knee-exercises/",
+     "sourceUrls": [
+      "https://medibilbaosalud.com/en/knee-exercises/"
+     ],
+     "gif": "recovery/knee_extension_cdc.gif",
+     "gifNote": ""
+    },
+    {
+     "id": "knee_05",
+     "name": "Glute bridge",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Lying on back, knees bent, squeeze glutes and lift hips to a straight line shoulders–knees.",
+     "steps": [
+      "Lying on back, knees bent, squeeze glutes and lift hips to a straight line shoulders–knees."
+     ],
+     "source": "MuscleWiki glute list (GIFs): https://musclewiki.com/exercises/glutes/bodyweight/4?model=f ; also https://health.clevelandclinic.org/glute-bridges",
+     "sourceUrls": [
+      "https://musclewiki.com/exercises/glutes/bodyweight/4?model=f",
+      "https://health.clevelandclinic.org/glute-bridges"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "knee_06",
+     "name": "Clamshell",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Side-lying, knees bent, feet together, open top knee without rolling hips back. Targets gluteus medius (hip stability → less knee load).",
+     "steps": [
+      "Side-lying, knees bent, feet together, open top knee without rolling hips back.",
+      "Targets gluteus medius (hip stability → less knee load)."
+     ],
+     "source": "MuscleWiki GIF (verified): https://musclewiki.com/exercise/mini-band-clamshell",
+     "sourceUrls": [
+      "https://musclewiki.com/exercise/mini-band-clamshell"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "knee_07",
+     "name": "Wall sit (shallow)",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Back against wall, slide down only a little, hold 10–20 s. Build depth slowly.",
+     "steps": [
+      "Back against wall, slide down only a little, hold 10–20 s.",
+      "Build depth slowly."
+     ],
+     "source": "AAOS / https://www.getpainfixed.com/conditions/knee-pain/knee-exercises/",
+     "sourceUrls": [
+      "https://www.getpainfixed.com/conditions/knee-pain/knee-exercises/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "knee_08",
+     "name": "Mini squats / half squats",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Feet shoulder-width, lower hips ~10 in as if sitting into a chair, hold 5 s, push up through heels.",
+     "steps": [
+      "Feet shoulder-width, lower hips ~10 in as if sitting into a chair, hold 5 s, push up through heels."
+     ],
+     "source": "AAOS, via https://medibilbaosalud.com/en/knee-exercises/",
+     "sourceUrls": [
+      "https://medibilbaosalud.com/en/knee-exercises/"
+     ],
+     "gif": "recovery/chair_squat_cdc.gif",
+     "gifNote": "Similar demo (chair squat, CDC)"
+    },
+    {
+     "id": "knee_09",
+     "name": "Step-ups",
+     "types": [
+      "strength"
+     ],
+     "phase": 3,
+     "how": "Low step (truck step works), step up leading with the sore leg, 2×10 each leg. Progress height slowly.",
+     "steps": [
+      "Low step (truck step works), step up leading with the sore leg, 2×10 each leg.",
+      "Progress height slowly."
+     ],
+     "source": "AAOS; https://www.getpainfixed.com/conditions/knee-pain/knee-exercises/",
+     "sourceUrls": [
+      "https://www.getpainfixed.com/conditions/knee-pain/knee-exercises/"
+     ],
+     "gif": "recovery/step_up_cdc.gif",
+     "gifNote": ""
+    },
+    {
+     "id": "knee_10",
+     "name": "Standing hamstring curls",
+     "types": [
+      "strength"
+     ],
+     "phase": 3,
+     "how": "Holding a chair/wall, bend knee and raise heel toward ceiling, hold 5 s.",
+     "steps": [
+      "Holding a chair/wall, bend knee and raise heel toward ceiling, hold 5 s."
+     ],
+     "source": "AAOS, via https://medibilbaosalud.com/en/knee-exercises/",
+     "sourceUrls": [
+      "https://medibilbaosalud.com/en/knee-exercises/"
+     ],
+     "gif": "recovery/knee_curl_cdc.gif",
+     "gifNote": ""
+    },
+    {
+     "id": "knee_11",
+     "name": "Calf raises",
+     "types": [
+      "strength"
+     ],
+     "phase": 3,
+     "how": "Holding a chair, rise onto toes as high as possible, lower slowly. 2×10.",
+     "steps": [
+      "Holding a chair, rise onto toes as high as possible, lower slowly.",
+      "2×10."
+     ],
+     "source": "AAOS, via https://medibilbaosalud.com/en/knee-exercises/",
+     "sourceUrls": [
+      "https://medibilbaosalud.com/en/knee-exercises/"
+     ],
+     "gif": "recovery/toe_stand_cdc.gif",
+     "gifNote": ""
+    },
+    {
+     "id": "knee_12",
+     "name": "Hamstring towel stretch",
+     "types": [
+      "mobility"
+     ],
+     "phase": 3,
+     "how": "Lying or sitting, loop towel around foot, gently pull leg toward you until a mild stretch, hold 30 s.",
+     "steps": [
+      "Lying or sitting, loop towel around foot, gently pull leg toward you until a mild stretch, hold 30 s."
+     ],
+     "source": "https://bridgwaterphysiotherapy.ca/top-7-exercises-physiotherapy-for-knee-pain-relief/",
+     "sourceUrls": [
+      "https://bridgwaterphysiotherapy.ca/top-7-exercises-physiotherapy-for-knee-pain-relief/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    }
+   ],
+   "swapsText": "jump squats → mini squats · lunges → step-ups · running/jump rope → walking or cycling · burpees → incline push-up + step-back (no jump) · deep squats → wall sit or sit-to-stand.",
+   "swaps": [
+    {
+     "match": "jump|box jump|linear stability|spil",
+     "to": "Mini squats / half squats"
+    },
+    {
+     "match": "lunge",
+     "to": "Step-ups"
+    },
+    {
+     "match": "burpee|8 count",
+     "to": "Incline push-up + step-back (no jump)"
+    },
+    {
+     "match": "squat hold|wall squat|ball squat",
+     "to": "Wall sit (shallow)"
+    },
+    {
+     "match": "deep squat|pistol|one leg squat|1 legged|prison squat|squat",
+     "to": "Sit-to-stand"
+    }
+   ],
+   "cautions": "avoid deep squats, lunges with the knee travelling well past the toes, and jumping during a flare-up (https://www.physioipoh.com.my/blog/best-exercises-knee-pain/). Wall sits: keep the bend shallow — a full 90° wall sit loads the knee heavily and some sources advise against it for knee problems. Stop and see a clinician for a swollen, locked, or giving-way knee, or pain that doesn't settle within 6–8 weeks.",
+   "redFlags": [
+    "A swollen, locked, or giving-way knee.",
+    "Pain that doesn't settle within 6–8 weeks."
+   ],
+   "laterCandidates": "standing quad stretch, single-leg stand (balance), step-downs (eccentric, later phase), lateral band walks, side-lying hip abduction/adduction."
+  },
+  {
+   "key": "ankle",
+   "name": "Ankles / feet",
+   "intro": "sprains (often old, never properly rehabbed — up to 40% of people have lingering pain/instability after a lateral sprain; chronic instability rates up to 70% in some studies). Rehab is phased: mobility → isometric strength → banded strength → balance.",
+   "exercises": [
+    {
+     "id": "ankle_01",
+     "name": "Ankle alphabet",
+     "types": [
+      "mobility"
+     ],
+     "phase": 1,
+     "how": "Seated, trace A–Z in the air with the big toe. Restores range of motion in all directions.",
+     "steps": [
+      "Seated, trace A–Z in the air with the big toe.",
+      "Restores range of motion in all directions."
+     ],
+     "source": "Kaiser Permanente rehab guide: https://healthy.kaiserpermanente.org/health-wellness/health-encyclopedia/he.sprained-ankle-rehabilitation-exercises.te7604",
+     "sourceUrls": [
+      "https://healthy.kaiserpermanente.org/health-wellness/health-encyclopedia/he.sprained-ankle-rehabilitation-exercises.te7604"
+     ],
+     "gif": null,
+     "gifNote": "",
+     "caution": "After a fresh sprain (first ~2 weeks) keep to up-and-down movement only; skip the side-to-side part."
+    },
+    {
+     "id": "ankle_02",
+     "name": "Ankle circles / rotations",
+     "types": [
+      "mobility"
+     ],
+     "phase": 1,
+     "how": "Slow circles each way, 5–10 reps. Reduces stiffness and swelling.",
+     "steps": [
+      "Slow circles each way, 5–10 reps.",
+      "Reduces stiffness and swelling."
+     ],
+     "source": "NHS (East Lancashire Hospitals): https://elht.nhs.uk/services/paediatric-physiotherapy/information-patients/ankle-sprains",
+     "sourceUrls": [
+      "https://elht.nhs.uk/services/paediatric-physiotherapy/information-patients/ankle-sprains"
+     ],
+     "gif": null,
+     "gifNote": "",
+     "caution": "After a fresh sprain (first ~2 weeks) keep to up-and-down movement only; skip the side-to-side part."
+    },
+    {
+     "id": "ankle_03",
+     "name": "Ankle pumps (dorsiflexion / plantarflexion)",
+     "types": [
+      "mobility"
+     ],
+     "phase": 1,
+     "how": "Point toes away, then pull toes up toward shin, slow and controlled.",
+     "steps": [
+      "Point toes away, then pull toes up toward shin, slow and controlled."
+     ],
+     "source": "NHS, as above",
+     "sourceUrls": [],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "ankle_04",
+     "name": "Towel scrunches / toe pick-ups",
+     "types": [
+      "strength"
+     ],
+     "phase": 1,
+     "how": "Spread a towel on the floor, scrunch it toward you with your toes; or pick up small objects with toes. Builds foot/ankle strength.",
+     "steps": [
+      "Spread a towel on the floor, scrunch it toward you with your toes; or pick up small objects with toes.",
+      "Builds foot/ankle strength."
+     ],
+     "source": "https://www.orthoanswer.org/foot-and-ankle/rehabilitation-for-ankle-sprain/",
+     "sourceUrls": [
+      "https://www.orthoanswer.org/foot-and-ankle/rehabilitation-for-ankle-sprain/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "ankle_05",
+     "name": "Seated heel raises",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Sitting, feet flat, push through toes to lift heels, lower slowly. 10–15 reps.",
+     "steps": [
+      "Sitting, feet flat, push through toes to lift heels, lower slowly.",
+      "10–15 reps."
+     ],
+     "source": "NHS, as above",
+     "sourceUrls": [],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "ankle_06",
+     "name": "Isometric eversion",
+     "types": [
+      "early",
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Seated, outside of foot pressed against a wall/furniture, push outward without moving, hold 6 s. Strengthens the peroneals (the muscles that stop the ankle rolling).",
+     "steps": [
+      "Seated, outside of foot pressed against a wall/furniture, push outward without moving, hold 6 s.",
+      "Strengthens the peroneals (the muscles that stop the ankle rolling)."
+     ],
+     "source": "Kaiser Permanente, as above",
+     "sourceUrls": [],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "ankle_07",
+     "name": "Isometric inversion / opposition",
+     "types": [
+      "early",
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Press inside of foot against the other foot, hold 6 s; then press down against the other heel.",
+     "steps": [
+      "Press inside of foot against the other foot, hold 6 s; then press down against the other heel."
+     ],
+     "source": "Kaiser Permanente, as above",
+     "sourceUrls": [],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "ankle_08",
+     "name": "Banded eversion",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Loop band around ball of foot, anchor other end, rotate ankle outward against resistance, return slowly. 2×15.",
+     "steps": [
+      "Loop band around ball of foot, anchor other end, rotate ankle outward against resistance, return slowly.",
+      "2×15."
+     ],
+     "source": "https://biologyinsights.com/how-to-strengthen-your-ankle-after-a-sprain/",
+     "sourceUrls": [
+      "https://biologyinsights.com/how-to-strengthen-your-ankle-after-a-sprain/"
+     ],
+     "gif": null,
+     "gifNote": "",
+     "lock": "freshSprain"
+    },
+    {
+     "id": "ankle_09",
+     "name": "Banded inversion",
+     "types": [
+      "strength"
+     ],
+     "phase": 3,
+     "how": "Same setup, rotate ankle inward against the band.",
+     "steps": [
+      "Same setup, rotate ankle inward against the band."
+     ],
+     "source": "https://www.sportsinjuryclinic.net/rehabilitation-exercises/ankle-sprain-exercises",
+     "sourceUrls": [
+      "https://www.sportsinjuryclinic.net/rehabilitation-exercises/ankle-sprain-exercises"
+     ],
+     "gif": null,
+     "gifNote": "",
+     "lock": "freshSprain"
+    },
+    {
+     "id": "ankle_10",
+     "name": "Banded dorsiflexion",
+     "types": [
+      "strength"
+     ],
+     "phase": 3,
+     "how": "Band around foot, pull toes up toward shin against resistance.",
+     "steps": [
+      "Band around foot, pull toes up toward shin against resistance."
+     ],
+     "source": "https://www.sportsinjuryclinic.net/rehabilitation-exercises/ankle-sprain-exercises",
+     "sourceUrls": [
+      "https://www.sportsinjuryclinic.net/rehabilitation-exercises/ankle-sprain-exercises"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "ankle_11",
+     "name": "Standing heel raises (supported)",
+     "types": [
+      "strength"
+     ],
+     "phase": 3,
+     "how": "Holding a wall/rail, rise onto toes, hold 5 s, lower slowly. 10–15 reps. Progress to single leg.",
+     "steps": [
+      "Holding a wall/rail, rise onto toes, hold 5 s, lower slowly.",
+      "10–15 reps.",
+      "Progress to single leg."
+     ],
+     "source": "NHS, as above",
+     "sourceUrls": [],
+     "gif": "recovery/toe_stand_cdc.gif",
+     "gifNote": ""
+    },
+    {
+     "id": "ankle_12",
+     "name": "Single-leg balance",
+     "types": [
+      "balance"
+     ],
+     "phase": 3,
+     "how": "Stand next to support, lift one foot, balance as long as possible; aim for 60 s × 3 on the injured leg. The key re-injury prevention exercise.",
+     "steps": [
+      "Stand next to support, lift one foot, balance as long as possible; aim for 60 s × 3 on the injured leg.",
+      "The key re-injury prevention exercise."
+     ],
+     "source": "Kaiser Permanente / NHS, as above",
+     "sourceUrls": [],
+     "gif": null,
+     "gifNote": ""
+    }
+   ],
+   "swapsText": "jump rope / running → walking, cycling, or seated cardio · jumping jacks → step jacks · lunges → supported step-ups · calf-heavy work → seated heel raises.",
+   "swaps": [
+    {
+     "match": "calf raise",
+     "to": "Seated heel raises"
+    },
+    {
+     "match": "jump|box jump|linear stability|spil",
+     "to": "Mini squats / half squats"
+    },
+    {
+     "match": "lunge",
+     "to": "Supported step-ups"
+    },
+    {
+     "match": "burpee|8 count",
+     "to": "Incline push-up + step-back (no jump)"
+    },
+    {
+     "match": "knee lift",
+     "to": "Marching in place"
+    }
+   ],
+   "cautions": "after a fresh sprain, do NOT tilt the foot in/out for the first ~2 weeks — only bend/straighten — as that can re-injure ligaments (https://www.orthoanswer.org/foot-and-ankle/rehabilitation-for-ankle-sprain/). No running or jumping until balance is restored. Grade 2 (partial tear, can't walk comfortably) and Grade 3 (complete tear, unstable) sprains need medical assessment before loading — the app should say so. If problems persist 6–8 weeks after injury, see a physiotherapist.",
+   "redFlags": [
+    "You can't put weight on the foot or can't walk comfortably (possible grade 2–3 sprain): get it assessed before loading it.",
+    "The ankle feels unstable, or problems last 6–8 weeks after the injury."
+   ],
+   "laterCandidates": "toe raises against a wall, star balance (reach foot to points around you), heel-toe walking, bent-knee calf stretch, wobble-board work (needs a board — not truck-friendly, skip for v1.5)."
+  },
+  {
+   "key": "hip",
+   "name": "Hips",
+   "intro": "stiff/achy hips from 10+ hours sitting, weak glutes (gluteus medius especially — it keeps the pelvis level with every step). Hip pain also drives knee and back pain, so this area overlaps both.",
+   "exercises": [
+    {
+     "id": "hip_01",
+     "name": "Glute bridge",
+     "types": [
+      "strength"
+     ],
+     "phase": 1,
+     "how": "As knee #5. Cornerstone hip exercise: strengthens glutes, stretches tight hip flexors, no spinal load.",
+     "steps": [
+      "As knee #5.",
+      "Cornerstone hip exercise: strengthens glutes, stretches tight hip flexors, no spinal load."
+     ],
+     "source": "MuscleWiki glute list (GIFs): https://musclewiki.com/exercises/glutes/bodyweight/4?model=f",
+     "sourceUrls": [
+      "https://musclewiki.com/exercises/glutes/bodyweight/4?model=f"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "hip_02",
+     "name": "Clamshell",
+     "types": [
+      "strength"
+     ],
+     "phase": 1,
+     "how": "As knee #6. Isolates gluteus medius, the key pelvic stabiliser.",
+     "steps": [
+      "As knee #6.",
+      "Isolates gluteus medius, the key pelvic stabiliser."
+     ],
+     "source": "MuscleWiki GIF (verified): https://musclewiki.com/exercise/mini-band-clamshell",
+     "sourceUrls": [
+      "https://musclewiki.com/exercise/mini-band-clamshell"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "hip_03",
+     "name": "Side-lying leg raise",
+     "types": [
+      "strength"
+     ],
+     "phase": 1,
+     "how": "Lying on side, bottom knee bent, top leg straight, lift to ~45°, lower slowly. Outer hip / glute med.",
+     "steps": [
+      "Lying on side, bottom knee bent, top leg straight, lift to ~45°, lower slowly.",
+      "Outer hip / glute med."
+     ],
+     "source": "https://physicalmedicineandrehab.com/exercise-and-hip-rehabilitation/ ; https://www.verywellhealth.com/physical-therapy-exercises-for-hip-pain-5090171",
+     "sourceUrls": [
+      "https://physicalmedicineandrehab.com/exercise-and-hip-rehabilitation/",
+      "https://www.verywellhealth.com/physical-therapy-exercises-for-hip-pain-5090171"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "hip_04",
+     "name": "Standing hip abduction",
+     "types": [
+      "strength"
+     ],
+     "phase": 1,
+     "how": "Standing, holding support, lift leg out to the side without leaning.",
+     "steps": [
+      "Standing, holding support, lift leg out to the side without leaning."
+     ],
+     "source": "https://backinmotionsspt.com/what-are-the-best-hip-physical-therapy-exercises/",
+     "sourceUrls": [
+      "https://backinmotionsspt.com/what-are-the-best-hip-physical-therapy-exercises/"
+     ],
+     "gif": "recovery/hip_abduction_cdc.gif",
+     "gifNote": ""
+    },
+    {
+     "id": "hip_05",
+     "name": "Sit-to-stand",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "From a sturdy chair, lean forward slightly and stand without pushing with arms; sit back slowly. Retrains hip drive.",
+     "steps": [
+      "From a sturdy chair, lean forward slightly and stand without pushing with arms; sit back slowly.",
+      "Retrains hip drive."
+     ],
+     "source": "https://physicalmedicineandrehab.com/exercise-and-hip-rehabilitation/ ; https://sportydoctor.com/hip-physical-therapy/",
+     "sourceUrls": [
+      "https://physicalmedicineandrehab.com/exercise-and-hip-rehabilitation/",
+      "https://sportydoctor.com/hip-physical-therapy/"
+     ],
+     "gif": "recovery/chair_squat_cdc.gif",
+     "gifNote": ""
+    },
+    {
+     "id": "hip_06",
+     "name": "Single-leg bridge",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Glute bridge on one leg, other leg lifted. Strength + balance; progress from #1.",
+     "steps": [
+      "Glute bridge on one leg, other leg lifted.",
+      "Strength + balance; progress from #1."
+     ],
+     "source": "https://sportydoctor.com/hip-physical-therapy/",
+     "sourceUrls": [
+      "https://sportydoctor.com/hip-physical-therapy/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "hip_07",
+     "name": "Banded side steps / monster walk",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Loop band above knees, slight knee bend, 10 small steps sideways and back. Needs a loop band (small, truck-friendly).",
+     "steps": [
+      "Loop band above knees, slight knee bend, 10 small steps sideways and back.",
+      "Needs a loop band (small, truck-friendly)."
+     ],
+     "source": "https://physicalmedicineandrehab.com/exercise-and-hip-rehabilitation/ ; https://www.verywellhealth.com/physical-therapy-exercises-for-hip-pain-5090171",
+     "sourceUrls": [
+      "https://physicalmedicineandrehab.com/exercise-and-hip-rehabilitation/",
+      "https://www.verywellhealth.com/physical-therapy-exercises-for-hip-pain-5090171"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "hip_08",
+     "name": "Hip hikers",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Standing on a low step on one leg, let the other hip drop then lift it level. Pure glute-med work.",
+     "steps": [
+      "Standing on a low step on one leg, let the other hip drop then lift it level.",
+      "Pure glute-med work."
+     ],
+     "source": "https://www.verywellhealth.com/physical-therapy-exercises-for-hip-pain-5090171",
+     "sourceUrls": [
+      "https://www.verywellhealth.com/physical-therapy-exercises-for-hip-pain-5090171"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "hip_09",
+     "name": "Straight-leg raises (side-lying)",
+     "types": [
+      "strength"
+     ],
+     "phase": 3,
+     "how": "Lying on side or back, lift straight leg to strengthen hip flexors/abductors without joint stress.",
+     "steps": [
+      "Lying on side or back, lift straight leg to strengthen hip flexors/abductors without joint stress."
+     ],
+     "source": "https://www.verywellhealth.com/physical-therapy-exercises-for-hip-pain-5090171",
+     "sourceUrls": [
+      "https://www.verywellhealth.com/physical-therapy-exercises-for-hip-pain-5090171"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "hip_10",
+     "name": "Kneeling hip flexor stretch",
+     "types": [
+      "mobility"
+     ],
+     "phase": 3,
+     "how": "Kneeling lunge, back knee down, push hips forward, hold 30 s. The #1 stretch for sitters.",
+     "steps": [
+      "Kneeling lunge, back knee down, push hips forward, hold 30 s.",
+      "The #1 stretch for sitters."
+     ],
+     "source": "https://backinmotionsspt.com/what-are-the-best-hip-physical-therapy-exercises/ ; https://aspirephysiotherapy.ca/physiotherapy-for-hip-pain-edmonton-south/",
+     "sourceUrls": [
+      "https://backinmotionsspt.com/what-are-the-best-hip-physical-therapy-exercises/",
+      "https://aspirephysiotherapy.ca/physiotherapy-for-hip-pain-edmonton-south/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "hip_11",
+     "name": "Figure-four stretch",
+     "types": [
+      "mobility"
+     ],
+     "phase": 3,
+     "how": "Lying or seated, ankle on opposite knee, lean forward gently. Stretches piriformis/glutes.",
+     "steps": [
+      "Lying or seated, ankle on opposite knee, lean forward gently.",
+      "Stretches piriformis/glutes."
+     ],
+     "source": "https://backinmotionsspt.com/what-are-the-best-hip-physical-therapy-exercises/",
+     "sourceUrls": [
+      "https://backinmotionsspt.com/what-are-the-best-hip-physical-therapy-exercises/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "hip_12",
+     "name": "Bird dog",
+     "types": [
+      "strength"
+     ],
+     "phase": 3,
+     "how": "On all fours, extend opposite arm + leg, keep spine and hips still, hold 5–10 s. Core + hip + pelvis coordination.",
+     "steps": [
+      "On all fours, extend opposite arm + leg, keep spine and hips still, hold 5–10 s.",
+      "Core + hip + pelvis coordination."
+     ],
+     "source": "MuscleWiki video (verified): https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-bird-dog-side.mp4",
+     "sourceUrls": [
+      "https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-bird-dog-side.mp4"
+     ],
+     "gif": null,
+     "gifNote": ""
+    }
+   ],
+   "swapsText": "deep squats → sit-to-stand or shallow squats · lunges → step-ups · high knees → marching in place · running → walking.",
+   "swaps": [
+    {
+     "match": "deep squat|pistol|one leg squat|1 legged",
+     "to": "Sit-to-stand"
+    },
+    {
+     "match": "lunge",
+     "to": "Step-ups"
+    },
+    {
+     "match": "knee lift",
+     "to": "Marching in place"
+    },
+    {
+     "match": "jump|box jump|linear stability|spil",
+     "to": "Mini squats / half squats"
+    }
+   ],
+   "cautions": "sharp or catching pain in the joint = stop (mild muscle fatigue is expected; joint catching is not). After hip surgery, surgeon/therapist precautions override everything in the app. Mild discomfort during exercise is acceptable only if it has settled by the next day.",
+   "redFlags": [
+    "Sharp or catching pain in the joint (mild muscle tiredness is normal; joint catching is not).",
+    "After hip surgery, your surgeon's or therapist's precautions override everything in the app."
+   ],
+   "laterCandidates": "90/90 hip stretch, pigeon pose, hip circles, prone hip extension, clock toe taps (balance)."
+  },
+  {
+   "key": "back",
+   "name": "Lower back",
+   "intro": "the big one for truckers — long sitting, then lifting. The evidence-based core is spine-sparing core endurance, not sit-ups: Prof. Stuart McGill's \"Big 3\" (curl-up, side plank, bird dog) is the most widely used physio starting point. General rule: exercise is first-line treatment for non-specific low back pain; staying gently active beats rest.",
+   "exercises": [
+    {
+     "id": "back_01",
+     "name": "McGill curl-up",
+     "types": [
+      "strength"
+     ],
+     "phase": 1,
+     "how": "Lying on back, one knee bent, hands under low back, lift head/shoulders just until shoulder blades clear, hold 10 s. Trains front core WITHOUT bending the spine.",
+     "steps": [
+      "Lying on back, one knee bent, hands under low back, lift head/shoulders just until shoulder blades clear, hold 10 s.",
+      "Trains front core WITHOUT bending the spine."
+     ],
+     "source": "https://befittrainingphysio.com/blog/low-back-pain-try-the-mcgill-big-3/ ; video of McGill himself: https://pro-activehealth.com/back-health/ (embeds YouTube video ID MaZbI2Tp2-g)",
+     "sourceUrls": [
+      "https://befittrainingphysio.com/blog/low-back-pain-try-the-mcgill-big-3/",
+      "https://pro-activehealth.com/back-health/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "back_02",
+     "name": "Side plank (from knees)",
+     "types": [
+      "strength"
+     ],
+     "phase": 1,
+     "how": "On side, elbow under shoulder, knees bent, lift hips to a straight line head–knees, hold 10 s. Progress to straight legs.",
+     "steps": [
+      "On side, elbow under shoulder, knees bent, lift hips to a straight line head–knees, hold 10 s.",
+      "Progress to straight legs."
+     ],
+     "source": "https://befittrainingphysio.com/blog/low-back-pain-try-the-mcgill-big-3/ ; https://www.bodysignals.org/topics/movement/lower-back",
+     "sourceUrls": [
+      "https://befittrainingphysio.com/blog/low-back-pain-try-the-mcgill-big-3/",
+      "https://www.bodysignals.org/topics/movement/lower-back"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "back_03",
+     "name": "Bird dog",
+     "types": [
+      "strength"
+     ],
+     "phase": 1,
+     "how": "As hip #12. The back-extensor leg of the Big 3.",
+     "steps": [
+      "As hip #12.",
+      "The back-extensor leg of the Big 3."
+     ],
+     "source": "MuscleWiki video (verified): https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-bird-dog-side.mp4",
+     "sourceUrls": [
+      "https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-bird-dog-side.mp4"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "back_04",
+     "name": "Dead bug",
+     "types": [
+      "strength"
+     ],
+     "phase": 1,
+     "how": "Lying on back, arms up, knees at 90°, flatten low back into floor, slowly extend opposite arm + leg. Teaches the core to hold the spine still while limbs move.",
+     "steps": [
+      "Lying on back, arms up, knees at 90°, flatten low back into floor, slowly extend opposite arm + leg.",
+      "Teaches the core to hold the spine still while limbs move."
+     ],
+     "source": "https://www.rcmuscleandmovement.uk/trunk-and-core-stability-drills ; https://www.gaspineortho.com/core-exercises/",
+     "sourceUrls": [
+      "https://www.rcmuscleandmovement.uk/trunk-and-core-stability-drills",
+      "https://www.gaspineortho.com/core-exercises/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "back_05",
+     "name": "Glute bridge",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "As knee #5. Glutes support the back; weak glutes = overloaded spine.",
+     "steps": [
+      "As knee #5.",
+      "Glutes support the back; weak glutes = overloaded spine."
+     ],
+     "source": "MuscleWiki glute list (GIFs): https://musclewiki.com/exercises/glutes/bodyweight/4?model=f",
+     "sourceUrls": [
+      "https://musclewiki.com/exercises/glutes/bodyweight/4?model=f"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "back_06",
+     "name": "Cat-cow",
+     "types": [
+      "mobility"
+     ],
+     "phase": 2,
+     "how": "On all fours, slowly arch then round the spine, 8–10 slow rounds. Gentle spinal mobility, good first thing.",
+     "steps": [
+      "On all fours, slowly arch then round the spine, 8–10 slow rounds.",
+      "Gentle spinal mobility, good first thing."
+     ],
+     "source": "https://www.movelittleandoften.com/article/full-body-stretching-routine ; https://www.gymtim.com/full-body-stretching-routine-at-home/",
+     "sourceUrls": [
+      "https://www.movelittleandoften.com/article/full-body-stretching-routine",
+      "https://www.gymtim.com/full-body-stretching-routine-at-home/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "back_07",
+     "name": "Knee-to-chest stretch",
+     "types": [
+      "mobility"
+     ],
+     "phase": 2,
+     "how": "Lying on back, pull one knee to chest, hold 30 s. Gentle low-back release.",
+     "steps": [
+      "Lying on back, pull one knee to chest, hold 30 s.",
+      "Gentle low-back release."
+     ],
+     "source": "Standard physio; see stretching sources below",
+     "sourceUrls": [],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "back_08",
+     "name": "Child's pose",
+     "types": [
+      "mobility"
+     ],
+     "phase": 2,
+     "how": "Kneeling, sit back toward heels, arms extended forward, hold 30 s.",
+     "steps": [
+      "Kneeling, sit back toward heels, arms extended forward, hold 30 s."
+     ],
+     "source": "https://www.movelittleandoften.com/article/full-body-stretching-routine",
+     "sourceUrls": [
+      "https://www.movelittleandoften.com/article/full-body-stretching-routine"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "back_09",
+     "name": "Pelvic tilts",
+     "types": [
+      "strength",
+      "mobility"
+     ],
+     "phase": 3,
+     "how": "Lying on back, knees bent, gently flatten low back into the floor by tilting pelvis, hold 5 s. Wakes up deep core.",
+     "steps": [
+      "Lying on back, knees bent, gently flatten low back into the floor by tilting pelvis, hold 5 s.",
+      "Wakes up deep core."
+     ],
+     "source": "https://aspirephysiotherapy.ca/physiotherapy-for-hip-pain-edmonton-south/",
+     "sourceUrls": [
+      "https://aspirephysiotherapy.ca/physiotherapy-for-hip-pain-edmonton-south/"
+     ],
+     "gif": "recovery/pelvic_tilt_cdc.gif",
+     "gifNote": ""
+    },
+    {
+     "id": "back_10",
+     "name": "Cobra / press-up (gentle)",
+     "types": [
+      "mobility"
+     ],
+     "phase": 3,
+     "how": "Lying face down, press chest up on forearms/hands, hips stay down, hold briefly. Only if it feels good.",
+     "steps": [
+      "Lying face down, press chest up on forearms/hands, hips stay down, hold briefly.",
+      "Only if it feels good."
+     ],
+     "source": "McKenzie-style extension; see https://www.powerphysiotherapy.co.uk/articles/lower-back-exercises",
+     "sourceUrls": [
+      "https://www.powerphysiotherapy.co.uk/articles/lower-back-exercises"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "back_11",
+     "name": "Supine twist (gentle)",
+     "types": [
+      "mobility"
+     ],
+     "phase": 3,
+     "how": "Lying on back, knees bent, slowly let knees fall to one side, hold 30 s. Keep shoulders down.",
+     "steps": [
+      "Lying on back, knees bent, slowly let knees fall to one side, hold 30 s.",
+      "Keep shoulders down."
+     ],
+     "source": "Standard physio; see stretching sources below",
+     "sourceUrls": [],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "back_12",
+     "name": "Sit-to-stand",
+     "types": [
+      "strength"
+     ],
+     "phase": 3,
+     "how": "As hip #5. Leg strength without spinal load — the functional move that protects the back in daily life.",
+     "steps": [
+      "As hip #5.",
+      "Leg strength without spinal load — the functional move that protects the back in daily life."
+     ],
+     "source": "https://physicalmedicineandrehab.com/exercise-and-hip-rehabilitation/",
+     "sourceUrls": [
+      "https://physicalmedicineandrehab.com/exercise-and-hip-rehabilitation/"
+     ],
+     "gif": "recovery/chair_squat_cdc.gif",
+     "gifNote": ""
+    }
+   ],
+   "swapsText": "sit-ups / crunches → McGill curl-up or dead bug · toe-touch stretches → hip hinge or hamstring stretch with straight back · heavy deadlifts / bent-over rows → glute bridge, bird dog, seated rows · jumping → step-based moves.",
+   "swaps": [
+    {
+     "match": "crunch|toe touch|sit.?up",
+     "to": "McGill curl-up"
+    },
+    {
+     "match": "rotational twist|standing rotations|plate swing",
+     "to": "Dead bug"
+    },
+    {
+     "match": "bent over|deadlift",
+     "to": "Bird dog"
+    },
+    {
+     "match": "jump|box jump|linear stability|spil|burpee|8 count",
+     "to": "Mini squats / half squats"
+    },
+    {
+     "match": "superman",
+     "to": "Bird dog"
+    }
+   ],
+   "cautions": "AVOID traditional sit-ups and crunches and loaded toe-touches — McGill's research is clear that repetitive spinal flexion under load aggravates backs. Avoid twisting stretches early in a flare. Stop and see a clinician urgently for: numbness/weakness in the legs, bladder or bowel changes, or pain shooting below the knee. Also: avoid spinal flexion in the first hour after waking (discs are hydrated and stiffer — McGill's \"spine hygiene\" point).",
+   "redFlags": [
+    "Numbness or weakness in the legs.",
+    "Bladder or bowel changes.",
+    "Pain shooting below the knee.",
+    "These need a clinician urgently."
+   ],
+   "laterCandidates": "hip hinge practice (unloaded, teaches safe lifting), wall angels (thoracic mobility), foam-roller thoracic extension (needs a roller — optional), walking program (the single best \"exercise\" for backs)."
+  },
+  {
+   "key": "shoulder",
+   "name": "Shoulder",
+   "intro": "rotator-cuff tendinopathy / impingement from overhead work and pressing, plus rounded shoulders from driving. Rehab is strictly phased (MOON Shoulder Group protocol): mobility first, strengthening only once range of motion is nearly pain-free — strengthening too early is the classic mistake.",
+   "exercises": [
+    {
+     "id": "shoulder_01",
+     "name": "Pendulum swings",
+     "types": [
+      "early",
+      "mobility"
+     ],
+     "phase": 1,
+     "how": "Lean forward, let the sore arm dangle, swing gently in small circles using body movement, 1–2 min. Uses gravity, not muscle — the safe first move.",
+     "steps": [
+      "Lean forward, let the sore arm dangle, swing gently in small circles using body movement, 1–2 min.",
+      "Uses gravity, not muscle — the safe first move."
+     ],
+     "source": "Alberta Health: https://myhealth.alberta.ca/Health/Pages/conditions.aspx?hwid=ue4829 ; Univ. of Michigan: https://hr.umich.edu/benefits-wellness/health-well-being/mhealthy/faculty-staff-well-being/physical-activity/physical-activity-resources/joint-muscle-movements/shoulder-movements",
+     "sourceUrls": [
+      "https://myhealth.alberta.ca/Health/Pages/conditions.aspx?hwid=ue4829",
+      "https://hr.umich.edu/benefits-wellness/health-well-being/mhealthy/faculty-staff-well-being/physical-activity/physical-activity-resources/joint-muscle-movements/shoulder-movements"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "shoulder_02",
+     "name": "Cross-body stretch",
+     "types": [
+      "mobility"
+     ],
+     "phase": 1,
+     "how": "Pull sore arm across chest with the other hand, hold 30 s. Stretches the posterior capsule.",
+     "steps": [
+      "Pull sore arm across chest with the other hand, hold 30 s.",
+      "Stretches the posterior capsule."
+     ],
+     "source": "https://limitlesspts.com/rotator-cuff-exercises-a-physical-therapists-complete-guide/",
+     "sourceUrls": [
+      "https://limitlesspts.com/rotator-cuff-exercises-a-physical-therapists-complete-guide/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "shoulder_03",
+     "name": "Sleeper stretch",
+     "types": [
+      "mobility"
+     ],
+     "phase": 1,
+     "how": "Lying on sore side, elbow at 90°, gently press forearm toward floor, hold 30 s.",
+     "steps": [
+      "Lying on sore side, elbow at 90°, gently press forearm toward floor, hold 30 s."
+     ],
+     "source": "https://limitlesspts.com/rotator-cuff-exercises-a-physical-therapists-complete-guide/",
+     "sourceUrls": [
+      "https://limitlesspts.com/rotator-cuff-exercises-a-physical-therapists-complete-guide/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "shoulder_04",
+     "name": "Shoulder blade squeezes (scapular setting)",
+     "types": [
+      "early",
+      "strength"
+     ],
+     "phase": 1,
+     "how": "Sit/stand tall, gently squeeze shoulder blades together and slightly down, hold 5 s. Wakes up the stabilisers.",
+     "steps": [
+      "Sit/stand tall, gently squeeze shoulder blades together and slightly down, hold 5 s.",
+      "Wakes up the stabilisers."
+     ],
+     "source": "https://www.physioipoh.com.my/blog/best-exercises-shoulder-pain/",
+     "sourceUrls": [
+      "https://www.physioipoh.com.my/blog/best-exercises-shoulder-pain/"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "shoulder_05",
+     "name": "Isometric external rotation",
+     "types": [
+      "early",
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Elbow at side, back of hand against a wall/doorframe, push outward without moving, hold 5–10 s. First strength step, no joint movement.",
+     "steps": [
+      "Elbow at side, back of hand against a wall/doorframe, push outward without moving, hold 5–10 s.",
+      "First strength step, no joint movement."
+     ],
+     "source": "https://docslib.org/download/9919258/shoulder-exercises-for-rehabilitation-protocols ; https://www.bondisportsmassage.com.au/post/shoulder-pain-sports-massage-sydney",
+     "sourceUrls": [
+      "https://docslib.org/download/9919258/shoulder-exercises-for-rehabilitation-protocols",
+      "https://www.bondisportsmassage.com.au/post/shoulder-pain-sports-massage-sydney"
+     ],
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "id": "shoulder_06",
+     "name": "Banded external rotation",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Elbow tucked at side with a towel roll under the arm, rotate forearm outward against a light band, return slowly. Targets infraspinatus/teres minor.",
+     "steps": [
+      "Elbow tucked at side with a towel roll under the arm, rotate forearm outward against a light band, return slowly.",
+      "Targets infraspinatus/teres minor."
+     ],
+     "source": "https://doctorsclinicdubai.ae/blog/rotator-cuff-exercises-physiotherapy ; dumbbell version MuscleWiki GIF (verified): https://musclewiki.com/exercise/dumbbell-shoulder-external-rotation",
+     "sourceUrls": [
+      "https://doctorsclinicdubai.ae/blog/rotator-cuff-exercises-physiotherapy",
+      "https://musclewiki.com/exercise/dumbbell-shoulder-external-rotation"
+     ],
+     "gif": null,
+     "gifNote": "",
+     "lock": "shoulderMobility"
+    },
+    {
+     "id": "shoulder_07",
+     "name": "Banded internal rotation",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Mirror of #6, rotating forearm inward against the band. Targets subscapularis.",
+     "steps": [
+      "Mirror of #6, rotating forearm inward against the band.",
+      "Targets subscapularis."
+     ],
+     "source": "https://doctorsclinicdubai.ae/blog/rotator-cuff-exercises-physiotherapy ; https://hr.umich.edu/benefits-wellness/health-well-being/mhealthy/faculty-staff-well-being/physical-activity/physical-activity-resources/joint-muscle-movements/shoulder-movements",
+     "sourceUrls": [
+      "https://doctorsclinicdubai.ae/blog/rotator-cuff-exercises-physiotherapy",
+      "https://hr.umich.edu/benefits-wellness/health-well-being/mhealthy/faculty-staff-well-being/physical-activity/physical-activity-resources/joint-muscle-movements/shoulder-movements"
+     ],
+     "gif": null,
+     "gifNote": "",
+     "lock": "shoulderMobility"
+    },
+    {
+     "id": "shoulder_08",
+     "name": "Side-lying external rotation",
+     "types": [
+      "strength"
+     ],
+     "phase": 2,
+     "how": "Lying on good side, sore arm on top with a light weight (0.5–1 kg — a water bottle works), rotate forearm to ceiling, lower over 3 s. EMG studies show this is the best isolated infraspinatus exercise.",
+     "steps": [
+      "Lying on good side, sore arm on top with a light weight (0.5–1 kg — a water bottle works), rotate forearm to ceiling, lower over 3 s.",
+      "EMG studies show this is the best isolated infraspinatus exercise."
+     ],
+     "source": "https://doctorsclinicdubai.ae/blog/rotator-cuff-exercises-physiotherapy",
+     "sourceUrls": [
+      "https://doctorsclinicdubai.ae/blog/rotator-cuff-exercises-physiotherapy"
+     ],
+     "gif": null,
+     "gifNote": "",
+     "lock": "shoulderMobility"
+    },
+    {
+     "id": "shoulder_09",
+     "name": "Scaption",
+     "types": [
+      "strength"
+     ],
+     "phase": 3,
+     "how": "Raise arm in the scapular plane (~30° in front of sideways), thumb up, light band/weight. The shoulder-friendly way to raise the arm.",
+     "steps": [
+      "Raise arm in the scapular plane (~30° in front of sideways), thumb up, light band/weight.",
+      "The shoulder-friendly way to raise the arm."
+     ],
+     "source": "MOON protocol, via https://doctorellison.com/wp-content/uploads/2022/06/Shoulder-Impingement.pdf",
+     "sourceUrls": [
+      "https://doctorellison.com/wp-content/uploads/2022/06/Shoulder-Impingement.pdf"
+     ],
+     "gif": null,
+     "gifNote": "",
+     "lock": "shoulderMobility"
+    },
+    {
+     "id": "shoulder_10",
+     "name": "Band pull-apart",
+     "types": [
+      "strength"
+     ],
+     "phase": 3,
+     "how": "Hold band at shoulder height, pull apart until it touches chest, squeeze shoulder blades. Rear delts + external rotators.",
+     "steps": [
+      "Hold band at shoulder height, pull apart until it touches chest, squeeze shoulder blades.",
+      "Rear delts + external rotators."
+     ],
+     "source": "MuscleWiki GIFs (verified page): https://musclewiki.com/exercises/rear-shoulders/band?model=f",
+     "sourceUrls": [
+      "https://musclewiki.com/exercises/rear-shoulders/band?model=f"
+     ],
+     "gif": null,
+     "gifNote": "",
+     "lock": "shoulderMobility"
+    },
+    {
+     "id": "shoulder_11",
+     "name": "Band face pull",
+     "types": [
+      "strength"
+     ],
+     "phase": 3,
+     "how": "Band anchored at eye level (truck door handle works), pull to bridge of nose, elbows flared, fists rotate out at the end.",
+     "steps": [
+      "Band anchored at eye level (truck door handle works), pull to bridge of nose, elbows flared, fists rotate out at the end."
+     ],
+     "source": "MuscleWiki GIFs (verified page): https://musclewiki.com/exercises/rear-shoulders/band?model=f ; https://www.hercules-gym.com/exercises/band-face-pulls",
+     "sourceUrls": [
+      "https://musclewiki.com/exercises/rear-shoulders/band?model=f",
+      "https://www.hercules-gym.com/exercises/band-face-pulls"
+     ],
+     "gif": null,
+     "gifNote": "",
+     "lock": "shoulderMobility"
+    },
+    {
+     "id": "shoulder_12",
+     "name": "Wall angels",
+     "types": [
+      "strength",
+      "mobility"
+     ],
+     "phase": 3,
+     "how": "Back against wall, arms in goalpost shape, slowly slide up and down without arching the back. Mobility + posture.",
+     "steps": [
+      "Back against wall, arms in goalpost shape, slowly slide up and down without arching the back.",
+      "Mobility + posture."
+     ],
+     "source": "https://hr.umich.edu/benefits-wellness/health-well-being/mhealthy/faculty-staff-well-being/physical-activity/physical-activity-resources/joint-muscle-movements/shoulder-movements",
+     "sourceUrls": [
+      "https://hr.umich.edu/benefits-wellness/health-well-being/mhealthy/faculty-staff-well-being/physical-activity/physical-activity-resources/joint-muscle-movements/shoulder-movements"
+     ],
+     "gif": null,
+     "gifNote": "",
+     "lock": "shoulderMobility"
+    }
+   ],
+   "swapsText": "overhead press / push-ups → scaption, band pull-aparts · dips → wall push-ups · pull-ups → band rows · burpees → squat + step-back (no push-up) · planks → forearm plank on knees if the shoulder complains.",
+   "swaps": [
+    {
+     "match": "shoulder press|upside down|squat and press|squat & press|lateral raise|front raise|front lateral|side lateral",
+     "to": "Scaption"
+    },
+    {
+     "match": "upright row",
+     "to": "Band pull-apart"
+    },
+    {
+     "match": "burpee|8 count",
+     "to": "Squat + step-back (no push-up)"
+    },
+    {
+     "match": "push.?ups?|pusups|pushup|dive bomber|bench dip|tricep bench|chest press|band press|band fly|chest fly",
+     "to": "Wall push-ups"
+    },
+    {
+     "match": "pull.?ups?|pullup|chin|towel pull|recline pull|pulldown|pull down|swimmer",
+     "to": "Seated band row"
+    },
+    {
+     "match": "plank",
+     "to": "Forearm plank on knees"
+    }
+   ],
+   "cautions": "do NOT start strengthening until range of motion is nearly pain-free — the MOON protocol milestone is active elevation above ~120° and pain at rest below 2/10. Avoid overhead pressing and behind-the-neck moves while painful. Sleeper stretch: gentle only, stop on sharp pain. Frozen shoulder (stiff in all directions, worse at night) needs a different, mobility-first approach — the app should flag \"see a clinician\" rather than push strengthening. Post-surgery shoulders follow the surgeon's protocol, not the app. If no improvement after 6–8 weeks of consistent work, get assessed.",
+   "redFlags": [
+    "After shoulder surgery, follow the surgeon's protocol, not the app.",
+    "Stiff in every direction and worse at night (possible frozen shoulder): see a clinician instead of strengthening.",
+    "No improvement after 6–8 weeks of consistent work."
+   ],
+   "laterCandidates": "wall push-up plus (serratus), prone T's and Y's (lying face down, arms out), doorway chest stretch, cane-assisted range of motion, shoulder rolls."
+  }
+ ],
+ "swapMoves": [
+  {
+   "name": "Step jacks",
+   "how": "Step one foot out to the side while the arms rise, step back in. No jumping.",
+   "gif": null
+  },
+  {
+   "name": "Incline push-up + step-back (no jump)",
+   "how": "Hands on the truck step or a counter, do one incline push-up, then step the feet back in one at a time and stand up. No jump.",
+   "gif": null
+  },
+  {
+   "name": "Squat + step-back (no push-up)",
+   "how": "Squat down, hands to the floor or a step, step the feet back to a plank and back in, stand up. No push-up, no jump.",
+   "gif": null
+  },
+  {
+   "name": "Marching in place",
+   "how": "Stand tall and march, lifting the knees to a comfortable height, arms swinging.",
+   "gif": null
+  },
+  {
+   "name": "Forearm plank on knees",
+   "how": "Forearms on the floor, knees down, body straight from head to knees. Hold.",
+   "gif": null
+  },
+  {
+   "name": "Wall push-ups",
+   "how": "Hands on a wall (or the truck) at shoulder height, step back, bend the elbows to bring the chest toward the wall, push back.",
+   "gif": "recovery/wall_pushup_cdc.gif"
+  },
+  {
+   "name": "Supported step-ups",
+   "how": "Low step, one hand on a rail or the truck for balance, step up and down slowly, leading with the sore leg.",
+   "gif": "recovery/step_up_cdc.gif"
+  },
+  {
+   "name": "Seated band row",
+   "how": "Sit with legs out, band around the feet, pull the handles to the ribs, squeeze the shoulder blades, return slowly. Keep the pull light and pain-free.",
+   "gif": null
+  }
+ ],
+ "stretching": {
+  "dynamic": [
+   {
+    "id": "dyn_01",
+    "name": "Arm circles",
+    "target": "",
+    "how": "Big slow circles, 10 each direction, forward and back.",
+    "steps": [
+     "Big slow circles, 10 each direction, forward and back."
+    ],
+    "source": "https://www.gymtim.com/full-body-stretching-routine-at-home/",
+    "sourceUrls": [
+     "https://www.gymtim.com/full-body-stretching-routine-at-home/"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 40,
+    "sides": false
+   },
+   {
+    "id": "dyn_02",
+    "name": "Leg swings",
+    "target": "",
+    "how": "Hold the truck/wall, swing one leg forward–back 10×, then side-to-side 10× each leg.",
+    "steps": [
+     "Hold the truck/wall, swing one leg forward–back 10×, then side-to-side 10× each leg."
+    ],
+    "source": "https://www.gymtim.com/full-body-stretching-routine-at-home/",
+    "sourceUrls": [
+     "https://www.gymtim.com/full-body-stretching-routine-at-home/"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 40,
+    "sides": false
+   },
+   {
+    "id": "dyn_03",
+    "name": "Cat-cow",
+    "target": "",
+    "how": "On all fours, 8–10 slow rounds arching and rounding the spine.",
+    "steps": [
+     "On all fours, 8–10 slow rounds arching and rounding the spine."
+    ],
+    "source": "https://www.movelittleandoften.com/article/full-body-stretching-routine",
+    "sourceUrls": [
+     "https://www.movelittleandoften.com/article/full-body-stretching-routine"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 40,
+    "sides": false
+   },
+   {
+    "id": "dyn_04",
+    "name": "World's greatest stretch",
+    "target": "",
+    "how": "Step into a deep lunge, elbow to floor inside the front foot, then rotate open; 4–5 per side.",
+    "steps": [
+     "Step into a deep lunge, elbow to floor inside the front foot, then rotate open; 4–5 per side."
+    ],
+    "source": "https://www.gymtim.com/full-body-stretching-routine-at-home/",
+    "sourceUrls": [
+     "https://www.gymtim.com/full-body-stretching-routine-at-home/"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 40,
+    "sides": false
+   },
+   {
+    "id": "dyn_05",
+    "name": "Shoulder rolls + hip circles",
+    "target": "",
+    "how": "10 slow rolls each way; hands on hips, 10 circles each direction.",
+    "steps": [
+     "10 slow rolls each way; hands on hips, 10 circles each direction."
+    ],
+    "source": "https://booboone.com/stretching-exercises-a-practical-guide-to-flexibility-recovery-and-feeling-great/",
+    "sourceUrls": [
+     "https://booboone.com/stretching-exercises-a-practical-guide-to-flexibility-recovery-and-feeling-great/"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 40,
+    "sides": false
+   }
+  ],
+  "static": [
+   {
+    "id": "static_01",
+    "name": "Neck side stretch",
+    "target": "Neck, upper traps",
+    "how": "Ear toward shoulder, gentle hand assist, hold, switch sides.",
+    "steps": [
+     "Ear toward shoulder, gentle hand assist, hold, switch sides."
+    ],
+    "source": "https://www.movelittleandoften.com/article/full-body-stretching-routine",
+    "sourceUrls": [
+     "https://www.movelittleandoften.com/article/full-body-stretching-routine"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 60,
+    "sides": true
+   },
+   {
+    "id": "static_02",
+    "name": "Cross-body shoulder stretch",
+    "target": "Shoulders, rear delts",
+    "how": "Arm across chest, gentle pressure with the other hand.",
+    "steps": [
+     "Arm across chest, gentle pressure with the other hand."
+    ],
+    "source": "https://booboone.com/stretching-exercises-a-practical-guide-to-flexibility-recovery-and-feeling-great/",
+    "sourceUrls": [
+     "https://booboone.com/stretching-exercises-a-practical-guide-to-flexibility-recovery-and-feeling-great/"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 60,
+    "sides": true
+   },
+   {
+    "id": "static_03",
+    "name": "Doorway chest opener",
+    "target": "Chest, front shoulders",
+    "how": "Forearm on a door frame (truck door works), step through gently. The antidote to hunching over the wheel.",
+    "steps": [
+     "Forearm on a door frame (truck door works), step through gently.",
+     "The antidote to hunching over the wheel."
+    ],
+    "source": "https://www.movelittleandoften.com/article/full-body-stretching-routine",
+    "sourceUrls": [
+     "https://www.movelittleandoften.com/article/full-body-stretching-routine"
+    ],
+    "gif": "recovery/chest_stretch_cdc.gif",
+    "gifNote": "Similar demo (hands-behind-back chest stretch, CDC)",
+    "seconds": 60,
+    "sides": true
+   },
+   {
+    "id": "static_04",
+    "name": "Standing side bend",
+    "target": "Lats, obliques",
+    "how": "Arms overhead, lean to one side, hold, switch.",
+    "steps": [
+     "Arms overhead, lean to one side, hold, switch."
+    ],
+    "source": "https://www.movelittleandoften.com/article/full-body-stretching-routine",
+    "sourceUrls": [
+     "https://www.movelittleandoften.com/article/full-body-stretching-routine"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 60,
+    "sides": true
+   },
+   {
+    "id": "static_05",
+    "name": "Kneeling hip flexor stretch",
+    "target": "Hip flexors, quads",
+    "how": "Kneeling lunge, push hips forward, hold.",
+    "steps": [
+     "Kneeling lunge, push hips forward, hold."
+    ],
+    "source": "https://www.movelittleandoften.com/article/full-body-stretching-routine",
+    "sourceUrls": [
+     "https://www.movelittleandoften.com/article/full-body-stretching-routine"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 60,
+    "sides": true
+   },
+   {
+    "id": "static_06",
+    "name": "Figure-four glute stretch (seated)",
+    "target": "Glutes, piriformis",
+    "how": "Seated, ankle on opposite knee, lean forward gently. Doable in the driver's seat.",
+    "steps": [
+     "Seated, ankle on opposite knee, lean forward gently.",
+     "Doable in the driver's seat."
+    ],
+    "source": "https://booboone.com/stretching-exercises-a-practical-guide-to-flexibility-recovery-and-feeling-great/",
+    "sourceUrls": [
+     "https://booboone.com/stretching-exercises-a-practical-guide-to-flexibility-recovery-and-feeling-great/"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 60,
+    "sides": true
+   },
+   {
+    "id": "static_07",
+    "name": "Standing hamstring stretch",
+    "target": "Hamstrings",
+    "how": "Heel on a low step, leg straight, hinge forward from hips.",
+    "steps": [
+     "Heel on a low step, leg straight, hinge forward from hips."
+    ],
+    "source": "https://booboone.com/stretching-exercises-a-practical-guide-to-flexibility-recovery-and-feeling-great/",
+    "sourceUrls": [
+     "https://booboone.com/stretching-exercises-a-practical-guide-to-flexibility-recovery-and-feeling-great/"
+    ],
+    "gif": "recovery/hamstring_stretch_cdc.gif",
+    "gifNote": "Similar demo (seated version, CDC)",
+    "seconds": 60,
+    "sides": true
+   },
+   {
+    "id": "static_08",
+    "name": "Standing quad stretch",
+    "target": "Quads, hip flexors",
+    "how": "Hold truck/wall for balance, pull heel toward buttock, knees together.",
+    "steps": [
+     "Hold truck/wall for balance, pull heel toward buttock, knees together."
+    ],
+    "source": "https://www.movelittleandoften.com/article/full-body-stretching-routine",
+    "sourceUrls": [
+     "https://www.movelittleandoften.com/article/full-body-stretching-routine"
+    ],
+    "gif": "recovery/quad_stretch_cdc.gif",
+    "gifNote": "",
+    "seconds": 60,
+    "sides": true
+   },
+   {
+    "id": "static_09",
+    "name": "Wall calf stretch",
+    "target": "Calves",
+    "how": "One leg back, heel down, knee straight (gastrocnemius) then bent (soleus), 30 s each.",
+    "steps": [
+     "One leg back, heel down, knee straight (gastrocnemius) then bent (soleus), 30 s each."
+    ],
+    "source": "https://www.movelittleandoften.com/article/full-body-stretching-routine",
+    "sourceUrls": [
+     "https://www.movelittleandoften.com/article/full-body-stretching-routine"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 60,
+    "sides": true
+   },
+   {
+    "id": "static_10",
+    "name": "Child's pose",
+    "target": "Low back, hips, shoulders",
+    "how": "Kneeling, sit back to heels, arms forward, breathe.",
+    "steps": [
+     "Kneeling, sit back to heels, arms forward, breathe."
+    ],
+    "source": "https://www.movelittleandoften.com/article/full-body-stretching-routine",
+    "sourceUrls": [
+     "https://www.movelittleandoften.com/article/full-body-stretching-routine"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 60,
+    "sides": true
+   },
+   {
+    "id": "static_11",
+    "name": "Seated butterfly",
+    "target": "Inner thighs, groin",
+    "how": "Soles of feet together, knees out, lean forward gently.",
+    "steps": [
+     "Soles of feet together, knees out, lean forward gently."
+    ],
+    "source": "https://www.middlebury.edu/sites/default/files/2021-01/Static%20Stretching.pdf?fv=hCTnoH61",
+    "sourceUrls": [
+     "https://www.middlebury.edu/sites/default/files/2021-01/Static%20Stretching.pdf?fv=hCTnoH61"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 60,
+    "sides": true
+   },
+   {
+    "id": "static_12",
+    "name": "Ankle circles + toe stretch",
+    "target": "Ankles, feet",
+    "how": "Slow circles both ways; then kneel with toes tucked under and sit back gently.",
+    "steps": [
+     "Slow circles both ways; then kneel with toes tucked under and sit back gently."
+    ],
+    "source": "https://www.movelittleandoften.com/article/full-body-stretching-routine",
+    "sourceUrls": [
+     "https://www.movelittleandoften.com/article/full-body-stretching-routine"
+    ],
+    "gif": null,
+    "gifNote": "",
+    "seconds": 60,
+    "sides": true
+   }
+  ]
+ },
+ "routines": [
+  {
+   "key": "marine",
+   "name": "Marine Corps — Daily 16",
+   "feel": "Familiar, thorough, most energetic",
+   "time": "10–15 min",
+   "space": "A parking space; jog in place",
+   "bestFor": "Before a hard workout",
+   "intro": "The USMC's official warm-up/conditioning program. Versions vary slightly between units; the sequence below is the Daily 16 as taught at the Staff NCO / Career courses at Quantico. Sources: full official text at https://archive.org/stream/US_Marine_Corps_Daily_16_Program/US_Marine_Corps_Daily_16_Program_djvu.txt ; Quantico sequence at https://www.oo-rah.com/semper-fitness/platoon-pt-daily-16 ; also summarised at https://trainerjosh.com/workouts/marine-corps-workout/.",
+   "sourceUrls": [
+    "https://archive.org/stream/US_Marine_Corps_Daily_16_Program/US_Marine_Corps_Daily_16_Program_djvu.txt",
+    "https://www.oo-rah.com/semper-fitness/platoon-pt-daily-16",
+    "https://trainerjosh.com/workouts/marine-corps-workout/"
+   ],
+   "items": [
+    {
+     "name": "Slow jog",
+     "how": "Easy jog around the field — in the truck world: march/jog in place beside the truck, 1–2 min. Raises temperature and heart rate.",
+     "seconds": 90,
+     "gif": "recovery/high_knees_wbs.gif",
+     "gifNote": "Similar demo (jog in place)"
+    },
+    {
+     "name": "Slow joint rotations",
+     "how": "Neck, arm circles, hips, knees, ankles — 10 counts each direction. Loosens every joint before anything else.",
+     "seconds": 60,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Reach for the sky",
+     "how": "Hands overhead, stretch as tall as possible.",
+     "seconds": 40,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Chest stretch",
+     "how": "Hands clasped behind back, lift gently (or use a door frame).",
+     "seconds": 40,
+     "gif": "recovery/chest_stretch_cdc.gif",
+     "gifNote": ""
+    },
+    {
+     "name": "Upper back stretch",
+     "how": "Arms forward, round the upper back.",
+     "seconds": 40,
+     "gif": "recovery/back_stretch_cdc.gif",
+     "gifNote": ""
+    },
+    {
+     "name": "Tricep stretch",
+     "how": "One arm overhead, pull the elbow gently with the other hand.",
+     "seconds": 40,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Hip and back stretch",
+     "how": "Standing, hands on knees, gentle round-and-arch of the back and hips.",
+     "seconds": 40,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Groin stretch",
+     "how": "Wide stance, shift weight side to side.",
+     "seconds": 40,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Thigh stretch",
+     "how": "Standing quad stretch, hold the truck for balance.",
+     "seconds": 40,
+     "gif": "recovery/quad_stretch_cdc.gif",
+     "gifNote": ""
+    },
+    {
+     "name": "Hamstring stretch",
+     "how": "Heel on a low step, hinge forward from the hips.",
+     "seconds": 40,
+     "gif": "recovery/hamstring_stretch_cdc.gif",
+     "gifNote": "Similar demo (seated version, CDC)"
+    },
+    {
+     "name": "Calf stretch",
+     "how": "Wall stretch, back heel down, knee straight then bent.",
+     "seconds": 40,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Stride jumps",
+     "how": "Jumping jacks in place, 10 reps, 4-count. Truck swap: step jacks if knees/ankles are flagged in the Recovery tab.",
+     "seconds": 40,
+     "gif": "recovery/jumping_jacks_wbs.gif",
+     "gifNote": "",
+     "flagged": {
+      "areas": [
+       "knee",
+       "ankle"
+      ],
+      "name": "Step jacks",
+      "how": "Step one foot out to the side while the arms rise, step back in. No jumping."
+     }
+    },
+    {
+     "name": "Steam engines",
+     "how": "Standing, march opposite elbow to opposite knee, 10 reps.",
+     "seconds": 40,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Cross-country skier",
+     "how": "Alternating arm/leg swing in a striding motion, 10 reps.",
+     "seconds": 40,
+     "gif": "recovery/skier_jacks_wbs.gif",
+     "gifNote": ""
+    },
+    {
+     "name": "Bicycle crunches",
+     "how": "Lying, pedal the legs, elbow to opposite knee, 10 reps.",
+     "seconds": 40,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Cool-down stretches",
+     "how": "Repeat stretches 4–11 to close.",
+     "seconds": 60,
+     "gif": null,
+     "gifNote": ""
+    }
+   ]
+  },
+  {
+   "key": "army",
+   "name": "Army — PRT Preparation Drill",
+   "feel": "Structured, fixed order, all-rounder",
+   "time": "10–15 min",
+   "space": "A mat or floor patch for 3 floor moves",
+   "bestFor": "Any workout, every day",
+   "intro": "The Army's official warm-up: 10 exercises in a fixed order, 5–10 reps each at a slow tempo, done before every training session. Sources: ATP 7-22.02 (Oct 2020), full text at https://fliphtml5.com/xgwlo/pgnq ; summaries at https://www.gymnasetips.com/army-prt/ and https://www.bespokepost.com/field-guide/army-approved-stretches-for-any-workout ; demo video of all 10 drills: https://www.instagram.com/reel/DdnNxc4xh6O/.",
+   "sourceUrls": [
+    "https://fliphtml5.com/xgwlo/pgnq",
+    "https://www.gymnasetips.com/army-prt/",
+    "https://www.bespokepost.com/field-guide/army-approved-stretches-for-any-workout",
+    "https://www.instagram.com/reel/DdnNxc4xh6O/"
+   ],
+   "items": [
+    {
+     "name": "Bend and Reach",
+     "how": "Squat down and reach to the floor, stand and reach overhead. Controlled, no bouncing. 5–10 reps.",
+     "seconds": 60,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Rear Lunge",
+     "how": "Step back into a deep lunge, arms overhead, return. Alternate legs.",
+     "seconds": 60,
+     "gif": "recovery/lunge_cdc.gif",
+     "gifNote": ""
+    },
+    {
+     "name": "High Jumper",
+     "how": "Small jump, legs spread, arms overhead, land soft and repeat. Truck swap: step-out version with no jump if knees/ankles are flagged.",
+     "seconds": 60,
+     "gif": null,
+     "gifNote": "",
+     "flagged": {
+      "areas": [
+       "knee",
+       "ankle"
+      ],
+      "name": "High Jumper (no jump)",
+      "how": "Step out to the side with arms overhead instead of jumping, step back in."
+     }
+    },
+    {
+     "name": "Rower",
+     "how": "Lying on back, sit up rowing the arms as knees come to chest, then extend back out. Core + hip flexors.",
+     "seconds": 60,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Squat Bender",
+     "how": "Squat, then fold forward touching the floor, return to standing.",
+     "seconds": 60,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Windmill",
+     "how": "Wide stance, rotate the torso and touch opposite toes, alternating sides. Rotate from the hips, knees slightly bent.",
+     "seconds": 60,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Forward Lunge",
+     "how": "Step forward into a lunge, drive back to standing. Alternate legs.",
+     "seconds": 60,
+     "gif": "recovery/lunge_cdc.gif",
+     "gifNote": "Similar demo (rear lunge shown, CDC)"
+    },
+    {
+     "name": "Prone Row",
+     "how": "Lying face down, lift chest and arms, squeeze the shoulder blades together.",
+     "seconds": 60,
+     "gif": "recovery/floor_back_extension_cdc.gif",
+     "gifNote": "Similar demo (floor back extension, CDC)"
+    },
+    {
+     "name": "Bent-Leg Body Twist",
+     "how": "Lying on back, knees bent, drop knees side to side while shoulders stay on the floor.",
+     "seconds": 60,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Push-Up",
+     "how": "5–10 standard push-ups (from knees if needed).",
+     "seconds": 60,
+     "gif": "recovery/pushups_wbs.gif",
+     "gifNote": ""
+    }
+   ],
+   "cautions": "needs a mat or floor patch beside the truck for #4, #8, #9; everything else is standing. Doctrine timing is ~5–8 min at a brisk clip; at a careful slow tempo (which is how it should be done) it's 10–15 min."
+  },
+  {
+   "key": "baduanjin",
+   "name": "Ba Duan Jin — Eight Pieces of Brocade (Qigong)",
+   "feel": "Slow, flowing, breathing-led",
+   "time": "10–15 min",
+   "space": "One mat of floor space",
+   "bestFor": "Stiff mornings, rest days",
+   "intro": "Eight movements, same order every time, 4–8 slow reps each, 10–15 min total, standing, no equipment, about one mat of space. Standardised by China's Health Qigong Management Center (2003); written record back to the Song dynasty (~900 years). Sources: https://wudang.academy/en/page/qigong-baduanjin ; https://www.wikiqigong.com/articles/baduanjin/ ; https://globalspiritualstudies.com/eight-brocades/.",
+   "sourceUrls": [
+    "https://wudang.academy/en/page/qigong-baduanjin",
+    "https://www.wikiqigong.com/articles/baduanjin/",
+    "https://globalspiritualstudies.com/eight-brocades/"
+   ],
+   "items": [
+    {
+     "name": "Two Hands Hold Up the Heavens",
+     "how": "Interlace fingers, float palms up the centre line and press gently to the sky, then lower. Full-body stretch, opens the breath.",
+     "seconds": 90,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Drawing the Bow to Shoot the Hawk",
+     "how": "Wide easy stance, one hand points out to the side while the other draws back across the chest like a bowstring; alternate. Opens chest and shoulders.",
+     "seconds": 90,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Separating Heaven and Earth",
+     "how": "One palm presses up above the head while the other presses down beside the hip; alternate. Stretches the waist and sides.",
+     "seconds": 90,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Looking Back (Wise Owl Gazes Backward)",
+     "how": "Arms relaxed, slowly turn the head to look behind; alternate. Releases neck and shoulders.",
+     "seconds": 90,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Swaying the Head and Shaking the Tail",
+     "how": "Low stance, slow lean and sway side to side. Mobilises the spine and hips.",
+     "seconds": 90,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Two Hands Hold the Feet",
+     "how": "Fold forward, hands reaching toward the feet, lengthening the spine and the backs of the legs.",
+     "seconds": 90,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Clenching the Fists and Gazing Fiercely",
+     "how": "Slow controlled punch from a low stance, alternate arms, focused gaze. Builds a little heat and strength.",
+     "seconds": 90,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Lifting the Heels (Bouncing on the Toes)",
+     "how": "Rise onto the balls of the feet and drop the heels gently, 7×, then shake the whole body loose to finish.",
+     "seconds": 90,
+     "gif": null,
+     "gifNote": ""
+    }
+   ],
+   "cautions": "#1 — with shoulder problems, lift only as high as comfortable; #3 — don't arch the low back; #5–#7 — keep the stance high and knees tracking over the toes."
+  },
+  {
+   "key": "dailydozen",
+   "name": "Tai Chi \"Daily Dozen\" joint loosening",
+   "feel": "Joint-by-joint loosening, zero impact",
+   "time": "~10 min",
+   "space": "Standing in one spot",
+   "bestFor": "When something specific is stiff; most truck-friendly",
+   "intro": "Twelve joint rotations, head to toe, 10 rotations each direction per joint, ~10 min. The standard Chen-style warm-up. Sources: https://dochenstyletaichi.com/tai-chi-warm-ups-part-1-upper-body/ (full list + demo video linked at the bottom of the page) ; https://wanghaijuntaichi.com/warm-up-joint-loosening-exercises/ (Grandmaster Wang Haijun's 18-exercise version).",
+   "sourceUrls": [
+    "https://dochenstyletaichi.com/tai-chi-warm-ups-part-1-upper-body/",
+    "https://wanghaijuntaichi.com/warm-up-joint-loosening-exercises/"
+   ],
+   "items": [
+    {
+     "name": "Neck rotation",
+     "how": "Slow head circles, 10 each way; move only the neck, keep shoulders still.",
+     "seconds": 45,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Shoulder rotation",
+     "how": "Big slow shoulder circles, both directions.",
+     "seconds": 45,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Elbow rotation 1",
+     "how": "Arms out at 45°, silk-reel the hands in circles (spiral the forearms).",
+     "seconds": 45,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Elbow rotation 2",
+     "how": "Hands circle to the hips and back out, silk-reeling throughout.",
+     "seconds": 45,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Wrist rotation 1",
+     "how": "Wrist circles one way, 10 reps.",
+     "seconds": 45,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Wrist rotation 2",
+     "how": "Wrist circles the other way, 10 reps.",
+     "seconds": 45,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Finger rotation",
+     "how": "Spread the fingers wide and circle them.",
+     "seconds": 45,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Waist rotation",
+     "how": "Hands on hips, circle the waist both directions.",
+     "seconds": 45,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Hip rotation",
+     "how": "Hands on hips, smooth hip circles both directions, 2 min minimum — the single most valuable move for low-back pain in this whole list (per the Chen-style back-pain guide).",
+     "seconds": 120,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Knee rotation",
+     "how": "Feet together, knees slightly bent, small circles both ways.",
+     "seconds": 45,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Ankle rotation",
+     "how": "One foot at a time, circles both ways.",
+     "seconds": 45,
+     "gif": null,
+     "gifNote": ""
+    },
+    {
+     "name": "Three leg stretches",
+     "how": "Front, side, and cross leg stretches to finish.",
+     "seconds": 45,
+     "gif": null,
+     "gifNote": ""
+    }
+   ],
+   "cautions": "Wang Haijun's version adds: slap the body lightly, shake the fingers down and to the side, and stretch the hips/groin and hamstrings while holding the feet — all usable as optional extras."
+  }
+ ],
+ "gifCredits": [
+  {
+   "file": "recovery/knee_extension_cdc.gif",
+   "title": "Knee extension-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/stage3.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Knee_extension-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/knee_curl_cdc.gif",
+   "title": "Knee curl-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/stage3.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Knee_curl-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/step_up_cdc.gif",
+   "title": "Step up-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/stage2.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Step_up-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/chair_squat_cdc.gif",
+   "title": "Squat-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/stage1.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Squat-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/toe_stand_cdc.gif",
+   "title": "Toe stand-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/stage1.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Toe_stand-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/hip_abduction_cdc.gif",
+   "title": "Hip abduction-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/stage2.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Hip_abduction-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/pelvic_tilt_cdc.gif",
+   "title": "Pelvic tilt-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/stage3.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Pelvic_tilt-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/quad_stretch_cdc.gif",
+   "title": "Quad stretch-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/cooldown.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Quad_stretch-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/hamstring_stretch_cdc.gif",
+   "title": "Hamstring stretch-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/cooldown.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Hamstring_stretch-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/chest_stretch_cdc.gif",
+   "title": "Chest stretch-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/cooldown.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Chest_stretch-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/back_stretch_cdc.gif",
+   "title": "Backstretch-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/stage1.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Backstretch-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/floor_back_extension_cdc.gif",
+   "title": "Floor back extensions-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/stage3.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Floor_back_extensions-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/lunge_cdc.gif",
+   "title": "Lunge-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/more.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Lunge-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/wall_pushup_cdc.gif",
+   "title": "Wallpushup-CDC strength training for older adults",
+   "author": "U.S. Centers for Disease Control and Prevention (CDC), \"Growing Stronger: Strength Training for Older Adults\"",
+   "license": "Public domain (work of the U.S. federal government)",
+   "licenseUrl": "",
+   "source": "https://www.cdc.gov/physicalactivity/growingstronger/exercises/stage1.html",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Wallpushup-CDC_strength_training_for_older_adults.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/jumping_jacks_wbs.gif",
+   "title": "Jumpingjacks wbs",
+   "author": "Wensceslao",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Jumpingjacks_wbs.gif",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Jumpingjacks_wbs.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/skier_jacks_wbs.gif",
+   "title": "Skierjacks wbs",
+   "author": "Wensceslao",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Skierjacks_wbs.gif",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Skierjacks_wbs.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/high_knees_wbs.gif",
+   "title": "Highknees wbs",
+   "author": "Wensceslao",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Highknees_wbs.gif",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Highknees_wbs.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/jump_rope_wbs.gif",
+   "title": "Jumpingrope wbs",
+   "author": "Wensceslao",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Jumpingrope_wbs.gif",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Jumpingrope_wbs.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/pushups_wbs.gif",
+   "title": "Pushups wbs",
+   "author": "Wensceslao",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Pushups_wbs.gif",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:Pushups_wbs.gif",
+   "modified": "Unmodified file."
+  }
+ ]
+}

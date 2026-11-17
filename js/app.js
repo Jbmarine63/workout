@@ -2,7 +2,7 @@
  * Plain JS, no build step. Data lives in IndexedDB; assets are precached by sw.js. */
 'use strict';
 (function () {
-const APP_VERSION = '1.4'; // matches the Android app 1.4 (versionCode 6)
+const APP_VERSION = '1.5'; // matches the Android app 1.5 (versionCode 7)
 // Always this address. The open page may be #/more, a local preview, or the Home Screen start URL.
 const SHARE_URL = 'https://jbmarine63.github.io/workout/';
 const $ = (s, el = document) => el.querySelector(s);
@@ -60,10 +60,12 @@ const DB = {
   db: null,
   open() {
     return new Promise((res, rej) => {
-      const r = indexedDB.open('workout-pwa', 1);
+      // v2 (app 1.5) adds trackers, recovery logs and progress photos; existing stores are untouched.
+      const r = indexedDB.open('workout-pwa', 2);
       r.onupgradeneeded = () => {
         const d = r.result;
-        for (const s of ['sessions', 'intervals', 'exercises'])
+        if (!d.objectStoreNames.contains('habits')) d.createObjectStore('habits', { keyPath: 'key' });
+        for (const s of ['sessions', 'intervals', 'exercises', 'metrics', 'recovery', 'photos'])
           if (!d.objectStoreNames.contains(s)) d.createObjectStore(s, { keyPath: 'id', autoIncrement: true });
         if (!d.objectStoreNames.contains('kv')) d.createObjectStore('kv', { keyPath: 'k' });
       };
@@ -92,7 +94,8 @@ const DB = {
 const S = {
   program: null, workouts: null, seed: [], library: [], libByKey: new Map(),
   sessions: [], intervals: [], custom: [],
-  settings: { week: 1, day: 'MON', currentWeek: null, theme: 'auto', keepAwake: true, a2hsDismissed: false, roadMode: false, voiceCues: true },
+  settings: { week: 1, day: 'MON', currentWeek: null, theme: 'auto', keepAwake: true, a2hsDismissed: false, roadMode: false, voiceCues: true, injuries: [], shoulderMobility: null, ankleFreshSprain: false },
+  recovery: null, metrics: [], habits: [], recLogs: [], photos: [], recOpen: [],
   hint: null, intervalDraft: null, persisted: null, backup: null,
   todayPick: null, goDraft: {}, lastDone: null
 };
@@ -100,7 +103,7 @@ const saveSettings = () => DB.kvSet('settings', S.settings);
 const currentWeek = () => { const n = S.settings.currentWeek ?? S.settings.week ?? 1; return Math.min(16, Math.max(1, n)); };
 
 async function refresh() {
-  [S.sessions, S.intervals, S.custom] = await Promise.all([DB.all('sessions'), DB.all('intervals'), DB.all('exercises')]);
+  [S.sessions, S.intervals, S.custom, S.metrics, S.habits, S.recLogs, S.photos] = await Promise.all(['sessions', 'intervals', 'exercises', 'metrics', 'habits', 'recovery', 'photos'].map(x => DB.all(x)));
   buildLibrary();
 }
 const activeSession = () => S.sessions.filter(s => !s.finished).sort((a, b) => b.date - a.date)[0] || null;
@@ -301,6 +304,7 @@ const Timer = {
     if (s.kind === 'interval' && !s.done && s.idx < s.phases.length - 1) {
       s.idx++; const p = s.phases[s.idx]; s.label = p.label; s.total = p.seconds; s.endAt = Date.now() + p.seconds * 1000; s.paused = false; s.cue = null;
       this.save(); this.run(); speak(phaseSpeech(p.label));
+      if (s.ctx && s.ctx.guide && route().name === 'guide') render();
     } else if (s.kind === 'interval' && !s.done) { this.finishIntervals(); }
     else this.clear();
   },
@@ -309,7 +313,9 @@ const Timer = {
   stopLoop() { if (this.iv) clearInterval(this.iv); this.iv = null; },
   finishIntervals() {
     const s = this.st; s.done = true; s.label = 'All rounds complete'; s.endAt = Date.now(); s.paused = false;
-    this.save(); this.stopLoop(); setWake(false); beep(4); speak('All rounds complete. Nice work.');
+    this.save(); this.stopLoop(); setWake(false); beep(4);
+    if (s.ctx && s.ctx.guide) { s.label = 'Done'; this.save(); speak('Done. Nice work.'); logGuide(s.ctx.guide).then(() => { if (route().name === 'guide') render(); }); renderTimer(); return; }
+    speak('All rounds complete. Nice work.');
     if (S.intervalDraft && s.ctx && s.ctx.draftKey === S.intervalDraft.key) {
       S.intervalDraft.done = true; S.intervalDraft.durationMinutes = String(computedMinutes(S.intervalDraft) ?? S.intervalDraft.durationMinutes);
       DB.kvSet('intervalDraft', S.intervalDraft);
@@ -335,6 +341,7 @@ const Timer = {
         if (Date.now() >= end) { this.finishIntervals(); return; }
         const p = s.phases[s.idx]; s.label = p.label; s.total = p.seconds; s.endAt = end; s.cue = null;
         this.save(); beep(1); speak(phaseSpeech(p.label));
+        if (s.ctx && s.ctx.guide && route().name === 'guide') render();
       } else {
         s.done = true; this.save(); this.stopLoop(); setWake(false);
         if (S.settings.voiceCues) { beep(1); speak(s.kind === 'work' ? 'Time' : `Go! ${s.ctx?.nextName || ''}`); } else beep(3);
@@ -380,7 +387,7 @@ function renderTimer() {
            <button class="primary" data-act="timer-skip">Skip</button>
            ${s.kind === 'interval' ? '<button class="danger" data-act="timer-clear">Stop</button>' : ''}`}</div>`;
   }
-  $('#tbLabel').textContent = s.done ? (s.kind === 'interval' ? 'All rounds complete — save below' : `${s.label} done!`) : s.label;
+  $('#tbLabel').textContent = s.done ? (s.ctx && s.ctx.guide ? 'Done — logged' : s.kind === 'interval' ? 'All rounds complete — save below' : `${s.label} done!`) : s.label;
   $('#tbClock').textContent = fmtClock(Math.ceil(rem));
   $('#tbProg').style.width = pct + '%';
 }
@@ -421,9 +428,10 @@ const go = hash => { if (location.hash === hash) render(); else location.hash = 
 
 function render() {
   const r = route();
-  const tab = r.name === 'interval' ? 'history' : (r.name === 'article' || r.name === 'photos' || r.name === 'credits') ? 'more' : r.name === 'session' ? 'today' : r.name;
+  const tab = r.name === 'interval' ? 'history' : r.name === 'guide' ? 'recovery' : (r.name === 'article' || r.name === 'photos' || r.name === 'credits' || r.name === 'trackers' || r.name === 'stats') ? 'more' : (r.name === 'session' || r.name === 'cardio') ? 'today' : r.name;
   $$('#tabs a').forEach(a => { const on = a.dataset.tab === tab; a.classList.toggle('active', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
-  const views = { today: viewToday, program: viewProgram, exercises: viewExercises, session: viewSession, go: viewGo, history: viewHistory, interval: viewInterval, more: viewMore, article: viewArticle, photos: viewPhotos, credits: viewCredits };
+  const views = { today: viewToday, program: viewProgram, exercises: viewExercises, session: viewSession, go: viewGo, history: viewHistory, interval: viewInterval, more: viewMore, article: viewArticle, photos: viewPhotos, credits: viewCredits,
+    recovery: viewRecovery, guide: viewGuide, cardio: viewCardio, trackers: viewTrackers, stats: viewStats };
   const fn = views[r.name] || viewToday;
   const { title, html, after, bare } = fn(r);
   document.body.classList.toggle('focus', r.name === 'go');
@@ -532,6 +540,8 @@ function viewToday() {
       <h2 class="display">Rest day</h2>
       <div class="muted small">Recover, eat well, drink water, and get some sleep. Next week starts tomorrow.</div>
       <button class="big block" data-act="open-interval" data-w="${cw}" data-d="${pick}">Log some cardio anyway</button>
+      ${liftDays(w).length ? (act ? `<button class="block" data-act="goto" data-h="#/go">${icon('play', 18)} Resume your open workout</button>`
+        : `<button class="block" data-act="train-anyway" data-w="${cw}" id="trainAnyway">${icon('play', 18)} Train anyway · ${DAY_NAMES[liftDays(w).find(d => !(dayDone(cw, d) > 0)) || liftDays(w)[0]]}'s workout</button>`) : ''}
     </div>`;
   }
 
@@ -543,6 +553,9 @@ function viewToday() {
   const a2hs = (!S.settings.a2hsDismissed && isIOS() && !isStandalone())
     ? `<div class="banner" id="a2hs">${icon('share', 20)}<div class="grow small"><b>Install:</b> tap Share in Safari, then <b>Add to Home Screen</b>. Works offline and keeps your log safe.</div><button class="icon sm ghost" data-act="a2hs-x" aria-label="Dismiss">${icon('x', 16)}</button></div>` : '';
 
+  const openHere = S.sessions.some(s => !s.finished && s.programWeek === cw && s.programDay === pick);
+  const resume = act && !openHere ? `<div class="card win resume">${icon('play', 22)}<div class="grow"><b>Unfinished workout</b><div class="small muted">${h(act.name)} · started ${fmtDate(act.date)}</div></div><button class="sm primary" data-act="goto" data-h="#/go">Resume</button></div>` : '';
+  const ar = injuries(); const nInj = dObj.type === 'resistance' ? injuryCount(w) : 0;
   return { title: 'Today', bare: true, html: `
     ${a2hs}
     <header class="today-head">
@@ -555,6 +568,7 @@ function viewToday() {
       <div class="small muted">${progressText}</div>
     </header>
     ${weekComplete ? `<div class="card win">${icon('trophy', 22)}<div class="grow"><b>Week ${cw} done!</b><div class="small muted">All the lifting days are logged.</div></div><button class="sm primary" data-act="set-week" data-w="${cw + 1}">Start Week ${cw + 1}</button></div>` : ''}
+    ${resume}
     <div class="strip">${strip}</div>
     ${hero}
     <div class="card road">
@@ -562,9 +576,14 @@ function viewToday() {
       <div class="grow"><div class="t">Road mode</div><div class="small muted">${h(roadText)}</div></div>
       ${switchBtn('toggle-road', road, 'Road mode')}
     </div>
+    ${ar.length ? `<a class="card row rec-line" href="#/recovery" id="recLine">${icon('check', 20, 'blue')}<span class="grow small">Recovery on (${ar.map(k => AREA_LABEL[k]).join(', ')})${dObj.type === 'resistance' ? ` · ${nInj ? `${nInj} move${nInj === 1 ? '' : 's'} swapped this week` : 'nothing to swap this week'}` : ''}</span><span class="muted">›</span></a>` : ''}
     <div class="row gap">
       <button class="grow" data-act="start-empty-quick">${icon('plus', 18)} Empty workout</button>
-      <button class="grow" data-act="open-interval" data-w="${cw}" data-d="">${icon('cardio', 18)} Log cardio</button>
+      <a class="btn grow" href="#/cardio" id="cardioLink">${icon('cardio', 18)} Cardio</a>
+    </div>
+    <div class="row gap">
+      <a class="btn grow" href="#/stats">${icon('trophy', 18)} Stats</a>
+      <a class="btn grow" href="#/trackers">${icon('check', 18)} Trackers</a>
     </div>` };
 }
 
@@ -653,10 +672,22 @@ function intervalDay(w, day) {
 }
 
 /* ---------------- Sessions ---------------- */
-function programItems(w, road) {
+function programItems(w, road, areas = []) {
   const items = [];
   w.groups.forEach(g => g.exercises.forEach(pe => {
     const sw = road ? roadSwap(pe) : null;
+    // 1.5 Recovery tab: an injury-friendly move replaces the program (or Road) move.
+    const inj = injurySwap(sw ? sw.name : pe.label, sw ? null : pe.exerciseName, areas);
+    if (inj) {
+      items.push({
+        uid: uid(), exName: inj.name, label: inj.name, groupCode: pe.code,
+        group: { code: g.code, kind: g.kind, roundsText: g.roundsText, restAfterGroupSeconds: g.restAfterGroupSeconds, restAfterEachSeconds: g.restAfterEachSeconds },
+        targetSets: pe.sets, targetReps: pe.reps || '', restAfterSeconds: pe.restAfterSeconds ?? null, workSeconds: pe.workSeconds ?? null,
+        notes: inj.how, demoAsset: inj.gif, demoNote: inj.gif ? 'Recovery demo (see Credits)' : '',
+        roadFrom: sw ? pe.label : undefined, swapFrom: sw ? sw.name : pe.label, swapReason: inj.areaName, sets: []
+      });
+      return;
+    }
     items.push({
       uid: uid(), exName: sw ? sw.name : pe.exerciseName, label: sw ? sw.name : pe.label, groupCode: pe.code,
       group: { code: g.code, kind: g.kind, roundsText: g.roundsText, restAfterGroupSeconds: g.restAfterGroupSeconds, restAfterEachSeconds: g.restAfterEachSeconds },
@@ -719,8 +750,8 @@ async function startProgram(weekN, day) {
     if (v !== 'finish') return;
     act.finished = true; await DB.put('sessions', act);
   }
-  const w = weekOf(weekN); const road = !!S.settings.roadMode;
-  await DB.put('sessions', { uid: uid(), date: Date.now(), name: `Week ${weekN} · ${dayShort(day)}${road ? ' · Road' : ''}`, notes: '', finished: false, programWeek: weekN, programDay: day, roadMode: road, items: programItems(w, road) });
+  const w = weekOf(weekN); const road = !!S.settings.roadMode; const ar = injuries();
+  await DB.put('sessions', { uid: uid(), date: Date.now(), name: `Week ${weekN} · ${dayShort(day)}${road ? ' · Road' : ''}`, notes: '', finished: false, programWeek: weekN, programDay: day, roadMode: road, injuries: ar, items: programItems(w, road, ar) });
   S.hint = null; S.goDraft = {}; S.lastDone = null; if (Timer.st && Timer.st.kind !== 'interval') Timer.clear();
   await refresh(); go('#/go');
 }
@@ -898,9 +929,11 @@ function goSet(s, step, sub) {
     <div>
       <h2 class="display lg">${h(it.label)}</h2>
       <div class="small muted">Target ${h(it.targetReps || (timed ? `${it.workSeconds}s` : '—'))}${notes ? ' · ' + h(notes) : ''}</div>
-      ${howLib && howLib.instructions && !it.roadFrom ? `<details><summary>How to</summary><pre class="text small">${h(howLib.instructions)}</pre></details>` : ''}
+      ${howLib && howLib.instructions && !it.roadFrom && !(it.swapReason && it.swapReason !== REST_SWAP) ? `<details><summary>How to</summary><pre class="text small">${h(howLib.instructions)}</pre></details>` : ''}
     </div>
     ${(pastSame || best) ? `<div class="chips">${pastSame ? `<span class="pill blue">Last time: ${h(setText(pastSame))} ${timed ? 'sec' : 'reps'}</span>` : ''}${best ? `<span class="pill">Best: ${h(setText(best))}</span>` : ''}</div>` : ''}
+    ${(() => { const hint = timed ? null : progressHint(it, s.id), e = timed ? null : bestE1rm(it.exName, s.id); return (hint || e) ? `<div class="chips" id="progHint">${hint ? `<span class="pill">${h(hint)}</span>` : ''}${e ? `<span class="pill">e1RM ${Math.round(e)} lb</span>` : ''}</div>` : ''; })()}
+    ${it.swapReason ? `<div class="small blue-t">${it.swapReason === REST_SWAP ? 'Swapped in for' : 'Recovery swap (' + h(it.swapReason) + ') for'}: ${h(it.swapFrom || '')}</div>` : ''}
     <div class="stepper" data-i="${step.i}">
       <button data-act="go-adj" data-k="reps" data-d="-1" aria-label="One less">${icon('minus', 26)}</button>
       <div class="center"><div class="big-num" id="goReps">${d.reps}</div><div class="eyebrow">${timed ? 'SECONDS' : 'REPS'}</div></div>
@@ -1177,7 +1210,7 @@ function viewInterval(r) {
 /* ---------------- History ---------------- */
 function intervalListItem(i) {
   const tag = i.programWeek ? `Week ${i.programWeek}${i.programDay ? ' · ' + dayShort(i.programDay) : ''}` : '';
-  const bits = [i.activity, i.rounds != null ? i.rounds + ' rounds' : '', i.workSeconds != null ? `${i.workSeconds}s/${i.restSeconds ?? '?'}s` : '', i.durationMinutes != null ? i.durationMinutes + ' min' : ''].filter(Boolean).map(h).join(' · ');
+  const bits = [i.activity, i.rounds != null ? i.rounds + ' rounds' : '', i.workSeconds != null ? `${i.workSeconds}s/${i.restSeconds ?? '?'}s` : '', i.durationMinutes != null ? i.durationMinutes + ' min' : '', i.distance != null ? `${i.distance} ${i.distanceUnit || ''}`.trim() : ''].filter(Boolean).map(h).join(' · ');
   return `<a class="listitem hist-interval" href="#/interval?id=${i.id}"><span class="li-ic blue">${icon('cardio', 22)}</span><span class="grow"><span class="t">Interval cardio${tag ? ' · ' + h(tag) : ''}</span><br>
     <span class="small muted">${fmtDate(i.date)}${bits ? ' · ' + bits : ''}${i.done ? '' : ' · <b>not done</b>'}</span></span><span class="muted">›</span></a>`;
 }
@@ -1201,18 +1234,22 @@ function viewHistory(r) {
 function isIOS() { return /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1); }
 function isStandalone() { return window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches; }
 function buildBackup() {
-  const data = { app: 'workout-pwa', schema: 1, appVersion: APP_VERSION, exportedAt: new Date().toISOString(), sessions: S.sessions, intervals: S.intervals, customExercises: S.custom, settings: S.settings };
+  // schema 2 (1.5): + trackers, habits, recovery logs; progress photos are listed without the images.
+  const data = { app: 'workout-pwa', schema: 2, appVersion: APP_VERSION, exportedAt: new Date().toISOString(), sessions: S.sessions, intervals: S.intervals, customExercises: S.custom, settings: S.settings,
+    metrics: S.metrics, habits: S.habits, recoveryLogs: S.recLogs, photos: S.photos.map(p => ({ id: p.id, date: p.date, notes: p.notes || '' })) };
   const stamp = new Date().toISOString().slice(0, 10);
   S.backup = { json: JSON.stringify(data, null, 1), name: `workout-backup-${stamp}.json`, csv: buildCsv(), csvName: `workout-log-${stamp}.csv` };
   return S.backup;
 }
 function csvCell(v) { v = v == null ? '' : String(v); return /[",\n\r]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
 function buildCsv() {
-  const rows = [['type', 'date', 'session', 'week', 'day', 'code', 'exercise', 'set', 'reps', 'weight_lb', 'rpe', 'activity', 'rounds', 'work_s', 'rest_s', 'duration_min', 'done', 'notes']];
+  const rows = [['type', 'date', 'session', 'week', 'day', 'code', 'exercise', 'set', 'reps', 'weight_lb', 'rpe', 'activity', 'rounds', 'work_s', 'rest_s', 'duration_min', 'done', 'notes', 'distance', 'distance_unit', 'pain']];
   S.sessions.slice().sort((a, b) => a.date - b.date).forEach(s => s.items.forEach(it => it.sets.forEach((st, k) =>
     rows.push(['set', new Date(st.at || s.date).toISOString(), s.name, s.programWeek ?? '', s.programDay ?? '', it.groupCode, it.label, k + 1, st.reps, st.weight, st.rpe ?? '', '', '', '', '', '', s.finished, '']))));
   S.intervals.slice().sort((a, b) => a.date - b.date).forEach(i =>
-    rows.push(['interval', new Date(i.date).toISOString(), '', i.programWeek ?? '', i.programDay ?? '', '', '', '', '', '', '', i.activity, i.rounds ?? '', i.workSeconds ?? '', i.restSeconds ?? '', i.durationMinutes ?? '', i.done, i.notes]));
+    rows.push(['interval', new Date(i.date).toISOString(), '', i.programWeek ?? '', i.programDay ?? '', '', '', '', '', '', '', i.activity, i.rounds ?? '', i.workSeconds ?? '', i.restSeconds ?? '', i.durationMinutes ?? '', i.done, i.notes, i.distance ?? '', i.distance != null ? i.distanceUnit || '' : '', '']));
+  S.recLogs.slice().sort((a, b) => a.date - b.date).forEach(l =>
+    rows.push([l.kind || 'recovery', new Date(l.date).toISOString(), '', '', '', '', l.itemName || '', '', '', '', '', l.area || '', '', '', '', l.durationSeconds != null ? Math.ceil(l.durationSeconds / 60) : '', true, l.notes || '', '', '', l.painLevel ?? '']));
   return rows.map(r => r.map(csvCell).join(',')).join('\r\n');
 }
 function download(text, name, type) {
@@ -1303,13 +1340,16 @@ function showManualCopy() {
 }
 async function importBackup(text) {
   let data; try { data = JSON.parse(text); } catch (e) { toast('That file is not valid JSON.'); return; }
-  if (!data || data.app !== 'workout-pwa' || !Array.isArray(data.sessions) || !Array.isArray(data.intervals)) { toast('Not a Workout backup file.'); return; }
+  const errs = validateBackup(data);
+  if (errs.length) { await choose('Not restored', `The file was checked and nothing was changed:<br>• ${errs.map(h).join('<br>• ')}`, [{ v: '', label: 'OK', cls: 'primary' }]); return; }
   const v = await choose('Restore backup', `File from ${h(data.exportedAt || 'unknown date')}: ${data.sessions.length} workouts, ${data.intervals.length} interval entries.<br><br><b>Merge</b> adds entries you don't already have. <b>Replace</b> deletes everything on this phone first.`,
     [{ v: 'merge', label: 'Merge into my log', cls: 'primary' }, { v: 'replace', label: 'Replace my log', cls: 'danger' }, { v: '', label: 'Cancel' }]);
   if (!v) return;
   if (v === 'replace' && !(await confirmBox('Replace everything?', 'All workouts and cardio entries on this phone will be replaced by the backup. This cannot be undone.', 'Replace', true))) return;
   let added = 0, skipped = 0;
-  if (v === 'replace') { await DB.clear('sessions'); await DB.clear('intervals'); await DB.clear('exercises'); await refresh(); }
+  // A safety copy of the current data is kept on this phone before anything changes.
+  await DB.kvSet('preImportBackup', buildBackup().json);
+  if (v === 'replace') { for (const st of ['sessions', 'intervals', 'exercises', 'metrics', 'habits', 'recovery']) await DB.clear(st); await refresh(); }
   const have = { sessions: new Set(S.sessions.map(x => x.uid)), intervals: new Set(S.intervals.map(x => x.uid)), exercises: new Set(S.custom.map(x => (x.name || '').toLowerCase())) };
   for (const s of data.sessions) {
     if (s.uid && have.sessions.has(s.uid)) { skipped++; continue; }
@@ -1320,6 +1360,10 @@ async function importBackup(text) {
     const c = { ...i, uid: i.uid || uid() }; delete c.id; await DB.put('intervals', c); added++;
   }
   for (const e of (data.customExercises || [])) { if (!e.name || have.exercises.has(e.name.toLowerCase())) continue; const c = { ...e }; delete c.id; await DB.put('exercises', c); }
+  const haveU = { metrics: new Set(S.metrics.map(x => x.uid)), recovery: new Set(S.recLogs.map(x => x.uid)) };
+  for (const m of (data.metrics || [])) { if (m.uid && haveU.metrics.has(m.uid)) { skipped++; continue; } const c = { ...m, uid: m.uid || uid() }; delete c.id; await DB.put('metrics', c); added++; }
+  for (const l of (data.recoveryLogs || [])) { if (l.uid && haveU.recovery.has(l.uid)) { skipped++; continue; } const c = { ...l, uid: l.uid || uid() }; delete c.id; await DB.put('recovery', c); added++; }
+  for (const x of (data.habits || [])) { await DB.put('habits', { key: `${x.date}|${x.habit}`, date: x.date, habit: x.habit, value: x.value }); }
   await refresh(); buildBackup();
   toast(`Restored: ${added} added${skipped ? ', ' + skipped + ' already there' : ''}.`, 3500); render();
 }
@@ -1335,6 +1379,12 @@ function viewMore() {
         <button class="block" id="copyLink" data-act="copy-link">Copy link</button>
       </div>
     </div>
+    <div class="card"><h3>Track</h3>
+      <a class="listitem" href="#/cardio">${icon('cardio', 20)}<span class="grow t">Cardio log</span><span class="muted">›</span></a>
+      <a class="listitem" href="#/trackers">${icon('check', 20)}<span class="grow t">Trackers · weight, habits, water, photos</span><span class="muted">›</span></a>
+      <a class="listitem" href="#/stats">${icon('trophy', 20)}<span class="grow t">Stats &amp; badges</span><span class="muted">›</span></a>
+      <a class="listitem" href="#/recovery">${icon('check', 20)}<span class="grow t">Recovery, stretching &amp; routines</span><span class="muted">›</span></a>
+    </div>
     <div class="card"><h3>Settings</h3>
       <label class="f">Current program week<select data-setting="currentWeek">${weekOpts}</select></label>
       <div class="set-row">${icon('truck', 20, 'blue')}<div class="grow"><b>Road mode</b><div class="small muted">Swap moves that need a ball, pull-up bar, rope or bench for band and bodyweight versions.</div></div>${switchBtn('toggle-road', !!S.settings.roadMode, 'Road mode')}</div>
@@ -1346,7 +1396,7 @@ function viewMore() {
       <div class="small muted" style="margin-top:8px">Workout ${APP_VERSION} · Storage: ${S.persisted === true ? 'persistent ✓' : S.persisted === false ? 'best-effort (add to Home Screen to keep data safe)' : 'unknown'} · ${isStandalone() ? 'running from Home Screen ✓' : 'running in the browser'}</div>
     </div>
     <div class="card"><h3>Backup &amp; restore</h3>
-      <p class="small muted" id="stats">${S.sessions.length} workouts · ${S.intervals.length} cardio entries · ${nSets} sets. Your log is stored only on this phone, so save a backup now and then.</p>
+      <p class="small muted" id="backupStats">${S.sessions.length} workouts · ${S.intervals.length} cardio entries · ${nSets} sets. Your log is stored only on this phone, so save a backup now and then.</p>
       <div class="stack"><button class="primary block" data-act="export-share">${icon('share', 18)} Share / save backup</button>
       <button class="block" data-act="export-dl">Download backup (JSON)</button>
       <button class="block" data-act="export-csv">Export CSV (spreadsheet)</button>
@@ -1381,16 +1431,19 @@ const CREDITS = [
   { title: 'ExerciseDB / AscendAPI',
     lines: ['Demos for Upside Down Shoulder press, the squat holds and Kneeling Band Row come from the ExerciseDB free dataset by AscendAPI, for personal, non-commercial use with credit to AscendAPI.'],
     urls: ['https://oss.exercisedb.dev/docs'] },
+  { title: 'Recovery, stretching and routine content (1.5)',
+    lines: ['Written for this app from public physiotherapy and training sources (NHS Inform, CDC Growing Stronger, MOON shoulder protocol, U.S. Army ATP 7-22.02, U.S. Marine Corps, Harvard Health, Cleveland Clinic and others). Each exercise, stretch and routine shows its own sources on its card.'],
+    urls: [] },
   { title: 'Barlow Condensed font', lines: ['By Jeremy Tribby. SIL Open Font License 1.1. (Bundled in the Android app; the web app uses it when your device has it.)'],
     urls: ['https://fonts.google.com/specimen/Barlow+Condensed', 'https://openfontlicense.org'] },
   { title: 'Open-source libraries (Android app)',
-    lines: ['AndroidX (Core, Activity, Lifecycle, Navigation), Jetpack Compose and Material 3, Room, Coil and kotlinx.serialization. Apache License 2.0. This web app itself uses no third-party code.'],
+    lines: ['AndroidX (Core, Activity, Lifecycle, Navigation, Health Connect client), Jetpack Compose and Material 3, Room, Coil and kotlinx.serialization. Apache License 2.0. This web app itself uses no third-party code.'],
     urls: ['https://www.apache.org/licenses/LICENSE-2.0'] }
 ];
 function viewCredits() {
   return { title: 'Credits', html: `<div id="credits">
     <p class="small muted pad">Where the program, the demo GIFs, the font and the libraries come from.</p>
-    ${CREDITS.map(c => `<div class="card credit"><h3>${h(c.title)}</h3>${c.lines.map(l => `<p class="small">${h(l)}</p>`).join('')}
+    ${CREDITS.concat((S.recovery?.gifCredits || []).map(g => ({ title: 'Recovery GIF: ' + g.file.split('/').pop(), lines: [`"${g.title}" by ${g.author}.`, `License: ${g.license}. ${g.modified || ''}`.trim()], urls: [g.commonsPage, g.source !== g.commonsPage ? g.source : '', g.licenseUrl].filter(Boolean) }))).map(c => `<div class="card credit"><h3>${h(c.title)}</h3>${c.lines.map(l => `<p class="small">${h(l)}</p>`).join('')}
       ${c.urls.map(u => `<div class="small"><a href="${h(u)}" target="_blank" rel="noopener noreferrer">${h(u)}</a></div>`).join('')}</div>`).join('')}
     <a class="btn block" href="#/more">${icon('back', 16)} Back</a></div>` };
 }
@@ -1417,6 +1470,336 @@ function showUpdate(reg) {
 }
 function updateOnline() { $('#offlineBadge').hidden = navigator.onLine; }
 
+const REST_SWAP = 'Swapped for the rest of the workout';
+/* ================= 1.5: Recovery, stretching, routines, cardio, trackers, stats (parity with Android 1.5) ================= */
+const AREA_KEYS = ['knee', 'ankle', 'hip', 'back', 'shoulder'];
+const AREA_LABEL = { knee: 'Knees', ankle: 'Ankles & feet', hip: 'Hips', back: 'Lower back', shoulder: 'Shoulders' };
+const injuries = () => AREA_KEYS.filter(k => (S.settings.injuries || []).includes(k));
+const RXC = new Map();
+const rxOf = p => { if (!RXC.has(p)) RXC.set(p, new RegExp(p, 'i')); return RXC.get(p); };
+const fmtMS = sec => `${Math.floor(sec / 60)}:${String(Math.round(sec) % 60).padStart(2, '0')}`;
+const dayKey = (ms = Date.now()) => { const d = new Date(ms); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
+function swapTarget(name) {
+  const R = S.recovery; if (!R) return null;
+  const m = R.swapMoves.find(x => ieq(x.name, name)); if (m) return m;
+  for (const a of R.areas) { const e = a.exercises.find(x => ieq(x.name, name)); if (e) return { name: e.name, how: e.how, gif: e.gif || null }; }
+  return null;
+}
+/** Same rules as Android InjurySwaps: area by area (knee, ankle, hip, back, shoulder); a replacement is re-checked against the other checked areas. */
+function injurySwap(label, exName, areas) {
+  const R = S.recovery; if (!R || !areas || !areas.length) return null;
+  let text = [label, exName].filter(Boolean).join(' ').toLowerCase(), result = null; const applied = new Set();
+  for (let hop = 0; hop < 3; hop++) {
+    let hit = null;
+    for (const k of AREA_KEYS) {
+      if (!areas.includes(k) || applied.has(k)) continue;
+      const a = R.areas.find(x => x.key === k); if (!a) continue;
+      const rule = a.swaps.find(r => rxOf(r.match).test(text)); if (rule) { hit = { a, to: rule.to }; break; }
+    }
+    if (!hit) return result;
+    applied.add(hit.a.key);
+    const t = swapTarget(hit.to);
+    result = { name: hit.to, how: t ? t.how : '', gif: t ? t.gif || null : null, areaKey: hit.a.key, areaName: hit.a.name };
+    text = hit.to.replace(/\(.*?\)/g, '').toLowerCase(); // "(no jump)" must not trigger another rule
+  }
+  return result;
+}
+function injuryCount(w) {
+  const ar = injuries(); if (!ar.length) return 0; const road = !!S.settings.roadMode;
+  return w.groups.flatMap(g => g.exercises).filter(pe => { const sw = road ? roadSwap(pe) : null; return injurySwap(sw ? sw.name : pe.label, sw ? null : pe.exerciseName, ar); }).length;
+}
+function lockReason(ex) {
+  if (ex.lock === 'shoulderMobility' && S.settings.shoulderMobility !== 'yes') return 'Unlocks once you can raise your arm above shoulder height without sharp pain.';
+  if (ex.lock === 'freshSprain' && S.settings.ankleFreshSprain) return 'Wait about two weeks after a fresh sprain before side-to-side band work.';
+  return null;
+}
+const levelTitle = p => p === 1 ? 'Level 1 — start here' : p === 2 ? 'Level 2 — when Level 1 is easy' : 'Level 3 — only when Level 1–2 are comfortable';
+const bandCls = lv => lv === 'ok' ? 'blue' : lv === 'caution' ? 'acc' : 'danger';
+const areaSwitch = (k, on, label) => `<button class="switch ${on ? 'on' : ''}" data-act="toggle-area" data-k="${k}" role="switch" aria-checked="${on}" aria-label="${h(label)}"><span></span></button>`;
+function srcList(urls) {
+  return urls && urls.length ? `<details class="small srcs"><summary>Sources</summary>${urls.map(u => `<div><a href="${h(u)}" target="_blank" rel="noopener noreferrer">${h(u)}</a></div>`).join('')}</details>` : '';
+}
+function recTabs(cur) {
+  return `<div class="chips rec-tabs">${[['', 'Recovery'], ['stretch', 'Stretch'], ['routines', 'Routines']].map(([k, l]) => `<a class="btn chip ${cur === k ? 'on' : ''}" href="#/recovery${k ? '/' + k : ''}">${l}</a>`).join('')}</div>`;
+}
+function painCard(R) {
+  return `<div class="card"><h3>Pain guide (0–10)</h3>${R.safety.painRule.map(b => `<div class="small pain-row"><i class="dot ${bandCls(b.level)}"></i>${h(b.text)}</div>`).join('')}</div>`;
+}
+function routineSteps(r, ar = injuries()) {
+  return r.items.map(i => i.flagged && i.flagged.areas.some(a => ar.includes(a))
+    ? { name: i.flagged.name, how: i.flagged.how, seconds: i.seconds, gif: null, swappedFrom: i.name }
+    : { name: i.name, how: i.how, seconds: i.seconds, gif: i.gif || null });
+}
+const expandStretch = items => items.flatMap(s => s.sides
+  ? [{ name: `${s.name} — left`, how: s.how, seconds: Math.round(s.seconds / 2), gif: s.gif || null }, { name: `${s.name} — right`, how: s.how, seconds: Math.round(s.seconds / 2), gif: s.gif || null }]
+  : [{ name: s.name, how: s.how, seconds: s.seconds, gif: s.gif || null }]);
+function viewRecovery(r) {
+  const R = S.recovery;
+  if (!R) return { title: 'Recovery', html: '<div class="empty">Recovery content could not be loaded. Open the app once while online.</div>' };
+  if (r.parts[1] === 'ex') return viewRecoveryEx(r.parts[2]);
+  const sub = r.parts[1] || ''; const ar = injuries();
+  let body = '';
+  if (sub === '') {
+    body += `<div class="card warn-card"><b>${icon('x', 16)} Not medical advice</b><p class="small">${h(R.safety.disclaimer)}</p><p class="small muted">${h(R.safety.equipment)}</p></div>`;
+    body += `<div class="card" id="areas"><h3>Problem areas</h3><p class="small muted">Check what's bothering you. Workouts you start from now on swap moves that load that area for gentler versions (shown as “Recovery swap”). Uncheck when you're better.</p>
+      ${R.areas.map(a => `<div class="set-row"><div class="grow"><b>${h(AREA_LABEL[a.key] || a.name)}</b><div class="small muted">${a.exercises.length} exercises · ${a.swaps.length} workout swaps</div></div>${areaSwitch(a.key, ar.includes(a.key), AREA_LABEL[a.key] || a.name)}</div>`).join('')}
+      ${ar.includes('shoulder') ? `<div class="sub-q"><b class="small">${h(R.safety.shoulderPrompt)}</b><div class="chips"><button class="chip ${S.settings.shoulderMobility === 'yes' ? 'on' : ''}" data-act="shoulder-ok" data-v="yes">Yes</button><button class="chip ${S.settings.shoulderMobility === 'no' ? 'on' : ''}" data-act="shoulder-ok" data-v="no">Not yet</button></div><div class="small muted">${h(R.safety.shoulderRule)}</div></div>` : ''}
+      ${ar.includes('ankle') ? `<div class="set-row"><div class="grow"><b>Sprained in the last 2 weeks</b><div class="small muted">${h(R.safety.ankleRule)}</div></div>${switchBtn('toggle-sprain', !!S.settings.ankleFreshSprain, 'Sprained in the last 2 weeks')}</div>` : ''}
+    </div>`;
+    body += painCard(R);
+    const open = new Set([...ar, ...(S.recOpen || [])]);
+    const ordered = R.areas.slice().sort((a, b) => (ar.includes(a.key) ? 0 : 1) - (ar.includes(b.key) ? 0 : 1));
+    for (const a of ordered) {
+      const show = open.has(a.key);
+      body += `<div class="card area-card"><button class="area-head ghost block" data-act="area-open" data-k="${a.key}"><span class="grow left"><span class="eyebrow ${ar.includes(a.key) ? 'acc' : ''}">${ar.includes(a.key) ? 'Checked' : 'Area'}</span><br><b class="area-name">${h(a.name)}</b></span><span class="small">${show ? 'Hide' : 'Show'}</span></button>`;
+      if (show) {
+        body += `<p class="small muted">${h(a.intro)}</p><p class="small muted">${h(R.safety.phasing)}</p>`;
+        for (const p of [1, 2, 3]) {
+          const list = a.exercises.filter(e => e.phase === p); if (!list.length) continue;
+          body += `<div class="eyebrow lvl">${levelTitle(p)}</div>` + list.map(e => {
+            const lock = lockReason(e);
+            return `<a class="listitem rec-ex" href="#/recovery/ex/${h(e.id)}">${thumb(e.gif, e.name, 'mini')}<span class="grow"><span class="t">${h(e.name)}</span><br><span class="small muted">${h(e.types.join(' · '))}</span>${lock ? `<br><span class="small acc-t">🔒 ${h(lock)}</span>` : ''}</span><span class="muted">›</span></a>`;
+          }).join('');
+        }
+        body += `<div class="redflags"><b>See a clinician if…</b>${a.redFlags.map(f => `<div class="small">• ${h(f)}</div>`).join('')}${a.cautions ? `<div class="small muted">Cautions: ${h(a.cautions)}</div>` : ''}</div>`;
+      }
+      body += '</div>';
+    }
+  } else if (sub === 'stretch') {
+    const st = R.stretching;
+    const row = (s, kind) => `<button class="listitem stretch-row block left" data-act="stretch-info" data-id="${h(s.id)}" data-kind="${kind}">${thumb(s.gif, s.name, 'mini')}<span class="grow"><span class="t">${h(s.name)}</span><br><span class="small muted">${s.target ? h(s.target) + ' · ' : ''}${fmtMS(s.seconds)}${s.sides ? ' (both sides)' : ''}</span></span></button>`;
+    body += `<div class="card"><p class="small muted">${h(R.safety.stretchRule)}</p></div>
+      <div class="card"><div class="eyebrow acc">Before a workout</div><h3>Dynamic warm-up</h3><p class="small muted">${st.dynamic.length} moves · ${fmtMS(st.dynamic.reduce((a, s) => a + s.seconds, 0))}</p><button class="primary block" data-act="guide-warmup">${icon('play', 18)} Start warm-up</button></div>
+      ${st.dynamic.map(s => row(s, 'warmup')).join('')}
+      <div class="card"><div class="eyebrow acc">After a workout</div><h3>Static stretches</h3><p class="small muted">${st.static.length} holds · ${fmtMS(st.static.reduce((a, s) => a + s.seconds, 0))}</p><button class="primary block" data-act="guide-static">${icon('play', 18)} Start stretches</button></div>
+      ${st.static.map(s => row(s, 'stretch')).join('')}`;
+  } else {
+    body += `<div class="card"><p class="small muted">Four daily routines with a timer that talks you through each move. Pick by feel — all fit next to the truck.</p></div>`;
+    body += R.routines.map(rt => {
+      const steps = routineSteps(rt, ar);
+      return `<div class="card routine" data-key="${h(rt.key)}"><h3>${h(rt.name)}</h3>
+        <div class="chips"><span class="pill">${steps.length} moves</span><span class="pill">${fmtMS(steps.reduce((a, s) => a + s.seconds, 0))}</span>${rt.time ? `<span class="pill">${h(rt.time)}</span>` : ''}</div>
+        ${rt.feel ? `<p class="small">${h(rt.feel)}</p>` : ''}${rt.bestFor ? `<p class="small muted">Best for: ${h(rt.bestFor)}</p>` : ''}${rt.space ? `<p class="small muted">Space: ${h(rt.space)}</p>` : ''}
+        <ol class="small tight">${steps.map(s => `<li${s.swappedFrom ? ' class="blue-t"' : ''}>${h(s.name)}${s.swappedFrom ? ` <span class="small">(swapped for ${h(s.swappedFrom)} — Recovery)</span>` : ''}</li>`).join('')}</ol>
+        ${rt.cautions ? `<p class="small muted">Note: ${h(rt.cautions)}</p>` : ''}${srcList(rt.sourceUrls)}
+        <button class="primary block" data-act="guide-routine" data-key="${h(rt.key)}">${icon('play', 18)} Start ${h(rt.name.split(' —')[0])}</button></div>`;
+    }).join('');
+  }
+  return { title: 'Recovery', html: `<div id="recovery">${recTabs(sub)}${body}</div>` };
+}
+function findRecEx(id) { for (const a of (S.recovery?.areas || [])) { const e = a.exercises.find(x => x.id === id); if (e) return { a, e }; } return null; }
+function viewRecoveryEx(id) {
+  const R = S.recovery, f = findRecEx(id);
+  if (!f) return { title: 'Recovery', html: '<div class="empty">Not found.</div>' };
+  const { a, e } = f; const lock = lockReason(e);
+  const logs = S.recLogs.filter(l => l.itemKey === e.id).sort((x, y) => y.date - x.date).slice(0, 5);
+  return { title: 'Recovery', html: `<div id="recEx" data-id="${h(e.id)}" data-area="${h(a.key)}">
+    <a class="btn sm ghost" href="#/recovery">${icon('back', 16)} Recovery</a>
+    <div class="eyebrow">${h(a.name)} · Level ${e.phase}</div>
+    <h2 class="display lg">${h(e.name)}</h2>
+    <div class="small muted">${h(e.types.join(' · '))}</div>
+    ${lock ? `<div class="small acc-t">🔒 ${h(lock)}</div>` : ''}${e.caution ? `<div class="small acc-t">${h(e.caution)}</div>` : ''}
+    ${e.gif ? `<div class="demo-card">${gifTag(e.gif, e.name, 'demo-img')}</div>${e.gifNote ? `<div class="small muted">${h(e.gifNote)}</div>` : ''}` : ''}
+    <p>${h(e.how)}</p>${e.steps && e.steps.length ? `<ol>${e.steps.map(s => `<li>${h(s)}</li>`).join('')}</ol>` : ''}
+    ${e.source ? `<p class="small muted">Source: ${h(e.source)}</p>` : ''}${srcList(e.sourceUrls)}
+    <div class="card"><h3>How did it feel? <span id="painVal">0</span> / 10</h3>
+      <input type="range" min="0" max="10" step="1" value="0" id="painIn" class="block" aria-label="Pain 0 to 10">
+      <div class="small" id="painBand"></div>
+      <label class="f">Notes (optional)<input id="painNotes" type="text"></label>
+      <button class="primary block" data-act="rec-log">Log it</button>
+      ${logs.length ? `<div class="small muted">Recent: ${logs.map(l => `${new Date(l.date).toLocaleDateString()} · pain ${l.painLevel ?? '—'}`).join(' · ')}</div>` : ''}
+    </div>
+    <p class="small dim">${h(R.safety.disclaimer)}</p></div>`,
+    after() {
+      const inp = $('#painIn'); const upd = () => {
+        const v = +inp.value; $('#painVal').textContent = v; const b = R.safety.painRule.find(x => v >= x.from && v <= x.to);
+        $('#painBand').innerHTML = (b ? `<span class="${bandCls(b.level)}-t">${h(b.text)}</span>` : '') + (v >= 6 ? '<div class="danger-t">If pain is sharp, getting worse, or you notice swelling, numbness or weakness — stop and see a clinician.</div>' : '');
+      };
+      inp.addEventListener('input', upd); upd();
+    } };
+}
+/* Guided timer for warm-ups, stretches and routines: reuses the timestamp phase timer (survives backgrounding). */
+function startGuide(title, kind, key, steps) {
+  if (!steps.length) return;
+  if (Timer.st && !Timer.st.done && Timer.st.ctx && Timer.st.ctx.sid) Timer.clear();
+  Timer.startPhases(steps.map(s => ({ label: s.name, seconds: s.seconds })), { guide: { title, kind, key, steps, total: steps.reduce((a, s) => a + s.seconds, 0) } });
+  go('#/guide');
+}
+function viewGuide() {
+  const t = Timer.st, g = t && t.ctx && t.ctx.guide;
+  if (!g) return { title: 'Timer', html: `<div class="empty"><h2 class="display">No routine running</h2><a class="btn primary" href="#/recovery/stretch">Stretch &amp; warm-up</a></div>` };
+  if (t.done) return { title: g.title, html: `<div id="guide" class="center"><h2 class="display xl">Done</h2><p class="muted">${fmtMS(g.total)} logged. It counts toward your streak in Stats.</p><button class="primary block" data-act="guide-close">Close</button></div>` };
+  const st = g.steps[t.idx] || g.steps[0]; const nx = g.steps[t.idx + 1];
+  return { title: g.title, html: `<div id="guide">
+    <div class="eyebrow acc">${h(g.title)} · ${t.idx + 1} of ${g.steps.length}</div>
+    <h2 class="display lg" id="guideName">${h(st.name)}</h2>
+    ${st.swappedFrom ? `<div class="small blue-t">Swapped for ${h(st.swappedFrom)} (Recovery)</div>` : ''}
+    ${st.gif ? `<div class="demo-card">${gifTag(st.gif, st.name, 'demo-img')}</div>` : ''}
+    <p>${h(st.how)}</p>
+    ${nx ? `<p class="small muted">Next: ${h(nx.name)}</p>` : ''}
+    <button class="block" data-act="guide-close">Stop (nothing is logged)</button></div>` };
+}
+async function logGuide(g) {
+  await DB.put('recovery', { uid: uid(), date: Date.now(), kind: g.kind, itemKey: g.key, itemName: g.title, durationSeconds: g.total, notes: '' });
+  await refresh();
+}
+
+/* ---------------- Cardio (suggestions are only suggestions; the log is manual) ---------------- */
+const CARDIO_IDEAS = [
+  { name: 'Jump rope', min: 10, how: 'Easy bounce on the balls of the feet, wrists turning the rope. Try 1 min on / 30 s easy, repeated.', gif: 'recovery/jump_rope_wbs.gif', rounds: 7, work: 60, rest: 30 },
+  { name: 'Jogging', min: 20, how: 'Conversational pace — you can talk in full sentences.' },
+  { name: 'Walking', min: 30, how: 'Brisk walk; swing the arms. Great on rest days and after a long drive.' },
+  { name: 'Sprints', min: 15, how: 'Warm up 5 min, then 6–8 hard 15–20 s sprints with a full walk-back recovery.', rounds: 8, work: 20, rest: 90 },
+  { name: 'Tabata', min: 4, how: '8 rounds of 20 s all-out / 10 s rest (any move: high knees, burpees, jump rope, bike).', rounds: 8, work: 20, rest: 10 },
+  { name: 'HIIT', min: 20, how: '10 rounds of 30 s hard / 30 s easy, with a 5 min warm-up and cool-down.', rounds: 10, work: 30, rest: 30 }
+];
+function viewCardio() {
+  const recent = S.intervals.slice().sort((a, b) => b.date - a.date).slice(0, 10);
+  return { title: 'Cardio', html: `<div id="cardio">
+    <div class="eyebrow">Ideas — tap one to fill in the log, or type your own</div>
+    ${CARDIO_IDEAS.map(c => `<button class="listitem block left cardio-idea" data-act="cardio-idea" data-n="${h(c.name)}">${c.gif ? thumb(c.gif, c.name, 'mini') : `<span class="li-ic blue">${icon('cardio', 22)}</span>`}<span class="grow"><span class="t">${h(c.name)}</span><br><span class="small muted">~${c.min} min · ${h(c.how)}</span></span></button>`).join('')}
+    <div class="card"><h3>Log cardio</h3>
+      <label class="f">Type<input id="cType" type="text" placeholder="e.g. Jump rope, Bike, Rowing"></label>
+      <label class="f">Minutes<input id="cMin" type="number" inputmode="numeric" min="1" max="1440"></label>
+      <div class="row"><label class="f grow">Distance (optional)<input id="cDist" type="number" inputmode="decimal" min="0" step="0.01"></label>
+        <label class="f">Unit<select id="cUnit"><option value="mi">mi</option><option value="km">km</option></select></label></div>
+      <label class="f">Notes (optional)<input id="cNotes" type="text"></label>
+      <button class="primary block" data-act="cardio-save">Save</button>
+    </div>
+    ${recent.length ? `<div class="eyebrow">Recent cardio</div>${recent.map(intervalListItem).join('')}` : ''}
+    <a class="small" href="#/interval?w=&d=">Open the interval timer &amp; journal</a></div>` };
+}
+
+/* ---------------- Trackers (manual entry; iPhone web apps can't read Apple Health or Health Connect) ---------------- */
+const HABITS = ['Stretched / mobility', 'Hit protein', '7+ hours sleep', 'No alcohol', 'Ate a vegetable'];
+const MEASURES = ['waist', 'chest', 'hips', 'arm', 'thigh', 'neck'];
+const num1 = v => (Math.round(v * 10) / 10).toString();
+function viewTrackers(r) {
+  const tab = r.parts[1] || 'body';
+  const tabs = `<div class="chips">${[['body', 'Body'], ['habits', 'Habits'], ['photos', 'Photos'], ['health', 'Health apps']].map(([k, l]) => `<a class="btn chip ${tab === k ? 'on' : ''}" href="#/trackers/${k}">${l}</a>`).join('')}</div>`;
+  let body = '';
+  if (tab === 'body') {
+    const ws = S.metrics.filter(m => m.type === 'weight').sort((a, b) => b.date - a.date);
+    const latest = ws[0], monthAgo = Date.now() - 30 * 864e5;
+    const old = ws.find(m => m.date <= monthAgo) || ws[ws.length - 1];
+    body += `<div class="card"><h3>Body weight</h3>${latest ? `<div class="display lg" id="wLatest">${num1(latest.value)} lb</div>${old && old !== latest ? `<div class="small muted">${latest.value - old.value >= 0 ? '+' : ''}${num1(latest.value - old.value)} lb since ${new Date(old.date).toLocaleDateString()}</div>` : ''}` : ''}
+      <div class="row"><input id="wIn" type="number" inputmode="decimal" step="0.1" placeholder="Weight (lb)" class="grow"><button data-act="metric-add" data-type="weight">Add</button></div></div>
+      <div class="card"><h3>Measurements (inches)</h3><div class="row"><select id="mType">${MEASURES.map(m => `<option>${m}</option>`).join('')}</select><input id="mIn" type="number" inputmode="decimal" step="0.1" placeholder="inches" class="grow"><button data-act="metric-add" data-type="measure">Add</button></div>
+      ${MEASURES.map(t => { const m = S.metrics.filter(x => x.type === t).sort((a, b) => b.date - a.date)[0]; return m ? `<div class="small muted">${t}: ${num1(m.value)} in</div>` : ''; }).join('')}</div>
+      <div class="eyebrow">History</div>
+      ${S.metrics.slice().sort((a, b) => b.date - a.date).slice(0, 60).map(m => `<div class="listitem"><span class="grow"><span class="t">${h(m.type)}: ${num1(m.value)} ${h(m.unit)}</span><br><span class="small muted">${fmtDate(m.date)}</span></span><button class="icon sm ghost" data-act="metric-del" data-id="${m.id}" aria-label="Delete">${icon('trash', 16)}</button></div>`).join('')}`;
+  } else if (tab === 'habits') {
+    const today = dayKey(); const val = k => (S.habits.find(x => x.date === today && x.habit === k) || {}).value || 0;
+    const cups = val('water');
+    body += `<div class="card"><h3>Water today</h3><div class="row"><button class="icon" data-act="water" data-d="-1" aria-label="One less cup">${icon('minus', 18)}</button><b class="display lg" id="waterVal">${cups} cups</b><button class="icon" data-act="water" data-d="1" aria-label="One more cup">${icon('plus', 18)}</button><span class="small muted">(8 oz)</span></div></div>
+      <div class="card"><h3>Today's habits</h3>${HABITS.map(k => `<label class="check"><input type="checkbox" data-habit="${h(k)}" ${val(k) ? 'checked' : ''}> ${h(k)}</label>`).join('')}</div>
+      <div class="card"><h3>Last 7 days</h3>${[6, 5, 4, 3, 2, 1, 0].map(n => { const d = dayKey(Date.now() - n * 864e5); const rows = S.habits.filter(x => x.date === d); return `<div class="small">${d} — ${rows.filter(x => x.habit !== 'water' && x.value > 0).length}/${HABITS.length} habits · ${(rows.find(x => x.habit === 'water') || {}).value || 0} cups</div>`; }).join('')}</div>`;
+  } else if (tab === 'photos') {
+    body += `<div class="card"><h3>Progress photos</h3><p class="small muted">Kept privately in this web app's storage on this phone (not in your photo library, never uploaded). Backups don't include the images.</p>
+      <label class="btn primary block" for="photoIn">${icon('plus', 18)} Add a photo</label><input id="photoIn" type="file" accept="image/*" class="hidden"></div>
+      <div id="photoList">${S.photos.slice().sort((a, b) => b.date - a.date).map(p => `<div class="card"><img class="photo" data-pid="${p.id}" alt="Progress photo"><div class="row"><span class="grow small">${fmtDate(p.date)}</span><button class="icon sm ghost" data-act="photo-del" data-id="${p.id}" aria-label="Delete photo">${icon('trash', 16)}</button></div></div>`).join('')}</div>`;
+  } else {
+    body += `<div class="card"><h3>Health apps</h3>
+      <p class="small">The iPhone web app can't read Apple Health, Samsung Health or Health Connect (no web app can), so trackers here are manual entry.</p>
+      <p class="small">The Android app can optionally import weight, steps, heart rate, sleep and exercise from <b>Health Connect</b> (read-only, on the phone).</p>
+      <p class="small">• Samsung Health and a Galaxy Watch write to Health Connect. • Hume (Band 2.0 / Pod 2.0): Hume officially lists Apple Health and Google Fit; some users report Pod/Band data in Health Connect. • iFit doesn't support Health Connect yet (it says it's working on it).</p></div>`;
+  }
+  return { title: 'Trackers', html: `<div id="trackers">${tabs}${body}</div>`, after() {
+    $$('img.photo[data-pid]').forEach(img => { const p = S.photos.find(x => x.id === +img.dataset.pid); if (p && p.blob) { const u = URL.createObjectURL(p.blob); img.src = u; img.onload = () => URL.revokeObjectURL(u); } });
+  } };
+}
+function downscale(file, max = 1600) {
+  return new Promise((res, rej) => {
+    const url = URL.createObjectURL(file); const img = new Image();
+    img.onload = () => {
+      const sc = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+      const c = document.createElement('canvas'); c.width = Math.max(1, Math.round(img.naturalWidth * sc)); c.height = Math.max(1, Math.round(img.naturalHeight * sc));
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url);
+      c.toBlob(b => b ? res(b) : rej(new Error('encode failed')), 'image/jpeg', 0.85);
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); rej(new Error('Not an image')); };
+    img.src = url;
+  });
+}
+
+/* ---------------- Progress: +5 lb hint, estimated 1RM, stats ---------------- */
+const e1rm = (reps, w) => (!(w > 0) || reps < 1 || reps > 12) ? null : reps === 1 ? w : w * (1 + reps / 30);
+const repTop = t => /sec|min/i.test(t || '') ? null : (String(t || '').match(/\d+/g) || []).map(Number).reduce((a, b) => Math.max(a, b), -Infinity);
+function progressHint(it, sid) {
+  const top = repTop(it.targetReps); if (!(top > 0)) return null;
+  const last = pastSets(it.exName, sid); if (!last || !last.length) return null;
+  if (last.some(s => (+s.reps || 0) < top)) return null;
+  const w = Math.max(...last.map(s => +s.weight || 0));
+  return w > 0 ? `Last time you hit ${top} on every set at ${w} lb · try +5 lb` : `Last time you hit ${top} on every set · try 1–2 more reps`;
+}
+function bestE1rm(exName, sid) {
+  const key = String(exName || '').toLowerCase(); let best = null;
+  S.sessions.filter(s => s.id !== sid).forEach(s => s.items.forEach(it => { if (String(it.exName || '').toLowerCase() === key) it.sets.forEach(st => { const v = e1rm(+st.reps || 0, +st.weight || 0); if (v && (!best || v > best)) best = v; }); }));
+  return best;
+}
+const isoWeek = d => { const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())); const day = t.getUTCDay() || 7; t.setUTCDate(t.getUTCDate() + 4 - day); const y0 = new Date(Date.UTC(t.getUTCFullYear(), 0, 1)); return t.getUTCFullYear() + '-' + Math.ceil(((t - y0) / 864e5 + 1) / 7); };
+function streaks(days, todayK) {
+  if (!days.size) return [0, 0];
+  const sorted = [...days].sort(); let longest = 1, run = 1;
+  for (let i = 1; i < sorted.length; i++) { run = (new Date(sorted[i]) - new Date(sorted[i - 1])) === 864e5 ? run + 1 : 1; longest = Math.max(longest, run); }
+  let cur = 0; let d = new Date(todayK + 'T12:00:00'); if (!days.has(todayK)) d = new Date(d - 864e5);
+  while (days.has(dayKey(d.getTime()))) { cur++; d = new Date(d - 864e5); }
+  return [cur, longest];
+}
+function buildStats() {
+  const fin = S.sessions.filter(s => s.finished);
+  const sets = S.sessions.flatMap(s => s.items.flatMap(it => it.sets.map(st => ({ s, it, reps: +st.reps || 0, weight: +st.weight || 0 }))));
+  const cardio = S.intervals.filter(i => i.done);
+  const active = new Set([...fin.map(s => dayKey(s.date)), ...cardio.map(i => dayKey(i.date)), ...S.recLogs.map(l => dayKey(l.date))]);
+  const count = {}; [...fin.map(s => s.date), ...cardio.map(i => i.date)].forEach(ms => { const k = dayKey(ms); count[k] = (count[k] || 0) + 1; });
+  const today = new Date(); const heat = []; for (let n = 83; n >= 0; n--) { const k = dayKey(today - n * 864e5); heat.push({ k, c: count[k] || 0 }); }
+  const weekly = []; for (let b = 7; b >= 0; b--) { const wk = isoWeek(new Date(today - b * 7 * 864e5)); const inW = sets.filter(x => isoWeek(new Date(x.s.date)) === wk); weekly.push({ label: b ? `-${b}w` : 'This wk', vol: inW.reduce((a, x) => a + x.reps * x.weight, 0) }); }
+  const byEx = {}; sets.forEach(x => { const k = x.it.exName || x.it.label; (byEx[k] = byEx[k] || []).push(x); });
+  const prs = Object.entries(byEx).map(([name, xs]) => { const top = xs.reduce((a, b) => (b.weight > a.weight || (b.weight === a.weight && b.reps > a.reps)) ? b : a); return { name, w: top.weight, r: top.reps, e: Math.max(0, ...xs.map(x => e1rm(x.reps, x.weight) || 0)) || null }; })
+    .sort((a, b) => (b.e || 0) - (a.e || 0) || b.r - a.r);
+  const [cur, longest] = streaks(active, dayKey());
+  const weeksDone = S.program.weeks.filter(w => { const L = liftDays(w); return L.length && L.every(d => fin.some(s => s.programWeek === w.week && s.programDay === d)); }).length;
+  const n = fin.length;
+  const badges = [['First workout', 'Finish your first workout', n >= 1], ['10 workouts', 'Finish 10 workouts', n >= 10], ['25 workouts', 'Finish 25 workouts', n >= 25], ['50 workouts', 'Finish 50 workouts', n >= 50],
+    ['3-day streak', 'Train (lift, cardio or recovery) 3 days in a row', longest >= 3], ['7-day streak', 'Train 7 days in a row', longest >= 7], ['Cardio regular', 'Log 10 cardio sessions', cardio.length >= 10],
+    ['Looking after it', 'Log 5 recovery or stretch sessions', S.recLogs.length >= 5], ['Halfway', 'Complete 8 weeks of the program', weeksDone >= 8], ['16 weeks', 'Complete all 16 weeks', weeksDone >= 16]];
+  return { n, sets: sets.length, vol: sets.reduce((a, x) => a + x.reps * x.weight, 0), cardio: cardio.length, rec: S.recLogs.length, cur, longest, heat, weekly, prs, badges };
+}
+const fmtVol = v => v >= 10000 ? Math.round(v / 1000) + 'k' : String(Math.round(v));
+function viewStats() {
+  const s = buildStats(); const max = Math.max(1, ...s.weekly.map(w => w.vol));
+  const cols = []; for (let i = 0; i < 12; i++) cols.push(s.heat.slice(i * 7, i * 7 + 7));
+  return { title: 'Stats', html: `<div id="stats">
+    <div class="card stat-grid"><div><b class="display lg">${s.n}</b><span class="small muted">workouts</span></div><div><b class="display lg">${s.sets}</b><span class="small muted">sets</span></div><div><b class="display lg">${fmtVol(s.vol)}</b><span class="small muted">lb lifted</span></div>
+      <div><b class="display lg">${s.cardio}</b><span class="small muted">cardio</span></div><div><b class="display lg">${s.rec}</b><span class="small muted">recovery</span></div><div><b class="display lg">${s.cur}</b><span class="small muted">day streak</span></div></div>
+    <p class="small muted">Longest streak: ${s.longest} days (lifting, cardio or recovery)</p>
+    <div class="card"><h3>Last 12 weeks</h3><div class="heat">${cols.map(c => `<div>${c.map(d => `<i class="${d.c >= 2 ? 'h2' : d.c ? 'h1' : ''}" title="${d.k}: ${d.c}"></i>`).join('')}</div>`).join('')}</div><div class="small muted">Blue = trained, orange = 2+ sessions</div></div>
+    <div class="card"><h3>Weekly volume (reps × lb)</h3><div class="bars">${s.weekly.map(w => `<div><span class="small muted">${fmtVol(w.vol)}</span><i style="height:${Math.max(2, Math.round(90 * w.vol / max))}px"></i><span class="small muted">${w.label}</span></div>`).join('')}</div></div>
+    <div class="card"><h3>Badges</h3>${s.badges.map(([t, d, e]) => `<div class="badge ${e ? 'on' : ''}">${icon('trophy', 18)}<div><b>${h(t)}</b><div class="small muted">${h(d)}</div></div></div>`).join('')}</div>
+    ${s.prs.length ? `<div class="card"><h3>Personal records</h3>${s.prs.slice(0, 40).map(p => `<div class="row small"><span class="grow">${h(p.name)}</span><b>${p.w > 0 ? `${p.w} lb × ${p.r}` : `${p.r} reps`}</b>${p.e ? `<span class="muted">e1RM ${Math.round(p.e)}</span>` : ''}</div>`).join('')}</div>` : ''}
+  </div>` };
+}
+
+/* ---------------- Backup validation (1.5) ---------------- */
+function validateBackup(data) {
+  const errs = [];
+  if (!data || typeof data !== 'object' || data.app !== 'workout-pwa') return ['Not a Workout backup file.'];
+  if (!(data.schema >= 1 && data.schema <= 2)) errs.push(`Backup format ${data.schema} is not supported (update the app).`);
+  if (!Array.isArray(data.sessions) || !Array.isArray(data.intervals)) errs.push('Workouts or cardio list is missing.');
+  const isNum = v => typeof v === 'number' && Number.isFinite(v);
+  (data.sessions || []).forEach((s, i) => {
+    if (!s || !isNum(s.date)) errs.push(`Workout ${i + 1}: bad date.`);
+    else if (!Array.isArray(s.items)) errs.push(`Workout ${i + 1}: exercises missing.`);
+    else s.items.forEach(it => { if (!it || !Array.isArray(it.sets) || it.sets.some(st => !st || !(isNum(+st.reps) && +st.reps >= 0) || !(isNum(+st.weight) && +st.weight >= 0))) errs.push(`Workout ${i + 1}: a set is invalid.`); });
+  });
+  (data.intervals || []).forEach((x, i) => { if (!x || !isNum(x.date)) errs.push(`Cardio ${i + 1}: bad date.`); });
+  (data.metrics || []).forEach((m, i) => { if (!m || typeof m.type !== 'string' || !isNum(m.value) || !isNum(m.date)) errs.push(`Tracker entry ${i + 1} is invalid.`); });
+  (data.habits || []).forEach((m, i) => { if (!m || !/^\d{4}-\d{2}-\d{2}$/.test(m.date || '') || typeof m.habit !== 'string' || !isNum(m.value)) errs.push(`Habit ${i + 1} is invalid.`); });
+  (data.recoveryLogs || []).forEach((m, i) => { if (!m || !isNum(m.date) || (m.painLevel != null && !(m.painLevel >= 0 && m.painLevel <= 10))) errs.push(`Recovery log ${i + 1} is invalid.`); });
+  if ((data.sessions || []).filter(s => s && !s.finished).length > 1) errs.push('More than one unfinished workout.');
+  return [...new Set(errs)].slice(0, 8);
+}
+
 /* ---------------- Events ---------------- */
 document.addEventListener('pointerdown', unlockAudio, { capture: true, passive: true });
 document.addEventListener('click', async ev => {
@@ -1426,6 +1809,58 @@ document.addEventListener('click', async ev => {
   const s = currentSession();
   switch (act) {
     case 'modal-val': closeModal(b.dataset.v); break;
+    /* --- 1.5 --- */
+    case 'toggle-area': {
+      const k = b.dataset.k; const set = new Set(injuries()); if (set.has(k)) set.delete(k); else set.add(k);
+      S.settings.injuries = AREA_KEYS.filter(x => set.has(x)); await saveSettings(); render(); break;
+    }
+    case 'shoulder-ok': S.settings.shoulderMobility = b.dataset.v; await saveSettings(); render(); break;
+    case 'toggle-sprain': S.settings.ankleFreshSprain = !S.settings.ankleFreshSprain; await saveSettings(); render(); break;
+    case 'area-open': { const k = b.dataset.k; const o = new Set(S.recOpen); if (o.has(k)) o.delete(k); else o.add(k); S.recOpen = [...o]; render(); break; }
+    case 'rec-log': {
+      const el = $('#recEx'); const f = findRecEx(el.dataset.id); if (!f) break;
+      await DB.put('recovery', { uid: uid(), date: Date.now(), kind: 'recovery', itemKey: f.e.id, itemName: f.e.name, area: f.a.key, painLevel: +$('#painIn').value, notes: ($('#painNotes').value || '').trim() });
+      await refresh(); toast('Logged. It shows in Stats.'); render(); break;
+    }
+    case 'stretch-info': {
+      const R = S.recovery; const it = [...R.stretching.dynamic, ...R.stretching.static].find(x => x.id === b.dataset.id); if (!it) break;
+      const v = await choose(it.name, `${it.gif ? gifTag(it.gif, it.name, 'demo-img') : ''}${it.target ? `<p class="small muted">${h(it.target)}</p>` : ''}<p>${h(it.how)}</p>${(it.steps || []).length ? `<ol>${it.steps.map(x => `<li>${h(x)}</li>`).join('')}</ol>` : ''}<p class="small muted">${fmtMS(it.seconds)}${it.sides ? ' total (half each side)' : ''}</p>${srcList(it.sourceUrls)}`,
+        [{ v: 'time', label: 'Time it', cls: 'primary' }, { v: '', label: 'Close' }]);
+      if (v === 'time') startGuide(it.name, b.dataset.kind, it.id, expandStretch([it]));
+      break;
+    }
+    case 'guide-warmup': startGuide('Dynamic warm-up', 'warmup', 'dynamic', expandStretch(S.recovery.stretching.dynamic)); break;
+    case 'guide-static': startGuide('Static stretches', 'stretch', 'static', expandStretch(S.recovery.stretching.static)); break;
+    case 'guide-routine': { const rt = S.recovery.routines.find(x => x.key === b.dataset.key); if (rt) startGuide(rt.name, 'routine', rt.key, routineSteps(rt)); break; }
+    case 'guide-close': Timer.clear(); go('#/recovery/stretch'); break;
+    case 'train-anyway': {
+      const w = weekOf(+b.dataset.w); const L = liftDays(w); const d = L.find(x => !(dayDone(w.week, x) > 0)) || L[0];
+      if (d) await startProgram(w.week, d); break;
+    }
+    case 'cardio-idea': {
+      const c = CARDIO_IDEAS.find(x => x.name === b.dataset.n); if (!c) break;
+      $('#cType').value = c.name; $('#cMin').value = c.min; S.cardioIdea = c; $('#cMin').focus(); break;
+    }
+    case 'cardio-save': {
+      const type = ($('#cType').value || '').trim(), min = parseInt($('#cMin').value, 10), dist = parseFloat(($('#cDist').value || '').replace(',', '.'));
+      if (!type || !(min > 0 && min <= 1440)) { toast('Type and minutes are needed.'); break; }
+      const c = S.cardioIdea && S.cardioIdea.name === type ? S.cardioIdea : null;
+      await DB.put('intervals', { uid: uid(), date: Date.now(), programWeek: null, programDay: null, activity: type, durationMinutes: min, rounds: c?.rounds ?? null, workSeconds: c?.work ?? null, restSeconds: c?.rest ?? null,
+        distance: dist > 0 ? dist : null, distanceUnit: dist > 0 ? $('#cUnit').value : null, notes: ($('#cNotes').value || '').trim(), done: true });
+      S.cardioIdea = null; await refresh(); toast('Saved. It shows in History and Stats.'); render(); break;
+    }
+    case 'metric-add': {
+      const isW = b.dataset.type === 'weight'; const v = parseFloat((isW ? $('#wIn') : $('#mIn')).value);
+      if (!(isW ? v >= 50 && v <= 800 : v >= 1 && v <= 100)) { toast('Enter a number.'); break; }
+      await DB.put('metrics', { uid: uid(), type: isW ? 'weight' : $('#mType').value, date: Date.now(), value: v, unit: isW ? 'lb' : 'in', source: 'manual', notes: '' });
+      await refresh(); render(); break;
+    }
+    case 'metric-del': await DB.del('metrics', +b.dataset.id); await refresh(); render(); break;
+    case 'water': {
+      const k = dayKey(); const cur = (S.habits.find(x => x.date === k && x.habit === 'water') || {}).value || 0;
+      await DB.put('habits', { key: `${k}|water`, date: k, habit: 'water', value: Math.max(0, cur + +b.dataset.d) }); await refresh(); render(); break;
+    }
+    case 'photo-del': if (await confirmBox('Delete this photo?', 'It is removed from this phone.', 'Delete', true)) { await DB.del('photos', +b.dataset.id); await refresh(); render(); } break;
     case 'goto': go(b.dataset.h); break;
     case 'today-pick': S.todayPick = b.dataset.d; render(); break;
     case 'change-week': {
@@ -1481,10 +1916,15 @@ document.addEventListener('click', async ev => {
       await saveSession(s); toast(`Skipped ${it.label}`); render(); break;
     }
     case 'go-swap': {
-      const it = s.items[+b.dataset.i]; const ex = await pickExercise(`Swap ${it.label} for…`); if (!ex) break;
-      const old = it.label;
-      Object.assign(it, { exName: ex.name, label: ex.name, demoAsset: ex.demoAsset || null, demoNote: '', roadFrom: undefined, notes: [`Swapped in for: ${old}`].join('\n') });
-      await saveSession(s); render(); toast('Swapped'); break;
+      // 1.5: the swap covers this exercise and every later row with the same move ("for the rest of this workout").
+      const i0 = +b.dataset.i, it = s.items[i0]; const ex = await pickExercise(`Swap ${it.label} for the rest of this workout…`); if (!ex) break;
+      const key = String(it.exName || '').toLowerCase(); let n = 0;
+      s.items.forEach((x, j) => {
+        if (j !== i0 && !(j > i0 && String(x.exName || '').toLowerCase() === key)) return;
+        const old = x.label; n++;
+        Object.assign(x, { exName: ex.name, label: ex.name, demoAsset: ex.demoAsset || null, demoNote: '', roadFrom: undefined, swapFrom: x.swapFrom || old, swapReason: REST_SWAP, notes: [`Swapped in for: ${old}`].join('\n') });
+      });
+      await saveSession(s); render(); toast(n > 1 ? `Swapped ${n} rows for the rest of this workout` : 'Swapped'); break;
     }
     /* --- list view --- */
     case 'log-set': {
@@ -1623,6 +2063,12 @@ document.addEventListener('click', async ev => {
 document.addEventListener('change', async ev => {
   const t = ev.target;
   if (t.id === 'importFile' && t.files && t.files[0]) { const text = await t.files[0].text(); t.value = ''; await importBackup(text); return; }
+  if (t.dataset.habit) { const k = dayKey(); await DB.put('habits', { key: `${k}|${t.dataset.habit}`, date: k, habit: t.dataset.habit, value: t.checked ? 1 : 0 }); await refresh(); return; }
+  if (t.id === 'photoIn' && t.files && t.files[0]) {
+    try { const blob = await downscale(t.files[0]); await DB.put('photos', { date: Date.now(), blob, notes: '' }); await refresh(); toast('Photo saved'); render(); }
+    catch (e) { toast("Couldn't read that photo."); }
+    t.value = ''; return;
+  }
   if (t.dataset.setting) {
     const k = t.dataset.setting;
     S.settings[k] = t.type === 'checkbox' ? t.checked : k === 'currentWeek' ? +t.value : t.value;
@@ -1668,6 +2114,7 @@ async function boot() {
     const [prog, wk, seed] = await Promise.all(['data/program16.json', 'data/workouts.json', 'data/seed_exercises.json']
       .map(u => fetch(u).then(r => { if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); })));
     S.program = prog; S.workouts = wk; S.seed = seed;
+    try { S.recovery = await fetch('data/recovery.json').then(r => { if (!r.ok) throw new Error('recovery ' + r.status); return r.json(); }); } catch (e) { console.warn('recovery content not loaded', e); }
     S.settings = Object.assign(S.settings, await DB.kvGet('settings', {}));
     if (S.settings.currentWeek == null) S.settings.currentWeek = S.settings.week || 1;
     S.intervalDraft = await DB.kvGet('intervalDraft', null);
@@ -1682,7 +2129,8 @@ async function boot() {
     if (!location.hash) history.replaceState(null, '', '#/today');
     render();
     if (Timer.st && !Timer.st.done) Timer.run();
-    window.__app = { S, DB, Timer, refresh, render, buildBackup, importBackup, nextStep, roadSwap, roadDemo, classify, upgradeDemos, libraryDemoFor, SHARE_URL, ready: true };
+    window.__app = { S, DB, Timer, refresh, render, buildBackup, importBackup, nextStep, roadSwap, roadDemo, classify, upgradeDemos, libraryDemoFor, SHARE_URL,
+      injurySwap, programItems, validateBackup, buildStats, progressHint, e1rm, streaks, ready: true };
   } catch (e) {
     $('#view').innerHTML = `<div class="card"><h3>Could not start</h3><p class="small">${h(e && e.message)}</p><p class="small">If you're offline, open the app once while online so it can save everything for offline use.</p></div>`;
     console.error(e);
