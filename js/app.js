@@ -1473,7 +1473,7 @@ function updateOnline() { $('#offlineBadge').hidden = navigator.onLine; }
 const REST_SWAP = 'Swapped for the rest of the workout';
 /* ================= 1.5: Recovery, stretching, routines, cardio, trackers, stats (parity with Android 1.5) ================= */
 const AREA_KEYS = ['knee', 'ankle', 'hip', 'back', 'shoulder'];
-const AREA_LABEL = { knee: 'Knees', ankle: 'Ankles & feet', hip: 'Hips', back: 'Lower back', shoulder: 'Shoulders' };
+const AREA_LABEL = { knee: 'Knees', ankle: 'Ankles/feet', hip: 'Hips', back: 'Lower back', shoulder: 'Shoulders' };
 const injuries = () => AREA_KEYS.filter(k => (S.settings.injuries || []).includes(k));
 const RXC = new Map();
 const rxOf = p => { if (!RXC.has(p)) RXC.set(p, new RegExp(p, 'i')); return RXC.get(p); };

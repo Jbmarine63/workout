@@ -75,7 +75,7 @@ Always open it from the Home Screen icon, not from a Safari tab (see "Limitation
 
 ## 1.5 (matches the Android app 1.5)
 
-- **Recovery** tab: injury areas (knees, shoulders, lower back, ankles, wrists) with leveled exercises, pain
+- **Recovery** tab: injury areas (knees, ankles/feet, hips, lower back, shoulders; 12 exercises each) with leveled exercises, pain
   guidance, red flags and sources; ticked areas swap program moves. Stretch and 4 Routines with a guided timer.
 - **Cardio** log with suggestions (jump rope, jogging, walking, sprints, Tabata, HIIT) or any type; distance.
 - **Trackers**: weight, measurements, habits, water and private progress photos. Health data is manual on

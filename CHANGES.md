@@ -1,6 +1,7 @@
 PWA 1.5: matches Android 1.5 — Recovery, stretching, cardio log, trackers, stats, backup v2
 
-- New Recovery tab (5 tabs): tick knees, shoulders, lower back, ankles or wrists. Each area has
+- New Recovery tab (5 tabs): tick knees, ankles/feet, hips, lower back or shoulders
+  (12 exercises each, early → late). Each area has
   leveled exercises (19 credited public-domain/CC GIFs in recovery/), a pain slider (0–10) with
   stop/continue guidance, red flags, sources and a "not medical advice" note. Checked areas swap
   matching program moves (after Road mode) and the workout shows "Recovery swap (area) for: …".

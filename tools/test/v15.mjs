@@ -37,8 +37,15 @@ await page.click('[data-act=toggle-area][data-k=knee]'); await settle();
 ok('knee checkbox saves', await page.evaluate(() => JSON.stringify(window.__app.S.settings.injuries) === '["knee"]'));
 const sw = await page.evaluate(() => { const a = window.__app; let n = 0, ex = null; for (const w of a.S.program.weeks) { const it = a.programItems(w, false, ['knee']); const s = it.filter(x => x.swapReason); n += s.length; if (s.length && !ex) ex = s[0].swapFrom + ' -> ' + s[0].label; } return { n, ex }; });
 ok('knee swaps applied to program weeks', sw.n > 0, JSON.stringify(sw));
-const road = await page.evaluate(() => { const a = window.__app; let n = 0; for (const w of a.S.program.weeks) n += a.programItems(w, true, ['knee', 'shoulder', 'back', 'ankle', 'wrist']).length; return n; });
+const road = await page.evaluate(() => { const a = window.__app; let n = 0; for (const w of a.S.program.weeks) n += a.programItems(w, true, ['knee', 'ankle', 'hip', 'back', 'shoulder']).length; return n; });
 ok('road + all areas builds every week', road > 0);
+const hip = await page.evaluate(() => { const a = window.__app; const r = a.S.recovery; const h = r.areas.find(x => x.key === 'hip');
+  return { keys: r.areas.map(x => x.key).join(), name: h.name, n: h.exercises.length, first: h.exercises[0].name, last: h.exercises[11].name, phases: h.exercises.map(e => e.phase).join(''),
+    caut: /catching/.test(h.cautions), flags: h.redFlags.length, sw: a.injurySwap('Walking Lunges', null, ['hip'])?.name, ank: r.areas.find(x => x.key === 'ankle').name }; });
+ok('Hips area: 12 doc exercises in phase order, cautions, warning signs, swaps', hip.keys === 'knee,ankle,hip,back,shoulder' && hip.n === 12 && hip.first === 'Glute bridge' && hip.last === 'Bird dog' && hip.phases === '111122223333' && hip.caut && hip.flags > 0 && hip.sw === 'Step-ups' && hip.ank === 'Ankles/feet', JSON.stringify(hip));
+await page.click('[data-act=toggle-area][data-k=hip]'); await settle();
+ok('Hips checkbox on the Recovery tab', await page.evaluate(() => window.__app.S.settings.injuries.includes('hip')) && (await page.textContent('#view')).includes('Hips'));
+await page.click('[data-act=toggle-area][data-k=hip]'); await settle();
 const exId = await page.evaluate(() => window.__app.S.recovery.areas[0].exercises[0].id);
 await page.goto(BASE + '#/recovery/ex/' + exId); await settle();
 await page.fill('#painIn', '2').catch(() => page.$eval('#painIn', el => { el.value = 2; el.dispatchEvent(new Event('input', { bubbles: true })); }));
