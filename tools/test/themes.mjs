@@ -47,7 +47,7 @@ ok('backup includes colorScheme', await page.evaluate(() => JSON.parse(window.__
 await page.evaluate(async () => { const a = window.__app; a.S.settings.colorScheme = 'pink'; await a.DB.kvSet('settings', a.S.settings); });
 await page.reload(); await ready();
 ok('unknown value falls back to default', (await vars()).scheme === 'default' && await page.$eval('select[data-setting=colorScheme]', s => s.value).catch(() => 'n/a') !== 'pink');
-ok('version shows 1.5.1', (await page.textContent('body')).includes('Workout 1.5.1'));
+ok('version shows 1.5.2', (await page.textContent('body')).includes('Workout 1.5.2'));
 ok('no page errors', errors.length === 0, errors.join(' | '));
 await browser.close();
 const fails = results.filter(r => r[0] === 'FAIL').length;

@@ -1,3 +1,16 @@
+PWA 1.5.2: Recovery GIFs + credits (matches Android 1.5.2, versionCode 9)
+
+- 51 more Recovery / Stretch / Routines moves now show a demo GIF (77 of 131, up from 26): 38 new files
+  in recovery/ plus High Jumper reusing the jumping-jacks GIF. 24 moves use Play-safe GIFs (Shim Eu-ddeum
+  clips, CC BY 3.0; Codman pendulum clip, CC BY-SA 3.0; LottieFiles free animations) and 27 use
+  personal-use-only GIFs (archived FitnessGenerator library, ExerciseDB/AscendAPI). Ba Duan Jin stays text-only.
+- data/recovery.json is byte-identical to the Android asset; every new GIF has a gifCredits entry.
+- More → Settings → Credits: new source entries (Shim Eu-ddeum videos, Codman pendulum, the 4 new LottieFiles
+  animations with animator names, the new FitnessGenerator and ExerciseDB demos). Same text as Android.
+- No IndexedDB change (still version 2). sw.js precaches all 57 recovery GIFs.
+- tools/test/v152.mjs: every recovery GIF URL is 200 image/gif, precached, credited and decodes on the
+  Recovery and Stretch tabs; v15.mjs and themes.mjs updated for the new counts and version.
+
 PWA 1.5.1: color schemes (matches Android 1.5.1, versionCode 8)
 
 - More → Settings → Color scheme: Default (orange/blue), Marine (scarlet/gold), Army (olive drab/tan),

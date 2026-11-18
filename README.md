@@ -120,12 +120,13 @@ online.
 index.html  manifest.webmanifest  sw.js  .nojekyll
 css/app.css            js/app.js (all app logic, plain JS)
 data/program16.json    data/workouts.json  data/seed_exercises.json   (same files as the Android assets)
-demos/*.gif (99)       recovery/*.gif (19)   data/recovery.json   privacy.html
+demos/*.gif (99)       recovery/*.gif (57)   data/recovery.json   privacy.html
 journal_images/*.jpg (6)   articles/*.txt (3)
 icons/ (180, 192, 512, maskable 512, apple-touch-icon)
 tools/build_sw.py  tools/sw.template.js  tools/test/e2e.mjs, update-flow.mjs (older Playwright tests)
 tools/test/v14-upgrade.mjs (1.4 upgrade, GIF, Road mode and Credits test)
 tools/test/v15.mjs (1.5: DB v1→v2 upgrade, Recovery, guides, swaps, cardio, trackers, stats, backup v2)
+tools/test/v152.mjs (1.5.2: every Recovery GIF loads, is precached and credited)
 tools/test/share-link.mjs (WebKit iPhone: share, cancel, copy, clipboard fallback)
 ```
 

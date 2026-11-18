@@ -72,7 +72,7 @@
      "sourceUrls": [
       "https://medibilbaosalud.com/en/knee-exercises/"
      ],
-     "gif": null,
+     "gif": "recovery/straight_leg_raise_fg.gif",
      "gifNote": ""
     },
     {
@@ -130,7 +130,7 @@
       "https://musclewiki.com/exercises/glutes/bodyweight/4?model=f",
       "https://health.clevelandclinic.org/glute-bridges"
      ],
-     "gif": null,
+     "gif": "recovery/glute_bridge_euddeume.gif",
      "gifNote": ""
     },
     {
@@ -168,8 +168,8 @@
      "sourceUrls": [
       "https://www.getpainfixed.com/conditions/knee-pain/knee-exercises/"
      ],
-     "gif": null,
-     "gifNote": ""
+     "gif": "recovery/wall_sit_lottie.gif",
+     "gifNote": "Demo shows a deeper wall sit; keep yours shallow"
     },
     {
      "id": "knee_08",
@@ -260,7 +260,7 @@
      "sourceUrls": [
       "https://bridgwaterphysiotherapy.ca/top-7-exercises-physiotherapy-for-knee-pain-relief/"
      ],
-     "gif": null,
+     "gif": "recovery/supine_hamstring_strap_stretch_fg.gif",
      "gifNote": ""
     }
    ],
@@ -335,7 +335,7 @@
      "sourceUrls": [
       "https://elht.nhs.uk/services/paediatric-physiotherapy/information-patients/ankle-sprains"
      ],
-     "gif": null,
+     "gif": "recovery/ankle_circles_edb.gif",
      "gifNote": "",
      "caution": "After a fresh sprain (first ~2 weeks) keep to up-and-down movement only; skip the side-to-side part."
     },
@@ -570,7 +570,7 @@
      "sourceUrls": [
       "https://musclewiki.com/exercises/glutes/bodyweight/4?model=f"
      ],
-     "gif": null,
+     "gif": "recovery/glute_bridge_euddeume.gif",
      "gifNote": ""
     },
     {
@@ -609,7 +609,7 @@
       "https://physicalmedicineandrehab.com/exercise-and-hip-rehabilitation/",
       "https://www.verywellhealth.com/physical-therapy-exercises-for-hip-pain-5090171"
      ],
-     "gif": null,
+     "gif": "recovery/side_lying_hip_abduction_edb.gif",
      "gifNote": ""
     },
     {
@@ -666,7 +666,7 @@
      "sourceUrls": [
       "https://sportydoctor.com/hip-physical-therapy/"
      ],
-     "gif": null,
+     "gif": "recovery/single_leg_bridge_euddeume.gif",
      "gifNote": ""
     },
     {
@@ -686,8 +686,8 @@
       "https://physicalmedicineandrehab.com/exercise-and-hip-rehabilitation/",
       "https://www.verywellhealth.com/physical-therapy-exercises-for-hip-pain-5090171"
      ],
-     "gif": null,
-     "gifNote": ""
+     "gif": "recovery/monster_walk_edb.gif",
+     "gifNote": "Demo shown without a band"
     },
     {
      "id": "hip_08",
@@ -723,8 +723,8 @@
      "sourceUrls": [
       "https://www.verywellhealth.com/physical-therapy-exercises-for-hip-pain-5090171"
      ],
-     "gif": null,
-     "gifNote": ""
+     "gif": "recovery/side_lying_hip_abduction_edb.gif",
+     "gifNote": "Side-lying leg raise shown"
     },
     {
      "id": "hip_10",
@@ -743,7 +743,7 @@
       "https://backinmotionsspt.com/what-are-the-best-hip-physical-therapy-exercises/",
       "https://aspirephysiotherapy.ca/physiotherapy-for-hip-pain-edmonton-south/"
      ],
-     "gif": null,
+     "gif": "recovery/kneeling_hip_flexor_euddeume.gif",
      "gifNote": ""
     },
     {
@@ -762,8 +762,8 @@
      "sourceUrls": [
       "https://backinmotionsspt.com/what-are-the-best-hip-physical-therapy-exercises/"
      ],
-     "gif": null,
-     "gifNote": ""
+     "gif": "recovery/figure_four_lying_euddeume.gif",
+     "gifNote": "Lying version shown (seated is fine too)"
     },
     {
      "id": "hip_12",
@@ -781,7 +781,7 @@
      "sourceUrls": [
       "https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-bird-dog-side.mp4"
      ],
-     "gif": null,
+     "gif": "recovery/bird_dog_lottie.gif",
      "gifNote": ""
     }
    ],
@@ -872,7 +872,7 @@
      "sourceUrls": [
       "https://media.musclewiki.com/media/uploads/videos/branded/male-Bodyweight-bird-dog-side.mp4"
      ],
-     "gif": null,
+     "gif": "recovery/bird_dog_lottie.gif",
      "gifNote": ""
     },
     {
@@ -892,7 +892,7 @@
       "https://www.rcmuscleandmovement.uk/trunk-and-core-stability-drills",
       "https://www.gaspineortho.com/core-exercises/"
      ],
-     "gif": null,
+     "gif": "recovery/dead_bug_edb.gif",
      "gifNote": ""
     },
     {
@@ -911,7 +911,7 @@
      "sourceUrls": [
       "https://musclewiki.com/exercises/glutes/bodyweight/4?model=f"
      ],
-     "gif": null,
+     "gif": "recovery/glute_bridge_euddeume.gif",
      "gifNote": ""
     },
     {
@@ -931,7 +931,7 @@
       "https://www.movelittleandoften.com/article/full-body-stretching-routine",
       "https://www.gymtim.com/full-body-stretching-routine-at-home/"
      ],
-     "gif": null,
+     "gif": "recovery/cat_cow_euddeume.gif",
      "gifNote": ""
     },
     {
@@ -948,7 +948,7 @@
      ],
      "source": "Standard physio; see stretching sources below",
      "sourceUrls": [],
-     "gif": null,
+     "gif": "recovery/knee_to_chest_single_euddeume.gif",
      "gifNote": ""
     },
     {
@@ -966,7 +966,7 @@
      "sourceUrls": [
       "https://www.movelittleandoften.com/article/full-body-stretching-routine"
      ],
-     "gif": null,
+     "gif": "recovery/childs_pose_euddeume.gif",
      "gifNote": ""
     },
     {
@@ -1005,7 +1005,7 @@
      "sourceUrls": [
       "https://www.powerphysiotherapy.co.uk/articles/lower-back-exercises"
      ],
-     "gif": null,
+     "gif": "recovery/cobra_lottie.gif",
      "gifNote": ""
     },
     {
@@ -1022,7 +1022,7 @@
      ],
      "source": "Standard physio; see stretching sources below",
      "sourceUrls": [],
-     "gif": null,
+     "gif": "recovery/supine_spinal_twist_fg.gif",
      "gifNote": ""
     },
     {
@@ -1100,7 +1100,7 @@
       "https://myhealth.alberta.ca/Health/Pages/conditions.aspx?hwid=ue4829",
       "https://hr.umich.edu/benefits-wellness/health-well-being/mhealthy/faculty-staff-well-being/physical-activity/physical-activity-resources/joint-muscle-movements/shoulder-movements"
      ],
-     "gif": null,
+     "gif": "recovery/pendulum_codman_commons.gif",
      "gifNote": ""
     },
     {
@@ -1119,7 +1119,7 @@
      "sourceUrls": [
       "https://limitlesspts.com/rotator-cuff-exercises-a-physical-therapists-complete-guide/"
      ],
-     "gif": null,
+     "gif": "recovery/cross_body_shoulder_euddeume.gif",
      "gifNote": ""
     },
     {
@@ -1157,7 +1157,7 @@
      "sourceUrls": [
       "https://www.physioipoh.com.my/blog/best-exercises-shoulder-pain/"
      ],
-     "gif": null,
+     "gif": "recovery/scapular_squeeze_euddeume.gif",
      "gifNote": ""
     },
     {
@@ -1198,7 +1198,7 @@
       "https://doctorsclinicdubai.ae/blog/rotator-cuff-exercises-physiotherapy",
       "https://musclewiki.com/exercise/dumbbell-shoulder-external-rotation"
      ],
-     "gif": null,
+     "gif": "recovery/band_external_rotation_fg.gif",
      "gifNote": "",
      "lock": "shoulderMobility"
     },
@@ -1219,7 +1219,7 @@
       "https://doctorsclinicdubai.ae/blog/rotator-cuff-exercises-physiotherapy",
       "https://hr.umich.edu/benefits-wellness/health-well-being/mhealthy/faculty-staff-well-being/physical-activity/physical-activity-resources/joint-muscle-movements/shoulder-movements"
      ],
-     "gif": null,
+     "gif": "recovery/band_internal_rotation_fg.gif",
      "gifNote": "",
      "lock": "shoulderMobility"
     },
@@ -1239,7 +1239,7 @@
      "sourceUrls": [
       "https://doctorsclinicdubai.ae/blog/rotator-cuff-exercises-physiotherapy"
      ],
-     "gif": null,
+     "gif": "recovery/side_lying_external_rotation_fg.gif",
      "gifNote": "",
      "lock": "shoulderMobility"
     },
@@ -1320,7 +1320,7 @@
      "sourceUrls": [
       "https://hr.umich.edu/benefits-wellness/health-well-being/mhealthy/faculty-staff-well-being/physical-activity/physical-activity-resources/joint-muscle-movements/shoulder-movements"
      ],
-     "gif": null,
+     "gif": "recovery/wall_angels_wall_slides_fg.gif",
      "gifNote": "",
      "lock": "shoulderMobility"
     }
@@ -1417,7 +1417,7 @@
     "sourceUrls": [
      "https://www.gymtim.com/full-body-stretching-routine-at-home/"
     ],
-    "gif": null,
+    "gif": "recovery/arm_circles_fg.gif",
     "gifNote": "",
     "seconds": 40,
     "sides": false
@@ -1434,7 +1434,7 @@
     "sourceUrls": [
      "https://www.gymtim.com/full-body-stretching-routine-at-home/"
     ],
-    "gif": null,
+    "gif": "recovery/leg_swings_fg.gif",
     "gifNote": "",
     "seconds": 40,
     "sides": false
@@ -1451,7 +1451,7 @@
     "sourceUrls": [
      "https://www.movelittleandoften.com/article/full-body-stretching-routine"
     ],
-    "gif": null,
+    "gif": "recovery/cat_cow_euddeume.gif",
     "gifNote": "",
     "seconds": 40,
     "sides": false
@@ -1468,7 +1468,7 @@
     "sourceUrls": [
      "https://www.gymtim.com/full-body-stretching-routine-at-home/"
     ],
-    "gif": null,
+    "gif": "recovery/worlds_greatest_stretch_edb.gif",
     "gifNote": "",
     "seconds": 40,
     "sides": false
@@ -1504,7 +1504,7 @@
     "sourceUrls": [
      "https://www.movelittleandoften.com/article/full-body-stretching-routine"
     ],
-    "gif": null,
+    "gif": "recovery/neck_side_stretch_euddeume.gif",
     "gifNote": "",
     "seconds": 60,
     "sides": true
@@ -1521,7 +1521,7 @@
     "sourceUrls": [
      "https://booboone.com/stretching-exercises-a-practical-guide-to-flexibility-recovery-and-feeling-great/"
     ],
-    "gif": null,
+    "gif": "recovery/cross_body_shoulder_euddeume.gif",
     "gifNote": "",
     "seconds": 60,
     "sides": true
@@ -1556,7 +1556,7 @@
     "sourceUrls": [
      "https://www.movelittleandoften.com/article/full-body-stretching-routine"
     ],
-    "gif": null,
+    "gif": "recovery/standing_side_bend_lottie.gif",
     "gifNote": "",
     "seconds": 60,
     "sides": true
@@ -1573,7 +1573,7 @@
     "sourceUrls": [
      "https://www.movelittleandoften.com/article/full-body-stretching-routine"
     ],
-    "gif": null,
+    "gif": "recovery/kneeling_hip_flexor_euddeume.gif",
     "gifNote": "",
     "seconds": 60,
     "sides": true
@@ -1591,7 +1591,7 @@
     "sourceUrls": [
      "https://booboone.com/stretching-exercises-a-practical-guide-to-flexibility-recovery-and-feeling-great/"
     ],
-    "gif": null,
+    "gif": "recovery/seated_figure_four_edb.gif",
     "gifNote": "",
     "seconds": 60,
     "sides": true
@@ -1642,7 +1642,7 @@
     "sourceUrls": [
      "https://www.movelittleandoften.com/article/full-body-stretching-routine"
     ],
-    "gif": null,
+    "gif": "recovery/wall_calf_stretch_edb.gif",
     "gifNote": "",
     "seconds": 60,
     "sides": true
@@ -1659,7 +1659,7 @@
     "sourceUrls": [
      "https://www.movelittleandoften.com/article/full-body-stretching-routine"
     ],
-    "gif": null,
+    "gif": "recovery/childs_pose_euddeume.gif",
     "gifNote": "",
     "seconds": 60,
     "sides": true
@@ -1676,7 +1676,7 @@
     "sourceUrls": [
      "https://www.middlebury.edu/sites/default/files/2021-01/Static%20Stretching.pdf?fv=hCTnoH61"
     ],
-    "gif": null,
+    "gif": "recovery/butterfly_stretch_edb.gif",
     "gifNote": "",
     "seconds": 60,
     "sides": true
@@ -1693,8 +1693,8 @@
     "sourceUrls": [
      "https://www.movelittleandoften.com/article/full-body-stretching-routine"
     ],
-    "gif": null,
-    "gifNote": "",
+    "gif": "recovery/ankle_circles_edb.gif",
+    "gifNote": "Shows the ankle circles (not the toe stretch)",
     "seconds": 60,
     "sides": true
    }
@@ -1754,7 +1754,7 @@
      "name": "Tricep stretch",
      "how": "One arm overhead, pull the elbow gently with the other hand.",
      "seconds": 40,
-     "gif": null,
+     "gif": "recovery/tricep_stretch_fg.gif",
      "gifNote": ""
     },
     {
@@ -1789,7 +1789,7 @@
      "name": "Calf stretch",
      "how": "Wall stretch, back heel down, knee straight then bent.",
      "seconds": 40,
-     "gif": null,
+     "gif": "recovery/wall_calf_stretch_edb.gif",
      "gifNote": ""
     },
     {
@@ -1811,7 +1811,7 @@
      "name": "Steam engines",
      "how": "Standing, march opposite elbow to opposite knee, 10 reps.",
      "seconds": 40,
-     "gif": null,
+     "gif": "recovery/steam_engine_cross_knee_euddeume.gif",
      "gifNote": ""
     },
     {
@@ -1825,7 +1825,7 @@
      "name": "Bicycle crunches",
      "how": "Lying, pedal the legs, elbow to opposite knee, 10 reps.",
      "seconds": 40,
-     "gif": null,
+     "gif": "recovery/bicycle_crunch_edb.gif",
      "gifNote": ""
     },
     {
@@ -1870,8 +1870,8 @@
      "name": "High Jumper",
      "how": "Small jump, legs spread, arms overhead, land soft and repeat. Truck swap: step-out version with no jump if knees/ankles are flagged.",
      "seconds": 60,
-     "gif": null,
-     "gifNote": "",
+     "gif": "recovery/jumping_jacks_wbs.gif",
+     "gifNote": "Similar demo (jumping jacks)",
      "flagged": {
       "areas": [
        "knee",
@@ -1920,7 +1920,7 @@
      "name": "Bent-Leg Body Twist",
      "how": "Lying on back, knees bent, drop knees side to side while shoulders stay on the floor.",
      "seconds": 60,
-     "gif": null,
+     "gif": "recovery/bent_knee_lying_twist_edb.gif",
      "gifNote": ""
     },
     {
@@ -2051,14 +2051,14 @@
      "name": "Wrist rotation 1",
      "how": "Wrist circles one way, 10 reps.",
      "seconds": 45,
-     "gif": null,
+     "gif": "recovery/wrist_circles_edb.gif",
      "gifNote": ""
     },
     {
      "name": "Wrist rotation 2",
      "how": "Wrist circles the other way, 10 reps.",
      "seconds": 45,
-     "gif": null,
+     "gif": "recovery/wrist_circles_edb.gif",
      "gifNote": ""
     },
     {
@@ -2086,14 +2086,14 @@
      "name": "Knee rotation",
      "how": "Feet together, knees slightly bent, small circles both ways.",
      "seconds": 45,
-     "gif": null,
+     "gif": "recovery/knee_circles_edb.gif",
      "gifNote": ""
     },
     {
      "name": "Ankle rotation",
      "how": "One foot at a time, circles both ways.",
      "seconds": 45,
-     "gif": null,
+     "gif": "recovery/ankle_circles_edb.gif",
      "gifNote": ""
     },
     {
@@ -2296,6 +2296,386 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:Pushups_wbs.gif",
    "commonsPage": "https://commons.wikimedia.org/wiki/File:Pushups_wbs.gif",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/ankle_circles_edb.gif",
+   "title": "ankle circles (ExerciseDB)",
+   "author": "ExerciseDB / AscendAPI",
+   "license": "Personal, non-commercial use with credit to ExerciseDB / AscendAPI",
+   "licenseUrl": "https://oss.exercisedb.dev/docs",
+   "source": "https://static.exercisedb.dev/media/uL9CsKm.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/arm_circles_fg.gif",
+   "title": "largearmcircleswings (FitnessGenerator library)",
+   "author": "FitnessGenerator (fitnessgenerator.com); rights remain with the original owner",
+   "license": "No stated license. Personal use only, from the copy archived by the Internet Archive Wayback Machine",
+   "licenseUrl": "",
+   "source": "https://web.archive.org/web/20131103100722/http://www.fitnessgenerator.com/images/exercises/largearmcircleswings.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/band_external_rotation_fg.gif",
+   "title": "external rotation with tubing (FitnessGenerator library)",
+   "author": "FitnessGenerator (fitnessgenerator.com); rights remain with the original owner",
+   "license": "No stated license. Personal use only, from the copy archived by the Internet Archive Wayback Machine",
+   "licenseUrl": "",
+   "source": "https://web.archive.org/web/20050516034311/http://www.fitnessgenerator.com/images/exercises/external%20rotation%20with%20tubing.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/band_internal_rotation_fg.gif",
+   "title": "internal rotation with tubing (FitnessGenerator library)",
+   "author": "FitnessGenerator (fitnessgenerator.com); rights remain with the original owner",
+   "license": "No stated license. Personal use only, from the copy archived by the Internet Archive Wayback Machine",
+   "licenseUrl": "",
+   "source": "https://web.archive.org/web/20050516051257/http://www.fitnessgenerator.com/images/exercises/internal%20rotation%20with%20tubing.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/bent_knee_lying_twist_edb.gif",
+   "title": "bent knee lying twist (ExerciseDB)",
+   "author": "ExerciseDB / AscendAPI",
+   "license": "Personal, non-commercial use with credit to ExerciseDB / AscendAPI",
+   "licenseUrl": "https://oss.exercisedb.dev/docs",
+   "source": "https://static.exercisedb.dev/media/6sYyrRX.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/bicycle_crunch_edb.gif",
+   "title": "bicycle crunch (ExerciseDB)",
+   "author": "ExerciseDB / AscendAPI",
+   "license": "Personal, non-commercial use with credit to ExerciseDB / AscendAPI",
+   "licenseUrl": "https://oss.exercisedb.dev/docs",
+   "source": "https://static.exercisedb.dev/media/1ZFqTDN.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/bird_dog_lottie.gif",
+   "title": "bird dog exercise vector animation",
+   "author": "Md kamrujjamandesigner (LottieFiles)",
+   "license": "Lottie Simple License (free, including commercial use)",
+   "licenseUrl": "https://lottiefiles.com/page/license",
+   "source": "https://lottiefiles.com/free-animation/bird-dog-exercise-vector-animation-Jp3vxhqQny",
+   "commonsPage": "",
+   "modified": "Free animation rendered to GIF, downscaled to 320 px."
+  },
+  {
+   "file": "recovery/butterfly_stretch_edb.gif",
+   "title": "butterfly yoga pose (ExerciseDB)",
+   "author": "ExerciseDB / AscendAPI",
+   "license": "Personal, non-commercial use with credit to ExerciseDB / AscendAPI",
+   "licenseUrl": "https://oss.exercisedb.dev/docs",
+   "source": "https://static.exercisedb.dev/media/bWlZvXh.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/cat_cow_euddeume.gif",
+   "title": "매일 아침 8분 스트레칭 l 8minutes morning full body stretch",
+   "author": "심으뜸의 마이너스 라이프 (Shim Eu-ddeum, \"Minus Life\" YouTube channel)",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:%EB%A7%A4%EC%9D%BC_%EC%95%84%EC%B9%A8_8%EB%B6%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_l_8minutes_morning_full_body_stretch.webm",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:%EB%A7%A4%EC%9D%BC_%EC%95%84%EC%B9%A8_8%EB%B6%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_l_8minutes_morning_full_body_stretch.webm",
+   "modified": "Clips cut from the video, cropped, scaled and converted to GIF."
+  },
+  {
+   "file": "recovery/childs_pose_euddeume.gif",
+   "title": "매일 아침 8분 스트레칭 l 8minutes morning full body stretch",
+   "author": "심으뜸의 마이너스 라이프 (Shim Eu-ddeum, \"Minus Life\" YouTube channel)",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:%EB%A7%A4%EC%9D%BC_%EC%95%84%EC%B9%A8_8%EB%B6%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_l_8minutes_morning_full_body_stretch.webm",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:%EB%A7%A4%EC%9D%BC_%EC%95%84%EC%B9%A8_8%EB%B6%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_l_8minutes_morning_full_body_stretch.webm",
+   "modified": "Clips cut from the video, cropped, scaled and converted to GIF."
+  },
+  {
+   "file": "recovery/cobra_lottie.gif",
+   "title": "cobras",
+   "author": "Dinh Bui Xuan (LottieFiles)",
+   "license": "Lottie Simple License (free, including commercial use)",
+   "licenseUrl": "https://lottiefiles.com/page/license",
+   "source": "https://lottiefiles.com/free-animation/cobras-w0bL4N81bN",
+   "commonsPage": "",
+   "modified": "Free animation rendered to GIF, downscaled to 320 px."
+  },
+  {
+   "file": "recovery/cross_body_shoulder_euddeume.gif",
+   "title": "매일 아침 8분 스트레칭 l 8minutes morning full body stretch",
+   "author": "심으뜸의 마이너스 라이프 (Shim Eu-ddeum, \"Minus Life\" YouTube channel)",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:%EB%A7%A4%EC%9D%BC_%EC%95%84%EC%B9%A8_8%EB%B6%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_l_8minutes_morning_full_body_stretch.webm",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:%EB%A7%A4%EC%9D%BC_%EC%95%84%EC%B9%A8_8%EB%B6%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_l_8minutes_morning_full_body_stretch.webm",
+   "modified": "Clips cut from the video, cropped, scaled and converted to GIF."
+  },
+  {
+   "file": "recovery/dead_bug_edb.gif",
+   "title": "dead bug (ExerciseDB)",
+   "author": "ExerciseDB / AscendAPI",
+   "license": "Personal, non-commercial use with credit to ExerciseDB / AscendAPI",
+   "licenseUrl": "https://oss.exercisedb.dev/docs",
+   "source": "https://static.exercisedb.dev/media/iny3m5y.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/figure_four_lying_euddeume.gif",
+   "title": "매일 아침 8분 스트레칭 l 8minutes morning full body stretch",
+   "author": "심으뜸의 마이너스 라이프 (Shim Eu-ddeum, \"Minus Life\" YouTube channel)",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:%EB%A7%A4%EC%9D%BC_%EC%95%84%EC%B9%A8_8%EB%B6%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_l_8minutes_morning_full_body_stretch.webm",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:%EB%A7%A4%EC%9D%BC_%EC%95%84%EC%B9%A8_8%EB%B6%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_l_8minutes_morning_full_body_stretch.webm",
+   "modified": "Clips cut from the video, cropped, scaled and converted to GIF."
+  },
+  {
+   "file": "recovery/glute_bridge_euddeume.gif",
+   "title": "누워서 하는 BEST 힙운동 I Lying down Hip Workout",
+   "author": "심으뜸의 마이너스 라이프 (Shim Eu-ddeum, \"Minus Life\" YouTube channel)",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:%EB%88%84%EC%9B%8C%EC%84%9C_%ED%95%98%EB%8A%94_BEST_%ED%9E%99%EC%9A%B4%EB%8F%99_I_Lying_down_Hip_Workout.webm",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:%EB%88%84%EC%9B%8C%EC%84%9C_%ED%95%98%EB%8A%94_BEST_%ED%9E%99%EC%9A%B4%EB%8F%99_I_Lying_down_Hip_Workout.webm",
+   "modified": "Clips cut from the video, cropped, scaled and converted to GIF."
+  },
+  {
+   "file": "recovery/knee_circles_edb.gif",
+   "title": "circles knee stretch (ExerciseDB)",
+   "author": "ExerciseDB / AscendAPI",
+   "license": "Personal, non-commercial use with credit to ExerciseDB / AscendAPI",
+   "licenseUrl": "https://oss.exercisedb.dev/docs",
+   "source": "https://static.exercisedb.dev/media/X7jbxra.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/knee_to_chest_single_euddeume.gif",
+   "title": "운동후 스트레칭 모음, 이거 하나면 운동효과 2배! 쿨다운 끝!",
+   "author": "심으뜸의 마이너스 라이프 (Shim Eu-ddeum, \"Minus Life\" YouTube channel)",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:%EC%9A%B4%EB%8F%99%ED%9B%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_%EB%AA%A8%EC%9D%8C,_%EC%9D%B4%EA%B1%B0_%ED%95%98%EB%82%98%EB%A9%B4_%EC%9A%B4%EB%8F%99%ED%9A%A8%EA%B3%BC_2%EB%B0%B0!_%EC%BF%A8%EB%8B%A4%EC%9A%B4_%EB%81%9D!.webm",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:%EC%9A%B4%EB%8F%99%ED%9B%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_%EB%AA%A8%EC%9D%8C,_%EC%9D%B4%EA%B1%B0_%ED%95%98%EB%82%98%EB%A9%B4_%EC%9A%B4%EB%8F%99%ED%9A%A8%EA%B3%BC_2%EB%B0%B0!_%EC%BF%A8%EB%8B%A4%EC%9A%B4_%EB%81%9D!.webm",
+   "modified": "Clips cut from the video, cropped, scaled and converted to GIF."
+  },
+  {
+   "file": "recovery/kneeling_hip_flexor_euddeume.gif",
+   "title": "운동후 스트레칭 모음, 이거 하나면 운동효과 2배! 쿨다운 끝!",
+   "author": "심으뜸의 마이너스 라이프 (Shim Eu-ddeum, \"Minus Life\" YouTube channel)",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:%EC%9A%B4%EB%8F%99%ED%9B%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_%EB%AA%A8%EC%9D%8C,_%EC%9D%B4%EA%B1%B0_%ED%95%98%EB%82%98%EB%A9%B4_%EC%9A%B4%EB%8F%99%ED%9A%A8%EA%B3%BC_2%EB%B0%B0!_%EC%BF%A8%EB%8B%A4%EC%9A%B4_%EB%81%9D!.webm",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:%EC%9A%B4%EB%8F%99%ED%9B%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_%EB%AA%A8%EC%9D%8C,_%EC%9D%B4%EA%B1%B0_%ED%95%98%EB%82%98%EB%A9%B4_%EC%9A%B4%EB%8F%99%ED%9A%A8%EA%B3%BC_2%EB%B0%B0!_%EC%BF%A8%EB%8B%A4%EC%9A%B4_%EB%81%9D!.webm",
+   "modified": "Clips cut from the video, cropped, scaled and converted to GIF."
+  },
+  {
+   "file": "recovery/leg_swings_fg.gif",
+   "title": "forwardbackwardlegswings (FitnessGenerator library)",
+   "author": "FitnessGenerator (fitnessgenerator.com); rights remain with the original owner",
+   "license": "No stated license. Personal use only, from the copy archived by the Internet Archive Wayback Machine",
+   "licenseUrl": "",
+   "source": "https://web.archive.org/web/20180625065936/http://www.fitnessgenerator.com/images/exercises/forwardbackwardlegswings.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/monster_walk_edb.gif",
+   "title": "monster walk (ExerciseDB)",
+   "author": "ExerciseDB / AscendAPI",
+   "license": "Personal, non-commercial use with credit to ExerciseDB / AscendAPI",
+   "licenseUrl": "https://oss.exercisedb.dev/docs",
+   "source": "https://static.exercisedb.dev/media/O95afRA.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/neck_side_stretch_euddeume.gif",
+   "title": "매일 아침 8분 스트레칭 l 8minutes morning full body stretch",
+   "author": "심으뜸의 마이너스 라이프 (Shim Eu-ddeum, \"Minus Life\" YouTube channel)",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:%EB%A7%A4%EC%9D%BC_%EC%95%84%EC%B9%A8_8%EB%B6%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_l_8minutes_morning_full_body_stretch.webm",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:%EB%A7%A4%EC%9D%BC_%EC%95%84%EC%B9%A8_8%EB%B6%84_%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%B9%AD_l_8minutes_morning_full_body_stretch.webm",
+   "modified": "Clips cut from the video, cropped, scaled and converted to GIF."
+  },
+  {
+   "file": "recovery/pendulum_codman_commons.gif",
+   "title": "EJERCICIO DE CODMAN (Codman pendulum exercise)",
+   "author": "Aurora Díaz Guerra (derivative of 3D models by Andrew Kator & Jennifer Legaz et al.)",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:EJERCICIO_DE_CODMAN.ogv",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:EJERCICIO_DE_CODMAN.ogv",
+   "modified": "Clip cut from the video (5.0–11.5 s), cropped, scaled and converted to GIF; the modified GIF is shared under CC BY-SA 3.0."
+  },
+  {
+   "file": "recovery/scapular_squeeze_euddeume.gif",
+   "title": "누구나 해야하는 견갑골 안정화 운동(feat.상체운동을 잘 하는 방법)",
+   "author": "심으뜸의 마이너스 라이프 (Shim Eu-ddeum, \"Minus Life\" YouTube channel)",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:%EB%88%84%EA%B5%AC%EB%82%98_%ED%95%B4%EC%95%BC%ED%95%98%EB%8A%94_%EA%B2%AC%EA%B0%91%EA%B3%A8_%EC%95%88%EC%A0%95%ED%99%94_%EC%9A%B4%EB%8F%99(feat.%EC%83%81%EC%B2%B4%EC%9A%B4%EB%8F%99%EC%9D%84_%EC%9E%98_%ED%95%98%EB%8A%94_%EB%B0%A9%EB%B2%95).webm",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:%EB%88%84%EA%B5%AC%EB%82%98_%ED%95%B4%EC%95%BC%ED%95%98%EB%8A%94_%EA%B2%AC%EA%B0%91%EA%B3%A8_%EC%95%88%EC%A0%95%ED%99%94_%EC%9A%B4%EB%8F%99(feat.%EC%83%81%EC%B2%B4%EC%9A%B4%EB%8F%99%EC%9D%84_%EC%9E%98_%ED%95%98%EB%8A%94_%EB%B0%A9%EB%B2%95).webm",
+   "modified": "Clips cut from the video, cropped, scaled and converted to GIF."
+  },
+  {
+   "file": "recovery/seated_figure_four_edb.gif",
+   "title": "seated piriformis stretch (ExerciseDB)",
+   "author": "ExerciseDB / AscendAPI",
+   "license": "Personal, non-commercial use with credit to ExerciseDB / AscendAPI",
+   "licenseUrl": "https://oss.exercisedb.dev/docs",
+   "source": "https://static.exercisedb.dev/media/QY39eBr.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/side_lying_external_rotation_fg.gif",
+   "title": "dbexternalrotation (FitnessGenerator library)",
+   "author": "FitnessGenerator (fitnessgenerator.com); rights remain with the original owner",
+   "license": "No stated license. Personal use only, from the copy archived by the Internet Archive Wayback Machine",
+   "licenseUrl": "",
+   "source": "https://web.archive.org/web/20050516030536/http://www.fitnessgenerator.com/images/exercises/dbexternalrotation.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/side_lying_hip_abduction_edb.gif",
+   "title": "side hip abduction (ExerciseDB)",
+   "author": "ExerciseDB / AscendAPI",
+   "license": "Personal, non-commercial use with credit to ExerciseDB / AscendAPI",
+   "licenseUrl": "https://oss.exercisedb.dev/docs",
+   "source": "https://static.exercisedb.dev/media/7WaDzyL.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/single_leg_bridge_euddeume.gif",
+   "title": "누워서 하는 힙운동 7분 따라하기(Lying hip-up workout)",
+   "author": "심으뜸의 마이너스 라이프 (Shim Eu-ddeum, \"Minus Life\" YouTube channel)",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:%EB%88%84%EC%9B%8C%EC%84%9C_%ED%95%98%EB%8A%94_%ED%9E%99%EC%9A%B4%EB%8F%99_7%EB%B6%84_%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0(Lying_hip-up_workout).webm",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:%EB%88%84%EC%9B%8C%EC%84%9C_%ED%95%98%EB%8A%94_%ED%9E%99%EC%9A%B4%EB%8F%99_7%EB%B6%84_%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0(Lying_hip-up_workout).webm",
+   "modified": "Clips cut from the video, cropped, scaled and converted to GIF."
+  },
+  {
+   "file": "recovery/standing_side_bend_lottie.gif",
+   "title": "stretch",
+   "author": "kat frost (LottieFiles)",
+   "license": "Lottie Simple License (free, including commercial use)",
+   "licenseUrl": "https://lottiefiles.com/page/license",
+   "source": "https://lottiefiles.com/free-animation/stretch-KhCoG3ZNPf",
+   "commonsPage": "",
+   "modified": "Free animation rendered to GIF, downscaled to 320 px."
+  },
+  {
+   "file": "recovery/steam_engine_cross_knee_euddeume.gif",
+   "title": "초보자를 위한 하루 5분 복근 루틴 l 5 minutes abs workout",
+   "author": "심으뜸의 마이너스 라이프 (Shim Eu-ddeum, \"Minus Life\" YouTube channel)",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+   "source": "https://commons.wikimedia.org/wiki/File:%EC%B4%88%EB%B3%B4%EC%9E%90%EB%A5%BC_%EC%9C%84%ED%95%9C_%ED%95%98%EB%A3%A8_5%EB%B6%84_%EB%B3%B5%EA%B7%BC_%EB%A3%A8%ED%8B%B4_l_5_minutes_abs_workout.webm",
+   "commonsPage": "https://commons.wikimedia.org/wiki/File:%EC%B4%88%EB%B3%B4%EC%9E%90%EB%A5%BC_%EC%9C%84%ED%95%9C_%ED%95%98%EB%A3%A8_5%EB%B6%84_%EB%B3%B5%EA%B7%BC_%EB%A3%A8%ED%8B%B4_l_5_minutes_abs_workout.webm",
+   "modified": "Clips cut from the video, cropped, scaled and converted to GIF."
+  },
+  {
+   "file": "recovery/straight_leg_raise_fg.gif",
+   "title": "single leg leg raise (FitnessGenerator library)",
+   "author": "FitnessGenerator (fitnessgenerator.com); rights remain with the original owner",
+   "license": "No stated license. Personal use only, from the copy archived by the Internet Archive Wayback Machine",
+   "licenseUrl": "",
+   "source": "https://web.archive.org/web/20111216020540/http://www.fitnessgenerator.com/images/exercises/single%20leg%20leg%20raise.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/supine_hamstring_strap_stretch_fg.gif",
+   "title": "Supine Hamstring Stretch (FitnessGenerator library)",
+   "author": "FitnessGenerator (fitnessgenerator.com); rights remain with the original owner",
+   "license": "No stated license. Personal use only, from the copy archived by the Internet Archive Wayback Machine",
+   "licenseUrl": "",
+   "source": "https://web.archive.org/web/20050516004407/http://www.fitnessgenerator.com:80/images/exercises/Supine%20Hamstring%20Stretch.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/supine_spinal_twist_fg.gif",
+   "title": "yoga_supine_spinal_twist (FitnessGenerator library)",
+   "author": "FitnessGenerator (fitnessgenerator.com); rights remain with the original owner",
+   "license": "No stated license. Personal use only, from the copy archived by the Internet Archive Wayback Machine",
+   "licenseUrl": "",
+   "source": "https://web.archive.org/web/20150105091433/http://www.fitnessgenerator.com/images/exercises/yoga_supine_spinal_twist.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/tricep_stretch_fg.gif",
+   "title": "tricep stretch (FitnessGenerator library)",
+   "author": "FitnessGenerator (fitnessgenerator.com); rights remain with the original owner",
+   "license": "No stated license. Personal use only, from the copy archived by the Internet Archive Wayback Machine",
+   "licenseUrl": "",
+   "source": "https://web.archive.org/web/20050516044325/http://www.fitnessgenerator.com/images/exercises/tricep%20stretch.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/wall_angels_wall_slides_fg.gif",
+   "title": "Scapular Wall Slides (FitnessGenerator library)",
+   "author": "FitnessGenerator (fitnessgenerator.com); rights remain with the original owner",
+   "license": "No stated license. Personal use only, from the copy archived by the Internet Archive Wayback Machine",
+   "licenseUrl": "",
+   "source": "https://web.archive.org/web/20141130061425/http://www.fitnessgenerator.com/images/exercises/Scapular%20Wall%20Slides.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/wall_calf_stretch_edb.gif",
+   "title": "calf stretch with hands against wall (ExerciseDB)",
+   "author": "ExerciseDB / AscendAPI",
+   "license": "Personal, non-commercial use with credit to ExerciseDB / AscendAPI",
+   "licenseUrl": "https://oss.exercisedb.dev/docs",
+   "source": "https://static.exercisedb.dev/media/m0tCHqc.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/wall_sit_lottie.gif",
+   "title": "wall sitting",
+   "author": "saagar shrestha (LottieFiles)",
+   "license": "Lottie Simple License (free, including commercial use)",
+   "licenseUrl": "https://lottiefiles.com/page/license",
+   "source": "https://lottiefiles.com/free-animation/wall-sitting-gvPf36Uttf",
+   "commonsPage": "",
+   "modified": "Free animation rendered to GIF, downscaled to 320 px."
+  },
+  {
+   "file": "recovery/worlds_greatest_stretch_edb.gif",
+   "title": "world greatest stretch (ExerciseDB)",
+   "author": "ExerciseDB / AscendAPI",
+   "license": "Personal, non-commercial use with credit to ExerciseDB / AscendAPI",
+   "licenseUrl": "https://oss.exercisedb.dev/docs",
+   "source": "https://static.exercisedb.dev/media/DFGXwZr.gif",
+   "commonsPage": "",
+   "modified": "Unmodified file."
+  },
+  {
+   "file": "recovery/wrist_circles_edb.gif",
+   "title": "wrist circles (ExerciseDB)",
+   "author": "ExerciseDB / AscendAPI",
+   "license": "Personal, non-commercial use with credit to ExerciseDB / AscendAPI",
+   "licenseUrl": "https://oss.exercisedb.dev/docs",
+   "source": "https://static.exercisedb.dev/media/2zNKRUB.gif",
+   "commonsPage": "",
    "modified": "Unmodified file."
   }
  ]

@@ -2,7 +2,7 @@
  * Plain JS, no build step. Data lives in IndexedDB; assets are precached by sw.js. */
 'use strict';
 (function () {
-const APP_VERSION = '1.5.1'; // matches the Android app 1.5.1 (versionCode 8)
+const APP_VERSION = '1.5.2'; // matches the Android app 1.5.2 (versionCode 9)
 // Always this address. The open page may be #/more, a local preview, or the Home Screen start URL.
 const SHARE_URL = 'https://jbmarine63.github.io/workout/';
 const $ = (s, el = document) => el.querySelector(s);
@@ -1421,17 +1421,35 @@ const CREDITS = [
     urls: ['https://web.archive.org/web/2007/http://www.iwantsixpackabs.com/workout/week1.html'] },
   { title: 'FitnessGenerator exercise library (archived)',
     lines: ["The site's own demo GIFs were hosted by FitnessGenerator. The extra demos added in 1.4 for weeks 7 and 11-16 and the library lifts come from the same FitnessGenerator library, archived by the Wayback Machine.",
-      'Labelled "Demo from FitnessGenerator library" (or "Similar exercise" when it is a related move).'],
+      'Labelled "Demo from FitnessGenerator library" (or "Similar exercise" when it is a related move).',
+      "1.5.2: 10 Recovery and stretching demos (arm circles, leg swings, straight-leg raise, supine hamstring stretch, supine twist, tricep stretch, wall angels and three band or side-lying shoulder rotations) also come from the archived FitnessGenerator library. No license is stated and the rights stay with the original owner (fitnessgenerator.com): included for personal use only, to be replaced before any public release."],
     urls: ['https://web.archive.org/web/2007/http://www.fitnessgenerator.com/'] },
   { title: 'LottieFiles',
-    lines: ['"Staggered_push_ups" by Dinh Bui Xuan and "spiderman push-up" (creator not listed), free animations under the Lottie Simple License. Converted to small GIFs.'],
-    urls: ['https://lottiefiles.com/free-animation/staggered-push-ups-zgWfOIvx3C', 'https://lottiefiles.com/free-animation/spiderman-push-up-f9IsK5KAnA', 'https://lottiefiles.com/page/license'] },
+    lines: ['"Staggered_push_ups" by Dinh Bui Xuan and "spiderman push-up" (creator not listed), free animations under the Lottie Simple License. Converted to small GIFs.',
+      "1.5.2 Recovery demos, courtesy of their LottieFiles animators: \"Bird dog exercise vector animation\" by Md kamrujjamandesigner, \"Cobras\" by Dinh Bui Xuan, \"Stretch\" by kat frost (standing side bend) and \"Wall sitting\" by saagar shrestha. Lottie Simple License (free, including commercial use). Rendered to GIF; some downscaled to 320 px."],
+    urls: ['https://lottiefiles.com/free-animation/staggered-push-ups-zgWfOIvx3C', 'https://lottiefiles.com/free-animation/spiderman-push-up-f9IsK5KAnA', 'https://lottiefiles.com/page/license',
+      "https://lottiefiles.com/free-animation/bird-dog-exercise-vector-animation-Jp3vxhqQny", "https://lottiefiles.com/free-animation/cobras-w0bL4N81bN", "https://lottiefiles.com/free-animation/stretch-KhCoG3ZNPf", "https://lottiefiles.com/free-animation/wall-sitting-gvPf36Uttf"] },
   { title: 'Wikimedia Commons',
     lines: ['"Dand (Basic) (cropped)" by RickyBennison, CC BY-SA 4.0 (Hindu pushups). Resized and converted to a smaller GIF (200 px, 6 fps); the modified file is shared under the same license.'],
     urls: ['https://commons.wikimedia.org/wiki/File:Dand_(Basic)_(cropped).gif', 'https://creativecommons.org/licenses/by-sa/4.0/'] },
   { title: 'ExerciseDB / AscendAPI',
-    lines: ['Demos for Upside Down Shoulder press, the squat holds and Kneeling Band Row come from the ExerciseDB free dataset by AscendAPI, for personal, non-commercial use with credit to AscendAPI.'],
+    lines: ['Demos for Upside Down Shoulder press, the squat holds and Kneeling Band Row come from the ExerciseDB free dataset by AscendAPI, for personal, non-commercial use with credit to AscendAPI.',
+      "1.5.2: 12 Recovery, stretching and routine demos (ankle, knee and wrist circles, side-lying leg raise, monster walk, dead bug, world's greatest stretch, seated figure-four, wall calf stretch, seated butterfly, bicycle crunch and bent-knee lying twist) come from the same ExerciseDB dataset, for personal, non-commercial use with credit to ExerciseDB / AscendAPI."],
     urls: ['https://oss.exercisedb.dev/docs'] },
+  { title: "Wikimedia Commons: Shim Eu-ddeum exercise videos (1.5.2)",
+    lines: ["11 Recovery and stretching demos (glute bridge, single-leg bridge, cat-cow, child's pose, knee-to-chest, kneeling hip flexor, lying figure-four, cross-body shoulder, neck side stretch, shoulder blade squeeze and steam engines) are clips from videos by 심으뜸의 마이너스 라이프 (Shim Eu-ddeum, \"Minus Life\" YouTube channel), published on Wikimedia Commons under CC BY 3.0.",
+      "Clips cut, cropped, scaled and converted to GIF. Each clip's source video is also listed under its own Recovery GIF credit."],
+    urls: ["https://commons.wikimedia.org/wiki/File:누구나_해야하는_견갑골_안정화_운동(feat.상체운동을_잘_하는_방법).webm",
+      "https://commons.wikimedia.org/wiki/File:누워서_하는_BEST_힙운동_I_Lying_down_Hip_Workout.webm",
+      "https://commons.wikimedia.org/wiki/File:누워서_하는_힙운동_7분_따라하기(Lying_hip-up_workout).webm",
+      "https://commons.wikimedia.org/wiki/File:매일_아침_8분_스트레칭_l_8minutes_morning_full_body_stretch.webm",
+      "https://commons.wikimedia.org/wiki/File:운동후_스트레칭_모음,_이거_하나면_운동효과_2배!_쿨다운_끝!.webm",
+      "https://commons.wikimedia.org/wiki/File:초보자를_위한_하루_5분_복근_루틴_l_5_minutes_abs_workout.webm",
+      "https://creativecommons.org/licenses/by/3.0/"] },
+  { title: "Wikimedia Commons: Codman pendulum exercise (1.5.2)",
+    lines: ["The Pendulum swings demo is a clip from \"EJERCICIO DE CODMAN\" by Aurora Díaz Guerra (derivative of 3D models by Andrew Kator & Jennifer Legaz et al.), CC BY-SA 3.0. Clip cut, cropped, scaled and converted to GIF; the modified GIF is shared under the same license."],
+    urls: ["https://commons.wikimedia.org/wiki/File:EJERCICIO_DE_CODMAN.ogv",
+      "https://creativecommons.org/licenses/by-sa/3.0/"] },
   { title: 'Recovery, stretching and routine content (1.5)',
     lines: ['Written for this app from public physiotherapy and training sources (NHS Inform, CDC Growing Stronger, MOON shoulder protocol, U.S. Army ATP 7-22.02, U.S. Marine Corps, Harvard Health, Cleveland Clinic and others). Each exercise, stretch and routine shows its own sources on its card.'],
     urls: [] },
